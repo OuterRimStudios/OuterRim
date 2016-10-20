@@ -116,6 +116,7 @@ GameObject:
   - 135: {fileID: 13552426}
   - 23: {fileID: 2303490}
   - 114: {fileID: 11482570}
+  - 114: {fileID: 11464690}
   m_Layer: 0
   m_Name: Gun1
   m_TagString: Untagged
@@ -922,8 +923,8 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 160216}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_Materials:
   - {fileID: 2100000, guid: c1c5c8b4b55a6ea42bd3959cb40d2a34, type: 2}
   m_SubsetIndices: 
@@ -1026,8 +1027,8 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 115074}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_Materials:
   - {fileID: 2100000, guid: 32b0bf49916aec74486a8112da5cb353, type: 2}
   m_SubsetIndices: 
@@ -1104,8 +1105,8 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 195812}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_Materials:
   - {fileID: 2100000, guid: c1c5c8b4b55a6ea42bd3959cb40d2a34, type: 2}
   m_SubsetIndices: 
@@ -1182,8 +1183,8 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 176004}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_Materials:
   - {fileID: 2100000, guid: b69dff9066f4724468fa04c276a1bb9f, type: 2}
   m_SubsetIndices: 
@@ -1208,8 +1209,8 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 161710}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_Materials:
   - {fileID: 2100000, guid: c1c5c8b4b55a6ea42bd3959cb40d2a34, type: 2}
   m_SubsetIndices: 
@@ -1312,8 +1313,8 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 152242}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_Materials:
   - {fileID: 2100000, guid: f69840f702830ba42ac47cb3c441d19d, type: 2}
   m_SubsetIndices: 
@@ -1338,8 +1339,8 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 137532}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_Materials:
   - {fileID: 2100000, guid: c1c5c8b4b55a6ea42bd3959cb40d2a34, type: 2}
   m_SubsetIndices: 
@@ -1364,8 +1365,8 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 169470}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_Materials:
   - {fileID: 2100000, guid: 32b0bf49916aec74486a8112da5cb353, type: 2}
   m_SubsetIndices: 
@@ -1720,9 +1721,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosion: {fileID: 100000, guid: c8fd86fe5050dc04bb501b291c30f591, type: 2}
   explosionSound: {fileID: 106574, guid: 3bccd5214c55ab54e842038afc0ebfbc, type: 2}
-  greenHealthRing: {fileID: 0}
-  yellowHealthRing: {fileID: 0}
-  redHealthRing: {fileID: 0}
+  healthBar1: {fileID: 0}
+  healthBar2: {fileID: 0}
+  healthBar3: {fileID: 0}
   lifeImage1: {fileID: 0}
   lifeImage2: {fileID: 0}
   damageIndicatorIMG: {fileID: 0}
@@ -1743,6 +1744,18 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11464690
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 123032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81db0c625e2aa0447a1e8bc61424e971, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laserSound: {fileID: 0}
 --- !u!114 &11467388
 MonoBehaviour:
   m_ObjectHideFlags: 1

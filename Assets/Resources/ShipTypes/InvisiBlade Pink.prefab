@@ -297,7 +297,6 @@ GameObject:
   - 23: {fileID: 2379872}
   - 114: {fileID: 11481802}
   - 114: {fileID: 11440750}
-  - 82: {fileID: 8279674}
   m_Layer: 0
   m_Name: Gun1
   m_TagString: Untagged
@@ -1101,80 +1100,6 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 7f51b1850c93971458a5e3b218564850, type: 3}
---- !u!82 &8279674
-AudioSource:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 183434}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!95 &9532634
 Animator:
   serializedVersion: 3
@@ -1470,9 +1395,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosion: {fileID: 100000, guid: c8fd86fe5050dc04bb501b291c30f591, type: 2}
   explosionSound: {fileID: 106574, guid: 3bccd5214c55ab54e842038afc0ebfbc, type: 2}
-  greenHealthRing: {fileID: 0}
-  yellowHealthRing: {fileID: 0}
-  redHealthRing: {fileID: 0}
+  healthBar1: {fileID: 0}
+  healthBar2: {fileID: 0}
+  healthBar3: {fileID: 0}
   lifeImage1: {fileID: 0}
   lifeImage2: {fileID: 0}
   damageIndicatorIMG: {fileID: 0}

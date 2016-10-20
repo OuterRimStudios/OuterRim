@@ -382,6 +382,7 @@ GameObject:
   - 135: {fileID: 13520030}
   - 23: {fileID: 2308832}
   - 114: {fileID: 11495750}
+  - 114: {fileID: 11455308}
   m_Layer: 0
   m_Name: Gun1
   m_TagString: Untagged
@@ -554,7 +555,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 430260}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!4 &428736
 Transform:
   m_ObjectHideFlags: 1
@@ -592,10 +593,10 @@ Transform:
   - {fileID: 418478}
   - {fileID: 404438}
   - {fileID: 484308}
+  - {fileID: 487740}
   - {fileID: 453436}
   - {fileID: 426544}
   - {fileID: 454782}
-  - {fileID: 487740}
   - {fileID: 429998}
   - {fileID: 494562}
   m_Father: {fileID: 466294}
@@ -647,7 +648,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 430260}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!4 &454782
 Transform:
   m_ObjectHideFlags: 1
@@ -659,7 +660,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 430260}
-  m_RootOrder: 5
+  m_RootOrder: 6
 --- !u!4 &455386
 Transform:
   m_ObjectHideFlags: 1
@@ -808,7 +809,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 430260}
-  m_RootOrder: 6
+  m_RootOrder: 3
 --- !u!4 &488262
 Transform:
   m_ObjectHideFlags: 1
@@ -1726,6 +1727,18 @@ MonoBehaviour:
       m_RotationOrder: 4
     maxSnapBackDistance: 100
   globalSpaceTransform: {fileID: 0}
+--- !u!114 &11455308
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 172458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81db0c625e2aa0447a1e8bc61424e971, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laserSound: {fileID: 0}
 --- !u!114 &11457282
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1837,9 +1850,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosion: {fileID: 100000, guid: c8fd86fe5050dc04bb501b291c30f591, type: 2}
   explosionSound: {fileID: 106574, guid: 3bccd5214c55ab54e842038afc0ebfbc, type: 2}
-  greenHealthRing: {fileID: 0}
-  yellowHealthRing: {fileID: 0}
-  redHealthRing: {fileID: 0}
+  healthBar1: {fileID: 0}
+  healthBar2: {fileID: 0}
+  healthBar3: {fileID: 0}
   lifeImage1: {fileID: 0}
   lifeImage2: {fileID: 0}
   damageIndicatorIMG: {fileID: 0}

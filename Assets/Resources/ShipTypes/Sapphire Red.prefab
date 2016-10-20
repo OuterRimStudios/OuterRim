@@ -82,6 +82,7 @@ GameObject:
   - 135: {fileID: 13554496}
   - 23: {fileID: 2388250}
   - 114: {fileID: 11405616}
+  - 114: {fileID: 11418546}
   m_Layer: 0
   m_Name: Gun1
   m_TagString: Untagged
@@ -1266,6 +1267,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   noTarget: {fileID: 0}
+--- !u!114 &11418546
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 124120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81db0c625e2aa0447a1e8bc61424e971, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laserSound: {fileID: 0}
 --- !u!114 &11421420
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1409,9 +1422,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosion: {fileID: 100000, guid: c8fd86fe5050dc04bb501b291c30f591, type: 2}
   explosionSound: {fileID: 106574, guid: 3bccd5214c55ab54e842038afc0ebfbc, type: 2}
-  greenHealthRing: {fileID: 0}
-  yellowHealthRing: {fileID: 0}
-  redHealthRing: {fileID: 0}
+  healthBar1: {fileID: 0}
+  healthBar2: {fileID: 0}
+  healthBar3: {fileID: 0}
   lifeImage1: {fileID: 0}
   lifeImage2: {fileID: 0}
   damageIndicatorIMG: {fileID: 0}
