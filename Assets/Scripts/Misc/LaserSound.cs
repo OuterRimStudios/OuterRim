@@ -5,12 +5,12 @@ public class LaserSound : MonoBehaviour
 {
     [HideInInspector]
     public AudioSource laserSound;
-    GameObject gameManger;
+    GameObject gameManager;
     void Start()
     {
-        gameManger = GameObject.Find("GameManager");
-        laserSound = GetComponent<AudioSource>();
-        laserSound.clip = gameManger.GetComponent<PublicVariableHandler>().laserNoLevelSound;
+        gameManager = GameObject.Find("GameManager");
+        laserSound = gameManager.GetComponent<AudioSource>();
+        laserSound.clip = gameManager.GetComponent<PublicVariableHandler>().laserNoLevelSound;
     }
 
     public void Shooting()
