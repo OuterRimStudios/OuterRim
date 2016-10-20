@@ -18,7 +18,6 @@ public class Actor : MonoBehaviour
     public GameObject player;
     public GameObject gun1;
     public GameObject gun2;
-    public GameObject gun3;
 
     public bool DebugMode;
 
@@ -70,6 +69,7 @@ public class Actor : MonoBehaviour
     private Transform lookAtPoint;      //The point that the ship looks at during the maneuver state
     GameObject gameManager;
     PublicVariableHandler publicVariableHandler;
+
     private void Awake()
     {
         GameObject gameManager = GameObject.FindGameObjectWithTag("Game Manager");
@@ -85,7 +85,6 @@ public class Actor : MonoBehaviour
 
         gun1 = GetComponent<EnemyStoreVariables>().gun1;
         gun2 = GetComponent<EnemyStoreVariables>().gun2;
-        gun3 = GetComponent<EnemyStoreVariables>().gun3;
 
         lookAtPoint = GetComponent<EnemyStoreVariables>().lookAtPoint;
     }
@@ -156,7 +155,7 @@ public class Actor : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (maneuverTimer >= ((5 * Mathf.PI) / 3))
+        if (maneuverTimer >= ((11 * Mathf.PI) / 6))
         {
             ChangeState(State.MOVING);
             hasChosenAction = false;
@@ -178,7 +177,6 @@ public class Actor : MonoBehaviour
                         ceasedFire = false;
                         gun1.GetComponent<Enemy1Fire>().canFire = true;
                         gun2.GetComponent<Enemy1Fire>().canFire = true;
-                        gun3.GetComponent<Enemy1Fire>().canFire = false;
                     }
 
                     transform.LookAt(playerTarget.transform);
@@ -212,7 +210,6 @@ public class Actor : MonoBehaviour
                         ceasedFire = true;
                         gun1.GetComponent<Enemy1Fire>().canFire = false;
                         gun2.GetComponent<Enemy1Fire>().canFire = false;
-                        gun3.GetComponent<Enemy1Fire>().canFire = false;
                     }
 
                     transform.LookAt(lookAtPoint);
@@ -274,16 +271,13 @@ public class Actor : MonoBehaviour
                         transform.position = Vector3.Lerp(transform.position, playerTarget.transform.position + new Vector3(100f, -100f, -1000f), Time.deltaTime * strafeSpeed);
                     }
 
-                    if (transform.position.z > playerTarget.transform.position.z + 400)
+                    if (transform.position.z > playerTarget.transform.position.z + 1000)
                     {
                         transform.LookAt(playerTarget.transform);
-                        gun3.transform.LookAt(playerTarget.transform);
-                        gun3.GetComponent<Enemy1Fire>().canFire = true;
                     }
-                    else if (transform.position.z <= playerTarget.transform.position.z + 400)
+                    else if (transform.position.z <= playerTarget.transform.position.z + 1000)
                     {
                         transform.rotation = new Quaternion(0f, 180f, 0f, 0f);
-                        gun3.transform.LookAt(playerTarget.transform);
 
                         if (transform.position.z < playerTarget.transform.position.z - 200)
                         {
@@ -321,10 +315,7 @@ public class Actor : MonoBehaviour
                         ceasedFire = true;
                         gun1.GetComponent<Enemy1Fire>().canFire = false;
                         gun2.GetComponent<Enemy1Fire>().canFire = false;
-                        gun3.GetComponent<Enemy1Fire>().canFire = false;
                     }
-
-                    //transform.LookAt (lookAtPoint);
 
                     maneuverTimer += Time.deltaTime;
                     maneuverAngle = maneuverTimer;

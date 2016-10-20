@@ -1482,9 +1482,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d70ddc7352f256e4fa9e0df89a767621, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHPAllowed: 100
+  maxHPAllowed: 500
   currentHPUsed: 0
-  AllowHPIncreaseAmount: 5
+  AllowHPIncreaseAmount: 10
   regularEnemyPool:
   - {fileID: 11046876}
   - {fileID: 930241600}
@@ -1555,14 +1555,14 @@ MonoBehaviour:
   laserHeatLossAfterSeconds: 1
   enemyAISpeed: 500
   actorSpeed: 600
-  maneuverSpeed: 1
-  strafeSpeed: 1.5
+  maneuverSpeed: 0.9
+  strafeSpeed: 1.25
   enemy1Speed: 500
   enemy1FireFreq: 3
   enemy1BaseHealth: 2
   enemy1LaserScore: 1000
   enemy1MissileScore: 1000
-  enemy2Speed: 600
+  enemy2Speed: 350
   enemy2FireFreq: 3
   enemy2BaseHealth: 6
   enemy2LaserScore: 1000
@@ -1572,7 +1572,7 @@ MonoBehaviour:
   enemy3BaseHealth: 2
   enemy3LaserScore: 1000
   enemy3MissileScore: 1000
-  enemy4Speed: 300
+  enemy4Speed: 250
   enemy4FireFreq: 3
   enemy4BaseHealth: 2
   enemy4ShieldHealth: 5
