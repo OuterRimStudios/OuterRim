@@ -234,4 +234,15 @@ public class PlayerCollision : MonoBehaviour
         }
     }
 
+    public void TakeDamage(int amount)
+    {
+        StartCoroutine(DamageIndicator());
+        playerHealth -= amount;
+        pickUpManager.LoseLevel();
+        if (playerHealth % 3 == 0)
+        {
+            LoseLife();
+        }
+        CheckHealth();
+    }
 }

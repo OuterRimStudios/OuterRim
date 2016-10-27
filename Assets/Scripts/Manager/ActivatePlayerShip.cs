@@ -24,6 +24,7 @@ public class ActivatePlayerShip : MonoBehaviour {
             {
                 player = Instantiate(shipPrefabs[0], Vector3.zero, Quaternion.identity) as GameObject;
                 player.name = "Player";
+                player.tag = "Player";
             }
             else
             {
@@ -34,6 +35,7 @@ public class ActivatePlayerShip : MonoBehaviour {
                     {
                         player = Instantiate(shipPrefabs[i], Vector3.zero, Quaternion.identity) as GameObject;
                         player.name = "Player";
+                        player.tag = "Player";
                     }
                 }
             }

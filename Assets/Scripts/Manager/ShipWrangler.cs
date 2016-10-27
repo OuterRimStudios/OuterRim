@@ -15,6 +15,7 @@ public class ShipWrangler : MonoBehaviour {
     public GameObject shipLight;
 
     public Text descriptionText;
+    public Text selectText;
 
     public List<GameObject> ships;
 
@@ -137,6 +138,7 @@ public class ShipWrangler : MonoBehaviour {
         playButton.SetActive(false);
         backButton.SetActive(false);
         descriptionText.text = "Choose your color.";
+        selectText.text = "Press       to select your color";
     }
 
     void SelectShip()
@@ -157,6 +159,7 @@ public class ShipWrangler : MonoBehaviour {
             transform.parent.gameObject.GetComponent<ShipWrangler>().enabled = true;
             transform.parent.gameObject.GetComponent<ShipWrangler>().ResetWranglers();
             descriptionText.text = "Choose your ship.";
+            selectText.text = "Press       to select your ship";
         }
         else if (gameObject.name == "ShipContainer")
         {

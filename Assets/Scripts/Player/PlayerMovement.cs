@@ -52,12 +52,7 @@ public class PlayerMovement : MonoBehaviour {
         }
 
         transform.position += new Vector3(moveX, moveY, moveZ);
-        transform.position = new Vector3(Mathf.Clamp(transform.position.x, -clampX, clampX), Mathf.Clamp(transform.position.y, -clampY, clampY), transform.position.z);
-
-        if (transform.position.x > 9000 || transform.position.x < -9000 || transform.position.y > 6000 || transform.position.y < -6000)
-        {
-            Camera.main.farClipPlane = 100000;
-        }
+        //transform.position = new Vector3(Mathf.Clamp(transform.position.x, -clampX, clampX), Mathf.Clamp(transform.position.y, -clampY, clampY), transform.position.z);
     }
 
     void ClampRotation(float minAngle, float maxAngle, float clampAroundAngle = 0)
