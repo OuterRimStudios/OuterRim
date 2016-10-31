@@ -68,79 +68,72 @@ public class AchievementManager : MonoBehaviour
         //Score Achievements
         switch (playerScore.score)
         {
-            case 10000:
-                //print("You earned 10,000 points!");
+            case 100000:
                 if (PlayerPrefs.GetInt("ScoreAchievement1") == 0)
                 {
                     PlayerPrefs.SetInt("ScoreAchievement1", 1);
                     PlayerPrefs.SetInt("Claw Red", 1);
-                    achievement.text = "You earned 10,000 points!";
-                    CallWait();
-                }
-                break;
-
-            case 25000:
-                //print("You earned 100,000 points!");
-                if (PlayerPrefs.GetInt("ScoreAchievement2") == 0)
-                {
-                    PlayerPrefs.SetInt("ScoreAchievement2", 1);
-                    PlayerPrefs.SetInt("Claw Pink", 1);
-                    achievement.text = "You earned 25,000 points!";
-                    CallWait();
-                }
-                break;
-
-            case 50000:
-                //print("You earned 100,000 points!");
-                if (PlayerPrefs.GetInt("ScoreAchievement3") == 0)
-                {
-                    PlayerPrefs.SetInt("ScoreAchievement3", 1);
-                    PlayerPrefs.SetInt("Claw Purple", 1);
-                    achievement.text = "You earned 50,000 points!";
-                    CallWait();
-                }
-                break;
-
-            case 100000:
-                //print("You earned 250,000 points!");
-                if (PlayerPrefs.GetInt("ScoreAchievement4") == 0)
-                {
-                    PlayerPrefs.SetInt("ScoreAchievement4", 1);
-                    PlayerPrefs.SetInt("Claw Green", 1);
                     achievement.text = "You earned 100,000 points!";
                     CallWait();
                 }
                 break;
 
-            case 150000:
-                //print("You earned 500,000 points!");
+            case 250000:
+                if (PlayerPrefs.GetInt("ScoreAchievement2") == 0)
+                {
+                    PlayerPrefs.SetInt("ScoreAchievement2", 1);
+                    PlayerPrefs.SetInt("Claw Pink", 1);
+                    achievement.text = "You earned 250,000 points!";
+                    CallWait();
+                }
+                break;
+
+            case 500000:
+                if (PlayerPrefs.GetInt("ScoreAchievement3") == 0)
+                {
+                    PlayerPrefs.SetInt("ScoreAchievement3", 1);
+                    PlayerPrefs.SetInt("Claw Purple", 1);
+                    achievement.text = "You earned 500,000 points!";
+                    CallWait();
+                }
+                break;
+
+            case 1000000:
+                if (PlayerPrefs.GetInt("ScoreAchievement4") == 0)
+                {
+                    PlayerPrefs.SetInt("ScoreAchievement4", 1);
+                    PlayerPrefs.SetInt("Claw Green", 1);
+                    achievement.text = "You earned 1,000,000 points!";
+                    CallWait();
+                }
+                break;
+
+            case 1500000:
                 if (PlayerPrefs.GetInt("ScoreAchievement5") == 0)
                 {
                     PlayerPrefs.SetInt("ScoreAchievement5", 1);
                     PlayerPrefs.SetInt("Claw Orange", 1);
-                    achievement.text = "You earned 150,000 points!";
+                    achievement.text = "You earned 1,500,000 points!";
                     CallWait();
                 }
                 break;
 
-            case 200000:
-                //print("You earned 1,000,000 points!");
+            case 2000000:
                 if (PlayerPrefs.GetInt("ScoreAchievement6") == 0)
                 {
                     PlayerPrefs.SetInt("ScoreAchievement6", 1);
                     PlayerPrefs.SetInt("Claw Yellow", 1);
-                    achievement.text = "You earned 200,000 points!";
+                    achievement.text = "You earned 2,000,000 points!";
                     CallWait();
                 }
                 break;
 
-            case 250000:
-                //print("You earned 1,000,000 points!");
+            case 2500000:
                 if (PlayerPrefs.GetInt("ScoreAchievement7") == 0)
                 {
                     PlayerPrefs.SetInt("ScoreAchievement7", 1);
                     PlayerPrefs.SetInt("Claw White", 1);
-                    achievement.text = "You earned 250,000 points!";
+                    achievement.text = "You earned 2,500,000 points!";
                     CallWait();
                 }
                 break;
