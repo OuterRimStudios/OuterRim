@@ -118,6 +118,7 @@ public class ShipWrangler : MonoBehaviour {
             if (i == currentShip)
             {
                 ships[i].SetActive(true);
+                ChooseShipTracker.currentUnlockedShip = ships[i];
             }
             else
             {

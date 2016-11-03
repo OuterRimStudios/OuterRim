@@ -1175,7 +1175,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.65
+  m_Volume: 0.96
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1258,11 +1258,15 @@ MonoBehaviour:
   - {fileID: 1478111000}
   - {fileID: 357815566}
   carrierEnemies:
-  - {fileID: 115900, guid: 2e6b7514ac8d42a42be4da492721cff2, type: 2}
-  spawnCarrierAt: 5
+  - {fileID: 128138, guid: b180ca4400e761b44ab528e951d87a4f, type: 2}
+  - {fileID: 169792, guid: 54600aa06d1c4584aa31cb43abf5a5d9, type: 2}
+  - {fileID: 177026, guid: afff5576370fa7f4b94a4ec329a84c43, type: 2}
+  - {fileID: 131540, guid: dcb47bf9ecd4c58449cdbeaf0d18bea7, type: 2}
+  spawnCarrierAt: 3
   spawnLocation: {x: 0, y: 0, z: 0}
   sectorCompleteAt: 5
   quadrentCompleteAt: 20
+  spawnPickUpAt: 1
   minXSpawn: -5000
   maxXspawn: 5000
   minYSpawn: -5000

@@ -39,5 +39,6 @@ public class PlayerScore : MonoBehaviour {
             
         highScoreText.text = "High Score: " + PlayerPrefs.GetInt("HighScore");
         scoreText.text = "Score: " + score;
+        print(score);
 	}
 }

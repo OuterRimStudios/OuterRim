@@ -59,9 +59,14 @@ GameObject:
   - 4: {fileID: 449934}
   - 82: {fileID: 8289104}
   - 82: {fileID: 8270616}
+  - 114: {fileID: 11478262}
+  - 114: {fileID: 11404860}
+  - 54: {fileID: 5419338}
+  - 65: {fileID: 6519020}
+  - 65: {fileID: 6549740}
   m_Layer: 0
   m_Name: Carrier dark Wing
-  m_TagString: Untagged
+  m_TagString: Carrier
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -416,7 +421,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 128138}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4595, y: -146, z: 1810}
+  m_LocalPosition: {x: -276.78076, y: -438.94043, z: 3055.025}
   m_LocalScale: {x: 15.868267, y: 15.8682785, z: 15.8682785}
   m_Children:
   - {fileID: 456236}
@@ -1057,6 +1062,45 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 191480}
   m_Mesh: {fileID: 4300008, guid: 7ebf15809e615594fbe4101b82d40720, type: 3}
+--- !u!54 &5419338
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 128138}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 1
+  m_Constraints: 80
+  m_CollisionDetection: 2
+--- !u!65 &6519020
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 128138}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 50.42, y: 41.09, z: 118.7}
+  m_Center: {x: 0.00000023841858, y: 34, z: 1.7}
+--- !u!65 &6549740
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 128138}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 50.42, y: 41.09, z: 118.7}
+  m_Center: {x: 0.00000023841858, y: 34, z: 1.7}
 --- !u!82 &8270616
 AudioSource:
   m_ObjectHideFlags: 1
@@ -1205,6 +1249,40 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &11404860
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 128138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2aca2d64609a1fc479717b14d21e3cf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ship: {fileID: 128138}
+  explosion: {fileID: 145756, guid: d29a82df8b202ea44bc3fafd96020bc3, type: 2}
+  explosionSound: {fileID: 120490, guid: 4fcbbef46864780438eedc191f46dc52, type: 2}
+  meteorExplosionPrefab: {fileID: 145756, guid: d29a82df8b202ea44bc3fafd96020bc3,
+    type: 2}
+  player: {fileID: 0}
+  laserScore: 50000
+  missileScore: 0
+  baseHealth: 100
+  currentHealth: 0
+--- !u!114 &11478262
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 128138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68b50cc832fad3b4b82da02f79b1bf0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  warpSpeed: 1000
+  speed: 400
 --- !u!135 &13512778
 SphereCollider:
   m_ObjectHideFlags: 1

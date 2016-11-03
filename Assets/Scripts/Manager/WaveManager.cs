@@ -29,6 +29,7 @@ public class WaveManager : MonoBehaviour
 
     public float sectorCompleteAt;
     public float quadrentCompleteAt;
+    public float spawnPickUpAt;
 
     public float minXSpawn;
     public float maxXspawn;
@@ -48,6 +49,7 @@ public class WaveManager : MonoBehaviour
     public Text quadrentBadgeText;
 
     private GameObject player;
+    private PickUpManager pickUpManager;
     private bool canSpawn;
     private bool sectorWasCompleted;
     private int newEnemyCount;  //This increases the pool size.
@@ -55,11 +57,13 @@ public class WaveManager : MonoBehaviour
     float sectorNum;
     float quadNum;
     int badgeAmt;
+    bool carrierSpawned;
 
-	void Start ()
+    void Start ()
     {
         canSpawn = true;
         player = GameObject.Find("Player");
+        pickUpManager = GetComponent<PickUpManager>();
         ChooseLocation();
         StartCoroutine(WaveStarting());
 	}
@@ -167,11 +171,27 @@ public class WaveManager : MonoBehaviour
             AllowedHP += AllowHPIncreaseAmount;
         }
 
-        //if (waveCount % spawnCarrierAt == 0 && waveCount != 0)
-        //{
-        //    print("Carrier spawned");
-        //    Instantiate(carrierEnemies[Random.Range(0, carrierEnemies.Length)], spawnLocation, Quaternion.identity);
-        //}
+        if (waveCount % spawnCarrierAt == 0 && waveCount != 0)
+        {
+            if (!carrierSpawned)
+            {
+                print("Carrier spawned");
+                Instantiate(carrierEnemies[Random.Range(0, carrierEnemies.Length)], spawnLocation, Quaternion.identity);
+                carrierSpawned = true;
+            }
+        }
+
+        if (waveCount % spawnPickUpAt == 0 && waveCount != 0)
+        {
+            pickUpManager.SpawnPickUp(true);    //if true, weapon pick up spawns
+        }
+
+        if (waveCount % spawnCarrierAt != 0)
+        {
+            print("it was called");
+            carrierSpawned = false;
+        }
+
         //if (waveCount % spawnKamikazeAt == 0 && waveCount != 0)
         //{
         //        Instantiate(kamikazeEnemies[Random.Range(0, carrierEnemies.Length)], new Vector3(player.transform.position.x + Random.Range(minXSpawn, maxXspawn),

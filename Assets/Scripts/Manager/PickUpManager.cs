@@ -50,6 +50,8 @@ public class PickUpManager : MonoBehaviour
     int oldScore;
     float x;
     float y;
+    int choose;
+    int currentLevel;
 
     void Start()
     {
@@ -70,40 +72,66 @@ public class PickUpManager : MonoBehaviour
         shieldLevel2Bar = publicVariableHandler.shieldLevel2Bar;
         shieldLevel3Bar = publicVariableHandler.shieldLevel3Bar;
     }
+    //void Update()
+    //{
+    //    if (playerScore.score % spawnAtScore == 0 && playerScore.score != 0 && !spawning && playerScore.score > oldScore)
+    //    {
+    //        spawning = true;
+    //        oldScore = playerScore.score;
+    //        SpawnPickUp();
+    //        spawning = false;
+    //    }
+
+    //}
+    public void SpawnPickUp(bool weaponPickUp)
+    {
+        if (weaponPickUp)
+        {
+            choose = Random.Range(0, 2);
+            print("I rolled a " + choose);
+            if(choose == 0 && laserLevel < 4)
+            {
+                print("Laser pick up spawned");
+                spawnPoint = new Vector3(Random.Range(player.transform.position.x + xMinSpawn, player.transform.position.x + xMaxSpawn),
+                Random.Range(player.transform.position.y + yMinSpawn, player.transform.position.y + yMaxSpawn),
+                Random.Range(player.transform.position.z + zSpawnMin, player.transform.position.z + zSpawnMax));
+                Instantiate(laserPickUp, spawnPoint, Quaternion.identity);
+            }
+            else
+            {
+                print("Laser pick up spawned");
+                spawnPoint = new Vector3(Random.Range(player.transform.position.x + xMinSpawn, player.transform.position.x + xMaxSpawn),
+                Random.Range(player.transform.position.y + yMinSpawn, player.transform.position.y + yMaxSpawn),
+                Random.Range(player.transform.position.z + zSpawnMin, player.transform.position.z + zSpawnMax));
+                Instantiate(missilePickUp, spawnPoint, Quaternion.identity);
+            }       
+        }
+  
+
+        if (!weaponPickUp)
+        {
+            choose = Random.Range(0, 2);
+            if (choose == 0)
+            {
+                spawnPoint = new Vector3(Random.Range(player.transform.position.x + xMinSpawn, player.transform.position.x + xMaxSpawn),
+                Random.Range(player.transform.position.y + yMinSpawn, player.transform.position.y + yMaxSpawn),
+                Random.Range(player.transform.position.z + zSpawnMin, player.transform.position.z + zSpawnMax));
+                Instantiate(shieldPickUp, spawnPoint, Quaternion.identity);
+            }
+            if (choose == 1)
+            {
+                spawnPoint = new Vector3(Random.Range(player.transform.position.x + xMinSpawn, player.transform.position.x + xMaxSpawn),
+                Random.Range(player.transform.position.y + yMinSpawn, player.transform.position.y + yMaxSpawn),
+                Random.Range(player.transform.position.z + zSpawnMin, player.transform.position.z + zSpawnMax));
+                Instantiate(healthPickUp, spawnPoint, Quaternion.identity);
+            }
+        }
+    }
+
     void Update()
     {
-        if (playerScore.score % spawnAtScore == 0 && playerScore.score != 0 && !spawning && playerScore.score > oldScore)
-        {
-            spawning = true;
-            oldScore = playerScore.score;
-            SpawnPickUp();
-            spawning = false;
-        }
-
+        print("My level is " + laserLevel);
     }
-    void SpawnPickUp()
-    {
-        spawnPoint = new Vector3(Random.Range(player.transform.position.x + xMinSpawn, player.transform.position.x + xMaxSpawn),
-        Random.Range(player.transform.position.y + yMinSpawn, player.transform.position.y + yMaxSpawn),
-        Random.Range(player.transform.position.z + zSpawnMin, player.transform.position.z + zSpawnMax));
-        Instantiate(laserPickUp, spawnPoint, Quaternion.identity);
-        
-        spawnPoint = new Vector3(Random.Range(player.transform.position.x + xMinSpawn, player.transform.position.x + xMaxSpawn),
-        Random.Range(player.transform.position.y + yMinSpawn, player.transform.position.y + yMaxSpawn),
-        Random.Range(player.transform.position.z + zSpawnMin, player.transform.position.z + zSpawnMax));
-        Instantiate(missilePickUp, spawnPoint, Quaternion.identity);
-
-        spawnPoint = new Vector3(Random.Range(player.transform.position.x + xMinSpawn, player.transform.position.x + xMaxSpawn),
-        Random.Range(player.transform.position.y + yMinSpawn, player.transform.position.y + yMaxSpawn),
-        Random.Range(player.transform.position.z + zSpawnMin, player.transform.position.z + zSpawnMax));
-        Instantiate(shieldPickUp, spawnPoint, Quaternion.identity);
-
-        spawnPoint = new Vector3(Random.Range(player.transform.position.x + xMinSpawn, player.transform.position.x + xMaxSpawn),
-        Random.Range(player.transform.position.y + yMinSpawn, player.transform.position.y + yMaxSpawn),
-        Random.Range(player.transform.position.z + zSpawnMin, player.transform.position.z + zSpawnMax));
-        Instantiate(healthPickUp, spawnPoint, Quaternion.identity);
-    }
-
     public void LevelUp(string powerUpType)
     {
         leveled = true;

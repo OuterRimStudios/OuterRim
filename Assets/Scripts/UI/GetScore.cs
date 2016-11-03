@@ -6,11 +6,13 @@ public class GetScore : MonoBehaviour {
 
     public Text scoreText;
     public string text;
+    int currency;
 
 	// Use this for initialization
 	void Start () {
-        
-        
+        currency = PlayerPrefs.GetInt("Currency");
+        currency += PlayerPrefs.GetInt("Score");
+        PlayerPrefs.SetInt("Currency", currency);
 	}
 	
 	// Update is called once per frame
@@ -30,6 +32,12 @@ public class GetScore : MonoBehaviour {
             {
                 scoreText.text = "Current \n High Score: " + PlayerPrefs.GetInt("HighScore");
             }
+        }
+
+        if(Input.GetKey(KeyCode.R))
+        {
+            PlayerPrefs.SetInt("Currency", 0);
+            print("Currency reset to " + PlayerPrefs.GetInt("Currency"));
         }
     }
 }
