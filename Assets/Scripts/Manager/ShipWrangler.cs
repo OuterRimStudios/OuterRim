@@ -14,8 +14,9 @@ public class ShipWrangler : MonoBehaviour {
     public GameObject lights;
     public GameObject shipLight;
 
+    public Image fadePanel;
+
     public Text descriptionText;
-    public Text selectText;
 
     public List<GameObject> ships;
 
@@ -24,6 +25,8 @@ public class ShipWrangler : MonoBehaviour {
     public bool choosingShip;
     bool hasMoved;
     bool cycling;
+    bool fading;
+    bool faded;
 
     // Use this for initialization
     void Start()
@@ -136,10 +139,12 @@ public class ShipWrangler : MonoBehaviour {
             ships[i].GetComponent<ShipWrangler>().enabled = true;
         }
 
+        faded = false;
+        StartCoroutine(Fade());
+        faded = false;
         playButton.SetActive(false);
         backButton.SetActive(false);
         descriptionText.text = "Choose your color.";
-        selectText.text = "Press       to select your color";
     }
 
     void SelectShip()
@@ -157,10 +162,12 @@ public class ShipWrangler : MonoBehaviour {
     {
         if (gameObject.name != "ShipContainer")
         {
+            faded = false;
+            StartCoroutine(Fade());
+            faded = false;
             transform.parent.gameObject.GetComponent<ShipWrangler>().enabled = true;
             transform.parent.gameObject.GetComponent<ShipWrangler>().ResetWranglers();
             descriptionText.text = "Choose your ship.";
-            selectText.text = "Press       to select your ship";
         }
         else if (gameObject.name == "ShipContainer")
         {
@@ -199,6 +206,35 @@ public class ShipWrangler : MonoBehaviour {
             yield return new WaitForSeconds(.25f);
             cycling = false;
         }
+    }
+
+    IEnumerator Fade()
+    {
+        if(!fading)
+        {
+            fading = true;
+            yield return new WaitUntil(FadePanel);
+            fading = false;
+        }
+    }
+
+    bool FadePanel()
+    {
+        if (!faded)
+            fadePanel.color = Vector4.Lerp(fadePanel.color, new Color(0, 0, 0, .8f), .2f);
+        else if(faded)
+            fadePanel.color = Vector4.Lerp(fadePanel.color, Color.clear, .2f);
+
+        if (fadePanel.color == new Color(0, 0, 0, .8f))
+            faded = true;
+
+        if(faded && fadePanel.color == Color.clear)
+        {
+            faded = false;
+            return true;
+        }
+
+        return false;
     }
 }
 
