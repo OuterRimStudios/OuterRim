@@ -13,6 +13,8 @@ public class ShipWrangler : MonoBehaviour {
     public GameObject backButton;
     public GameObject lights;
     public GameObject shipLight;
+    public GameObject unlockButton;
+    public GameObject selectButton;
 
     public Image fadePanel;
 
@@ -139,6 +141,11 @@ public class ShipWrangler : MonoBehaviour {
             ships[i].GetComponent<ShipWrangler>().enabled = true;
         }
 
+        foreach (Transform child in ships[currentShip].transform)
+        {
+            child.GetComponent<ShipUnlocking>().enabled = true;
+        }
+
         faded = false;
         StartCoroutine(Fade());
         faded = false;
@@ -153,7 +160,7 @@ public class ShipWrangler : MonoBehaviour {
         {
             ChooseShipTracker.currentShipName = ships[currentShip].name;
             playButton.SetActive(true);
-            backButton.SetActive(true);
+            //backButton.SetActive(true);
             EventSystem.current.SetSelectedGameObject(playButton);
         }
     }
@@ -162,6 +169,12 @@ public class ShipWrangler : MonoBehaviour {
     {
         if (gameObject.name != "ShipContainer")
         {
+            foreach (GameObject go in ships)
+            {
+                go.GetComponent<ShipUnlocking>().enabled = false;
+            }
+            unlockButton.SetActive(false);
+            selectButton.SetActive(true);
             faded = false;
             StartCoroutine(Fade());
             faded = false;
@@ -176,7 +189,7 @@ public class ShipWrangler : MonoBehaviour {
         }
 
         playButton.SetActive(false);
-        backButton.SetActive(false);
+        //backButton.SetActive(false);
     }
 
     public void ResetWranglers()
