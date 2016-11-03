@@ -117,6 +117,7 @@ public class ShipWrangler : MonoBehaviour {
             if (i == currentShip)
             {
                 ships[i].SetActive(true);
+                ChooseShipTracker.currentActiveShip = ships[i];
             }
             else
             {
@@ -127,7 +128,7 @@ public class ShipWrangler : MonoBehaviour {
 
     void SelectContainer()
     {
-        enabled = false;
+        enabled = false;s
 
         for (int i = 0; i < ships.Count; i++)
         {
