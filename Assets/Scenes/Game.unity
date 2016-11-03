@@ -1576,8 +1576,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbcc6d2a16bddba43897438761b0a06e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  meteorExplosion: {fileID: 100000, guid: 809320482fb694b6e8149a226202b86a, type: 2}
-  meteorHealth: 20
+  meteorExplosion: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
+  meteorHealth: 10
   laserNoLevelSound: {fileID: 8300000, guid: a8c82b3dd073d3a4589f528e85b5560b, type: 3}
   laserLevel1Sound: {fileID: 8300000, guid: d6690401f8a263e4a927e136c14d7131, type: 3}
   laserLevel2Sound: {fileID: 8300000, guid: 8fb2a93bd17cea74ca6ffb03a5df0d79, type: 3}
@@ -1746,13 +1746,8 @@ MonoBehaviour:
   - {x: 50, y: 50, z: 50}
   - {x: 200, y: 200, z: 200}
   - {x: 350, y: 350, z: 350}
-  - {x: 400, y: 400, z: 400}
+  - {x: 400, y: 400, z: 200}
   - {x: 90, y: 90, z: 90}
-  - {x: 225, y: 225, z: 225}
-  - {x: 150, y: 150, z: 150}
-  - {x: 100, y: 100, z: 100}
-  - {x: 200, y: 200, z: 200}
-  - {x: 45, y: 45, z: 45}
 --- !u!4 &568474989
 Transform:
   m_ObjectHideFlags: 0
@@ -6029,6 +6024,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11449200, guid: c34b6c2c49c7dab418898767af3de19f, type: 2}
+      propertyPath: sunTransform
+      value: 
+      objectReference: {fileID: 600270516}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c34b6c2c49c7dab418898767af3de19f, type: 2}
   m_IsPrefabParent: 0
