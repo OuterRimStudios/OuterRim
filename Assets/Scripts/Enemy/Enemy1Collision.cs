@@ -102,7 +102,8 @@ public class Enemy1Collision : MonoBehaviour {
     {
         achievementManager.EnemyDied();
         _playerScore.score += laserScore;
-        gameManager.GetComponent<WaveManager>().ShipDestroyed(gameObject);
+        if(gameObject.tag != "Carrier")
+            gameManager.GetComponent<WaveManager>().ShipDestroyed(gameObject);
         //switch (transform.name)
         //{
         //    case "Enemy1":

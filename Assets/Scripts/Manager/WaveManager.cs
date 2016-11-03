@@ -9,11 +9,11 @@ public class WaveManager : MonoBehaviour
     [Tooltip("This is the max hp ever allowed.")]
     public float maxHPAllowed;
     [Tooltip("Total allowed Health Pofloats. changing this will increase the amount of ships that could spawn.")]
-     float AllowedHP;
+    float allowedHP;
     [Tooltip("How much total Health Pofloats are active right now. This correlates to how many ships are active.")]
     public float currentHPUsed;
     [Tooltip("How much will the Allowed HP increase by every wave complete.")]
-    public float AllowHPIncreaseAmount;
+    public float allowHPIncreaseAmount;
     [Tooltip("This array should be populated with the pools of all the basic enemies in order from hardest to easiest. This excludes Kamikaze and Carrier ships.")]
     public ObjectPooling[] regularEnemyPool;
     [Tooltip("This array should be populated with all the enemy carrier PREFABS.")]
@@ -77,11 +77,11 @@ public class WaveManager : MonoBehaviour
 
 	void Spawn ()
     {
+        
         if (canSpawn)
         {
-            while (currentHPUsed < AllowedHP)
+            while (currentHPUsed < allowedHP)
             {
-                print("spawning");
                 GameObject obj = regularEnemyPool[Random.Range(0, newEnemyCount)].GetPooledObject();
 
                 if (obj == null)
@@ -97,10 +97,9 @@ public class WaveManager : MonoBehaviour
                 activeEnemies.Add(obj);
                 obj.GetComponent<Enemy1Collision>().OnSpawned();
                 
-                if (currentHPUsed >= AllowedHP)
+                if (currentHPUsed >= allowedHP)
                 {
                     canSpawn = false;
-                    print("You spawned more than the allowed amount " + canSpawn);
                 }
             }
         }
@@ -112,7 +111,6 @@ public class WaveManager : MonoBehaviour
         sectorNum++;
         waveCompleteText.gameObject.SetActive(true);
         waveCompleteText.text = "Sector " + sectorNum + " Cleared!";
-
        
         if (badgeAmt < 4)
         {
@@ -166,16 +164,15 @@ public class WaveManager : MonoBehaviour
 
     IEnumerator WaveStarting()
     {
-        if (AllowedHP < maxHPAllowed)
+        if (allowedHP < maxHPAllowed)
         {
-            AllowedHP += AllowHPIncreaseAmount;
+            allowedHP += allowHPIncreaseAmount;
         }
 
         if (waveCount % spawnCarrierAt == 0 && waveCount != 0)
         {
             if (!carrierSpawned)
             {
-                print("Carrier spawned");
                 Instantiate(carrierEnemies[Random.Range(0, carrierEnemies.Length)], spawnLocation, Quaternion.identity);
                 carrierSpawned = true;
             }
@@ -188,15 +185,9 @@ public class WaveManager : MonoBehaviour
 
         if (waveCount % spawnCarrierAt != 0)
         {
-            print("it was called");
             carrierSpawned = false;
         }
 
-        //if (waveCount % spawnKamikazeAt == 0 && waveCount != 0)
-        //{
-        //        Instantiate(kamikazeEnemies[Random.Range(0, carrierEnemies.Length)], new Vector3(player.transform.position.x + Random.Range(minXSpawn, maxXspawn),
-        //        player.transform.position.y + Random.Range(minYSpawn, maxYSpawn), player.transform.position.z + zSpawn), Quaternion.identity);
-        //}
         if (newEnemyCount < regularEnemyPool.Length)
         {
             newEnemyCount++;
@@ -205,13 +196,10 @@ public class WaveManager : MonoBehaviour
 
         if (waveCount % sectorCompleteAt == 0 && waveCount != 0 && sectorCompleteAt != 0)
         {
-            print("WaveCount is: " + waveCount + "A sector is complete at: " + sectorCompleteAt + "Modulation Resutls: " + waveCount % sectorCompleteAt);
-            print("SectorCompleted");
             sectorWasCompleted = true;
             StartCoroutine(SectorCompleted());
             yield return new WaitForSeconds(3);
         }
-
 
         waveStartingText.gameObject.SetActive(true);
         waveStartingText.text = "Wave " + waveCount;

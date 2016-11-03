@@ -10,7 +10,6 @@ public class FireScript : MonoBehaviour {
     float lastShot;
     float laserTimer;
 
-    bool overHeated;
     ObjectPooling laserPool;
     GameObject gameManager;
     AchievementManager achievementManager;
@@ -18,9 +17,6 @@ public class FireScript : MonoBehaviour {
     LaserSound laserSound;
 
     GameObject player;
-    GameObject laserLevel1Bar;
-    GameObject laserLevel2Bar;
-    GameObject laserLevel3Bar;
 
     AudioClip noLevelSound;
     AudioClip level1Sound;
@@ -38,9 +34,6 @@ public class FireScript : MonoBehaviour {
         achievementManager = gameManager.GetComponent<AchievementManager>();
         player = GameObject.Find("Player");
         baseFireFreq = publicVariableHandler.playerShootingFrequency;
-        laserLevel1Bar = publicVariableHandler.laserLevel1Bar;
-        laserLevel2Bar = publicVariableHandler.laserLevel2Bar;
-        laserLevel3Bar = publicVariableHandler.laserLevel3Bar;
 		fireFreq = baseFireFreq;
 
 		if (transform.tag == "PodLeft")
@@ -101,7 +94,6 @@ public class FireScript : MonoBehaviour {
     {
         if (levelUp)
         {
-            laserLevel1Bar.SetActive(levelUp);
             if (laserSound)
                 laserSound.LevelChange(level1Sound);
         }
@@ -116,7 +108,6 @@ public class FireScript : MonoBehaviour {
     {
         if (levelUp)
         {
-            laserLevel2Bar.SetActive(levelUp);
             fireFreq = fireFreq / 2;
             if (laserSound)
                 laserSound.LevelChange(level2Sound);
@@ -133,7 +124,6 @@ public class FireScript : MonoBehaviour {
     {
         if (levelUp)
         {
-            laserLevel3Bar.SetActive(levelUp);
             foreach (GameObject go in player.GetComponent<StoreVariables>().upgradeWeapons)
             {
                 go.SetActive(true);

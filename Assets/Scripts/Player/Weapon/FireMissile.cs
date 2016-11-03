@@ -5,9 +5,6 @@ using System.Collections;
 public class FireMissile : MonoBehaviour
 {
     public GameObject missile;
-    public GameObject missile1Img;
-    public GameObject missile2Img;
-    public GameObject missile3Img;
     public GameObject target;
     public GameObject noTarget;
 
@@ -20,9 +17,6 @@ public class FireMissile : MonoBehaviour
 
     GameObject player;
     GameObject gameManager;
-    GameObject missileLevel1Bar;
-    GameObject missileLevel2Bar;
-    GameObject missileLevel3Bar;
 
     float lastShot;
     float recharge;
@@ -42,13 +36,6 @@ public class FireMissile : MonoBehaviour
         missile = player.GetComponent<StoreVariables>().missileColor;
         lightningGunDuration = publicVariableHandler.lightningGunDuration;
         player.GetComponent<StoreVariables>().lightningGun.GetComponent<ArcReactorDemoGunController>().enabled = false;
-        missile1Img = GameObject.Find("M1b");
-        missile2Img = GameObject.Find("M2b");
-        missile3Img = GameObject.Find("M3b");
-
-        missileLevel1Bar = publicVariableHandler.missileLevel1Bar;
-        missileLevel2Bar = publicVariableHandler.missileLevel2Bar;
-        missileLevel3Bar = publicVariableHandler.missileLevel3Bar;
 
         //noTarget = GameObject.Find("NoTarget");
         //noTarget.SetActive(false);
@@ -65,36 +52,6 @@ public class FireMissile : MonoBehaviour
         {
             Missile();
         }
-        //else if ((Input.GetButtonDown("Fire2") && !hasTarget))   // || (Input.GetAxis("Secondary")) != 0)
-        //{
-        //    StartCoroutine(FlashNoTarget());
-        //}
-
-        //switch (missileCount)
-        //{
-        //    case 3:
-        //        missile1Img.SetActive(true);
-        //        missile2Img.SetActive(true);
-        //        missile3Img.SetActive(true);
-        //        break;
-        //    case 2:
-        //        missile1Img.SetActive(true);
-        //        missile2Img.SetActive(true);
-        //        missile3Img.SetActive(false);
-        //        break;
-        //    case 1:
-        //        missile1Img.SetActive(true);
-        //        missile2Img.SetActive(false);
-        //        missile3Img.SetActive(false);
-        //        break;
-        //    case 0:
-        //        missile1Img.SetActive(false);
-        //        missile2Img.SetActive(false);
-        //        missile3Img.SetActive(false);
-        //        break;
-        //    default:
-        //        break;
-        //}
     }
 
     void Missile()
@@ -137,7 +94,6 @@ public class FireMissile : MonoBehaviour
     {
         if (levelUp)
         {
-            missileLevel1Bar.SetActive(levelUp);
             missileRechargeLength = missileRechargeLength / 2;
             newRecharge = recharge;
             missileCooldown = missileCooldown / 3;
@@ -154,7 +110,6 @@ public class FireMissile : MonoBehaviour
     {
         if (levelUp)
         {
-            missileLevel2Bar.SetActive(levelUp);
             missileRechargeLength = missileRechargeLength / 2;
             missileCooldown = 0;
         }
@@ -163,14 +118,12 @@ public class FireMissile : MonoBehaviour
             missileRechargeLength = newRecharge;
             missileCooldown = newMissileCooldown;
         }
-
     }
 
     public void MissileLevel3(bool levelUp)
     {
         if (levelUp)
         {
-            missileLevel3Bar.SetActive(levelUp);
             StartCoroutine(LightningGunActive());
         }
         else if (!levelUp)

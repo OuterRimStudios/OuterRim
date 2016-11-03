@@ -1084,7 +1084,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 555410810}
   - 114: {fileID: 555410811}
-  - 114: {fileID: 555410809}
   - 114: {fileID: 555410814}
   - 114: {fileID: 555410816}
   - 114: {fileID: 555410817}
@@ -1098,46 +1097,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &555410809
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 555410808}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d19fb84d51019714a9b7194f9108ffde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firstEnemyPool: {fileID: 11046874}
-  secondEnemyPool: {fileID: 930241598}
-  thirdEnemyPool: {fileID: 1478110998}
-  fourthEnemyPool: {fileID: 357815564}
-  fifthEnemyPool: {fileID: 825245193}
-  bossShip: {fileID: 0}
-  spawnRate: 1.2
-  difficultyIncreaseScore: 1000
-  minXSpawn: -5000
-  maxXspawn: 5000
-  minYSpawn: -2500
-  maxYSpawn: 2500
-  zSpawn: 11000
-  carrierSpawnRate: 15000
-  secondEnemySpawnScore: 50000
-  thirdEnemySpawnScore: 100000
-  fourthEnemySpawnScore: 150000
-  firstEnemySpawnCap: 1
-  secondEnemySpawnCap: 1
-  thirdEnemySpawnCap: 1
-  fourthEnemySpawnCap: 1
-  firstEnemyFinalCap: 6
-  secondEnemyFinalCap: 6
-  thirdEnemyFinalCap: 6
-  fourthEnemyFinalCap: 6
-  firstEnemyCount: 0
-  secondEnemyCount: 0
-  thirdEnemyCount: 0
-  fourthEnemyCount: 0
 --- !u!4 &555410810
 Transform:
   m_ObjectHideFlags: 0
@@ -1250,8 +1209,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHPAllowed: 100
+  allowedHP: 0
   currentHPUsed: 0
-  AllowHPIncreaseAmount: 5
+  allowHPIncreaseAmount: 5
   regularEnemyPool:
   - {fileID: 11046876}
   - {fileID: 930241600}
@@ -1298,16 +1258,6 @@ MonoBehaviour:
   laserLevel2Sound: {fileID: 8300000, guid: 8fb2a93bd17cea74ca6ffb03a5df0d79, type: 3}
   laserLevel3Sound: {fileID: 8300000, guid: 52212d344f5f019409266df5986aba62, type: 3}
   fadeOut: {fileID: 1494826401}
-  laserLevel1Bar: {fileID: 0}
-  laserLevel2Bar: {fileID: 0}
-  laserLevel3Bar: {fileID: 0}
-  missileLevel1Bar: {fileID: 0}
-  missileLevel2Bar: {fileID: 0}
-  missileLevel3Bar: {fileID: 0}
-  shieldLevel1Bar: {fileID: 0}
-  shieldLevel2Bar: {fileID: 0}
-  shieldLevel3Bar: {fileID: 0}
-  shieldIcon: {fileID: 1563848385}
   shipIMG1: {fileID: 1760556309}
   shipIMG2: {fileID: 809921980}
   hitEffect: {fileID: 100000, guid: 2b55ffa5aab4e2c48bcdb135a37adba3, type: 2}
@@ -1321,9 +1271,6 @@ MonoBehaviour:
   playerHealth: 9
   playerSpeed: 700
   playerRotation: 20
-  playerLaserHeatCap: 1
-  playerLaserHeatIncreaseAmount: 0.06
-  laserHeatLossAfterSeconds: 1
   enemyAISpeed: 500
   actorSpeed: 600
   maneuverSpeed: 1
@@ -5834,7 +5781,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pooledObject:
   - {fileID: 0}
-  pooledAmount: 10
+  pooledAmount: 30
   waitTime: 0.0000001
   willGrow: 1
   pooledObjects: []

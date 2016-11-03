@@ -107,14 +107,12 @@ public class Actor : MonoBehaviour
                 speed = gameManager.GetComponent<PublicVariableHandler>().enemy1Speed;
                 break;
             case "SecondEnemyShips":
-                print("secondenemyships");
                 speed = gameManager.GetComponent<PublicVariableHandler>().enemy2Speed;
                 break;
             case "ThirdEnemyShips":
                 speed = gameManager.GetComponent<PublicVariableHandler>().enemy3Speed;
                 break;
             case "FourthEnemyShips":
-                print("fourthenemyships");
                 speed = gameManager.GetComponent<PublicVariableHandler>().enemy4Speed;
                 break;
         }
@@ -184,24 +182,6 @@ public class Actor : MonoBehaviour
                     transform.LookAt(playerTarget.transform);
 
                     transform.Translate(Vector3.forward * speed * Time.deltaTime);
-
-                    //if (elapsedTime > checkTime)
-                    //{
-                    //    checkTime = elapsedTime + 1;
-                    //    SetTarget();
-                    //}
-
-                    //if (path != null)
-                    //{
-                    //    if (onNode)
-                    //    {
-                    //        onNode = false;
-                    //        if (nodeIndex < path.Count)
-                    //            currNode = path[nodeIndex];
-                    //    }
-                    //    else
-                    //        MoveToward();
-                    //}
                     break;
 
                 case State.MANEUVER:
@@ -288,25 +268,6 @@ public class Actor : MonoBehaviour
                         if (transform.position.z < playerTarget.transform.position.z - 200)
                         {
                             transform.position = gameManager.GetComponent<WaveManager>().ChooseLocation();
-                            //switch (transform.name)
-                            //{
-                            //    case "Enemy1":
-                            //        _waveHandler.firstEnemyCount--;
-                            //        gameObject.SetActive(false);
-                            //        break;
-                            //    case "Enemy2":
-                            //        _waveHandler.secondEnemyCount--;
-                            //        gameObject.SetActive(false);
-                            //        break;
-                            //    case "Enemy3":
-                            //        _waveHandler.thirdEnemyCount--;
-                            //        gameObject.SetActive(false);
-                            //        break;
-                            //    case "Enemy4":
-                            //        _waveHandler.fourthEnemyCount--;
-                            //        gameObject.SetActive(false);
-                            //        break;
-                            //}
                         }
                     }
 
@@ -323,8 +284,6 @@ public class Actor : MonoBehaviour
                         gun2.GetComponent<Enemy1Fire>().canFire = false;
                         gun3.GetComponent<Enemy1Fire>().canFire = false;
                     }
-
-                    //transform.LookAt (lookAtPoint);
 
                     maneuverTimer += Time.deltaTime;
                     maneuverAngle = maneuverTimer;

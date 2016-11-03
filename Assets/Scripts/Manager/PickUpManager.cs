@@ -31,18 +31,6 @@ public class PickUpManager : MonoBehaviour
 
     public bool leveled;
 
-    GameObject laserLevel1Bar;
-    GameObject laserLevel2Bar;
-    GameObject laserLevel3Bar;
-
-    GameObject missileLevel1Bar;
-    GameObject missileLevel2Bar;
-    GameObject missileLevel3Bar;
-
-    GameObject shieldLevel1Bar;
-    GameObject shieldLevel2Bar;
-    GameObject shieldLevel3Bar;
-
     PublicVariableHandler publicVariableHandler;
 
     Vector3 spawnPoint;
@@ -59,18 +47,6 @@ public class PickUpManager : MonoBehaviour
         playerScore = player.GetComponent<PlayerScore>();
         publicVariableHandler = GetComponent<PublicVariableHandler>();
 		audioSource = GetComponent<AudioSource> ();
-
-        laserLevel1Bar = publicVariableHandler.laserLevel1Bar;
-        laserLevel2Bar = publicVariableHandler.laserLevel2Bar;
-        laserLevel3Bar = publicVariableHandler.laserLevel3Bar;
-
-        missileLevel1Bar = publicVariableHandler.missileLevel1Bar;
-        missileLevel2Bar = publicVariableHandler.missileLevel2Bar;
-        missileLevel3Bar = publicVariableHandler.missileLevel3Bar;
-
-        shieldLevel1Bar = publicVariableHandler.shieldLevel1Bar;
-        shieldLevel2Bar = publicVariableHandler.shieldLevel2Bar;
-        shieldLevel3Bar = publicVariableHandler.shieldLevel3Bar;
     }
     //void Update()
     //{
@@ -88,10 +64,8 @@ public class PickUpManager : MonoBehaviour
         if (weaponPickUp)
         {
             choose = Random.Range(0, 2);
-            print("I rolled a " + choose);
             if(choose == 0 && laserLevel < 4)
             {
-                print("Laser pick up spawned");
                 spawnPoint = new Vector3(Random.Range(player.transform.position.x + xMinSpawn, player.transform.position.x + xMaxSpawn),
                 Random.Range(player.transform.position.y + yMinSpawn, player.transform.position.y + yMaxSpawn),
                 Random.Range(player.transform.position.z + zSpawnMin, player.transform.position.z + zSpawnMax));
@@ -99,7 +73,6 @@ public class PickUpManager : MonoBehaviour
             }
             else
             {
-                print("Laser pick up spawned");
                 spawnPoint = new Vector3(Random.Range(player.transform.position.x + xMinSpawn, player.transform.position.x + xMaxSpawn),
                 Random.Range(player.transform.position.y + yMinSpawn, player.transform.position.y + yMaxSpawn),
                 Random.Range(player.transform.position.z + zSpawnMin, player.transform.position.z + zSpawnMax));
@@ -128,10 +101,6 @@ public class PickUpManager : MonoBehaviour
         }
     }
 
-    void Update()
-    {
-        print("My level is " + laserLevel);
-    }
     public void LevelUp(string powerUpType)
     {
         leveled = true;
@@ -170,25 +139,22 @@ public class PickUpManager : MonoBehaviour
             switch (laserLevel)
             {
                 case 0:
-                    laserLevel1Bar.SetActive(false);
                     foreach (GameObject go in player.GetComponent<StoreVariables>().lasers)
                     {
                         go.GetComponent<FireScript>().LaserLevel1(leveled);
                     }
                     break;
                 case 1:
-                    laserLevel2Bar.SetActive(false);
                     foreach (GameObject go in player.GetComponent<StoreVariables>().lasers)
                     {
                         go.GetComponent<FireScript>().LaserLevel2(leveled);
                     }
                     break;
                 case 2:
-                    laserLevel3Bar.SetActive(false);
-				foreach (GameObject go in player.GetComponent<StoreVariables>().lasers)
-				{
-					go.GetComponent<FireScript>().LaserLevel3(leveled);
-				}
+				    foreach (GameObject go in player.GetComponent<StoreVariables>().lasers)
+				    {
+					    go.GetComponent<FireScript>().LaserLevel3(leveled);
+				    }
                     break;
             }
         }
@@ -199,15 +165,10 @@ public class PickUpManager : MonoBehaviour
             switch (missileLevel)
             {
                 case 0:
-                    missileLevel1Bar.SetActive(false);
                     player.GetComponent<StoreVariables>().missile.GetComponent<FireMissile>().MissileLevel1(leveled);
                     break;
                 case 1:
-                    missileLevel2Bar.SetActive(false);
                     player.GetComponent<StoreVariables>().missile.GetComponent<FireMissile>().MissileLevel2(leveled);
-                    break;
-                case 2:
-                    missileLevel3Bar.SetActive(false);
                     break;
             }
         }
@@ -218,7 +179,6 @@ public class PickUpManager : MonoBehaviour
         if (missileLevel == 3)
         {
             missileLevel--;
-			missileLevel3Bar.SetActive (false);
         }
     }
 }

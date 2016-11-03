@@ -19,20 +19,7 @@ public class PublicVariableHandler : MonoBehaviour
 
     //User Interface Variables
     public Image fadeOut;
-    public GameObject laserLevel1Bar;
-    public GameObject laserLevel2Bar;
-    public GameObject laserLevel3Bar;
 
-    public GameObject missileLevel1Bar;
-    public GameObject missileLevel2Bar;
-    public GameObject missileLevel3Bar;
-
-    public GameObject shieldLevel1Bar;
-    public GameObject shieldLevel2Bar;
-    public GameObject shieldLevel3Bar;
-
-
-    public GameObject shieldIcon;
     public GameObject shipIMG1;
     public GameObject shipIMG2;
 
@@ -48,9 +35,6 @@ public class PublicVariableHandler : MonoBehaviour
     public int playerHealth;
     public float playerSpeed;
     public float playerRotation;
-    public float playerLaserHeatCap;
-    public float playerLaserHeatIncreaseAmount;
-    public float laserHeatLossAfterSeconds;
 
     //Enemy Variables
 	public float enemyAISpeed;
