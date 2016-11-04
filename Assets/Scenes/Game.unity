@@ -1577,7 +1577,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   meteorExplosion: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
-  meteorHealth: 10
+  meteorHealth: 8
   laserNoLevelSound: {fileID: 8300000, guid: a8c82b3dd073d3a4589f528e85b5560b, type: 3}
   laserLevel1Sound: {fileID: 8300000, guid: d6690401f8a263e4a927e136c14d7131, type: 3}
   laserLevel2Sound: {fileID: 8300000, guid: 8fb2a93bd17cea74ca6ffb03a5df0d79, type: 3}
@@ -1605,7 +1605,7 @@ MonoBehaviour:
   playerLives: 3
   playerHealth: 9
   playerSpeed: 1000
-  playerRotation: 20
+  playerRotation: 25
   playerLaserHeatCap: 1
   playerLaserHeatIncreaseAmount: 0.06
   laserHeatLossAfterSeconds: 1
@@ -4475,9 +4475,9 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 1
+  near clip plane: 2
   far clip plane: 15000
-  field of view: 50
+  field of view: 45
   orthographic: 0
   orthographic size: 25
   m_Depth: 0
@@ -4509,6 +4509,7 @@ Transform:
   - {fileID: 1828909409}
   - {fileID: 1588113441}
   - {fileID: 1841926798}
+  - {fileID: 2121521053}
   m_Father: {fileID: 0}
   m_RootOrder: 1
 --- !u!114 &1591680881
@@ -7387,12 +7388,12 @@ Light:
   serializedVersion: 6
   m_Type: 0
   m_Color: {r: 0.9191176, g: 0.98661256, b: 1, a: 1}
-  m_Intensity: 2.21
+  m_Intensity: 3.82
   m_Range: 500
-  m_SpotAngle: 79
+  m_SpotAngle: 64
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_Strength: 1
     m_Bias: 0.05
@@ -7401,7 +7402,7 @@ Light:
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -7416,11 +7417,11 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2121521051}
-  m_LocalRotation: {x: 0.41137323, y: 0, z: 0, w: 0.911467}
-  m_LocalPosition: {x: -8.7, y: 117, z: -312}
+  m_LocalRotation: {x: 0.51194155, y: 0, z: 0, w: 0.85902035}
+  m_LocalPosition: {x: -1.29, y: 259.56033, z: 155.64238}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1591680880}
   m_RootOrder: 6
 --- !u!1 &2147116173
 GameObject:
