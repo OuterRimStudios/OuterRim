@@ -44,7 +44,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e2a0481e6ed09904980dc9aafffbd8b6, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.75
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -118,7 +118,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 9aff43560ee0cbe46b5611ec28cf82d7, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.95
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -152,7 +152,7 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - time: 0
-      value: 0.087
+      value: 0.38
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -426,7 +426,7 @@ ParticleSystem:
         rgba: 4289974488
       minMaxState: 0
     startSize:
-      scalar: 80
+      scalar: 40
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -631,7 +631,7 @@ ParticleSystem:
     cntmax1: 30
     cntmax2: 30
     cntmax3: 30
-    time0: 0.01
+    time0: 0.1
     time1: 0
     time2: 0
     time3: 0
@@ -639,7 +639,7 @@ ParticleSystem:
   SizeModule:
     enabled: 1
     curve:
-      scalar: 80
+      scalar: 40
       maxCurve:
         serializedVersion: 2
         m_Curve:
