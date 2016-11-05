@@ -368,6 +368,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &179206
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 487900}
+  - 108: {fileID: 10807988}
+  m_Layer: 0
+  m_Name: Spotlight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &181524
 GameObject:
   m_ObjectHideFlags: 1
@@ -700,7 +716,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 118434}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071067}
-  m_LocalPosition: {x: 38.9, y: -49.2, z: -23}
+  m_LocalPosition: {x: 28.72, y: -58.46, z: -11.72}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 449328}
@@ -718,6 +734,7 @@ Transform:
   - {fileID: 430550}
   - {fileID: 449328}
   - {fileID: 482242}
+  - {fileID: 487900}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &470588
@@ -751,7 +768,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 192298}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071067}
-  m_LocalPosition: {x: 38.9, y: -49.2, z: -29}
+  m_LocalPosition: {x: 28.46, y: -58.48, z: -36.86}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 449328}
@@ -814,6 +831,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 449328}
   m_RootOrder: 3
+--- !u!4 &487900
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 179206}
+  m_LocalRotation: {x: -0.08498614, y: 0, z: 0, w: 0.9963821}
+  m_LocalPosition: {x: 0.39001465, y: -2.88, z: -36.43}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 459832}
+  m_RootOrder: 3
 --- !u!4 &495680
 Transform:
   m_ObjectHideFlags: 1
@@ -862,7 +891,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: b982799d83fe9744c9515bf39db00a0e, type: 2}
+  - {fileID: 2100000, guid: fc9ce7a4698e82942924e4e4133d86f1, type: 2}
   - {fileID: 2100000, guid: 4da6b183d4879a24b9ae7ea4271e57c7, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
@@ -1385,6 +1414,39 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 76.3, y: 89.22, z: 13.6}
   m_Center: {x: -25.12, y: -14.78, z: -3.6}
+--- !u!108 &10807988
+Light:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 179206}
+  m_Enabled: 1
+  serializedVersion: 6
+  m_Type: 0
+  m_Color: {r: 0.6858906, g: 0.14792386, b: 0.83823526, a: 1}
+  m_Intensity: 1
+  m_Range: 1000
+  m_SpotAngle: 47
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_BounceIntensity: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_AreaSize: {x: 1, y: 1}
 --- !u!114 &11409198
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1588,10 +1650,10 @@ MonoBehaviour:
   missile: {fileID: 184606}
   colliders: {fileID: 197536}
   shield: {fileID: 121444}
-  meteorExplosion: {fileID: 100000, guid: 809320482fb694b6e8149a226202b86a, type: 2}
+  meteorExplosion: {fileID: 139146, guid: 8a4967d62235453468658ed59536870e, type: 2}
   lightningGun: {fileID: 145196}
-  laserColor: {fileID: 188982, guid: e76b7fb8090ece44d848b9ea2b17832c, type: 2}
-  missileColor: {fileID: 128558, guid: 2bfca4e69e1f8b944b7dc5bab39ebf7a, type: 2}
+  laserColor: {fileID: 197788, guid: c860f022ab389dc48b501ccfe5603a82, type: 2}
+  missileColor: {fileID: 157856, guid: e7b40c124712f9c4dba68ad96e383e89, type: 2}
 --- !u!114 &11478770
 MonoBehaviour:
   m_ObjectHideFlags: 1
