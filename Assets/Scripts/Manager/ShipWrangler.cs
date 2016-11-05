@@ -16,7 +16,7 @@ public class ShipWrangler : MonoBehaviour {
     public GameObject unlockButton;
     public GameObject selectButton;
 
-    public Image fadePanel;
+    public RectTransform textMask;
 
     public Text descriptionText;
 
@@ -27,22 +27,14 @@ public class ShipWrangler : MonoBehaviour {
     public bool choosingShip;
     bool hasMoved;
     bool cycling;
-    bool fading;
-    bool faded;
+    bool transitioning;
+    bool transitioned;
+    float maskWidth;
 
     // Use this for initialization
     void Start()
     {
-        //Transform[] children;
-        //children = transform.GetComponentsInChildren<Transform>();
-        //foreach (Transform t in children)
-        //{
-        //    if (t.tag == "ShipWrangler")
-        //    {
-        //        ships.Add(t.gameObject);
-        //        t.gameObject.SetActive(false);
-        //    }
-        //}       
+        maskWidth = 1;
     }
 
     // Update is called once per frame
@@ -146,9 +138,7 @@ public class ShipWrangler : MonoBehaviour {
             child.GetComponent<ShipUnlocking>().enabled = true;
         }
 
-        faded = false;
-        StartCoroutine(Fade());
-        faded = false;
+        StartCoroutine(Transition());
         playButton.SetActive(false);
         backButton.SetActive(false);
         descriptionText.text = "Choose your color.";
@@ -175,9 +165,7 @@ public class ShipWrangler : MonoBehaviour {
             }
             unlockButton.SetActive(false);
             selectButton.SetActive(true);
-            faded = false;
-            StartCoroutine(Fade());
-            faded = false;
+            StartCoroutine(Transition());
             transform.parent.gameObject.GetComponent<ShipWrangler>().enabled = true;
             transform.parent.gameObject.GetComponent<ShipWrangler>().ResetWranglers();
             descriptionText.text = "Choose your ship.";
@@ -221,32 +209,26 @@ public class ShipWrangler : MonoBehaviour {
         }
     }
 
-    IEnumerator Fade()
+    IEnumerator Transition()
     {
-        if(!fading)
+        if (!transitioning)
         {
-            fading = true;
-            yield return new WaitUntil(FadePanel);
-            fading = false;
+            maskWidth = 1;
+            transitioning = true;
+            yield return new WaitUntil(MaskTransition);
+            transitioning = false;
         }
     }
 
-    bool FadePanel()
+    bool MaskTransition()
     {
-        if (!faded)
-            fadePanel.color = Vector4.Lerp(fadePanel.color, new Color(0, 0, 0, .8f), .2f);
-        else if(faded)
-            fadePanel.color = Vector4.Lerp(fadePanel.color, Color.clear, .2f);
+        maskWidth = Mathf.Lerp(maskWidth, 800, Time.deltaTime * 2);
+        textMask.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, maskWidth);
 
-        if (fadePanel.color == new Color(0, 0, 0, .8f))
-            faded = true;
-
-        if(faded && fadePanel.color == Color.clear)
+        if (textMask.rect.width > 600)
         {
-            faded = false;
             return true;
         }
-
         return false;
     }
 }

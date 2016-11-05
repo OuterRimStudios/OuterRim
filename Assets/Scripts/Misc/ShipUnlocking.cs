@@ -22,6 +22,8 @@ public class ShipUnlocking : MonoBehaviour
 
     public void ShipUnlocked()
     {
+        if (PlayerPrefs.GetInt(transform.name) == 1)
+            unlocked = true;
     }
 
     void Update()

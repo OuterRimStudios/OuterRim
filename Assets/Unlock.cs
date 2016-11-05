@@ -9,11 +9,10 @@ public class Unlock : MonoBehaviour {
     public GameObject confirmButton;
     public Text priceText;
     public Text currencryText;
-    int currency;
 
     void Start()
     {
-        currency = PlayerPrefs.GetInt("Currency");
+        
     }
 
     void Update()
@@ -29,7 +28,7 @@ public class Unlock : MonoBehaviour {
         confirmationWindow.SetActive(true);
         EventSystem.current.SetSelectedGameObject(confirmButton);
         priceText.text = "Costs: " + ShipUnlocking.realPrice;
-        currencryText.text = "Points: " + currency;
+        currencryText.text = "Points: " + PlayerPrefs.GetInt("Currency");
     }
 
 

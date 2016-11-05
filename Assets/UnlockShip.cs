@@ -4,10 +4,9 @@ using UnityEngine.UI;
 
 public class UnlockShip : MonoBehaviour
 {
-    public GameObject unlockButton;
     public GameObject confirmationWindow;
     public Text priceText;
-    public Text currencryText;
+    public Text currencyText;
     Unlock unlock;
     int price;
     int myCurrency;
@@ -15,26 +14,26 @@ public class UnlockShip : MonoBehaviour
 
     void Start()
     {
-        unlock = unlockButton.GetComponent<Unlock>();
+        
     }
 
     public void ConfirmPurchase()
     {
-        print("It called you IDIOT");
         if(PlayerPrefs.GetInt("Currency") > ShipUnlocking.realPrice)
         {
             price = ShipUnlocking.realPrice;
             myCurrency = PlayerPrefs.GetInt("Currency");
             newCurrency = myCurrency - price;
-            PlayerPrefs.SetInt("Currency", newCurrency);
-            UpdatePoints();
-            ChooseShipTracker.currentUnlockedShip.GetComponent<ShipUnlocking>().ShipUnlocked();
+            PlayerPrefs.SetInt("Currency", newCurrency);            
             ShipUnlockManager.UnlockShip(ChooseShipTracker.currentUnlockedShip);
+            ChooseShipTracker.currentUnlockedShip.GetComponent<ShipUnlocking>().ShipUnlocked();
+            UpdatePoints();
         }
     }
+
     public void UpdatePoints()
     {
-        currencryText.text = "Points: " + PlayerPrefs.GetInt("Currency");
+        currencyText.text = "Points: " + PlayerPrefs.GetInt("Currency");
         confirmationWindow.SetActive(false);
     }
 }
