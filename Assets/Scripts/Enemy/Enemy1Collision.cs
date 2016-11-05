@@ -3,7 +3,6 @@ using System.Collections;
 
 public class Enemy1Collision : MonoBehaviour {
 
-    public GameObject ship;
     public GameObject explosion;
     public GameObject explosionSound;
     public GameObject meteorExplosionPrefab;
@@ -104,21 +103,7 @@ public class Enemy1Collision : MonoBehaviour {
         _playerScore.score += laserScore;
         if(gameObject.tag != "Carrier")
             gameManager.GetComponent<WaveManager>().ShipDestroyed(gameObject);
-        //switch (transform.name)
-        //{
-        //    case "Enemy1":
-        //        gameManager.GetComponent<WaveHandler>().firstEnemyCount--;
-        //        break;
-        //    case "Enemy2":
-        //        gameManager.GetComponent<WaveHandler>().secondEnemyCount--;
-        //        break;
-        //    case "Enemy3":
-        //        gameManager.GetComponent<WaveHandler>().thirdEnemyCount--;
-        //        break;
-        //    case "Enemy4":
-        //        gameManager.GetComponent<WaveHandler>().fourthEnemyCount--;
-        //        break;
-        //}
+
         Instantiate(explosion, transform.position, transform.rotation);
         Instantiate(explosionSound, transform.position, transform.rotation);
         gameObject.SetActive(false);

@@ -173,6 +173,7 @@ public class WaveManager : MonoBehaviour
         {
             if (!carrierSpawned)
             {
+                ChooseLocation();
                 Instantiate(carrierEnemies[Random.Range(0, carrierEnemies.Length)], spawnLocation, Quaternion.identity);
                 carrierSpawned = true;
             }
