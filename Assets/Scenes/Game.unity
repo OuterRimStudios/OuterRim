@@ -1585,7 +1585,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   meteorExplosion: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
-  meteorHealth: 8
+  meteorHealth: 12
   laserNoLevelSound: {fileID: 8300000, guid: a8c82b3dd073d3a4589f528e85b5560b, type: 3}
   laserLevel1Sound: {fileID: 8300000, guid: d6690401f8a263e4a927e136c14d7131, type: 3}
   laserLevel2Sound: {fileID: 8300000, guid: 8fb2a93bd17cea74ca6ffb03a5df0d79, type: 3}
@@ -1744,17 +1744,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectTypes:
   - {fileID: 1814202497}
-  objSpawnMinX: -1000
-  objSpawnMaxX: 1000
-  objSpawnMinY: -1000
-  objSpawnMaxY: 1000
-  spawnFrequency: 1
-  objSpawnZ: 15000
+  objSpawnMinX: -3000
+  objSpawnMaxX: 3000
+  objSpawnMinY: -1500
+  objSpawnMaxY: 1500
+  spawnFrequency: 0.5
+  objSpawnZ: 18000
   sizes:
-  - {x: 300, y: 300, z: 300}
-  - {x: 150, y: 75, z: 150}
-  - {x: 200, y: 100, z: 100}
   - {x: 200, y: 200, z: 200}
+  - {x: 300, y: 300, z: 300}
+  - {x: 225, y: 225, z: 225}
   - {x: 250, y: 250, z: 250}
 --- !u!4 &568474989
 Transform:
