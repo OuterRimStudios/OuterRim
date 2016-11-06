@@ -1,5 +1,7 @@
 using System;
 using UnityEngine;
+using System.Collections.Generic;
+using Random = UnityEngine.Random;
 
 namespace UnityStandardAssets.Utility
 {
@@ -49,10 +51,13 @@ namespace UnityStandardAssets.Utility
         private Vector3 lastPosition; // Used to calculate current speed (since we may not have a rigidbody component)
         private float speed; // current speed of this object (calculated from delta since last frame)
 
+        GameObject[] circuitList;
+
         // setup script properties
         private void Start()
         {
-            circuit = GameObject.Find("Circuit").GetComponent<WaypointCircuit>();
+            circuitList = GameObject.FindGameObjectsWithTag("Circuit");
+            circuit = circuitList[Random.Range(0, circuitList.Length)].GetComponent<WaypointCircuit>();
 
             // we use a transform to represent the point to aim for, and the point which
             // is considered for upcoming changes-of-speed. This allows this component

@@ -2561,12 +2561,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f947e56d54f4274896478766fef616c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_RollSensitivity: 10
-  m_PitchSensitivity: 10
-  m_LateralWanderDistance: 0
-  m_LateralWanderSpeed: 0
-  m_MaxClimbAngle: 360
-  m_MaxRollAngle: 360
+  m_RollSensitivity: 0.2
+  m_PitchSensitivity: 0.5
+  m_LateralWanderDistance: 5
+  m_LateralWanderSpeed: 0.11
+  m_MaxClimbAngle: 60
+  m_MaxRollAngle: 75
   m_SpeedEffect: 0.01
   m_TakeoffHeight: 0
   m_Target: {fileID: 400104}
@@ -2649,19 +2649,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 235a6615124795442b98c1f03500003e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MaxEnginePower: 400
+  m_MaxEnginePower: 200
   m_Lift: 0.002
-  m_ZeroLiftSpeed: 400
-  m_RollEffect: 50
-  m_PitchEffect: 50
-  m_YawEffect: 50
+  m_ZeroLiftSpeed: 300
+  m_RollEffect: 5
+  m_PitchEffect: 5
+  m_YawEffect: 1
   m_BankedTurnEffect: 5
   m_AerodynamicEffect: 0.02
   m_AutoTurnPitch: 0.5
   m_AutoRollLevel: 0.2
   m_AutoPitchLevel: 0.2
-  m_AirBrakesEffect: 100
-  m_ThrottleChangeSpeed: 0.3
+  m_AirBrakesEffect: 3
+  m_ThrottleChangeSpeed: 1
   m_DragIncreaseFactor: 0.001
 --- !u!114 &11400016
 MonoBehaviour:
