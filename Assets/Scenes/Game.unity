@@ -4475,7 +4475,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0.019607844}
+  m_BackGroundColor: {r: 0.08742432, g: 0.2736057, b: 0.5661765, a: 0.019607844}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -4483,8 +4483,8 @@ Camera:
     width: 1
     height: 1
   near clip plane: 2
-  far clip plane: 15000
-  field of view: 45
+  far clip plane: 14000
+  field of view: 50
   orthographic: 0
   orthographic size: 25
   m_Depth: 0
@@ -4507,7 +4507,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1591680875}
   m_LocalRotation: {x: 0.08715575, y: 0, z: 0, w: 0.9961947}
-  m_LocalPosition: {x: 0, y: 35, z: -300}
+  m_LocalPosition: {x: 0, y: 0, z: -250}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1467586857}
@@ -4531,7 +4531,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  cameraSpeed: 5
+  cameraSpeed: 4
   cameraOffset: {x: 0, y: 100, z: -250}
   snapMovement: 0
 --- !u!82 &1591680882
