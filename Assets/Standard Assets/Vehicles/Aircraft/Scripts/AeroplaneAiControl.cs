@@ -13,10 +13,10 @@ namespace UnityStandardAssets.Vehicles.Aeroplane
         [SerializeField] private float m_PitchSensitivity = .5f;        // How sensitively the AI applies the pitch controls
         [SerializeField] private float m_LateralWanderDistance = 5;     // The amount that the plane can wander by when heading for a target
         [SerializeField] private float m_LateralWanderSpeed = 0.11f;    // The speed at which the plane will wander laterally
-        [SerializeField] private float m_MaxClimbAngle = 45;            // The maximum angle that the AI will attempt to make plane can climb at
-        [SerializeField] private float m_MaxRollAngle = 45;             // The maximum angle that the AI will attempt to u
+        [SerializeField] private float m_MaxClimbAngle = 90;            // The maximum angle that the AI will attempt to make plane can climb at
+        [SerializeField] private float m_MaxRollAngle = 90;             // The maximum angle that the AI will attempt to u
         [SerializeField] private float m_SpeedEffect = 0.01f;           // This increases the effect of the controls based on the plane's speed.
-        [SerializeField] private float m_TakeoffHeight = 20;            // the AI will fly straight and only pitch upwards until reaching this height
+        [SerializeField] private float m_TakeoffHeight = 0;            // the AI will fly straight and only pitch upwards until reaching this height
         [SerializeField] private Transform m_Target;                    // the target to fly towards
 
         private AeroplaneController m_AeroplaneController;  // The aeroplane controller that is used to move the plane
