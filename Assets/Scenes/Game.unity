@@ -1209,7 +1209,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHPAllowed: 100
-  allowedHP: 0
   currentHPUsed: 0
   allowHPIncreaseAmount: 5
   regularEnemyPool:
@@ -1400,21 +1399,15 @@ MonoBehaviour:
   - {fileID: 1814202497}
   objSpawnMinX: -3000
   objSpawnMaxX: 3000
-  objSpawnMinY: -1000
-  objSpawnMaxY: 1000
+  objSpawnMinY: -1500
+  objSpawnMaxY: 1500
   spawnFrequency: 2
-  objSpawnZ: 15000
+  objSpawnZ: 18000
   sizes:
-  - {x: 50, y: 50, z: 50}
   - {x: 200, y: 200, z: 200}
-  - {x: 350, y: 350, z: 350}
-  - {x: 400, y: 400, z: 400}
-  - {x: 90, y: 90, z: 90}
+  - {x: 300, y: 300, z: 300}
   - {x: 225, y: 225, z: 225}
-  - {x: 150, y: 150, z: 150}
-  - {x: 100, y: 100, z: 100}
-  - {x: 200, y: 200, z: 200}
-  - {x: 45, y: 45, z: 45}
+  - {x: 250, y: 250, z: 250}
 --- !u!4 &568474989
 Transform:
   m_ObjectHideFlags: 0
