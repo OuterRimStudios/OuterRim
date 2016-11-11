@@ -1,0 +1,78 @@
+{
+    "format": {
+        "version": "1.0"
+    },
+    "shaders": {
+        "Main shader": {
+            "parameters": {
+                "ao_intensity": 0.75,
+                "emissive_intensity": 5.3499999046325684,
+                "height_force": 1,
+                "nbSamples": 16
+            },
+            "shader": "pbr-metal-rough"
+        }
+    },
+    "texturesets": {
+        "20 - Default": {
+            "shader": "Main shader"
+        },
+        "DefaultMaterial": {
+            "shader": "Main shader"
+        },
+        "Metal Chrome - Polished Black": {
+            "shader": "Main shader"
+        },
+        "Metal Expanded Metal 04": {
+            "shader": "Main shader"
+        },
+        "Metal Gunmetal": {
+            "shader": "Main shader"
+        },
+        "Metal Plate - Mesh 2": {
+            "shader": "Main shader"
+        },
+        "Metal Silver": {
+            "shader": "Main shader"
+        },
+        "Metal Silver1": {
+            "shader": "Main shader"
+        },
+        "Metal Titanium": {
+            "shader": "Main shader"
+        },
+        "Metal_Aluminum Aluminum - Dark": {
+            "shader": "Main shader"
+        },
+        "Metal_Aluminum Anodized - Blue": {
+            "shader": "Main shader"
+        },
+        "Metal_Aluminum Anodized - Blue1": {
+            "shader": "Main shader"
+        },
+        "Metal_Aluminum Anodized - Subtle Dark Bronze": {
+            "shader": "Main shader"
+        },
+        "Metal_Fabricated Aluminum Frame - Anodized Dark Bronze Satin": {
+            "shader": "Main shader"
+        },
+        "Metal_Fabricated Aluminum Frame - Anodized Dark Bronze Satin1": {
+            "shader": "Main shader"
+        },
+        "Metal_Fabricated Aluminum Frame - Anodized Dark Bronze Satin2": {
+            "shader": "Main shader"
+        },
+        "Metal_Fabricated Aluminum Frame - Painted White": {
+            "shader": "Main shader"
+        },
+        "Metal_Fabricated Steel Doors - Painted White": {
+            "shader": "Main shader"
+        },
+        "Metal_Steel Steel": {
+            "shader": "Main shader"
+        },
+        "Plastic High Gloss - Burnt Red": {
+            "shader": "Main shader"
+        }
+    }
+}

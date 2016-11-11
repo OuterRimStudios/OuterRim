@@ -796,11 +796,8 @@ GameObject:
   - 4: {fileID: 400094}
   - 54: {fileID: 5400000}
   - 114: {fileID: 11400014}
-  - 114: {fileID: 11400012}
-  - 114: {fileID: 11400010}
   - 114: {fileID: 11400008}
   - 95: {fileID: 9500000}
-  - 114: {fileID: 11400020}
   - 114: {fileID: 11400006}
   - 114: {fileID: 11400022}
   - 136: {fileID: 13697854}
@@ -1542,8 +1539,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100104}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -26.002197, y: 12.568787, z: 921.79785}
+  m_LocalRotation: {x: -0.000000007450581, y: 0.0000000037252903, z: 0.43411726, w: 0.90085644}
+  m_LocalPosition: {x: -0.8814106, y: -27.495419, z: -181.34958}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400092}
@@ -2525,7 +2522,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b878b2bd27dca747855179c7ca76010, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minColour: {r: 0, g: 0, b: 0, a: 1}
+  minColour:
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  m_Jet: {fileID: 0}
+  m_System: {fileID: 0}
+  m_OriginalStartSize: 0
+  m_OriginalLifetime: 0
+  m_OriginalStartColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2537,7 +2547,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b878b2bd27dca747855179c7ca76010, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minColour: {r: 0, g: 0, b: 0, a: 0}
+  minColour:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  m_Jet: {fileID: 0}
+  m_System: {fileID: 0}
+  m_OriginalStartSize: 0
+  m_OriginalLifetime: 0
+  m_OriginalStartColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2549,7 +2572,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b878b2bd27dca747855179c7ca76010, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minColour: {r: 0, g: 0, b: 0, a: 0}
+  minColour:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  m_Jet: {fileID: 0}
+  m_System: {fileID: 0}
+  m_OriginalStartSize: 0
+  m_OriginalLifetime: 0
+  m_OriginalStartColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2581,63 +2617,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 643c971818f68d3439e84b5d8bdafe07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &11400010
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100094}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66329fe4ad8cd59478fffdc10131da1c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EngineSound: {fileID: 8300000, guid: 9db9336e9f17c9744847c5fe94c1650f, type: 3}
-  m_EngineMinThrottlePitch: 0.4
-  m_EngineMaxThrottlePitch: 2
-  m_EngineFwdSpeedMultiplier: 0.002
-  m_WindSound: {fileID: 8300000, guid: 38d4d0ff7855e984285fbf430385b2aa, type: 3}
-  m_WindBasePitch: 0.2
-  m_WindSpeedPitchFactor: 0.004
-  m_WindMaxSpeedVolume: 100
-  m_AdvancedSetttings:
-    engineMinDistance: 50
-    engineMaxDistance: 1000
-    engineDopplerLevel: 1
-    engineMasterVolume: 0.5
-    windMinDistance: 10
-    windMaxDistance: 100
-    windDopplerLevel: 1
-    windMasterVolume: 0.5
---- !u!114 &11400012
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100094}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ee34fdb2d383a84e9ef60c30fc2778e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Smoothing: 5
-  m_ControlSurfaces:
-  - transform: {fileID: 400088}
-    amount: 30
-    type: 3
-    originalLocalRotation: {x: 0, y: 0, z: 0, w: 0}
-  - transform: {fileID: 400082}
-    amount: -30
-    type: 4
-    originalLocalRotation: {x: 0, y: 0, z: 0, w: 0}
-  - transform: {fileID: 400074}
-    amount: -30
-    type: 0
-    originalLocalRotation: {x: 0, y: 0, z: 0, w: 0}
-  - transform: {fileID: 400076}
-    amount: 30
-    type: 0
-    originalLocalRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &11400014
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2674,7 +2653,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b878b2bd27dca747855179c7ca76010, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minColour: {r: 0, g: 0, b: 0, a: 0}
+  minColour:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  m_Jet: {fileID: 0}
+  m_System: {fileID: 0}
+  m_OriginalStartSize: 0
+  m_OriginalLifetime: 0
+  m_OriginalStartColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
 --- !u!114 &11400018
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2686,20 +2678,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b878b2bd27dca747855179c7ca76010, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minColour: {r: 0, g: 0, b: 0, a: 1}
---- !u!114 &11400020
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100094}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf6c56c7f8c75ca4c99450be5aca5ace, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  raiseAtAltitude: 20
-  lowerAtAltitude: 20
+  minColour:
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  m_Jet: {fileID: 0}
+  m_System: {fileID: 0}
+  m_OriginalStartSize: 0
+  m_OriginalLifetime: 0
+  m_OriginalStartColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
 --- !u!114 &11400022
 MonoBehaviour:
   m_ObjectHideFlags: 1
