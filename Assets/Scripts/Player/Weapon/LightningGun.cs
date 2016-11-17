@@ -41,23 +41,18 @@ public class LightningGun : MonoBehaviour
             distance = Vector3.Distance(target.transform.position, player.transform.position);
             if (distance > 5000)
             {
-                NoEnemy();
+                FindEnemy();
             }
+        }
+        else if (!target.activeInHierarchy)
+        {
+            FindEnemy();
+            hasTarget = false;
         }
         else if (target.activeInHierarchy)
         {
             target.GetComponent<EnemyState>().isTarget = true;
             hasTarget = true;
         }
-        else if (!target.activeInHierarchy)
-        {
-            hasTarget = false;
-        }
-    }
-
-    void NoEnemy()
-    {
-
-        FindEnemy();
     }
 }

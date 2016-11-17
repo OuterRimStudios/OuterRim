@@ -7,16 +7,17 @@ public class PlayerCollision : MonoBehaviour
 {
     public GameObject explosion;
     public GameObject explosionSound;
-    public GameObject healthBar1;
-    public GameObject healthBar2;
-    public GameObject healthBar3;
-    public GameObject lifeImage1;
-    public GameObject lifeImage2;
+    public Image healthBar;
+    public Sprite[] healthBarSprites;
+    //public GameObject healthBar1;
+    //public GameObject healthBar2;
+    //public GameObject healthBar3;
+    //public GameObject lifeImage1;
+    //public GameObject lifeImage2;
     public GameObject damageIndicatorIMG;
     public GameObject meteorExplosionPrefab;
 
     public int playerHealth;
-    public int playerLives;
     int healthScore;
 
     public string gameOverScene;
@@ -46,17 +47,19 @@ public class PlayerCollision : MonoBehaviour
         source = gameManager.GetComponent<AudioSource>();
 
         fadeOut = publicVariableHandler.fadeOut;
-        healthBar1 = GameObject.Find("HealthBar1");
-        healthBar2 = GameObject.Find("HealthBar2");
-        healthBar3 = GameObject.Find("HealthBar3");
+        healthBar = GameObject.Find("HealthBar").GetComponent<Image>();
+
+        healthBarSprites = Resources.LoadAll<Sprite>("HealthBarSprites");
+        //healthBar1 = GameObject.Find("HealthBar1");
+        //healthBar2 = GameObject.Find("HealthBar2");
+        //healthBar3 = GameObject.Find("HealthBar3");
         damageIndicatorIMG = GameObject.Find("HitEffect");
         damageIndicatorIMG.SetActive(false);
 
-        lifeImage1 = publicVariableHandler.shipIMG1;
-        lifeImage2 = publicVariableHandler.shipIMG2;        
+        //lifeImage1 = publicVariableHandler.shipIMG1;
+        //lifeImage2 = publicVariableHandler.shipIMG2;        
 
         playerHealth = publicVariableHandler.playerHealth;
-        playerLives = publicVariableHandler.playerLives;
         healthScore = publicVariableHandler.healthRecoverScore;
 
         StartCoroutine(CheckScore());
@@ -71,14 +74,14 @@ public class PlayerCollision : MonoBehaviour
         }
         else if (col.gameObject.tag == "Meteor" || col.gameObject.tag == "Carrier")
         {
-            LoseLife();
+            playerHealth -= 3;
             pickUpManager.LoseLevel();
             Instantiate(meteorExplosionPrefab, transform.position, transform.rotation);
             col.gameObject.SetActive(false);
         }
         else if (col.gameObject.tag == "Enemy")
         {
-            LoseLife();
+            playerHealth -= 3;
             pickUpManager.LoseLevel();
             col.GetComponent<Enemy1Collision>().WasDestroyed();
         }
@@ -92,11 +95,6 @@ public class PlayerCollision : MonoBehaviour
             StartCoroutine(DamageIndicator());
             playerHealth--;
             pickUpManager.LoseLevel();
-
-            if (playerHealth % 3 == 0)
-            {
-                LoseLife();
-            }
 
             CheckHealth();
             yield return new WaitForSeconds(.5f);
@@ -136,74 +134,72 @@ public class PlayerCollision : MonoBehaviour
 
     void CheckHealth()
     {
-        if (playerLives <= 0)
+        if (playerHealth <= 0)
         {
             StartCoroutine(GameOver());
         }
         else
         {
-            if (playerHealth % 3 == 0)
-            {
-                healthBar1.SetActive(true);
-                healthBar2.SetActive(true);
-                healthBar3.SetActive(true);
-            }
-            else if (playerHealth % 3 == 2)
-            {
-                healthBar1.SetActive(true);
-                healthBar2.SetActive(true);
-                healthBar3.SetActive(false);
-            }
-            else if (playerHealth % 3 == 1)
-            {
-                healthBar1.SetActive(true);
-                healthBar2.SetActive(false);
-                healthBar3.SetActive(false);
-            }
-            else if (playerHealth % 3 == 4)
-            {
-                healthBar1.SetActive(false);
-                healthBar2.SetActive(false);
-                healthBar3.SetActive(false);
-            }
+            healthBar.sprite = healthBarSprites[playerHealth];
+            //if (playerHealth % 3 == 0)
+            //{
+            //    healthBar1.SetActive(true);
+            //    healthBar2.SetActive(true);
+            //    healthBar3.SetActive(true);
+            //}
+            //else if (playerHealth % 3 == 2)
+            //{
+            //    healthBar1.SetActive(true);
+            //    healthBar2.SetActive(true);
+            //    healthBar3.SetActive(false);
+            //}
+            //else if (playerHealth % 3 == 1)
+            //{
+            //    healthBar1.SetActive(true);
+            //    healthBar2.SetActive(false);
+            //    healthBar3.SetActive(false);
+            //}
+            //else if (playerHealth % 3 == 4)
+            //{
+            //    healthBar1.SetActive(false);
+            //    healthBar2.SetActive(false);
+            //    healthBar3.SetActive(false);
+            //}
 
-            if (playerLives % 3 == 0)
-            {
-                lifeImage1.SetActive(true);
-                lifeImage2.SetActive(true);
-            }
-            else if (playerLives % 3 == 2)
-            {
-                lifeImage1.SetActive(true);
-                lifeImage2.SetActive(false);
-            }
-            else if (playerLives % 3 == 1)
-            {
-                lifeImage1.SetActive(false);
-                lifeImage2.SetActive(false);
-            }
+            //if (playerLives % 3 == 0)
+            //{
+            //    lifeImage1.SetActive(true);
+            //    lifeImage2.SetActive(true);
+            //}
+            //else if (playerLives % 3 == 2)
+            //{
+            //    lifeImage1.SetActive(true);
+            //    lifeImage2.SetActive(false);
+            //}
+            //else if (playerLives % 3 == 1)
+            //{
+            //    lifeImage1.SetActive(false);
+            //    lifeImage2.SetActive(false);
+            //}
         }        
-    }
-
-    void LoseLife()
-    {
-        if (!shieldActive)
-        {
-            playerLives--;
-
-            healthBar1.SetActive(true);
-            healthBar2.SetActive(true);
-            healthBar3.SetActive(true);
-
-            Instantiate(explosion, transform.position, transform.rotation);
-            Instantiate(explosionSound, transform.position, transform.rotation);
-        }
     }
 
     public void GainLife()
     {
-        if(playerLives < 3)
-        playerLives++;
+        switch (playerHealth)
+        {
+            case 10:
+                break;
+            case 9:
+                playerHealth++;
+                break;
+            case 8:
+                playerHealth += 2;
+                break;
+            default:
+                playerHealth += 3;
+                break;
+        }
     }
 
     public static class CoroutineUtil
@@ -239,10 +235,7 @@ public class PlayerCollision : MonoBehaviour
         StartCoroutine(DamageIndicator());
         playerHealth -= amount;
         pickUpManager.LoseLevel();
-        if (playerHealth % 3 == 0)
-        {
-            LoseLife();
-        }
+
         CheckHealth();
     }
 }

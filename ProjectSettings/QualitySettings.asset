@@ -76,7 +76,6 @@ QualitySettings:
     - WP8
     - WebGL
     - Samsung TV
-    - Standalone
   - serializedVersion: 2
     name: Simple
     pixelLightCount: 1
@@ -112,7 +111,6 @@ QualitySettings:
     - WP8
     - WebGL
     - Samsung TV
-    - Standalone
   - serializedVersion: 2
     name: Good
     pixelLightCount: 2
@@ -148,7 +146,6 @@ QualitySettings:
     - WP8
     - WebGL
     - Samsung TV
-    - Standalone
   - serializedVersion: 2
     name: Beautiful
     pixelLightCount: 3
@@ -184,7 +181,6 @@ QualitySettings:
     - WP8
     - WebGL
     - Samsung TV
-    - Standalone
   - serializedVersion: 2
     name: Fantastic
     pixelLightCount: 4
@@ -220,23 +216,4 @@ QualitySettings:
     - WP8
     - WebGL
     - Samsung TV
-    - Standalone
-  m_PerPlatformDefaultQuality:
-    Android: 2
-    BlackBerry: 2
-    GLES Emulation: 5
-    PS3: 5
-    PS4: 5
-    PSM: 5
-    PSP2: 5
-    Samsung TV: 2
-    Standalone: 5
-    Tizen: 2
-    WP8: 5
-    Web: 5
-    WebGL: 3
-    Windows Store Apps: 5
-    XBOX360: 5
-    XboxOne: 5
-    iPhone: 2
-    tvOS: 0
+  m_PerPlatformDefaultQuality: {}

@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 
 public class AchievementManager : MonoBehaviour
-{    
+{    /*
     public RectTransform achievementContainer;
     public RectTransform achievementCap;
 
@@ -1185,5 +1185,5 @@ public class AchievementManager : MonoBehaviour
         PlayerPrefs.SetInt("LaserShot6", 0);
         PlayerPrefs.SetInt("LaserShot7", 0);
         PlayerPrefs.SetInt("LaserShot8", 0);
-    }
+    }*/
 }

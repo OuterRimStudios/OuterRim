@@ -75,7 +75,7 @@ public class FireScript : MonoBehaviour {
         {
             laserSound.Shooting();
         }
-            achievementManager.LaserShot();
+            //achievementManager.LaserShot();
             lastShot = Time.time;
 
             GameObject obj = laserPool.GetPooledObject();

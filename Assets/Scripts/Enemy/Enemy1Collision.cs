@@ -92,7 +92,7 @@ public class Enemy1Collision : MonoBehaviour {
     public void TookDamage()
     {
         currentHealth--;
-        achievementManager.EnemyHit();
+       // achievementManager.EnemyHit();
         if (currentHealth <= 0)
         {
             WasDestroyed();
@@ -100,7 +100,7 @@ public class Enemy1Collision : MonoBehaviour {
     }
     public void WasDestroyed()
     {
-        achievementManager.EnemyDied();
+       // achievementManager.EnemyDied();
         _playerScore.score += laserScore;
         if(gameObject.tag != "Carrier")
             gameManager.GetComponent<WaveManager>().ShipDestroyed(gameObject);
