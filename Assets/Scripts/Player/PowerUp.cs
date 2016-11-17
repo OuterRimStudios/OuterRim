@@ -13,6 +13,7 @@ public class PowerUp : MonoBehaviour
 
     public PowerUpType type = PowerUpType.HEALTH;
     PickUpManager pickUpManager;
+    AudioSource audioSource;
     public int powerUpLength;
     GameObject player;
     GameObject shield;
@@ -39,6 +40,7 @@ public class PowerUp : MonoBehaviour
     {
         player = GameObject.Find("Player");
         shield = player.transform.FindChild("Shield").gameObject;
+        audioSource = GetComponent<AudioSource>();
         gameManager = GameObject.Find("GameManager");
         pickUpManager = gameManager.GetComponent<PickUpManager>();
 		    }

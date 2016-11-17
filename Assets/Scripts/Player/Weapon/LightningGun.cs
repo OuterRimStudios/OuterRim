@@ -34,7 +34,7 @@ public class LightningGun : MonoBehaviour
     void FindEnemy()
     {
         target = GameObject.FindGameObjectWithTag("Enemy");
-        if (target == null)
+        if (target != null)
         {
             hasTarget = false;
 

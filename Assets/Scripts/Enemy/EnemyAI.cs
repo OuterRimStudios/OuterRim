@@ -22,10 +22,6 @@ public class EnemyAI : MonoBehaviour
 		speed = gameManager.GetComponent<PublicVariableHandler> ().enemyAISpeed;
 		
         newSpawn = true;
-        if (transform.tag == "Carrier")
-        {
-            speed = 300;
-        }
     }
 	
 	void FixedUpdate ()
@@ -41,6 +37,11 @@ public class EnemyAI : MonoBehaviour
 
         if (warped) //If you are warped in.
         {
+            if(tag == "Carrier")
+            {
+                transform.position = Vector3.Lerp(transform.position, new Vector3(playerPosition.x, playerPosition.y, playerPosition.z - 1000f), 0.05f * Time.deltaTime);
+            }
+            else
             transform.position = Vector3.Lerp(transform.position, new Vector3 (playerPosition.x, playerPosition.y, playerPosition.z - 1000f), 0.25f * Time.deltaTime);    //Move forward
 
             if (transform.position.z <= -250)   //If you go to far, shut off.
