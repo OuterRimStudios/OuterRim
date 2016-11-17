@@ -20,19 +20,19 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.39215687, g: 0.3529412, b: 0.24313726, a: 1}
+  m_AmbientSkyColor: {r: 0.32352942, g: 0.32352942, b: 0.32352942, a: 1}
   m_AmbientEquatorColor: {r: 0.104880005, g: 0.115, b: 0.122360006, a: 0.92}
   m_AmbientGroundColor: {r: 0.04324, g: 0.03956, b: 0.0322, a: 0.92}
   m_AmbientIntensity: 0.92
   m_AmbientMode: 3
   m_SkyboxMaterial: {fileID: 2100000, guid: 6028dec9a0d96a446bf8ded2ae91b380, type: 2}
-  m_HaloStrength: 0.026
+  m_HaloStrength: 0.016
   m_FlareStrength: 1
   m_FlareFadeSpeed: 5
   m_HaloTexture: {fileID: 0}
   m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
   m_DefaultReflectionMode: 0
-  m_DefaultReflectionResolution: 128
+  m_DefaultReflectionResolution: 256
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 0.026
   m_CustomReflection: {fileID: 0}
@@ -793,7 +793,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 128106, guid: 5ee02f1e38a12e44d838a147f23550f5, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 19824108, guid: 5ee02f1e38a12e44d838a147f23550f5, type: 2}
       propertyPath: EmissionModule.rate.scalar
@@ -802,6 +802,14 @@ Prefab:
     - target: {fileID: 19824108, guid: 5ee02f1e38a12e44d838a147f23550f5, type: 2}
       propertyPath: InitialModule.maxNumParticles
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 19824108, guid: 5ee02f1e38a12e44d838a147f23550f5, type: 2}
+      propertyPath: VelocityModule.y.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19824108, guid: 5ee02f1e38a12e44d838a147f23550f5, type: 2}
+      propertyPath: VelocityModule.y.maxCurve.m_Curve.Array.data[0].value
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5ee02f1e38a12e44d838a147f23550f5, type: 2}
@@ -1366,7 +1374,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbcc6d2a16bddba43897438761b0a06e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  meteorExplosion: {fileID: 100000, guid: 809320482fb694b6e8149a226202b86a, type: 2}
+  meteorExplosion: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
   meteorHealth: 20
   laserNoLevelSound: {fileID: 8300000, guid: a8c82b3dd073d3a4589f528e85b5560b, type: 3}
   laserLevel1Sound: {fileID: 8300000, guid: d6690401f8a263e4a927e136c14d7131, type: 3}
@@ -1375,7 +1383,7 @@ MonoBehaviour:
   fadeOut: {fileID: 1494826401}
   shipIMG1: {fileID: 1760556309}
   shipIMG2: {fileID: 809921980}
-  hitEffect: {fileID: 100000, guid: 2b55ffa5aab4e2c48bcdb135a37adba3, type: 2}
+  hitEffect: {fileID: 164108, guid: 617ad9e000e6e794996337449785aa1b, type: 2}
   hitSound: {fileID: 8300000, guid: 77e3e012ba915ac47aaf30c11ab78ba0, type: 3}
   healthRecoverScore: 100000
   playerShootingFrequency: 0.15
@@ -2318,6 +2326,10 @@ Prefab:
     - target: {fileID: 1547278, guid: b41b1d0807078b648b6091c14f052bab, type: 2}
       propertyPath: rndVelocity.z
       value: -200
+      objectReference: {fileID: 0}
+    - target: {fileID: 146302, guid: b41b1d0807078b648b6091c14f052bab, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b41b1d0807078b648b6091c14f052bab, type: 2}
@@ -3365,6 +3377,46 @@ Prefab:
       propertyPath: InitialModule.maxNumParticles
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 19842636, guid: 03420208651a7c349900c409ea84aa8c, type: 2}
+      propertyPath: VelocityModule.y.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19842636, guid: 03420208651a7c349900c409ea84aa8c, type: 2}
+      propertyPath: VelocityModule.y.maxCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19842636, guid: 03420208651a7c349900c409ea84aa8c, type: 2}
+      propertyPath: VelocityModule.y.maxCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19842636, guid: 03420208651a7c349900c409ea84aa8c, type: 2}
+      propertyPath: VelocityModule.y.minCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19842636, guid: 03420208651a7c349900c409ea84aa8c, type: 2}
+      propertyPath: VelocityModule.x.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19842636, guid: 03420208651a7c349900c409ea84aa8c, type: 2}
+      propertyPath: VelocityModule.x.maxCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19842636, guid: 03420208651a7c349900c409ea84aa8c, type: 2}
+      propertyPath: VelocityModule.x.minCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19842636, guid: 03420208651a7c349900c409ea84aa8c, type: 2}
+      propertyPath: VelocityModule.z.scalar
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 19842636, guid: 03420208651a7c349900c409ea84aa8c, type: 2}
+      propertyPath: VelocityModule.z.maxCurve.m_Curve.Array.data[0].value
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19842636, guid: 03420208651a7c349900c409ea84aa8c, type: 2}
+      propertyPath: VelocityModule.z.minCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 03420208651a7c349900c409ea84aa8c, type: 2}
   m_IsPrefabParent: 0
@@ -4173,6 +4225,7 @@ GameObject:
   - 114: {fileID: 1591680881}
   - 114: {fileID: 1591680883}
   - 82: {fileID: 1591680882}
+  - 114: {fileID: 1591680884}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -4357,6 +4410,44 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 7b31ad54931367542b2ee570151df0b9, type: 3}
   - {fileID: 8300000, guid: eefc8f2884e7a0945a2d0d763af03234, type: 3}
   source: {fileID: 1591680882}
+--- !u!114 &1591680884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1591680875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fceaeb339b971b429c4cc600acabd13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tweakMode: 1
+  screenBlendMode: 1
+  hdr: 0
+  sepBlurSpread: 4.32
+  quality: 1
+  bloomIntensity: 5.9
+  bloomThreshold: 0.74
+  bloomThresholdColor: {r: 1, g: 1, b: 1, a: 1}
+  bloomBlurIterations: 2
+  hollywoodFlareBlurIterations: 2
+  flareRotation: 0
+  lensflareMode: 2
+  hollyStretchWidth: 2.5
+  lensflareIntensity: 0
+  lensflareThreshold: 0.57
+  lensFlareSaturation: 0.75
+  flareColorA: {r: 0.4, g: 0.4, b: 0.8, a: 0.75}
+  flareColorB: {r: 0.4, g: 0.8, b: 0.8, a: 0.75}
+  flareColorC: {r: 0.8, g: 0.4, b: 0.8, a: 0.75}
+  flareColorD: {r: 0.8, g: 0.4, b: 0, a: 0.75}
+  lensFlareVignetteMask: {fileID: 2800000, guid: 95ef4804fe0be4c999ddaa383536cde8,
+    type: 3}
+  lensFlareShader: {fileID: 4800000, guid: 459fe69d2f6d74ddb92f04dbf45a866b, type: 3}
+  screenBlendShader: {fileID: 4800000, guid: 7856cbff0a0ca45c787d5431eb805bb0, type: 3}
+  blurAndFlaresShader: {fileID: 4800000, guid: be6e39cf196f146d5be72fbefb18ed75, type: 3}
+  brightPassFilterShader: {fileID: 4800000, guid: 0aeaa4cb29f5d4e9c8455f04c8575c8c,
+    type: 3}
 --- !u!1 &1607794819
 GameObject:
   m_ObjectHideFlags: 0
