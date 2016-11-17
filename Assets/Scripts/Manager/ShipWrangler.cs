@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 
 public class ShipWrangler : MonoBehaviour {
 
+    public GameObject loadScreen;
     public GameObject startMenu;
     public GameObject chooseShipMenu;
     public GameObject startButton;
@@ -149,12 +150,14 @@ public class ShipWrangler : MonoBehaviour {
         if (ships[currentShip].GetComponent<ShipUnlocking>().unlocked)
         {
             ChooseShipTracker.currentShipName = ships[currentShip].name;
-            playButton.SetActive(true);
+            //playButton.SetActive(true);
             //backButton.SetActive(true);
-            EventSystem.current.SetSelectedGameObject(playButton);
+
+            //EventSystem.current.SetSelectedGameObject(playButton);
+            loadScreen.GetComponent<FadeIn>().StartMyCoroutine();
         }
     }
-
+    
     public void CancelSelect()
     {
         if (gameObject.name != "ShipContainer")
