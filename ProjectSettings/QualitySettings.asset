@@ -8,7 +8,7 @@ QualitySettings:
   m_QualitySettings:
   - serializedVersion: 2
     name: Fantastic
-    pixelLightCount: 0
+    pixelLightCount: 4
     shadows: 0
     shadowResolution: 1
     shadowProjection: 1
@@ -19,8 +19,8 @@ QualitySettings:
     shadowCascade4Split: {x: 0.06666667, y: 0.19999999, z: 0.46666664}
     blendWeights: 1
     textureQuality: 0
-    anisotropicTextures: 0
-    antiAliasing: 0
+    anisotropicTextures: 2
+    antiAliasing: 2
     softParticles: 0
     softVegetation: 0
     realtimeReflectionProbes: 0
@@ -211,8 +211,6 @@ QualitySettings:
     asyncUploadTimeSlice: 2
     asyncUploadBufferSize: 4
     excludedTargetPlatforms:
-    - Web
-    - iPhone
     - Android
     - BlackBerry
     - Tizen
@@ -220,7 +218,6 @@ QualitySettings:
     - WP8
     - WebGL
     - Samsung TV
-    - Standalone
   m_PerPlatformDefaultQuality:
     Android: 2
     BlackBerry: 2
