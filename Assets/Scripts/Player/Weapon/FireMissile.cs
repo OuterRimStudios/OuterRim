@@ -17,6 +17,7 @@ public class FireMissile : MonoBehaviour
 
     GameObject player;
     GameObject gameManager;
+    GameObject lightningGun;
 
     float lastShot;
     float recharge;
@@ -32,13 +33,12 @@ public class FireMissile : MonoBehaviour
         hasTarget = false;
         player = GameObject.Find("Player");
         gameManager = GameObject.Find("GameManager");
+        lightningGun = GameObject.Find("LightningGun");
+        lightningGun.SetActive(false);
         publicVariableHandler = gameManager.GetComponent<PublicVariableHandler>();
         missile = player.GetComponent<StoreVariables>().missileColor;
         lightningGunDuration = publicVariableHandler.lightningGunDuration;
         player.GetComponent<StoreVariables>().lightningGun.GetComponent<ArcReactorDemoGunController>().enabled = false;
-
-        //noTarget = GameObject.Find("NoTarget");
-        //noTarget.SetActive(false);
     }
 
     // Update is called once per frame
@@ -133,9 +133,11 @@ public class FireMissile : MonoBehaviour
 
     IEnumerator LightningGunActive()
     {
+        lightningGun.SetActive(true);
         player.GetComponent<StoreVariables>().lightningGun.GetComponent<ArcReactorDemoGunController>().enabled = true;
         yield return new WaitForSeconds(lightningGunDuration);
         player.GetComponent<StoreVariables>().lightningGun.GetComponent<ArcReactorDemoGunController>().enabled = false;
         gameManager.GetComponent<PickUpManager>().LoseMissileLevel();
+        lightningGun.SetActive(false);
     }
 }

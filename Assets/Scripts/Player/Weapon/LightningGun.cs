@@ -19,24 +19,27 @@ public class LightningGun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire2"))
+        if (Input.GetButtonDown("Fire2") && hasTarget)
         {
             FindEnemy();
         }
         if (target != null)
         {
             transform.LookAt(target.transform);
-        }
-        
-      
+        }      
     }
 
     void FindEnemy()
     {
         target = GameObject.FindGameObjectWithTag("Enemy");
-        if (target != null)
+        if(target == null)
         {
+            FindEnemy();
             hasTarget = false;
+        }
+        else if (target != null)
+        {
+            hasTarget = true;
 
             distance = Vector3.Distance(target.transform.position, player.transform.position);
             if (distance > 5000)
