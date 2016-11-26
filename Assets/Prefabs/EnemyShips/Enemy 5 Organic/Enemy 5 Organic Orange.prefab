@@ -197,7 +197,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 447208}
-  - 114: {fileID: 11443768}
   - 114: {fileID: 11449736}
   - 114: {fileID: 11433532}
   - 54: {fileID: 5413490}
@@ -1298,32 +1297,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lockOn: {fileID: 196710, guid: a407ec5e72b5406468151c5235458891, type: 2}
   isTarget: 0
---- !u!114 &11443768
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 150238}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15958e410bc686b4f8dfe81e1d8a49ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1500
-  recalcDelay: 2
-  enemyZClamp: 0
-  enemyXPos: 0
-  centerX: 2000
-  centerY: 0
-  centerZ: 2000
-  maneuverRadius: 2000
-  maneuverRadiusMin: 1750
-  maneuverRadiusMax: 2250
-  player: {fileID: 0}
-  gun1: {fileID: 103038}
-  gun2: {fileID: 140382}
-  gun3: {fileID: 0}
-  DebugMode: 1
 --- !u!114 &11445748
 MonoBehaviour:
   m_ObjectHideFlags: 1

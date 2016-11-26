@@ -7,6 +7,8 @@ public class InputManager : MonoBehaviour
     public Image selectButtonImg;
     public Image unlockButtonImg;
     public Image backButtonImg;
+    public Image confirmationWindowConfImg;
+    public Image confirmationWindowBackImg;
     public Sprite xBoxSpriteA;
     public Sprite xBoxSpriteB;
     public Sprite xBoxSpriteX;
@@ -24,24 +26,30 @@ public class InputManager : MonoBehaviour
 
 	}
 	
-	void Update () {
+	void LateUpdate () {
         if (ControllerDetection.xBox)
         {
             selectButtonImg.sprite = xBoxSpriteA;
             unlockButtonImg.sprite = xBoxSpriteY;
             backButtonImg.sprite = xBoxSpriteB;
+            confirmationWindowConfImg.sprite = xBoxSpriteA;
+            confirmationWindowBackImg.sprite = xBoxSpriteB;
         }
         else if (ControllerDetection.ps)
         {
             selectButtonImg.sprite = psSpriteX;
             unlockButtonImg.sprite = psSpriteTr;
             backButtonImg.sprite = psSpriteO;
+            confirmationWindowConfImg.sprite = psSpriteX;
+            confirmationWindowBackImg.sprite = psSpriteO;
         }
         else
         {
             selectButtonImg.sprite = enter;
             unlockButtonImg.sprite = eKey;
             backButtonImg.sprite = esc;
+            confirmationWindowConfImg.sprite = enter;
+            confirmationWindowBackImg.sprite = esc;
         }
 	}
 }

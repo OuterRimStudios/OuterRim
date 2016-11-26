@@ -101,7 +101,7 @@ GameObject:
   m_Layer: 0
   m_Name: Dark Wing Blue
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1616,16 +1616,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosion: {fileID: 100000, guid: c8fd86fe5050dc04bb501b291c30f591, type: 2}
   explosionSound: {fileID: 106574, guid: 3bccd5214c55ab54e842038afc0ebfbc, type: 2}
-  greenHealthRing: {fileID: 0}
-  yellowHealthRing: {fileID: 0}
-  redHealthRing: {fileID: 0}
-  lifeImage1: {fileID: 0}
-  lifeImage2: {fileID: 0}
+  healthBar: {fileID: 0}
+  healthBarSprites: []
   damageIndicatorIMG: {fileID: 0}
   meteorExplosionPrefab: {fileID: 100000, guid: 809320482fb694b6e8149a226202b86a,
     type: 2}
   playerHealth: 9
-  playerLives: 3
   gameOverScene: GameOver
   shieldActive: 0
 --- !u!114 &11415662
@@ -1870,9 +1866,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   missile: {fileID: 125306, guid: b0e3ff5bfaeca8d40a1cbaae32b2b920, type: 2}
-  missile1Img: {fileID: 0}
-  missile2Img: {fileID: 0}
-  missile3Img: {fileID: 0}
   target: {fileID: 0}
   noTarget: {fileID: 0}
   missileRechargeLength: 9

@@ -8,7 +8,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 485266}
-  - 114: {fileID: 11410574}
   - 114: {fileID: 11464214}
   - 114: {fileID: 11434282}
   - 54: {fileID: 5490186}
@@ -1268,32 +1267,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 40, y: 45, z: 120}
   m_Center: {x: 0, y: 10, z: 0}
---- !u!114 &11410574
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 115900}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15958e410bc686b4f8dfe81e1d8a49ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1500
-  recalcDelay: 2
-  enemyZClamp: 0
-  enemyXPos: 0
-  centerX: 2000
-  centerY: 0
-  centerZ: 2000
-  maneuverRadius: 2000
-  maneuverRadiusMin: 1750
-  maneuverRadiusMax: 2250
-  player: {fileID: 0}
-  gun1: {fileID: 149018}
-  gun2: {fileID: 141064}
-  gun3: {fileID: 0}
-  DebugMode: 1
 --- !u!114 &11417912
 MonoBehaviour:
   m_ObjectHideFlags: 1

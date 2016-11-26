@@ -41,36 +41,39 @@ public class ShipWrangler : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        DisplayShip();
+        if (!Unlock.unlocking)
+        {
+            DisplayShip();
 
-        if ((Input.GetAxis("Horizontal") < -.99f && !hasMoved) || Input.GetKeyDown(KeyCode.A))      //left
-        {
-            CallCoroutine("left");
-        }
-        else if ((Input.GetAxis("Horizontal") > .99f && !hasMoved) || Input.GetKeyDown(KeyCode.D))  //right
-        {
-            CallCoroutine("right");
-        }
-        else if (Input.GetAxis("Horizontal") > -.09f && Input.GetAxis("Horizontal") < .09f)
-        {
-            hasMoved = false;
-        }
-
-        if (Input.GetButtonDown("Submit"))
-        {
-            if (choosingContainer)
+            if ((Input.GetAxis("Horizontal") < -.99f && !hasMoved) || Input.GetKeyDown(KeyCode.A))      //left
             {
-                SelectContainer();
+                CallCoroutine("left");
             }
-            else if (choosingShip)
+            else if ((Input.GetAxis("Horizontal") > .99f && !hasMoved) || Input.GetKeyDown(KeyCode.D))  //right
             {
-                SelectShip();
+                CallCoroutine("right");
             }
-        }
+            else if (Input.GetAxis("Horizontal") > -.09f && Input.GetAxis("Horizontal") < .09f)
+            {
+                hasMoved = false;
+            }
 
-        if (Input.GetButtonDown("Cancel"))
-        {
-            CancelSelect();
+            if (Input.GetButtonDown("Submit"))
+            {
+                if (choosingContainer)
+                {
+                    SelectContainer();
+                }
+                else if (choosingShip)
+                {
+                    SelectShip();
+                }
+            }
+
+            if (Input.GetButtonDown("Cancel"))
+            {
+                CancelSelect();
+            }
         }
     }
 
@@ -150,6 +153,7 @@ public class ShipWrangler : MonoBehaviour {
         if (ships[currentShip].GetComponent<ShipUnlocking>().unlocked)
         {
             ChooseShipTracker.currentShipName = ships[currentShip].name;
+            PlayerPrefs.SetString("Ship", ChooseShipTracker.currentShipName);       //This doesn't really need to grab from the static
             //playButton.SetActive(true);
             //backButton.SetActive(true);
 

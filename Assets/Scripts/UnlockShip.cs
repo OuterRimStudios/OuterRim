@@ -17,6 +17,21 @@ public class UnlockShip : MonoBehaviour
         
     }
 
+    void Update()
+    {
+        if(Input.GetButtonDown("Submit"))
+        {
+            Unlock.unlocking = false;
+            ConfirmPurchase();
+        }
+
+        if (Input.GetButtonDown("Cancel"))
+        {
+            Unlock.unlocking = false;
+            confirmationWindow.SetActive(false);
+        }
+    }
+
     public void ConfirmPurchase()
     {
         if(PlayerPrefs.GetInt("Currency") > ShipUnlocking.realPrice)

@@ -27,7 +27,8 @@ public class MissileMovement : MonoBehaviour {
         }
         else
         {
-            Destroy(this);
+            transform.Translate(Vector3.forward * missileSpeed * Time.deltaTime);
+            //Destroy(this.gameObject);
         }
     }
 

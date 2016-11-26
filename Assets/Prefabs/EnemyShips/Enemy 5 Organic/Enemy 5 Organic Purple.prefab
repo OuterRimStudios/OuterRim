@@ -166,7 +166,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 450290}
-  - 114: {fileID: 11454954}
   - 114: {fileID: 11437796}
   - 114: {fileID: 11476240}
   - 54: {fileID: 5432798}
@@ -1353,32 +1352,6 @@ MonoBehaviour:
   missileScore: 15000
   baseHealth: 10
   currentHealth: 0
---- !u!114 &11454954
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 132060}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15958e410bc686b4f8dfe81e1d8a49ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1500
-  recalcDelay: 2
-  enemyZClamp: 0
-  enemyXPos: 0
-  centerX: 2000
-  centerY: 0
-  centerZ: 2000
-  maneuverRadius: 2000
-  maneuverRadiusMin: 1750
-  maneuverRadiusMax: 2250
-  player: {fileID: 0}
-  gun1: {fileID: 168120}
-  gun2: {fileID: 128236}
-  gun3: {fileID: 0}
-  DebugMode: 1
 --- !u!114 &11457686
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -74,7 +74,8 @@ public class Enemy1Collision : MonoBehaviour {
         else if (col.gameObject.tag == "Missile" && transform.name != "Enemy5")
         {
             WasDestroyed();
-            col.gameObject.SetActive(false);
+            Destroy(col.gameObject);
+            //col.gameObject.SetActive(false);
         }
         if (transform.name != "Enemy5")
         {

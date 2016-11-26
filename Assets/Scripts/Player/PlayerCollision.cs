@@ -62,7 +62,7 @@ public class PlayerCollision : MonoBehaviour
         playerHealth = publicVariableHandler.playerHealth;
         healthScore = publicVariableHandler.healthRecoverScore;
 
-        StartCoroutine(CheckScore());
+        //StartCoroutine(CheckScore());
     }
 
     void OnTriggerEnter(Collider col)
@@ -102,23 +102,23 @@ public class PlayerCollision : MonoBehaviour
         }
     }
 
-    IEnumerator CheckScore()
-    {
-        if (playerScoreOBJ.score % healthScore == 0 && playerScoreOBJ.score != 0)
-        {
-            playerHealth++;
+    //IEnumerator CheckScore()
+    //{
+    //    if (playerScoreOBJ.score % healthScore == 0 && playerScoreOBJ.score != 0)
+    //    {
+    //        playerHealth++;
 
-            CheckHealth();
-            yield return new WaitForSeconds(10f);
-        }
-        else
-        {
-            CheckHealth();
-            yield return new WaitForSeconds(0f);
-        }
+    //        CheckHealth();
+    //        yield return new WaitForSeconds(10f);
+    //    }
+    //    else
+    //    {
+    //        CheckHealth();
+    //        yield return new WaitForSeconds(0f);
+    //    }
 
-        StartCoroutine(CheckScore());
-    }
+    //    StartCoroutine(CheckScore());
+    //}
 
     IEnumerator DamageIndicator()
     {

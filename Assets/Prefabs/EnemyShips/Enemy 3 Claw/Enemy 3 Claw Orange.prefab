@@ -347,11 +347,7 @@ GameObject:
   - 82: {fileID: 8204324}
   - 114: {fileID: 11474870}
   - 136: {fileID: 13635868}
-  - 114: {fileID: 11400134}
   - 54: {fileID: 5446628}
-  - 114: {fileID: 11421192}
-  - 114: {fileID: 11481528}
-  - 114: {fileID: 11423822}
   m_Layer: 0
   m_Name: Enemy 3 Claw Orange
   m_TagString: Enemy
@@ -1647,17 +1643,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &11400134
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 149830}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 643c971818f68d3439e84b5d8bdafe07, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &11416220
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1674,50 +1659,6 @@ MonoBehaviour:
   maxFreq: 8
   laserPoolName: EnemyLasers
   canFire: 1
---- !u!114 &11421192
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 149830}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 235a6615124795442b98c1f03500003e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MaxEnginePower: 400
-  m_Lift: 1
-  m_ZeroLiftSpeed: 0
-  m_RollEffect: 50
-  m_PitchEffect: 50
-  m_YawEffect: 50
-  m_BankedTurnEffect: 1
-  m_AerodynamicEffect: 1
-  m_AutoTurnPitch: 90
-  m_AutoRollLevel: 1
-  m_AutoPitchLevel: 1
-  m_AirBrakesEffect: 0
-  m_ThrottleChangeSpeed: 2
-  m_DragIncreaseFactor: 0.00095
---- !u!114 &11423822
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 149830}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5cb22d331ef7d64796f917c6a455a32, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  circuit: {fileID: 0}
-  lookAheadForTargetOffset: 2000
-  lookAheadForTargetFactor: 1000
-  lookAheadForSpeedOffset: 1000
-  lookAheadForSpeedFactor: 1000
-  progressStyle: 1
-  pointToPointThreshold: 2000
-  target: {fileID: 417340}
 --- !u!114 &11431066
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1805,33 +1746,13 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 149830}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 68b50cc832fad3b4b82da02f79b1bf0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   warpSpeed: 1500
   speed: 1000
---- !u!114 &11481528
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 149830}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f947e56d54f4274896478766fef616c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_RollSensitivity: 0.1
-  m_PitchSensitivity: 0.1
-  m_LateralWanderDistance: 500
-  m_LateralWanderSpeed: 10000
-  m_MaxClimbAngle: 90
-  m_MaxRollAngle: 0
-  m_SpeedEffect: 0
-  m_TakeoffHeight: 0
-  m_Target: {fileID: 417340}
 --- !u!135 &13500684
 SphereCollider:
   m_ObjectHideFlags: 1

@@ -9,6 +9,7 @@ public class Unlock : MonoBehaviour {
     public GameObject confirmButton;
     public Text priceText;
     public Text currencryText;
+    public static bool unlocking;
 
     void Start()
     {
@@ -19,6 +20,7 @@ public class Unlock : MonoBehaviour {
     {
         if (Input.GetButtonDown("Fire5") || Input.GetKeyDown(KeyCode.E))
         {
+            unlocking = true;
             Purchase();
         }
     }
@@ -30,6 +32,4 @@ public class Unlock : MonoBehaviour {
         priceText.text = "Costs: " + ShipUnlocking.realPrice;
         currencryText.text = "Points: " + PlayerPrefs.GetInt("Currency");
     }
-
-
 }
