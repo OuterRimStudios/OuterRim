@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
-
+using System.Collections.Generic;
 public class FireMissile : MonoBehaviour
 {
+    public List<GameObject> targetsInRange;
     public GameObject missile;
     public GameObject target;
     public GameObject noTarget;
@@ -23,7 +24,10 @@ public class FireMissile : MonoBehaviour
     float recharge;
     float newRecharge;
     float newMissileCooldown;
-    bool hasTarget;
+
+    [HideInInspector]
+    public bool hasTarget;
+    public static bool doneShooting;
 
     PublicVariableHandler publicVariableHandler;
 
@@ -39,17 +43,26 @@ public class FireMissile : MonoBehaviour
         missile = player.GetComponent<StoreVariables>().missileColor;
         lightningGunDuration = publicVariableHandler.lightningGunDuration;
         player.GetComponent<StoreVariables>().lightningGun.GetComponent<ArcReactorDemoGunController>().enabled = false;
+        doneShooting = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetAxis("Fire2") > 0)
+        print("hasTarget = " + hasTarget);
+    
+        if (!hasTarget && doneShooting && targetsInRange.Count >= 1)
         {
             FindEnemy();
         }
-        if (((Input.GetAxis("Fire2") > 0) && Time.time > (lastShot + missileCooldown) && hasTarget && missileCount > 0))   // || (Input.GetAxis("Secondary")) != 0)
+        if (!targetsInRange.Contains(target) && target == null && targetsInRange.Count >= 1)
         {
+            FindEnemy();
+        }
+        if (((Input.GetAxis("Fire2") > 0) && Time.time > (lastShot + missileCooldown) && hasTarget && missileCount > 0) && target != null && doneShooting == true)   // || (Input.GetAxis("Secondary")) != 0)
+        {
+            doneShooting = false;
+            target.GetComponent<EnemyState>().isTarget = false;
             Missile();
         }
     }
@@ -57,8 +70,10 @@ public class FireMissile : MonoBehaviour
     void Missile()
     {
         lastShot = Time.time;
-        Instantiate(missile, transform.position, transform.rotation);
+        GameObject clone = Instantiate(missile, transform.position, transform.rotation) as GameObject;
+        clone.GetComponent<MissileMovement>().target = target;
         missileCount--;
+        target = null;
         if (missileCount < missileMax && !(missileCount >= missileMax))
         {
             StartCoroutine(MissileRecharge(missileRechargeLength));
@@ -67,20 +82,24 @@ public class FireMissile : MonoBehaviour
 
     void FindEnemy()
     {
-        target = GameObject.FindGameObjectWithTag("Enemy");
-        if (target == null)
-        {
-            hasTarget = false;
-        }
-        else if (target.activeInHierarchy)
-        {
-            target.GetComponent<EnemyState>().isTarget = true;
-            hasTarget = true;
-        }
-        else if (!target.activeInHierarchy)
-        {
-            hasTarget = false;
-        }
+        print("Find enemy is called");
+       target = targetsInRange[Random.Range(0, targetsInRange.Count)];
+       target.GetComponent<EnemyState>().isTarget = true;
+
+        //target = GameObject.FindGameObjectWithTag("Enemy");
+        //if (target == null)
+        //{
+        //    hasTarget = false;
+        //}
+        //else if (target.activeInHierarchy)
+        //{
+        //    target.GetComponent<EnemyState>().isTarget = true;
+        //    hasTarget = true;
+        //}
+        //else if (!target.activeInHierarchy)
+        //{
+        //    hasTarget = false;
+        //}
     }
 
     IEnumerator MissileRecharge(float _missileRechargeLength)

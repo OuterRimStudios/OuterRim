@@ -20,6 +20,7 @@ public class Enemy1Collision : MonoBehaviour {
     GameObject gameManager;
 	GameObject hitEffect;
     PlayerCollision playerCollision;
+    FireMissile fireMissile;
 
     void Start()
     {
@@ -29,6 +30,7 @@ public class Enemy1Collision : MonoBehaviour {
         publicVariableHandler = gameManager.GetComponent<PublicVariableHandler>();
         achievementManager = gameManager.GetComponent<AchievementManager>();
 		hitEffect = publicVariableHandler.hitEffect;
+        fireMissile = GameObject.Find("MissileNozzle").GetComponent<FireMissile>();
         switch (transform.name)
         {
             case "Enemy1":
@@ -73,6 +75,8 @@ public class Enemy1Collision : MonoBehaviour {
         }
         else if (col.gameObject.tag == "Missile" && transform.name != "Enemy5")
         {
+            fireMissile.hasTarget = false;
+            FireMissile.doneShooting = true;
             WasDestroyed();
             Destroy(col.gameObject);
             //col.gameObject.SetActive(false);
@@ -101,7 +105,9 @@ public class Enemy1Collision : MonoBehaviour {
     }
     public void WasDestroyed()
     {
-       // achievementManager.EnemyDied();
+
+        fireMissile.targetsInRange.Remove(gameObject);
+        // achievementManager.EnemyDied();
         _playerScore.score += laserScore;
         if(gameObject.tag != "Carrier")
             gameManager.GetComponent<WaveManager>().ShipDestroyed(gameObject);

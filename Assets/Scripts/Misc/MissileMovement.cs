@@ -13,7 +13,7 @@ public class MissileMovement : MonoBehaviour {
     void Start()
     {
         nozzle = GameObject.Find("MissileNozzle");
-        target = nozzle.GetComponent<FireMissile>().target;
+       // target = nozzle.GetComponent<FireMissile>().target;
         StartCoroutine(IncreaseSpeed());
     }
 
