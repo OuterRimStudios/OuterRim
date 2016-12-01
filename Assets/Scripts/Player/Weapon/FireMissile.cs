@@ -30,6 +30,9 @@ public class FireMissile : MonoBehaviour
     public static bool doneShooting;
 
     PublicVariableHandler publicVariableHandler;
+    WaveManager waveManager;
+
+    bool isLevel3;
 
     // Use this for initialization
     void Start()
@@ -37,11 +40,12 @@ public class FireMissile : MonoBehaviour
         hasTarget = false;
         player = GameObject.Find("Player");
         gameManager = GameObject.Find("GameManager");
-        lightningGun = GameObject.Find("LightningGun");
-        lightningGun.SetActive(false);
+        waveManager = gameManager.GetComponent<WaveManager>();
+       // lightningGun = GameObject.Find("LightningGun");
+        //lightningGun.SetActive(false);
         publicVariableHandler = gameManager.GetComponent<PublicVariableHandler>();
         missile = player.GetComponent<StoreVariables>().missileColor;
-        lightningGunDuration = publicVariableHandler.lightningGunDuration;
+      //  lightningGunDuration = publicVariableHandler.lightningGunDuration;
         player.GetComponent<StoreVariables>().lightningGun.GetComponent<ArcReactorDemoGunController>().enabled = false;
         doneShooting = true;
     }
@@ -51,7 +55,7 @@ public class FireMissile : MonoBehaviour
     {
         //print("hasTarget = " + hasTarget);
     
-        if (!hasTarget && doneShooting && targetsInRange.Count >= 1)
+        if (!hasTarget && targetsInRange.Count >= 1 || target != null && !target.activeInHierarchy && targetsInRange.Count >= 1)
         {
             FindEnemy();
         }
@@ -63,8 +67,22 @@ public class FireMissile : MonoBehaviour
         {
             doneShooting = false;
             target.GetComponent<EnemyState>().isTarget = false;
+            if (isLevel3)
+                Level3Missile();
+            else
             Missile();
         }
+    }
+
+    void Level3Missile()
+    {
+        foreach (GameObject enemy in waveManager.activeEnemies)
+        {
+            GameObject clone = Instantiate(missile, transform.position, transform.rotation) as GameObject;
+            clone.GetComponent<MissileMovement>().target = enemy;
+            enemy.GetComponent<EnemyState>().isTarget = true;
+        }
+        isLevel3 = false;
     }
 
     void Missile()
@@ -82,10 +100,11 @@ public class FireMissile : MonoBehaviour
 
     void FindEnemy()
     {
-        //print("Find enemy is called");
        target = targetsInRange[Random.Range(0, targetsInRange.Count)];
        target.GetComponent<EnemyState>().isTarget = true;
 
+
+        print("Find enemy is called. Target is set to " +  target);
         //target = GameObject.FindGameObjectWithTag("Enemy");
         //if (target == null)
         //{
@@ -143,20 +162,22 @@ public class FireMissile : MonoBehaviour
     {
         if (levelUp)
         {
-            StartCoroutine(LightningGunActive());
+            isLevel3 = true;
+            //StartCoroutine(LightningGunActive());
         }
         else if (!levelUp)
         {
+            isLevel3 = false;
         }
     }
 
-    IEnumerator LightningGunActive()
-    {
-        lightningGun.SetActive(true);
-        player.GetComponent<StoreVariables>().lightningGun.GetComponent<ArcReactorDemoGunController>().enabled = true;
-        yield return new WaitForSeconds(lightningGunDuration);
-        player.GetComponent<StoreVariables>().lightningGun.GetComponent<ArcReactorDemoGunController>().enabled = false;
-        gameManager.GetComponent<PickUpManager>().LoseMissileLevel();
-        lightningGun.SetActive(false);
-    }
+    //IEnumerator LightningGunActive()
+    //{
+    //    lightningGun.SetActive(true);
+    //    player.GetComponent<StoreVariables>().lightningGun.GetComponent<ArcReactorDemoGunController>().enabled = true;
+    //    yield return new WaitForSeconds(lightningGunDuration);
+    //    player.GetComponent<StoreVariables>().lightningGun.GetComponent<ArcReactorDemoGunController>().enabled = false;
+    //    gameManager.GetComponent<PickUpManager>().LoseMissileLevel();
+    //    lightningGun.SetActive(false);
+    //}
 }

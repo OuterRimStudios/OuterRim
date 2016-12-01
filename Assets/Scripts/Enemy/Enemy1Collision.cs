@@ -107,6 +107,10 @@ public class Enemy1Collision : MonoBehaviour {
     {
 
         fireMissile.targetsInRange.Remove(gameObject);
+        if(fireMissile.target == gameObject)
+        {
+            fireMissile.hasTarget = false;
+        }
         // achievementManager.EnemyDied();
         _playerScore.score += laserScore;
         if(gameObject.tag != "Carrier")

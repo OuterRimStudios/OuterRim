@@ -63,7 +63,7 @@ public class PickUpManager : MonoBehaviour
         if (weaponPickUp)
         {
             choose = Random.Range(0, 2);
-            if(choose == 0 && laserLevel < 4)
+            if(choose == 0 && laserLevel > 4) /// I changed this to test the missile levels make the > a < and it will work properly.
             {
                 spawnPoint = new Vector3(Random.Range(player.transform.position.x + xMinSpawn, player.transform.position.x + xMaxSpawn),
                 Random.Range(player.transform.position.y + yMinSpawn, player.transform.position.y + yMaxSpawn),
