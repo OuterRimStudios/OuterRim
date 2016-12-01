@@ -49,7 +49,7 @@ public class FireMissile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        print("hasTarget = " + hasTarget);
+        //print("hasTarget = " + hasTarget);
     
         if (!hasTarget && doneShooting && targetsInRange.Count >= 1)
         {
@@ -82,7 +82,7 @@ public class FireMissile : MonoBehaviour
 
     void FindEnemy()
     {
-        print("Find enemy is called");
+        //print("Find enemy is called");
        target = targetsInRange[Random.Range(0, targetsInRange.Count)];
        target.GetComponent<EnemyState>().isTarget = true;
 

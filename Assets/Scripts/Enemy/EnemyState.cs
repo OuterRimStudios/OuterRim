@@ -23,12 +23,12 @@ public class EnemyState : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        if(Vector3.Distance(new Vector3 (0,0,transform.position.z), new Vector3(0,0,player.transform.position.z)) < 8000 &&
-            Vector3.Distance(new Vector3(0, 0, transform.position.z), new Vector3(0, 0, player.transform.position.z)) > -500 &&
-            Vector3.Distance(new Vector3(0, transform.position.y, 0), new Vector3(0, player.transform.position.y, 0)) < 1000 &&
-            Vector3.Distance(new Vector3(0, transform.position.y, 0), new Vector3(0, player.transform.position.y, 0)) > -1000 &&
-             Vector3.Distance(new Vector3(transform.position.x, 0, 0), new Vector3(player.transform.position.x, 0, 0)) < 1000 &&
-             Vector3.Distance(new Vector3(transform.position.x, 0, 0), new Vector3(player.transform.position.x, 0, 0)) > -1000)
+        if( transform.position.z - player.transform.position.z < 8000 &&
+            transform.position.z - player.transform.position.z > -500 &&
+            transform.position.y - player.transform.position.y < 1000 &&
+            transform.position.y - player.transform.position.y > -1000 &&
+            transform.position.x - player.transform.position.x < 1000 &&
+            transform.position.x - player.transform.position.x > -1000)
         {
             if (!fireMissile.targetsInRange.Contains(gameObject))
             {
