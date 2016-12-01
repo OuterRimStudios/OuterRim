@@ -9,6 +9,7 @@ public class ShipUnlocking : MonoBehaviour
     public bool unlocked;
     public GameObject selectButton;
     public GameObject unlockButton;
+    public GameObject lockedPanel;
 
 
 	void Start ()
@@ -32,11 +33,13 @@ public class ShipUnlocking : MonoBehaviour
         {
             selectButton.SetActive(true);
             unlockButton.SetActive(false);
+            lockedPanel.SetActive(false);
         }
         else if (!unlocked)
         {
             selectButton.SetActive(false);
             unlockButton.SetActive(true);
+            lockedPanel.SetActive(true);
         }
     }
 }

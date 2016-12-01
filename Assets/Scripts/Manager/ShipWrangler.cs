@@ -12,10 +12,10 @@ public class ShipWrangler : MonoBehaviour {
     public GameObject startButton;
     public GameObject playButton;
     public GameObject backButton;
-    public GameObject lights;
-    public GameObject shipLight;
     public GameObject unlockButton;
     public GameObject selectButton;
+    public GameObject lockedPanel;
+    public GameObject[] toggleObjects;
 
     public RectTransform textMask;
 
@@ -154,10 +154,6 @@ public class ShipWrangler : MonoBehaviour {
         {
             ChooseShipTracker.currentShipName = ships[currentShip].name;
             PlayerPrefs.SetString("Ship", ChooseShipTracker.currentShipName);       //This doesn't really need to grab from the static
-            //playButton.SetActive(true);
-            //backButton.SetActive(true);
-
-            //EventSystem.current.SetSelectedGameObject(playButton);
             loadScreen.GetComponent<FadeIn>().StartMyCoroutine();
         }
     }
@@ -172,6 +168,7 @@ public class ShipWrangler : MonoBehaviour {
             }
             unlockButton.SetActive(false);
             selectButton.SetActive(true);
+            lockedPanel.SetActive(false);
             StartCoroutine(Transition());
             transform.parent.gameObject.GetComponent<ShipWrangler>().enabled = true;
             transform.parent.gameObject.GetComponent<ShipWrangler>().ResetWranglers();
@@ -180,7 +177,7 @@ public class ShipWrangler : MonoBehaviour {
         else if (gameObject.name == "ShipContainer")
         {
             MenuToggle.ToggleMenu(chooseShipMenu, startMenu, startButton);
-            ToggleObject.Toggle(lights, shipLight, gameObject);
+            ToggleObject.Toggle(toggleObjects);
         }
 
         playButton.SetActive(false);

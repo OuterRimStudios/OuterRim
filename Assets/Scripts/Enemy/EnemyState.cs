@@ -23,7 +23,19 @@ public class EnemyState : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        if( transform.position.z - player.transform.position.z < 8000 &&
+        //sets laser target
+        if (transform.position.z - player.transform.position.z < 7000 &&
+            transform.position.z - player.transform.position.z > 250 &&
+            transform.position.y - player.transform.position.y < 250 &&
+            transform.position.y - player.transform.position.y > -250 &&
+            transform.position.x - player.transform.position.x < 250 &&
+            transform.position.x - player.transform.position.x > -250)
+        {
+            player.GetComponent<AimAssist>().FoundTarget(gameObject);
+        }
+
+        //sets missile target
+        if ( transform.position.z - player.transform.position.z < 8000 &&
             transform.position.z - player.transform.position.z > -500 &&
             transform.position.y - player.transform.position.y < 1000 &&
             transform.position.y - player.transform.position.y > -1000 &&
