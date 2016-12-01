@@ -19,7 +19,6 @@ public class AimAssist : MonoBehaviour
         gun1Script = gun1.GetComponent<FireScript>();
         gun2Script = gun2.GetComponent<FireScript>();
     }
-	
     public void FoundTarget(GameObject target)
     {
         if(target.activeInHierarchy)

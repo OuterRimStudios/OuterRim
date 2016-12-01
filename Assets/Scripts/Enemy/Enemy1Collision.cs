@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Enemy1Collision : MonoBehaviour {
-
+public class Enemy1Collision : MonoBehaviour
+{
     public GameObject ship;
     public GameObject explosion;
     public GameObject explosionSound;
@@ -60,7 +60,6 @@ public class Enemy1Collision : MonoBehaviour {
         }
         currentHealth = baseHealth;
     }
-
     public void OnSpawned()
     {
         currentHealth = baseHealth;
@@ -78,7 +77,6 @@ public class Enemy1Collision : MonoBehaviour {
             fireMissile.hasTarget = false;
             WasDestroyed();
             Destroy(col.gameObject);
-            //col.gameObject.SetActive(false);
         }
         if (transform.name != "Enemy5")
         {
@@ -89,13 +87,10 @@ public class Enemy1Collision : MonoBehaviour {
                 WasDestroyed();
             }
         }
-
     }
-
     public void TookDamage()
     {
         currentHealth--;
-       // achievementManager.EnemyHit();
         if (currentHealth <= 0)
         {
             WasDestroyed();

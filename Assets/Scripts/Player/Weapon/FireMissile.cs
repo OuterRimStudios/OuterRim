@@ -33,28 +33,21 @@ public class FireMissile : MonoBehaviour
     WaveManager waveManager;
 
     bool isLevel3;
-
-    // Use this for initialization
+    
     void Start()
     {
         hasTarget = false;
         player = GameObject.Find("Player");
         gameManager = GameObject.Find("GameManager");
         waveManager = gameManager.GetComponent<WaveManager>();
-       // lightningGun = GameObject.Find("LightningGun");
-        //lightningGun.SetActive(false);
         publicVariableHandler = gameManager.GetComponent<PublicVariableHandler>();
         missile = player.GetComponent<StoreVariables>().missileColor;
-      //  lightningGunDuration = publicVariableHandler.lightningGunDuration;
         player.GetComponent<StoreVariables>().lightningGun.GetComponent<ArcReactorDemoGunController>().enabled = false;
         doneShooting = true;
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
-        //print("hasTarget = " + hasTarget);
-    
         if (!hasTarget && targetsInRange.Count >= 1 || target != null && !target.activeInHierarchy && targetsInRange.Count >= 1)
         {
             FindEnemy();
@@ -84,7 +77,6 @@ public class FireMissile : MonoBehaviour
         }
         isLevel3 = false;
     }
-
     void Missile()
     {
         lastShot = Time.time;
@@ -146,21 +138,10 @@ public class FireMissile : MonoBehaviour
         if (levelUp)
         {
             isLevel3 = true;
-            //StartCoroutine(LightningGunActive());
         }
         else if (!levelUp)
         {
             isLevel3 = false;
         }
     }
-
-    //IEnumerator LightningGunActive()
-    //{
-    //    lightningGun.SetActive(true);
-    //    player.GetComponent<StoreVariables>().lightningGun.GetComponent<ArcReactorDemoGunController>().enabled = true;
-    //    yield return new WaitForSeconds(lightningGunDuration);
-    //    player.GetComponent<StoreVariables>().lightningGun.GetComponent<ArcReactorDemoGunController>().enabled = false;
-    //    gameManager.GetComponent<PickUpManager>().LoseMissileLevel();
-    //    lightningGun.SetActive(false);
-    //}
 }

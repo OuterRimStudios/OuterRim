@@ -85,7 +85,7 @@ public class PublicVariableHandler : MonoBehaviour
 
     float enemy4ShieldCap = 16;
 
-    float enemy1SpeedCap = 350;
+    float enemy1SpeedCap = 400;
     float enemy2SpeedCap = 400;
     float enemy3SpeedCap = 1200;
     float enemy4SpeedCap = 1000;

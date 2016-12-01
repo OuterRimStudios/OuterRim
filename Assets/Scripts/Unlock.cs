@@ -11,11 +11,6 @@ public class Unlock : MonoBehaviour {
     public Text currencryText;
     public static bool unlocking;
 
-    void Start()
-    {
-        
-    }
-
     void Update()
     {
         if (Input.GetButtonDown("Fire5") || Input.GetKeyDown(KeyCode.E))
@@ -24,7 +19,6 @@ public class Unlock : MonoBehaviour {
             Purchase();
         }
     }
-
     public void Purchase()
     {
         confirmationWindow.SetActive(true);
