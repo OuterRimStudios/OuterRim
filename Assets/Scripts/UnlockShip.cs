@@ -12,11 +12,6 @@ public class UnlockShip : MonoBehaviour
     int myCurrency;
     int newCurrency;
 
-    void Start()
-    {
-        
-    }
-
     void Update()
     {
         if(Input.GetButtonDown("Submit"))

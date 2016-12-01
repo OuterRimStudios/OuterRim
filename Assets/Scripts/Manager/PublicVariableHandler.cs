@@ -81,10 +81,54 @@ public class PublicVariableHandler : MonoBehaviour
 
     //Adjust Difficulty Code and Variables\
 
+    float fireRateCap = 1;
+
+    float enemy4ShieldCap = 16;
+
+    float enemy1SpeedCap = 350;
+    float enemy2SpeedCap = 400;
+    float enemy3SpeedCap = 1200;
+    float enemy4SpeedCap = 1000;
+
+    int enemy1HealthCap = 16;
+    int enemy2HealthCap = 28;
+    int enemy3HealthCap = 16;
+    int enemy4HealthCap = 12;
+
     public void IncreaseDifficulty()
     {
-        //Ship Speed
-        //Fire Rate
-        //Super Mega Charged Particle Photon Laser of Death Speed Script
+        //Increases the fire rate for all ships
+        if (enemy1FireFreq < fireRateCap)
+            enemy1FireFreq -= .2f;
+        if (enemy2FireFreq < fireRateCap)
+            enemy2FireFreq -= .2f;
+        if (enemy3FireFreq < fireRateCap)
+            enemy3FireFreq -= .2f;
+        if (enemy4FireFreq < fireRateCap)
+            enemy4FireFreq -= .2f;
+
+        //Increases the health of the shields for all ships with shields
+        if (enemy4ShieldHealth < enemy4ShieldCap)
+            enemy4ShieldHealth += 1;
+
+        //Increases the speed for all ships
+        if (enemy1Speed < enemy1SpeedCap)
+            enemy1Speed += 50;
+        if (enemy2Speed < enemy2SpeedCap)
+            enemy2Speed += 50;
+        if (enemy3Speed < enemy3SpeedCap)
+            enemy3Speed += 50;
+        if (enemy4Speed < enemy4SpeedCap)
+            enemy4Speed += 50;
+
+        //Increases the health for all ships
+        if (enemy1BaseHealth < enemy1HealthCap)
+            enemy1BaseHealth += 3;
+        if (enemy2BaseHealth < enemy2HealthCap)
+            enemy2BaseHealth += 3;
+        if (enemy3BaseHealth < enemy3HealthCap)
+            enemy3BaseHealth += 3;
+        if (enemy4BaseHealth < enemy4HealthCap)
+            enemy4BaseHealth += 3;
     }
 }

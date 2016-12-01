@@ -58,12 +58,14 @@ public class WaveManager : MonoBehaviour
     float quadNum;
     int badgeAmt;
     bool carrierSpawned;
-
+    PublicVariableHandler publicVariableHandler;
+    float checkWave;
     void Start ()
     {
         canSpawn = true;
         player = GameObject.Find("Player");
         pickUpManager = GetComponent<PickUpManager>();
+        publicVariableHandler = GetComponent<PublicVariableHandler>();
         ChooseLocation();
         StartCoroutine(WaveStarting());
 	}
@@ -199,6 +201,14 @@ public class WaveManager : MonoBehaviour
             sectorWasCompleted = true;
             StartCoroutine(SectorCompleted());
             yield return new WaitForSeconds(3);
+        }
+
+        if(waveCount % 5 == 0 && waveCount != 0)
+        {
+            if(waveCount != checkWave)
+            publicVariableHandler.IncreaseDifficulty();
+
+            checkWave = waveCount;
         }
 
         waveStartingText.gameObject.SetActive(true);

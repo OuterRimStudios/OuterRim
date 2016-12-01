@@ -102,23 +102,6 @@ public class FireMissile : MonoBehaviour
     {
        target = targetsInRange[Random.Range(0, targetsInRange.Count)];
        target.GetComponent<EnemyState>().isTarget = true;
-
-
-        print("Find enemy is called. Target is set to " +  target);
-        //target = GameObject.FindGameObjectWithTag("Enemy");
-        //if (target == null)
-        //{
-        //    hasTarget = false;
-        //}
-        //else if (target.activeInHierarchy)
-        //{
-        //    target.GetComponent<EnemyState>().isTarget = true;
-        //    hasTarget = true;
-        //}
-        //else if (!target.activeInHierarchy)
-        //{
-        //    hasTarget = false;
-        //}
     }
 
     IEnumerator MissileRecharge(float _missileRechargeLength)

@@ -76,7 +76,6 @@ public class Enemy1Collision : MonoBehaviour {
         else if (col.gameObject.tag == "Missile" && transform.name != "Enemy5")
         {
             fireMissile.hasTarget = false;
-            FireMissile.doneShooting = true;
             WasDestroyed();
             Destroy(col.gameObject);
             //col.gameObject.SetActive(false);
@@ -87,7 +86,6 @@ public class Enemy1Collision : MonoBehaviour {
             {
                 Instantiate(meteorExplosionPrefab, transform.position, transform.rotation);
                 col.gameObject.SetActive(false);
-
                 WasDestroyed();
             }
         }
@@ -105,31 +103,14 @@ public class Enemy1Collision : MonoBehaviour {
     }
     public void WasDestroyed()
     {
-
         fireMissile.targetsInRange.Remove(gameObject);
         if(fireMissile.target == gameObject)
         {
             fireMissile.hasTarget = false;
         }
-        // achievementManager.EnemyDied();
         _playerScore.score += laserScore;
         if(gameObject.tag != "Carrier")
             gameManager.GetComponent<WaveManager>().ShipDestroyed(gameObject);
-        //switch (transform.name)
-        //{
-        //    case "Enemy1":
-        //        gameManager.GetComponent<WaveHandler>().firstEnemyCount--;
-        //        break;
-        //    case "Enemy2":
-        //        gameManager.GetComponent<WaveHandler>().secondEnemyCount--;
-        //        break;
-        //    case "Enemy3":
-        //        gameManager.GetComponent<WaveHandler>().thirdEnemyCount--;
-        //        break;
-        //    case "Enemy4":
-        //        gameManager.GetComponent<WaveHandler>().fourthEnemyCount--;
-        //        break;
-        //}
         Instantiate(explosion, transform.position, transform.rotation);
         Instantiate(explosionSound, transform.position, transform.rotation);
         gameObject.SetActive(false);
