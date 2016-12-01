@@ -56,9 +56,8 @@ public class FireMissile : MonoBehaviour
         {
             FindEnemy();
         }
-        if (((Input.GetAxis("Fire2") > 0) && Time.time > (lastShot + missileCooldown) && hasTarget && missileCount > 0) && target != null && doneShooting == true)   // || (Input.GetAxis("Secondary")) != 0)
+        if (((Input.GetAxis("Fire2") > 0) && Time.time > (lastShot + missileCooldown) && hasTarget && missileCount > 0) && target != null)   // || (Input.GetAxis("Secondary")) != 0)
         {
-            doneShooting = false;
             target.GetComponent<EnemyState>().isTarget = false;
             if (isLevel3)
                 Level3Missile();

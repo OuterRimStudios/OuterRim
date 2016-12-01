@@ -2,6 +2,8 @@
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using System.Collections.Generic;
+using UnityEngine.Analytics;
 
 public class PlayerCollision : MonoBehaviour
 {
@@ -226,6 +228,12 @@ public class PlayerCollision : MonoBehaviour
                 Time.timeScale -= .1f;
             }
             yield return StartCoroutine(CoroutineUtil.WaitForRealSeconds(3f));
+            Analytics.CustomEvent("gameOver", new Dictionary<string, object>
+            {
+                {"waves", gameManager.GetComponent<WaveManager>().waveCount },
+                {"score", PlayerPrefs.GetInt("Score") },
+                {"shipName", PlayerPrefs.GetString("Ship") }
+            });
             SceneManager.LoadScene("GameOver");
         }
     }

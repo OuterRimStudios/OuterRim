@@ -421,7 +421,6 @@ GameObject:
   - 54: {fileID: 5490824}
   - 114: {fileID: 11431212}
   - 82: {fileID: 8217416}
-  - 114: {fileID: 11496416}
   - 114: {fileID: 11447800}
   - 114: {fileID: 11411236}
   - 114: {fileID: 11485714}
@@ -1447,12 +1446,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f947e56d54f4274896478766fef616c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_RollSensitivity: 0.1
-  m_PitchSensitivity: 0.1
-  m_LateralWanderDistance: 500
-  m_LateralWanderSpeed: 10000
+  m_RollSensitivity: 0.2
+  m_PitchSensitivity: 0.2
+  m_LateralWanderDistance: 20
+  m_LateralWanderSpeed: 100
   m_MaxClimbAngle: 90
-  m_MaxRollAngle: 0
+  m_MaxRollAngle: 90
   m_SpeedEffect: 0
   m_TakeoffHeight: 0
   m_Target: {fileID: 419480}
@@ -1571,19 +1570,6 @@ MonoBehaviour:
   maxFreq: 8
   laserPoolName: EnemyLasers
   canFire: 1
---- !u!114 &11496416
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 183016}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68b50cc832fad3b4b82da02f79b1bf0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  warpSpeed: 750
-  speed: 500
 --- !u!135 &13505204
 SphereCollider:
   m_ObjectHideFlags: 1

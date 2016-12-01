@@ -22,46 +22,84 @@ public class Enemy1Collision : MonoBehaviour
     PlayerCollision playerCollision;
     FireMissile fireMissile;
 
-    void Start()
+    void Awake()
     {
         player = GameObject.Find("Player");
         _playerScore = player.GetComponent<PlayerScore>();
         gameManager = GameObject.Find("GameManager");
         publicVariableHandler = gameManager.GetComponent<PublicVariableHandler>();
         achievementManager = gameManager.GetComponent<AchievementManager>();
-		hitEffect = publicVariableHandler.hitEffect;
+        hitEffect = publicVariableHandler.hitEffect;
         fireMissile = GameObject.Find("MissileNozzle").GetComponent<FireMissile>();
+    }
+
+    void Start()
+    {
+  //      player = GameObject.Find("Player");
+  //      _playerScore = player.GetComponent<PlayerScore>();
+  //      gameManager = GameObject.Find("GameManager");
+  //      publicVariableHandler = gameManager.GetComponent<PublicVariableHandler>();
+  //      achievementManager = gameManager.GetComponent<AchievementManager>();
+		//hitEffect = publicVariableHandler.hitEffect;
+  //      fireMissile = GameObject.Find("MissileNozzle").GetComponent<FireMissile>();
+        //switch (transform.name)
+        //{
+        //    case "Enemy 1":
+        //        laserScore = publicVariableHandler.enemy1LaserScore;
+        //        missileScore = publicVariableHandler.enemy1MissileScore;
+        //        baseHealth = publicVariableHandler.enemy1BaseHealth;
+        //        break;
+        //    case "Enemy 2":
+        //        laserScore = publicVariableHandler.enemy2LaserScore;
+        //        missileScore = publicVariableHandler.enemy2MissileScore;
+        //        baseHealth = publicVariableHandler.enemy2BaseHealth;
+        //        break;
+        //    case "Enemy 3":
+        //        laserScore = publicVariableHandler.enemy3LaserScore;
+        //        missileScore = publicVariableHandler.enemy3MissileScore;
+        //        baseHealth = publicVariableHandler.enemy3BaseHealth;
+        //        break;
+        //    case "Enemy 4":
+        //        laserScore = publicVariableHandler.enemy4LaserScore;
+        //        missileScore = publicVariableHandler.enemy4MissileScore;
+        //        baseHealth = publicVariableHandler.enemy4BaseHealth;
+        //        break;
+        //    case "Enemy 5":
+        //        laserScore = publicVariableHandler.enemy5LaserScore;
+        //        baseHealth = publicVariableHandler.enemy5BaseHealth;
+        //        break;
+        //}
+        //currentHealth = baseHealth;
+    }
+    public void OnSpawned()
+    {
         switch (transform.name)
         {
-            case "Enemy1":
+            case "Enemy 1":
                 laserScore = publicVariableHandler.enemy1LaserScore;
                 missileScore = publicVariableHandler.enemy1MissileScore;
                 baseHealth = publicVariableHandler.enemy1BaseHealth;
                 break;
-            case "Enemy2":
+            case "Enemy 2":
                 laserScore = publicVariableHandler.enemy2LaserScore;
                 missileScore = publicVariableHandler.enemy2MissileScore;
                 baseHealth = publicVariableHandler.enemy2BaseHealth;
                 break;
-            case "Enemy3":
+            case "Enemy 3":
                 laserScore = publicVariableHandler.enemy3LaserScore;
                 missileScore = publicVariableHandler.enemy3MissileScore;
                 baseHealth = publicVariableHandler.enemy3BaseHealth;
                 break;
-            case "Enemy4":
+            case "Enemy 4":
                 laserScore = publicVariableHandler.enemy4LaserScore;
                 missileScore = publicVariableHandler.enemy4MissileScore;
                 baseHealth = publicVariableHandler.enemy4BaseHealth;
                 break;
-            case "Enemy5":
+            case "Enemy 5":
                 laserScore = publicVariableHandler.enemy5LaserScore;
                 baseHealth = publicVariableHandler.enemy5BaseHealth;
                 break;
         }
-        currentHealth = baseHealth;
-    }
-    public void OnSpawned()
-    {
         currentHealth = baseHealth;
     }
     void OnTriggerEnter(Collider col)

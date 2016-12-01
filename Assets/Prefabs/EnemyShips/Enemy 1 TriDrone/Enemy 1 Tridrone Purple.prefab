@@ -455,7 +455,6 @@ GameObject:
   - 54: {fileID: 5402574}
   - 114: {fileID: 11461058}
   - 82: {fileID: 8259522}
-  - 114: {fileID: 11476402}
   - 114: {fileID: 11486848}
   - 114: {fileID: 11494170}
   - 114: {fileID: 11413608}
@@ -1513,19 +1512,6 @@ MonoBehaviour:
   missileScore: 1000
   baseHealth: 4
   currentHealth: 0
---- !u!114 &11476402
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 179910}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68b50cc832fad3b4b82da02f79b1bf0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  warpSpeed: 750
-  speed: 500
 --- !u!114 &11486848
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1575,12 +1561,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f947e56d54f4274896478766fef616c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_RollSensitivity: 0.1
-  m_PitchSensitivity: 0.1
-  m_LateralWanderDistance: 500
-  m_LateralWanderSpeed: 10000
+  m_RollSensitivity: 0.2
+  m_PitchSensitivity: 0.2
+  m_LateralWanderDistance: 20
+  m_LateralWanderSpeed: 100
   m_MaxClimbAngle: 90
-  m_MaxRollAngle: 0
+  m_MaxRollAngle: 90
   m_SpeedEffect: 0
   m_TakeoffHeight: 0
   m_Target: {fileID: 403250}
