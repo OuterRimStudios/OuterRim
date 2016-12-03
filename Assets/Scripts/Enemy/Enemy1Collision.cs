@@ -71,37 +71,84 @@ public class Enemy1Collision : MonoBehaviour
         //}
         //currentHealth = baseHealth;
     }
+
     public void OnSpawned()
     {
-        switch (transform.name)
+        if (transform.tag == "Enemy")
         {
-            case "Enemy 1":
-                laserScore = publicVariableHandler.enemy1LaserScore;
-                missileScore = publicVariableHandler.enemy1MissileScore;
-                baseHealth = publicVariableHandler.enemy1BaseHealth;
-                break;
-            case "Enemy 2":
-                laserScore = publicVariableHandler.enemy2LaserScore;
-                missileScore = publicVariableHandler.enemy2MissileScore;
-                baseHealth = publicVariableHandler.enemy2BaseHealth;
-                break;
-            case "Enemy 3":
-                laserScore = publicVariableHandler.enemy3LaserScore;
-                missileScore = publicVariableHandler.enemy3MissileScore;
-                baseHealth = publicVariableHandler.enemy3BaseHealth;
-                break;
-            case "Enemy 4":
-                laserScore = publicVariableHandler.enemy4LaserScore;
-                missileScore = publicVariableHandler.enemy4MissileScore;
-                baseHealth = publicVariableHandler.enemy4BaseHealth;
-                break;
-            case "Enemy 5":
-                laserScore = publicVariableHandler.enemy5LaserScore;
-                baseHealth = publicVariableHandler.enemy5BaseHealth;
-                break;
+            switch (transform.name)
+            {
+                case "Enemy 01":
+                    laserScore = publicVariableHandler.enemy1LaserScore;
+                    missileScore = publicVariableHandler.enemy1MissileScore;
+                    baseHealth = publicVariableHandler.enemy1BaseHealth;
+                    break;
+                case "Enemy 02":
+                    laserScore = publicVariableHandler.enemy2LaserScore;
+                    missileScore = publicVariableHandler.enemy2MissileScore;
+                    baseHealth = publicVariableHandler.enemy2BaseHealth;
+                    break;
+                case "Enemy 03":
+                    laserScore = publicVariableHandler.enemy3LaserScore;
+                    missileScore = publicVariableHandler.enemy3MissileScore;
+                    baseHealth = publicVariableHandler.enemy3BaseHealth;
+                    break;
+                case "Enemy 04":
+                    laserScore = publicVariableHandler.enemy4LaserScore;
+                    missileScore = publicVariableHandler.enemy4MissileScore;
+                    baseHealth = publicVariableHandler.enemy4BaseHealth;
+                    break;
+                case "Enemy 05":
+                    laserScore = publicVariableHandler.enemy5LaserScore;
+                    missileScore = publicVariableHandler.enemy5MissileScore;
+                    baseHealth = publicVariableHandler.enemy5BaseHealth;
+                    break;
+                case "Enemy 06":
+                    laserScore = publicVariableHandler.enemy6LaserScore;
+                    missileScore = publicVariableHandler.enemy6MissileScore;
+                    baseHealth = publicVariableHandler.enemy6BaseHealth;
+                    break;
+                case "Enemy 07":
+                    laserScore = publicVariableHandler.enemy7LaserScore;
+                    missileScore = publicVariableHandler.enemy7MissileScore;
+                    baseHealth = publicVariableHandler.enemy7BaseHealth;
+                    break;
+                case "Enemy 08":
+                    laserScore = publicVariableHandler.enemy8LaserScore;
+                    missileScore = publicVariableHandler.enemy8MissileScore;
+                    baseHealth = publicVariableHandler.enemy8BaseHealth;
+                    break;
+                case "Enemy 09":
+                    laserScore = publicVariableHandler.enemy9LaserScore;
+                    missileScore = publicVariableHandler.enemy9MissileScore;
+                    baseHealth = publicVariableHandler.enemy9BaseHealth;
+                    break;
+                case "Enemy 10":
+                    laserScore = publicVariableHandler.enemy10LaserScore;
+                    missileScore = publicVariableHandler.enemy10MissileScore;
+                    baseHealth = publicVariableHandler.enemy10BaseHealth;
+                    break;
+                case "Enemy 11":
+                    laserScore = publicVariableHandler.enemy11LaserScore;
+                    missileScore = publicVariableHandler.enemy11MissileScore;
+                    baseHealth = publicVariableHandler.enemy11BaseHealth;
+                    break;
+                case "Enemy 12":
+                    laserScore = publicVariableHandler.enemy12LaserScore;
+                    missileScore = publicVariableHandler.enemy12MissileScore;
+                    baseHealth = publicVariableHandler.enemy12BaseHealth;
+                    break;
+            }
         }
+        else if (transform.tag == "Carrier")
+        {
+            laserScore = publicVariableHandler.carrierScore;
+            baseHealth = publicVariableHandler.carrierBaseHealth;
+        }
+
         currentHealth = baseHealth;
     }
+
     void OnTriggerEnter(Collider col)
     {
         if (col.gameObject.tag == "Laser")
@@ -110,13 +157,13 @@ public class Enemy1Collision : MonoBehaviour
             col.gameObject.SetActive(false);
             TookDamage();
         }
-        else if (col.gameObject.tag == "Missile" && transform.name != "Enemy5")
+        else if (col.gameObject.tag == "Missile")
         {
             fireMissile.hasTarget = false;
             WasDestroyed();
             Destroy(col.gameObject);
         }
-        if (transform.name != "Enemy5")
+        if (transform.tag != "Carrier")
         {
             if (col.gameObject.tag == "Meteor")
             {
@@ -126,6 +173,7 @@ public class Enemy1Collision : MonoBehaviour
             }
         }
     }
+
     public void TookDamage()
     {
         currentHealth--;
@@ -134,6 +182,7 @@ public class Enemy1Collision : MonoBehaviour
             WasDestroyed();
         }
     }
+
     public void WasDestroyed()
     {
         fireMissile.targetsInRange.Remove(gameObject);

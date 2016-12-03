@@ -15,7 +15,7 @@ public class MissileMovement : MonoBehaviour
         nozzle = GameObject.Find("MissileNozzle");
         StartCoroutine(IncreaseSpeed());
     }
-    void Update()
+    void FixedUpdate()
     {
         if (target.activeInHierarchy)
         {

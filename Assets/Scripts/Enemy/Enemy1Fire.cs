@@ -35,6 +35,30 @@ public class Enemy1Fire : MonoBehaviour
             case "Enemy4Guns":
                 fireFreq = gameManager.GetComponent<PublicVariableHandler>().enemy4FireFreq;
                 break;
+            case "Enemy5Guns":
+                fireFreq = gameManager.GetComponent<PublicVariableHandler>().enemy5FireFreq;
+                break;
+            case "Enemy6Guns":
+                fireFreq = gameManager.GetComponent<PublicVariableHandler>().enemy6FireFreq;
+                break;
+            case "Enemy7Guns":
+                fireFreq = gameManager.GetComponent<PublicVariableHandler>().enemy7FireFreq;
+                break;
+            case "Enemy8Guns":
+                fireFreq = gameManager.GetComponent<PublicVariableHandler>().enemy8FireFreq;
+                break;
+            case "Enemy9Guns":
+                fireFreq = gameManager.GetComponent<PublicVariableHandler>().enemy9FireFreq;
+                break;
+            case "Enemy10Guns":
+                fireFreq = gameManager.GetComponent<PublicVariableHandler>().enemy10FireFreq;
+                break;
+            case "Enemy11Guns":
+                fireFreq = gameManager.GetComponent<PublicVariableHandler>().enemy11FireFreq;
+                break;
+            case "Enemy12Guns":
+                fireFreq = gameManager.GetComponent<PublicVariableHandler>().enemy12FireFreq;
+                break;
         }
     }
 

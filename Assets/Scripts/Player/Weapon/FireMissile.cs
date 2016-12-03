@@ -58,7 +58,7 @@ public class FireMissile : MonoBehaviour
         }
         if (((Input.GetAxis("Fire2") > 0) && Time.time > (lastShot + missileCooldown) && hasTarget && missileCount > 0) && target != null)   // || (Input.GetAxis("Secondary")) != 0)
         {
-            target.GetComponent<EnemyState>().isTarget = false;
+            target.transform.parent.GetComponent<EnemyState>().isTarget = false;
             if (isLevel3)
                 Level3Missile();
             else
@@ -91,8 +91,8 @@ public class FireMissile : MonoBehaviour
 
     void FindEnemy()
     {
-       target = targetsInRange[Random.Range(0, targetsInRange.Count)];
-       target.GetComponent<EnemyState>().isTarget = true;
+       target = targetsInRange[Random.Range(0, targetsInRange.Count)].transform.FindChild("LookAtPoint").gameObject;
+       target.transform.parent.GetComponent<EnemyState>().isTarget = true;
     }
 
     IEnumerator MissileRecharge(float _missileRechargeLength)

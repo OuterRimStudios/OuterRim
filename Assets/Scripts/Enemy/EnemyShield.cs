@@ -16,12 +16,12 @@ public class EnemyShield : MonoBehaviour
 
         switch (transform.parent.name)
         {
-            case "Enemy4":
+            case "Enemy 04":
                 startingHealth = gameManager.GetComponent<PublicVariableHandler>().enemy4ShieldHealth;
                 break;
-            case "Enemy5":
-                startingHealth = gameManager.GetComponent<PublicVariableHandler>().enemy5ShieldHealth;
-                break;
+            //case "Enemy5":
+            //    startingHealth = gameManager.GetComponent<PublicVariableHandler>().enemy5ShieldHealth;
+            //    break;
         }
 
         currentHealth = startingHealth;
@@ -45,7 +45,7 @@ public class EnemyShield : MonoBehaviour
             }
         }
 
-        if (transform.parent.name != "Enemy5")
+        if (transform.parent.tag != "Carrier")
         {
             if (other.tag == "Meteor")
             {

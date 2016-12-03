@@ -46,7 +46,48 @@ namespace UnityStandardAssets.Vehicles.Aeroplane
         private void Start()
         {
             publicVariableHandler = GameObject.Find("GameManager").GetComponent<PublicVariableHandler>();
-            m_MaxEnginePower = publicVariableHandler.enemy1Speed;
+            if (transform.tag == "Enemy")
+            {
+                switch (transform.name)
+                {
+                    case "Enemy 01":
+                        m_MaxEnginePower = publicVariableHandler.enemy1Speed;
+                        break;
+                    case "Enemy 02":
+                        m_MaxEnginePower = publicVariableHandler.enemy2Speed;
+                        break;
+                    case "Enemy 03":
+                        m_MaxEnginePower = publicVariableHandler.enemy3Speed;
+                        break;
+                    case "Enemy 04":
+                        m_MaxEnginePower = publicVariableHandler.enemy4Speed;
+                        break;
+                    case "Enemy 05":
+                        m_MaxEnginePower = publicVariableHandler.enemy5Speed;
+                        break;
+                    case "Enemy 06":
+                        m_MaxEnginePower = publicVariableHandler.enemy6Speed;
+                        break;
+                    case "Enemy 07":
+                        m_MaxEnginePower = publicVariableHandler.enemy7Speed;
+                        break;
+                    case "Enemy 08":
+                        m_MaxEnginePower = publicVariableHandler.enemy8Speed;
+                        break;
+                    case "Enemy 09":
+                        m_MaxEnginePower = publicVariableHandler.enemy9Speed;
+                        break;
+                    case "Enemy 10":
+                        m_MaxEnginePower = publicVariableHandler.enemy10Speed;
+                        break;
+                    case "Enemy 11":
+                        m_MaxEnginePower = publicVariableHandler.enemy11Speed;
+                        break;
+                    case "Enemy 12":
+                        m_MaxEnginePower = publicVariableHandler.enemy12Speed;
+                        break;
+                }
+            }
             m_Rigidbody = GetComponent<Rigidbody>();
             // Store original drag settings, these are modified during flight.
             m_OriginalDrag = m_Rigidbody.drag;
