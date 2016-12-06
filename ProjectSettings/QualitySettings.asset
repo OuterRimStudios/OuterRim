@@ -13,12 +13,12 @@ QualitySettings:
     shadowResolution: 1
     shadowProjection: 1
     shadowCascades: 1
-    shadowDistance: 15
-    shadowNearPlaneOffset: 2
+    shadowDistance: 0
+    shadowNearPlaneOffset: 0
     shadowCascade2Split: 0.33333334
     shadowCascade4Split: {x: 0.06666667, y: 0.19999999, z: 0.46666664}
     blendWeights: 1
-    textureQuality: 0
+    textureQuality: 1
     anisotropicTextures: 0
     antiAliasing: 0
     softParticles: 0
@@ -34,7 +34,6 @@ QualitySettings:
     excludedTargetPlatforms:
     - Web
     - iPhone
-    - Android
     - BlackBerry
     - Tizen
     - Windows Store Apps
@@ -69,7 +68,6 @@ QualitySettings:
     excludedTargetPlatforms:
     - Web
     - iPhone
-    - Android
     - BlackBerry
     - Tizen
     - Windows Store Apps
@@ -104,7 +102,6 @@ QualitySettings:
     excludedTargetPlatforms:
     - Web
     - iPhone
-    - Android
     - BlackBerry
     - Tizen
     - Windows Store Apps
@@ -139,7 +136,6 @@ QualitySettings:
     excludedTargetPlatforms:
     - Web
     - iPhone
-    - Android
     - BlackBerry
     - Tizen
     - Windows Store Apps
@@ -174,7 +170,6 @@ QualitySettings:
     excludedTargetPlatforms:
     - Web
     - iPhone
-    - Android
     - BlackBerry
     - Tizen
     - Windows Store Apps
@@ -209,11 +204,14 @@ QualitySettings:
     excludedTargetPlatforms:
     - Web
     - iPhone
-    - Android
     - BlackBerry
     - Tizen
     - Windows Store Apps
     - WP8
     - WebGL
     - Samsung TV
-  m_PerPlatformDefaultQuality: {}
+  m_PerPlatformDefaultQuality:
+    Android: 0
+    Standalone: 0
+    WebGL: 0
+    iPhone: 0
