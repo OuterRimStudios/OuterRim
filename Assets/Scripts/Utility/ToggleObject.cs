@@ -4,9 +4,7 @@ using System.Collections;
 public class ToggleObject : MonoBehaviour
 {
 
-    public GameObject _object;
-    public GameObject lights;
-    public GameObject shipLight;
+    public GameObject[] objects;
 
     // Use this for initialization
     void Start()
@@ -22,15 +20,17 @@ public class ToggleObject : MonoBehaviour
 
     public void Toggle()
     {
-        lights.SetActive(!lights.activeInHierarchy);
-        shipLight.SetActive(!shipLight.activeInHierarchy);
-        _object.SetActive(!_object.activeInHierarchy);
+        foreach(GameObject obj in objects)
+        {
+            obj.SetActive(!obj.activeInHierarchy);
+        }        
     }
 
-    public static void Toggle(GameObject lights, GameObject shipLight, GameObject _object)
+    public static void Toggle(GameObject[] objects)
     {
-        lights.SetActive(!lights.activeInHierarchy);
-        shipLight.SetActive(!shipLight.activeInHierarchy);
-        _object.SetActive(!_object.activeInHierarchy);
+        foreach(GameObject obj in objects)
+        {
+            obj.SetActive(!obj.activeInHierarchy);
+        }
     }
 }

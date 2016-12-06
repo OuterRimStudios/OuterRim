@@ -47,17 +47,6 @@ public class PickUpManager : MonoBehaviour
         playerScore = player.GetComponent<PlayerScore>();
         publicVariableHandler = GetComponent<PublicVariableHandler>();
     }
-    //void Update()
-    //{
-    //    if (playerScore.score % spawnAtScore == 0 && playerScore.score != 0 && !spawning && playerScore.score > oldScore)
-    //    {
-    //        spawning = true;
-    //        oldScore = playerScore.score;
-    //        SpawnPickUp();
-    //        spawning = false;
-    //    }
-
-    //}
     public void SpawnPickUp(bool weaponPickUp)
     {
         if (weaponPickUp)
@@ -78,8 +67,6 @@ public class PickUpManager : MonoBehaviour
                 Instantiate(missilePickUp, spawnPoint, Quaternion.identity);
             }       
         }
-  
-
         if (!weaponPickUp)
         {
             choose = Random.Range(0, 2);
@@ -99,7 +86,6 @@ public class PickUpManager : MonoBehaviour
             }
         }
     }
-
     public void LevelUp(string powerUpType)
     {
         leveled = true;
@@ -127,7 +113,6 @@ public class PickUpManager : MonoBehaviour
                 break;
         }
     }
-
     public void LoseLevel()
     {
         leveled = false;
@@ -157,7 +142,6 @@ public class PickUpManager : MonoBehaviour
                     break;
             }
         }
-
         if (missileLevel > 0)
         {
             missileLevel--;
@@ -172,7 +156,6 @@ public class PickUpManager : MonoBehaviour
             }
         }
     }
-
     public void LoseMissileLevel()
     {
         if (missileLevel == 3)

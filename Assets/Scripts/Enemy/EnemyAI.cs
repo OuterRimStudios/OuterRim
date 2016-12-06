@@ -11,17 +11,63 @@ public class EnemyAI : MonoBehaviour
 	Vector3 playerPosition;
     private bool warped;
     private bool inRange;
-    WaveHandler waveHandler;
     bool newSpawn;
+    PublicVariableHandler publicVariableHandler;
 
 	void Start ()
     {
         player = GameObject.Find("Player");
         gameManager = GameObject.Find("GameManager");
-        waveHandler = gameManager.GetComponent<WaveHandler>();
-		speed = gameManager.GetComponent<PublicVariableHandler> ().enemyAISpeed;
+        publicVariableHandler = gameManager.GetComponent<PublicVariableHandler>();
 		
         newSpawn = true;
+
+        if (transform.tag == "Enemy")
+        {
+            switch (transform.name)
+            {
+                case "Enemy 01":
+                    speed = publicVariableHandler.enemy1Speed;
+                    break;
+                case "Enemy 02":
+                    speed = publicVariableHandler.enemy2Speed;
+                    break;
+                case "Enemy 03":
+                    speed = publicVariableHandler.enemy3Speed;
+                    break;
+                case "Enemy 04":
+                    speed = publicVariableHandler.enemy4Speed;
+                    break;
+                case "Enemy 05":
+                    speed = publicVariableHandler.enemy5Speed;
+                    break;
+                case "Enemy 06":
+                    speed = publicVariableHandler.enemy6Speed;
+                    break;
+                case "Enemy 07":
+                    speed = publicVariableHandler.enemy7Speed;
+                    break;
+                case "Enemy 08":
+                    speed = publicVariableHandler.enemy8Speed;
+                    break;
+                case "Enemy 09":
+                    speed = publicVariableHandler.enemy9Speed;
+                    break;
+                case "Enemy 10":
+                    speed = publicVariableHandler.enemy10Speed;
+                    break;
+                case "Enemy 11":
+                    speed = publicVariableHandler.enemy11Speed;
+                    break;
+                case "Enemy 12":
+                    speed = publicVariableHandler.enemy12Speed;
+                    break;
+            }
+        }
+        else if (transform.tag == "Carrier")
+        {
+            speed = publicVariableHandler.carrierSpeed;
+        }
     }
 	
 	void FixedUpdate ()

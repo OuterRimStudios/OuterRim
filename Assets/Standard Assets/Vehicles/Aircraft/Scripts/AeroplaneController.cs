@@ -41,10 +41,53 @@ namespace UnityStandardAssets.Vehicles.Aeroplane
         private float m_BankedTurnAmount;
         private Rigidbody m_Rigidbody;
 	    WheelCollider[] m_WheelColliders;
-
+        PublicVariableHandler publicVariableHandler;
 
         private void Start()
         {
+            publicVariableHandler = GameObject.Find("GameManager").GetComponent<PublicVariableHandler>();
+            if (transform.tag == "Enemy")
+            {
+                switch (transform.name)
+                {
+                    case "Enemy 01":
+                        m_MaxEnginePower = publicVariableHandler.enemy1Speed;
+                        break;
+                    case "Enemy 02":
+                        m_MaxEnginePower = publicVariableHandler.enemy2Speed;
+                        break;
+                    case "Enemy 03":
+                        m_MaxEnginePower = publicVariableHandler.enemy3Speed;
+                        break;
+                    case "Enemy 04":
+                        m_MaxEnginePower = publicVariableHandler.enemy4Speed;
+                        break;
+                    case "Enemy 05":
+                        m_MaxEnginePower = publicVariableHandler.enemy5Speed;
+                        break;
+                    case "Enemy 06":
+                        m_MaxEnginePower = publicVariableHandler.enemy6Speed;
+                        break;
+                    case "Enemy 07":
+                        m_MaxEnginePower = publicVariableHandler.enemy7Speed;
+                        break;
+                    case "Enemy 08":
+                        m_MaxEnginePower = publicVariableHandler.enemy8Speed;
+                        break;
+                    case "Enemy 09":
+                        m_MaxEnginePower = publicVariableHandler.enemy9Speed;
+                        break;
+                    case "Enemy 10":
+                        m_MaxEnginePower = publicVariableHandler.enemy10Speed;
+                        break;
+                    case "Enemy 11":
+                        m_MaxEnginePower = publicVariableHandler.enemy11Speed;
+                        break;
+                    case "Enemy 12":
+                        m_MaxEnginePower = publicVariableHandler.enemy12Speed;
+                        break;
+                }
+            }
             m_Rigidbody = GetComponent<Rigidbody>();
             // Store original drag settings, these are modified during flight.
             m_OriginalDrag = m_Rigidbody.drag;
@@ -58,8 +101,6 @@ namespace UnityStandardAssets.Vehicles.Aeroplane
 				}
 			}
         }
-
-
         public void Move(float rollInput, float pitchInput, float yawInput, float throttleInput, bool airBrakes)
         {
             // transfer input parameters into properties.s
@@ -68,29 +109,17 @@ namespace UnityStandardAssets.Vehicles.Aeroplane
             YawInput = yawInput;
             ThrottleInput = throttleInput;
             AirBrakes = airBrakes;
-
             ClampInputs();
-
             CalculateRollAndPitchAngles();
-
             AutoLevel();
-
             CalculateForwardSpeed();
-
             ControlThrottle();
-
             CalculateDrag();
-
             CaluclateAerodynamicEffect();
-
             CalculateLinearForces();
-
             CalculateTorque();
-
             CalculateAltitude();
         }
-
-
         private void ClampInputs()
         {
             // clamp the inputs to -1 to 1 range
@@ -99,8 +128,6 @@ namespace UnityStandardAssets.Vehicles.Aeroplane
             YawInput = Mathf.Clamp(YawInput, -1, 1);
             ThrottleInput = Mathf.Clamp(ThrottleInput, -1, 1);
         }
-
-
         private void CalculateRollAndPitchAngles()
         {
             // Calculate roll & pitch angles
@@ -120,8 +147,6 @@ namespace UnityStandardAssets.Vehicles.Aeroplane
                 RollAngle = Mathf.Atan2(localFlatRight.y, localFlatRight.x);
             }
         }
-
-
         private void AutoLevel()
         {
             // The banked turn amount (between -1 and 1) is the sine of the roll angle.
@@ -140,16 +165,12 @@ namespace UnityStandardAssets.Vehicles.Aeroplane
                 PitchInput -= Mathf.Abs(m_BankedTurnAmount*m_BankedTurnAmount*m_AutoTurnPitch);
             }
         }
-
-
         private void CalculateForwardSpeed()
         {
             // Forward speed is the speed in the planes's forward direction (not the same as its velocity, eg if falling in a stall)
             var localVelocity = transform.InverseTransformDirection(m_Rigidbody.velocity);
             ForwardSpeed = Mathf.Max(0, localVelocity.z);
         }
-
-
         private void ControlThrottle()
         {
             // override throttle if immobilized
@@ -164,8 +185,6 @@ namespace UnityStandardAssets.Vehicles.Aeroplane
             // current engine power is just:
             EnginePower = Throttle*m_MaxEnginePower;
         }
-
-
         private void CalculateDrag()
         {
             // increase the drag based on speed, since a constant drag doesn't seem "Real" (tm) enough
@@ -175,8 +194,6 @@ namespace UnityStandardAssets.Vehicles.Aeroplane
             // Forward speed affects angular drag - at high forward speed, it's much harder for the plane to spin
             m_Rigidbody.angularDrag = m_OriginalAngularDrag*ForwardSpeed;
         }
-
-
         private void CaluclateAerodynamicEffect()
         {
             // "Aerodynamic" calculations. This is a very simple approximation of the effect that a plane
@@ -201,8 +218,6 @@ namespace UnityStandardAssets.Vehicles.Aeroplane
                                                       m_AerodynamicEffect*Time.deltaTime);
             }
         }
-
-
         private void CalculateLinearForces()
         {
             // Now calculate forces acting on the aeroplane:
@@ -222,8 +237,6 @@ namespace UnityStandardAssets.Vehicles.Aeroplane
             // Apply the calculated forces to the the Rigidbody
             m_Rigidbody.AddForce(forces);
         }
-
-
         private void CalculateTorque()
         {
             // We accumulate torque forces into this variable:
@@ -241,8 +254,6 @@ namespace UnityStandardAssets.Vehicles.Aeroplane
             // (i.e. falling while stalled)
             m_Rigidbody.AddTorque(torque*ForwardSpeed*m_AeroFactor);
         }
-
-
         private void CalculateAltitude()
         {
             // Altitude calculations - we raycast downwards from the aeroplane
@@ -251,15 +262,11 @@ namespace UnityStandardAssets.Vehicles.Aeroplane
             RaycastHit hit;
             Altitude = Physics.Raycast(ray, out hit) ? hit.distance + 10 : transform.position.y;
         }
-
-
         // Immobilize can be called from other objects, for example if this plane is hit by a weapon and should become uncontrollable
         public void Immobilize()
         {
             m_Immobilized = true;
         }
-
-
         // Reset is called via the ObjectResetter script, if present.
         public void Reset()
         {

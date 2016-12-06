@@ -2,8 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class MissileMovement : MonoBehaviour {
-
+public class MissileMovement : MonoBehaviour
+{
     public float missileSpeed;
     public GameObject target;
     GameObject nozzle;
@@ -13,12 +13,9 @@ public class MissileMovement : MonoBehaviour {
     void Start()
     {
         nozzle = GameObject.Find("MissileNozzle");
-       // target = nozzle.GetComponent<FireMissile>().target;
         StartCoroutine(IncreaseSpeed());
     }
-
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (target.activeInHierarchy)
         {
@@ -28,10 +25,8 @@ public class MissileMovement : MonoBehaviour {
         else
         {
             transform.Translate(Vector3.forward * missileSpeed * Time.deltaTime);
-            //Destroy(this.gameObject);
         }
     }
-
     IEnumerator IncreaseSpeed()
     {
         for(int i = 0; i <= 4; i++)

@@ -19,21 +19,12 @@ public class AimAssist : MonoBehaviour
         gun1Script = gun1.GetComponent<FireScript>();
         gun2Script = gun2.GetComponent<FireScript>();
     }
-	void Update ()
+    public void FoundTarget(GameObject target)
     {
-        foundTarget = Physics.SphereCast(transform.position, 150f, transform.forward, out hit, 7000f);
-
-        if (foundTarget)
+        if(target.activeInHierarchy)
         {
-            if (hit.transform.tag == "Enemy")
-            {
-                gun1Script.target = hit.transform;
-                gun2Script.target = hit.transform;
-            }
-            else
-            {
-                //Do nothing
-            }
+            gun1Script.target = target.transform;
+            gun2Script.target = target.transform;
         }
-	}
+    }
 }

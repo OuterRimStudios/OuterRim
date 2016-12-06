@@ -34,8 +34,8 @@ public class FadeIn : MonoBehaviour
     }
     bool FadingIn()
     {
-        image.color = Color.Lerp(image.color, Color.white, Time.deltaTime * 10f);
-        text.color = Color.Lerp(text.color, Color.white, Time.deltaTime * 10f);
+        image.color = Color.Lerp(image.color, Color.white, Time.deltaTime * 15f);
+        text.color = Color.Lerp(text.color, Color.white, Time.deltaTime * 15f);
         timer += 1 / 60.0f;
         if (image.color == Color.clear)
             return true;

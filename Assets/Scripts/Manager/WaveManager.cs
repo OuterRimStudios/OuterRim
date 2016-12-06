@@ -53,17 +53,20 @@ public class WaveManager : MonoBehaviour
     private bool canSpawn;
     private bool sectorWasCompleted;
     private int newEnemyCount;  //This increases the pool size.
-    private float waveCount;
+    [HideInInspector]
+    public float waveCount;
     float sectorNum;
     float quadNum;
     int badgeAmt;
     bool carrierSpawned;
-
+    PublicVariableHandler publicVariableHandler;
+    float checkWave;
     void Start ()
     {
         canSpawn = true;
         player = GameObject.Find("Player");
         pickUpManager = GetComponent<PickUpManager>();
+        publicVariableHandler = GetComponent<PublicVariableHandler>();
         ChooseLocation();
         StartCoroutine(WaveStarting());
 	}
@@ -76,8 +79,7 @@ public class WaveManager : MonoBehaviour
     }
 
 	void Spawn ()
-    {
-        
+    {        
         if (canSpawn)
         {
             while (currentHPUsed < allowedHP)
@@ -87,16 +89,18 @@ public class WaveManager : MonoBehaviour
                 if (obj == null)
                 {
                     return;
-                }
-                currentHPUsed += obj.GetComponent<Enemy1Collision>().baseHealth;
+                }                
 
                 obj.transform.position = new Vector3(player.transform.position.x + Random.Range(minXSpawn, maxXspawn),
                 player.transform.position.y + Random.Range(minYSpawn, maxYSpawn), player.transform.position.z + zSpawn);
                 obj.transform.rotation = transform.rotation;
+                obj.name = obj.name.Substring(0, 8);
+                obj.GetComponent<Enemy1Collision>().OnSpawned();
                 obj.SetActive(true);
                 activeEnemies.Add(obj);
-                obj.GetComponent<Enemy1Collision>().OnSpawned();
                 
+                currentHPUsed += obj.GetComponent<Enemy1Collision>().baseHealth;
+
                 if (currentHPUsed >= allowedHP)
                 {
                     canSpawn = false;
@@ -199,6 +203,14 @@ public class WaveManager : MonoBehaviour
             sectorWasCompleted = true;
             StartCoroutine(SectorCompleted());
             yield return new WaitForSeconds(3);
+        }
+
+        if(waveCount % 5 == 0 && waveCount != 0)
+        {
+            if(waveCount != checkWave)
+            publicVariableHandler.IncreaseDifficulty();
+
+            checkWave = waveCount;
         }
 
         waveStartingText.gameObject.SetActive(true);
