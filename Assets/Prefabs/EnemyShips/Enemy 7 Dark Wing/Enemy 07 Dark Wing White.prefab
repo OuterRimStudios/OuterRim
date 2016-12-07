@@ -181,6 +181,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 490294}
   - 212: {fileID: 21293694}
+  - 114: {fileID: 114000012063809966}
   m_Layer: 0
   m_Name: LockOn
   m_TagString: Untagged
@@ -4935,6 +4936,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000011076395888}
   - 212: {fileID: 212000011257468898}
+  - 114: {fileID: 114000012813500058}
   m_Layer: 0
   m_Name: LockOn
   m_TagString: Untagged
@@ -5051,6 +5053,17 @@ MonoBehaviour:
   m_SpeedEffect: 0
   m_TakeoffHeight: 0
   m_Target: {fileID: 462018}
+--- !u!114 &114000012063809966
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 143914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5fe9fa792377d74ab147dd91d935461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000012257268790
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5076,6 +5089,17 @@ MonoBehaviour:
   m_AirBrakesEffect: 0
   m_ThrottleChangeSpeed: 2
   m_DragIncreaseFactor: 0.00095
+--- !u!114 &114000012813500058
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000014224533218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5fe9fa792377d74ab147dd91d935461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000013343730788
 MonoBehaviour:
   m_ObjectHideFlags: 1

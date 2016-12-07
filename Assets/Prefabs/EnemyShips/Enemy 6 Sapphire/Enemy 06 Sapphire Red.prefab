@@ -254,6 +254,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 434800}
   - 212: {fileID: 21223820}
+  - 114: {fileID: 114000013562507448}
   m_Layer: 0
   m_Name: LockOn
   m_TagString: Untagged
@@ -4869,6 +4870,17 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   waittingTime: 0
   copy: 0
+--- !u!114 &114000013562507448
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 195898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5fe9fa792377d74ab147dd91d935461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000014038495428
 MonoBehaviour:
   m_ObjectHideFlags: 1

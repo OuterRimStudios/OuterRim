@@ -152,6 +152,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 495424}
   - 212: {fileID: 21218512}
+  - 114: {fileID: 114000010195999146}
   m_Layer: 0
   m_Name: LockOn
   m_TagString: Untagged
@@ -4780,6 +4781,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 410394}
   m_RootOrder: 1
+--- !u!114 &114000010195999146
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 150500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5fe9fa792377d74ab147dd91d935461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000010214005254
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -238,6 +238,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 444806}
   - 212: {fileID: 21205616}
+  - 114: {fileID: 114000011669859614}
   m_Layer: 0
   m_Name: LockOn
   m_TagString: Untagged
@@ -4935,6 +4936,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000013272806000}
   - 212: {fileID: 212000010013421224}
+  - 114: {fileID: 114000010007594528}
   m_Layer: 0
   m_Name: LockOn
   m_TagString: Untagged
@@ -5012,6 +5014,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000013272806000}
   m_RootOrder: 0
+--- !u!114 &114000010007594528
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000014162543688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5fe9fa792377d74ab147dd91d935461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000010739162370
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5031,6 +5044,17 @@ MonoBehaviour:
   progressStyle: 1
   pointToPointThreshold: 2000
   target: {fileID: 404050}
+--- !u!114 &114000011669859614
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 145186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5fe9fa792377d74ab147dd91d935461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000011797724110
 MonoBehaviour:
   m_ObjectHideFlags: 1

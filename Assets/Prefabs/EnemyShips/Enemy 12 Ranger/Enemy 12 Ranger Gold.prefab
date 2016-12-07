@@ -66,6 +66,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 426360}
   - 212: {fileID: 21249938}
+  - 114: {fileID: 114000012112523284}
   m_Layer: 0
   m_Name: LockOn
   m_TagString: Untagged
@@ -4735,6 +4736,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000014153511952}
   - 212: {fileID: 212000013009059200}
+  - 114: {fileID: 114000011962463366}
   m_Layer: 0
   m_Name: LockOn (1)
   m_TagString: Untagged
@@ -4830,6 +4832,28 @@ Transform:
   - {fileID: 4000011900665816}
   m_Father: {fileID: 426360}
   m_RootOrder: 0
+--- !u!114 &114000011962463366
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010928249012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5fe9fa792377d74ab147dd91d935461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114000012112523284
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 119084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5fe9fa792377d74ab147dd91d935461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000012321782810
 MonoBehaviour:
   m_ObjectHideFlags: 1

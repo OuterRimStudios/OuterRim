@@ -9,6 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 440268}
   - 212: {fileID: 21257578}
+  - 114: {fileID: 114000012660860170}
   m_Layer: 0
   m_Name: LockOn
   m_TagString: Untagged
@@ -4589,6 +4590,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000013821201014}
   - 212: {fileID: 212000012508829334}
+  - 114: {fileID: 114000011519705184}
   m_Layer: 0
   m_Name: LockOn
   m_TagString: Untagged
@@ -4666,6 +4668,17 @@ Transform:
   - {fileID: 4000013558978058}
   m_Father: {fileID: 440268}
   m_RootOrder: 0
+--- !u!114 &114000011519705184
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013239476632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5fe9fa792377d74ab147dd91d935461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000011576292554
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4726,6 +4739,17 @@ MonoBehaviour:
   m_AirBrakesEffect: 0
   m_ThrottleChangeSpeed: 2
   m_DragIncreaseFactor: 0.00095
+--- !u!114 &114000012660860170
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5fe9fa792377d74ab147dd91d935461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000013392043582
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -26,6 +26,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 488150}
   - 212: {fileID: 21216298}
+  - 114: {fileID: 114000012598006798}
   m_Layer: 0
   m_Name: LockOn
   m_TagString: Untagged
@@ -4751,6 +4752,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000011556484474}
   - 212: {fileID: 212000012694759176}
+  - 114: {fileID: 114000010284008074}
   m_Layer: 0
   m_Name: LockOn
   m_TagString: Untagged
@@ -4843,6 +4845,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   warpSpeed: 1000
   speed: 500
+--- !u!114 &114000010284008074
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013695476016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5fe9fa792377d74ab147dd91d935461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000010612021712
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4878,6 +4891,17 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   waittingTime: 0
   copy: 0
+--- !u!114 &114000012598006798
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 104460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5fe9fa792377d74ab147dd91d935461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000013574152664
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -198,6 +198,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 455894}
   - 212: {fileID: 21271080}
+  - 114: {fileID: 114000012699195580}
   m_Layer: 0
   m_Name: LockOn
   m_TagString: Untagged
@@ -4905,6 +4906,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000013398593012}
   - 212: {fileID: 212000013552900732}
+  - 114: {fileID: 114000014253392098}
   m_Layer: 0
   m_Name: LockOn
   m_TagString: Untagged
@@ -5092,6 +5094,17 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   waittingTime: 0
   copy: 0
+--- !u!114 &114000012699195580
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5fe9fa792377d74ab147dd91d935461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000013317407754
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5146,6 +5159,17 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   waittingTime: 0
   copy: 0
+--- !u!114 &114000014253392098
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012666467652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5fe9fa792377d74ab147dd91d935461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212000013552900732
 SpriteRenderer:
   m_ObjectHideFlags: 1

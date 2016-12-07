@@ -238,6 +238,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 434160}
   - 212: {fileID: 21268958}
+  - 114: {fileID: 114000010474490150}
   m_Layer: 0
   m_Name: LockOn
   m_TagString: Untagged
@@ -4573,6 +4574,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000011795365152}
   - 212: {fileID: 212000011849509246}
+  - 114: {fileID: 114000011717898986}
   m_Layer: 0
   m_Name: LockOn
   m_TagString: Untagged
@@ -4666,6 +4668,17 @@ Transform:
   - {fileID: 419288}
   m_Father: {fileID: 430456}
   m_RootOrder: 5
+--- !u!114 &114000010474490150
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 188758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5fe9fa792377d74ab147dd91d935461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000011482959186
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4701,6 +4714,17 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   waittingTime: 0
   copy: 0
+--- !u!114 &114000011717898986
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013924637310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5fe9fa792377d74ab147dd91d935461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000011736803252
 MonoBehaviour:
   m_ObjectHideFlags: 1
