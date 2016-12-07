@@ -26,10 +26,10 @@ public class EnemyState : MonoBehaviour {
         //sets laser target
         if (transform.position.z - player.transform.position.z < 20000 &&
             transform.position.z - player.transform.position.z > 100 &&
-            transform.position.y - player.transform.position.y < 500 &&
-            transform.position.y - player.transform.position.y > -500 &&
-            transform.position.x - player.transform.position.x < 500 &&
-            transform.position.x - player.transform.position.x > -500)
+            transform.position.y - player.transform.position.y < transform.position.z * .1f &&
+            transform.position.y - player.transform.position.y > -transform.position.z * .1f &&
+            transform.position.x - player.transform.position.x < transform.position.z * .1f &&
+            transform.position.x - player.transform.position.x > -transform.position.z * .1f)
         {
             player.GetComponent<AimAssist>().FoundTarget(gameObject);
         }
