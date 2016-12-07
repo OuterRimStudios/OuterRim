@@ -54,10 +54,6 @@ public class FireScript : MonoBehaviour {
 
     void Update()
     {
-        print("No level sound " + noLevelSound.name);
-        print("Level 1 sound " + level1Sound.name);
-        print("Level 2 sound " + level2Sound.name);
-        print("Level 3 sound " + level3Sound.name);
         if ((Input.GetAxis("Fire1") > 0) && Time.time > lastShot + fireFreq)
         {
             if (target == null || target.tag != "Enemy")

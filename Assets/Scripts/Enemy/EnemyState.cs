@@ -45,7 +45,6 @@ public class EnemyState : MonoBehaviour {
             if (!fireMissile.targetsInRange.Contains(gameObject))
             {
                 fireMissile.targetsInRange.Add(gameObject);
-                print("is this calling?");
             }
         }
         else
