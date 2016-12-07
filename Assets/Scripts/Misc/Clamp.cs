@@ -4,10 +4,15 @@ using System.Collections;
 public class Clamp : MonoBehaviour {
 
     public GameObject warningText;
+    public GameObject particleCloud;
     public float waitTime = 1f;
     bool killingPlayer;
     GameObject parent;
         
+    void Start()
+    {
+
+    }
     void OnTriggerEnter(Collider col)
     {
         if (gameObject.tag == "InnerClamp")
@@ -15,6 +20,8 @@ public class Clamp : MonoBehaviour {
             if (col.name == "Colliders")
             {
                 warningText.SetActive(true);
+
+                particleCloud.SetActive(true);
             }
         }        
     }
@@ -38,6 +45,7 @@ public class Clamp : MonoBehaviour {
             if (col.name == "Colliders")
             {
                 warningText.SetActive(false);
+                particleCloud.SetActive(false);
             }
         }
     }

@@ -9,7 +9,7 @@ public class FireMissile : MonoBehaviour
     public GameObject target;
     public GameObject noTarget;
 
-    public float missileRechargeLength;
+    float missileRechargeLength;
     public float missileCooldown;
     public float lightningGunDuration;
 
@@ -42,6 +42,7 @@ public class FireMissile : MonoBehaviour
         waveManager = gameManager.GetComponent<WaveManager>();
         publicVariableHandler = gameManager.GetComponent<PublicVariableHandler>();
         missile = player.GetComponent<StoreVariables>().missileColor;
+        missileRechargeLength = publicVariableHandler.missileRechargeLength;
         player.GetComponent<StoreVariables>().lightningGun.GetComponent<ArcReactorDemoGunController>().enabled = false;
         doneShooting = true;
     }

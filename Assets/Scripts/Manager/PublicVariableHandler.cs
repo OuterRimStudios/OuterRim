@@ -37,6 +37,7 @@ public class PublicVariableHandler : MonoBehaviour
     public float playerRotation;
     public float laserPickUpActiveTime;
     public float dualLaserPickUpActiveTime;
+    public float missileRechargeLength;
 
     //Enemy Variables
     public float enemyAISpeed;
@@ -175,10 +176,13 @@ public class PublicVariableHandler : MonoBehaviour
     {
         waveManager = GetComponent<WaveManager>();
     }
+    public void IncreaseWavePool()
+    {
+        if (waveManager.maxHPAllowed <= 250)
+            waveManager.maxHPAllowed += 5;
+    }
     public void IncreaseDifficulty()
     {
-        if(waveManager.maxHPAllowed <= 250)
-        waveManager.maxHPAllowed += 25;
 
         //Increases the fire rate for all ships
         if (enemy1FireFreq < fireRateCap)

@@ -61,6 +61,8 @@ public class WaveManager : MonoBehaviour
     bool carrierSpawned;
     PublicVariableHandler publicVariableHandler;
     float checkWave;
+    float checkWave2;
+
     void Start ()
     {
         canSpawn = true;
@@ -212,6 +214,13 @@ public class WaveManager : MonoBehaviour
             publicVariableHandler.IncreaseDifficulty();
 
             checkWave = waveCount;
+        }
+        if (waveCount % 1 == 0 && waveCount != 0)
+        {
+            if (waveCount != checkWave2)
+                publicVariableHandler.IncreaseWavePool();
+
+            checkWave2 = waveCount;
         }
 
         waveStartingText.gameObject.SetActive(true);

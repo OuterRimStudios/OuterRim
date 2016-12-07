@@ -36,11 +36,11 @@ public class EnemyState : MonoBehaviour {
 
         //sets missile target
         if ( transform.position.z - player.transform.position.z < 8000 &&
-            transform.position.z - player.transform.position.z > -500 &&
-            transform.position.y - player.transform.position.y < 1000 &&
-            transform.position.y - player.transform.position.y > -1000 &&
-            transform.position.x - player.transform.position.x < 1000 &&
-            transform.position.x - player.transform.position.x > -1000)
+            transform.position.z - player.transform.position.z > 100 &&
+            transform.position.y - player.transform.position.y < transform.position.z * .25f &&
+            transform.position.y - player.transform.position.y > -transform.position.z * .25f &&
+            transform.position.x - player.transform.position.x < transform.position.z * .25f &&
+            transform.position.x - player.transform.position.x > -transform.position.z * .25f)
         {
             if (!fireMissile.targetsInRange.Contains(gameObject))
             {
