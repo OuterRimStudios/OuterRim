@@ -82,7 +82,7 @@ public class WaveManager : MonoBehaviour
     {        
         if (canSpawn)
         {
-            while (currentHPUsed < allowedHP)
+            while (currentHPUsed < maxHPAllowed)
             {
                 GameObject obj = regularEnemyPool[Random.Range(0, newEnemyCount)].GetPooledObject();
 

@@ -169,8 +169,17 @@ public class PublicVariableHandler : MonoBehaviour
     int enemy11HealthCap = 16;
     int enemy12HealthCap = 16;
 
+    WaveManager waveManager;
+
+    void Start()
+    {
+        waveManager = GetComponent<WaveManager>();
+    }
     public void IncreaseDifficulty()
     {
+        if(waveManager.maxHPAllowed <= 250)
+        waveManager.maxHPAllowed += 25;
+
         //Increases the fire rate for all ships
         if (enemy1FireFreq < fireRateCap)
             enemy1FireFreq -= .2f;
