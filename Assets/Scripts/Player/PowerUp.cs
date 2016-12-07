@@ -8,6 +8,7 @@ public class PowerUp : MonoBehaviour
         HEALTH,
         SHIELD,
         LASER,
+        DUALLASER,
         Missile,
     }
 
@@ -50,64 +51,32 @@ public class PowerUp : MonoBehaviour
         {
             case PowerUpType.HEALTH:
                 healthType = "health";
-                pickUpManager.LevelUp(healthType);
+                //pickUpManager.LevelUp(healthType);
                 player.GetComponentInChildren<PlayerCollision>().GainLife();
                 break;
 
             case PowerUpType.SHIELD:
                 shieldType = "shield";
-                pickUpManager.LevelUp(shieldType);
+               // pickUpManager.LevelUp(shieldType);
                 player.GetComponent<StoreVariables>().shield.SetActive(true);
                 break;
 
             case PowerUpType.LASER:
-
-                laserType = "laser";
-                pickUpManager.LevelUp(laserType);
-                laserLevel = pickUpManager.laserLevel;
-
-                switch (laserLevel)
+                foreach (GameObject go in player.GetComponent<StoreVariables>().lasers)
                 {
-                    case 1:
-                        foreach (GameObject go in player.GetComponent<StoreVariables>().lasers)
-                        {
-                            go.GetComponent<FireScript>().LaserLevel1(pickUpManager.leveled);
-                        }
-                        break;
-                    case 2:
-                        foreach (GameObject go in player.GetComponent<StoreVariables>().lasers)
-                        {
-                            go.GetComponent<FireScript>().LaserLevel2(pickUpManager.leveled);
-                        }
-                        break;
-                    case 3:
-                        foreach (GameObject go in player.GetComponent<StoreVariables>().lasers)
-                        {
-                            go.GetComponent<FireScript>().LaserLevel3(pickUpManager.leveled);
-                        }
-                        break;
+                    go.GetComponent<FireScript>().LaserUpgrade();
                 }
+                break;
 
+            case PowerUpType.DUALLASER:
+                foreach (GameObject go in player.GetComponent<StoreVariables>().lasers)
+                {
+                    go.GetComponent<FireScript>().DualLaserUpgrade();
+                }
                 break;
 
             case PowerUpType.Missile:
-
-                missileType = "missile";
-                pickUpManager.LevelUp(missileType);
-                missileLevel = pickUpManager.missileLevel;
-                switch (missileLevel)
-                {
-                    case 1:
-                        player.GetComponent<StoreVariables>().missile.GetComponent<FireMissile>().MissileLevel1(pickUpManager.leveled);
-                        break;
-                    case 2:
-                        player.GetComponent<StoreVariables>().missile.GetComponent<FireMissile>().MissileLevel2(pickUpManager.leveled);
-                        break;
-                    case 3:
-                        player.GetComponent<StoreVariables>().missile.GetComponent<FireMissile>().MissileLevel3(pickUpManager.leveled);
-                        break;
-                }
-
+                player.GetComponent<StoreVariables>().missile.GetComponent<FireMissile>().MissilePickUp();
                 break;
         }
     }

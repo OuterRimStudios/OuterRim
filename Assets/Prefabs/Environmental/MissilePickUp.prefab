@@ -106,7 +106,7 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 198106}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: a33d08cbbfb57a7498dfd51594b790f8, type: 3}
@@ -185,8 +185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90b7d522476be9b4f94d625fa6045977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 3
-  clip: {fileID: 8300000, guid: a33d08cbbfb57a7498dfd51594b790f8, type: 3}
+  type: 4
   powerUpLength: 10
   shieldType: 
   laserType: 

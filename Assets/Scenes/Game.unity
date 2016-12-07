@@ -441,7 +441,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22413744, guid: cdeb67ef133786f449e03a95c8940934, type: 2}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 22413744, guid: cdeb67ef133786f449e03a95c8940934, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -1726,7 +1726,7 @@ MonoBehaviour:
   spawnLocation: {x: 0, y: 0, z: 0}
   sectorCompleteAt: 5
   quadrentCompleteAt: 20
-  spawnPickUpAt: 1
+  spawnPickUpAt: 4
   minXSpawn: -5000
   maxXspawn: 5000
   minYSpawn: -5000
@@ -1772,6 +1772,8 @@ MonoBehaviour:
   playerHealth: 10
   playerSpeed: 700
   playerRotation: 20
+  laserPickUpActiveTime: 15
+  dualLaserPickUpActiveTime: 15
   enemyAISpeed: 500
   actorSpeed: 600
   maneuverSpeed: 1
@@ -1868,6 +1870,8 @@ MonoBehaviour:
   missilePickUp: {fileID: 198106, guid: acde87d815de6524db34cf21d114108a, type: 2}
   shieldPickUp: {fileID: 155664, guid: fd1a508508af11c49b561f844e85a297, type: 2}
   healthPickUp: {fileID: 155664, guid: 5d501daed271a9245bd86763f5d8b608, type: 2}
+  dualLaserPickUp: {fileID: 1000011556323172, guid: 771aeab3b35b7aa45a1bdcf4be09d3c0,
+    type: 2}
   audioSource: {fileID: 1544002025}
   pickupSounds:
   - {fileID: 8300000, guid: f1cbc985b74d1e743844f1a01fcc1afb, type: 3}

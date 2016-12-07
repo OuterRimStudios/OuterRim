@@ -35,9 +35,11 @@ public class PublicVariableHandler : MonoBehaviour
     public int playerHealth;
     public float playerSpeed;
     public float playerRotation;
+    public float laserPickUpActiveTime;
+    public float dualLaserPickUpActiveTime;
 
     //Enemy Variables
-	public float enemyAISpeed;
+    public float enemyAISpeed;
     public float actorSpeed;
     public float maneuverSpeed;
     public float strafeSpeed;

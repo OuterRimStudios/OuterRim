@@ -32,7 +32,7 @@ public class FireMissile : MonoBehaviour
     PublicVariableHandler publicVariableHandler;
     WaveManager waveManager;
 
-    bool isLevel3;
+    bool missileUpgraded;
     
     void Start()
     {
@@ -59,14 +59,14 @@ public class FireMissile : MonoBehaviour
         if (((Input.GetAxis("Fire2") > 0) && Time.time > (lastShot + missileCooldown) && hasTarget && missileCount > 0) && target != null)   // || (Input.GetAxis("Secondary")) != 0)
         {
             target.transform.parent.GetComponent<EnemyState>().isTarget = false;
-            if (isLevel3)
-                Level3Missile();
+            if (missileUpgraded)
+                MissileUpgraded();
             else
             Missile();
         }
     }
 
-    void Level3Missile()
+    void MissileUpgraded()
     {
         foreach (GameObject enemy in waveManager.activeEnemies)
         {
@@ -74,7 +74,7 @@ public class FireMissile : MonoBehaviour
             clone.GetComponent<MissileMovement>().target = enemy;
             enemy.GetComponent<EnemyState>().isTarget = true;
         }
-        isLevel3 = false;
+        missileUpgraded = false;
     }
     void Missile()
     {
@@ -102,45 +102,8 @@ public class FireMissile : MonoBehaviour
         missileCount++;
     }
 
-    public void MissileLevel1(bool levelUp)
+    public void MissilePickUp()
     {
-        if (levelUp)
-        {
-            missileRechargeLength = missileRechargeLength / 2;
-            newRecharge = recharge;
-            missileCooldown = missileCooldown / 3;
-            newMissileCooldown = missileCooldown;
-        }
-        else if (!levelUp)
-        {
-            missileRechargeLength = missileRechargeLength * 2;
-            missileCooldown = missileCooldown * 3;
-        }
-    }
-
-    public void MissileLevel2(bool levelUp)
-    {
-        if (levelUp)
-        {
-            missileRechargeLength = missileRechargeLength / 2;
-            missileCooldown = 0;
-        }
-        else if (!levelUp)
-        {
-            missileRechargeLength = newRecharge;
-            missileCooldown = newMissileCooldown;
-        }
-    }
-
-    public void MissileLevel3(bool levelUp)
-    {
-        if (levelUp)
-        {
-            isLevel3 = true;
-        }
-        else if (!levelUp)
-        {
-            isLevel3 = false;
-        }
+        missileUpgraded = true;
     }
 }

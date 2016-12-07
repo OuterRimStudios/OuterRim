@@ -24,12 +24,12 @@ public class EnemyState : MonoBehaviour {
 	void Update ()
     {
         //sets laser target
-        if (transform.position.z - player.transform.position.z < 7000 &&
-            transform.position.z - player.transform.position.z > 250 &&
-            transform.position.y - player.transform.position.y < 250 &&
-            transform.position.y - player.transform.position.y > -250 &&
-            transform.position.x - player.transform.position.x < 250 &&
-            transform.position.x - player.transform.position.x > -250)
+        if (transform.position.z - player.transform.position.z < 20000 &&
+            transform.position.z - player.transform.position.z > 100 &&
+            transform.position.y - player.transform.position.y < 500 &&
+            transform.position.y - player.transform.position.y > -500 &&
+            transform.position.x - player.transform.position.x < 500 &&
+            transform.position.x - player.transform.position.x > -500)
         {
             player.GetComponent<AimAssist>().FoundTarget(gameObject);
         }
