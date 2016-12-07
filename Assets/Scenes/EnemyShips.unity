@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.38449207, g: 0.38281474, b: 0.36803445, a: 1}
+  m_IndirectSpecularColor: {r: 0.3844916, g: 0.38281298, b: 0.368034, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -276,12 +276,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2330148, guid: c7200950f234d714e8e5e16204aac707, type: 2}
-      propertyPath: m_Materials.Array.data[2]
-      value: 
-      objectReference: {fileID: 2100000, guid: d124387e99a1fee4caa7cdc89b30ceee, type: 2}
     - target: {fileID: 2381448, guid: c7200950f234d714e8e5e16204aac707, type: 2}
       propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: d124387e99a1fee4caa7cdc89b30ceee, type: 2}
+    - target: {fileID: 2330148, guid: c7200950f234d714e8e5e16204aac707, type: 2}
+      propertyPath: m_Materials.Array.data[2]
       value: 
       objectReference: {fileID: 2100000, guid: d124387e99a1fee4caa7cdc89b30ceee, type: 2}
     m_RemovedComponents: []
@@ -7084,6 +7084,10 @@ Prefab:
       propertyPath: m_Name
       value: Carrier Dark Wing
       objectReference: {fileID: 0}
+    - target: {fileID: 11404860, guid: b180ca4400e761b44ab528e951d87a4f, type: 2}
+      propertyPath: baseHealth
+      value: 200
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b180ca4400e761b44ab528e951d87a4f, type: 2}
   m_IsPrefabParent: 0
@@ -7575,7 +7579,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1060992217
 Transform:
   m_ObjectHideFlags: 0
@@ -10238,7 +10242,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11457246, guid: dcb47bf9ecd4c58449cdbeaf0d18bea7, type: 2}
       propertyPath: baseHealth
-      value: 150
+      value: 200
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dcb47bf9ecd4c58449cdbeaf0d18bea7, type: 2}
@@ -15872,12 +15876,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 2344606, guid: fa1ef5db7e12d7a459a81cadcb1e65fc, type: 2}
-      propertyPath: m_Materials.Array.data[2]
-      value: 
-      objectReference: {fileID: 2100000, guid: d124387e99a1fee4caa7cdc89b30ceee, type: 2}
     - target: {fileID: 2360370, guid: fa1ef5db7e12d7a459a81cadcb1e65fc, type: 2}
       propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: d124387e99a1fee4caa7cdc89b30ceee, type: 2}
+    - target: {fileID: 2344606, guid: fa1ef5db7e12d7a459a81cadcb1e65fc, type: 2}
+      propertyPath: m_Materials.Array.data[2]
       value: 
       objectReference: {fileID: 2100000, guid: d124387e99a1fee4caa7cdc89b30ceee, type: 2}
     m_RemovedComponents: []
@@ -16779,6 +16783,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11451696, guid: afff5576370fa7f4b94a4ec329a84c43, type: 2}
+      propertyPath: baseHealth
+      value: 200
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: afff5576370fa7f4b94a4ec329a84c43, type: 2}
   m_IsPrefabParent: 0
@@ -16827,7 +16835,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11486996, guid: 54600aa06d1c4584aa31cb43abf5a5d9, type: 2}
       propertyPath: baseHealth
-      value: 150
+      value: 200
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 54600aa06d1c4584aa31cb43abf5a5d9, type: 2}

@@ -177,7 +177,8 @@ public class WaveManager : MonoBehaviour
         {
             if (!carrierSpawned)
             {
-                Instantiate(carrierEnemies[Random.Range(0, carrierEnemies.Length)], spawnLocation, Quaternion.identity);
+                GameObject clone = Instantiate(carrierEnemies[Random.Range(0, carrierEnemies.Length)], spawnLocation, Quaternion.identity) as GameObject;
+                clone.GetComponent<Enemy1Collision>().OnSpawned();
                 carrierSpawned = true;
             }
         }

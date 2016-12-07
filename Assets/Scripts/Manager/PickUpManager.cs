@@ -96,18 +96,18 @@ public class PickUpManager : MonoBehaviour
                 audioSource.Play();
                 break;
             case "shield":
-			    audioSource.clip = pickupSounds [2];
-			    audioSource.Play ();
+                audioSource.clip = pickupSounds[2];
+                audioSource.Play();
                 break;
             case "laser":
-			    audioSource.clip = pickupSounds [0];
-			    audioSource.Play ();
+                audioSource.clip = pickupSounds[0];
+                audioSource.Play();
                 if (laserLevel < 3)
                     laserLevel++;
                 break;
             case "missile":
-			    audioSource.clip = pickupSounds [1];
-			    audioSource.Play ();
+                audioSource.clip = pickupSounds[1];
+                audioSource.Play();
                 if (missileLevel < 3)
                     missileLevel++;
                 break;

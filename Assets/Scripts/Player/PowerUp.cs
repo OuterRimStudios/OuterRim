@@ -43,7 +43,7 @@ public class PowerUp : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         gameManager = GameObject.Find("GameManager");
         pickUpManager = gameManager.GetComponent<PickUpManager>();
-		    }
+    }
     void ApplyPower()
     {
         switch (type)
