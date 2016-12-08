@@ -24,6 +24,7 @@ GameObject:
   - 23: {fileID: 23000010919610488}
   - 114: {fileID: 114000012968682364}
   - 114: {fileID: 114000012525282238}
+  - 114: {fileID: 114000010917488528}
   m_Layer: 0
   m_Name: EarthLikePlanet
   m_TagString: Untagged
@@ -80,6 +81,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011049687002}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &114000010917488528
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011049687002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6699bd2f46a517e43b10f5f320881b20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000012525282238
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -91,8 +103,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 622a6f80f8cf60448827b790c081fb6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minSpeed: 500
-  maxSpeed: 500
+  minSpeed: 1000
+  maxSpeed: 1000
 --- !u!114 &114000012968682364
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -106,7 +118,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pitch: 0
   yaw: 0
-  roll: 0.1
+  roll: 0.2
 --- !u!135 &135000010146746040
 SphereCollider:
   m_ObjectHideFlags: 1

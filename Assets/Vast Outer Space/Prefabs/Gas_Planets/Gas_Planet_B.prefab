@@ -12,6 +12,7 @@ GameObject:
   - 23: {fileID: 2368006}
   - 114: {fileID: 114000010681278238}
   - 114: {fileID: 114000013340768488}
+  - 114: {fileID: 114000012364737164}
   m_Layer: 0
   m_Name: Gas_Planet_B
   m_TagString: Untagged
@@ -92,7 +93,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pitch: 0
   yaw: 0
-  roll: 0.1
+  roll: 0.2
+--- !u!114 &114000012364737164
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 181524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6699bd2f46a517e43b10f5f320881b20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000013340768488
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -104,5 +116,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 622a6f80f8cf60448827b790c081fb6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minSpeed: 500
-  maxSpeed: 500
+  minSpeed: 1000
+  maxSpeed: 1000
