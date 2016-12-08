@@ -46,7 +46,7 @@ public class PlayerCollision : MonoBehaviour
         gameManager = GameObject.Find("GameManager");
         pickUpManager = gameManager.GetComponent<PickUpManager>();
         publicVariableHandler = gameManager.GetComponent<PublicVariableHandler>();
-        source = gameManager.GetComponent<AudioSource>();
+        source = gameManager.transform.FindChild("HitSourceManager").GetComponent<AudioSource>();
 
         fadeOut = publicVariableHandler.fadeOut;
         healthBar = GameObject.Find("HealthBar").GetComponent<Image>();
@@ -77,14 +77,14 @@ public class PlayerCollision : MonoBehaviour
         else if (col.gameObject.tag == "Meteor" || col.gameObject.tag == "Carrier")
         {
             playerHealth -= 3;
-            pickUpManager.LoseLevel();
+            //pickUpManager.LoseLevel();
             Instantiate(meteorExplosionPrefab, transform.position, transform.rotation);
             col.gameObject.SetActive(false);
         }
         else if (col.gameObject.tag == "Enemy")
         {
             playerHealth -= 3;
-            pickUpManager.LoseLevel();
+            //pickUpManager.LoseLevel();
             col.GetComponent<Enemy1Collision>().WasDestroyed();
         }
     }
@@ -96,7 +96,7 @@ public class PlayerCollision : MonoBehaviour
             takingDamage = true;
             StartCoroutine(DamageIndicator());
             playerHealth--;
-            pickUpManager.LoseLevel();
+            //pickUpManager.LoseLevel();
 
             CheckHealth();
             yield return new WaitForSeconds(.5f);
@@ -242,7 +242,7 @@ public class PlayerCollision : MonoBehaviour
     {
         StartCoroutine(DamageIndicator());
         playerHealth -= amount;
-        pickUpManager.LoseLevel();
+        //pickUpManager.LoseLevel();
 
         CheckHealth();
     }

@@ -261,6 +261,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 407760}
   - 212: {fileID: 21264030}
+  - 114: {fileID: 114000011835203176}
   m_Layer: 0
   m_Name: LockOn
   m_TagString: Untagged
@@ -4758,6 +4759,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000011126128818}
   - 212: {fileID: 212000011163309144}
+  - 114: {fileID: 114000011387885994}
   m_Layer: 0
   m_Name: LockOn
   m_TagString: Untagged
@@ -4891,12 +4893,23 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013941415330}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.345, y: 9.577, z: 2.15}
+  m_LocalPosition: {x: 0, y: 8, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 420810}
   m_RootOrder: 1
+--- !u!114 &114000011387885994
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010361223678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5fe9fa792377d74ab147dd91d935461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000011460858760
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4942,6 +4955,17 @@ MonoBehaviour:
   m_AirBrakesEffect: 0
   m_ThrottleChangeSpeed: 2
   m_DragIncreaseFactor: 0.00095
+--- !u!114 &114000011835203176
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 163172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5fe9fa792377d74ab147dd91d935461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000013289358770
 MonoBehaviour:
   m_ObjectHideFlags: 1

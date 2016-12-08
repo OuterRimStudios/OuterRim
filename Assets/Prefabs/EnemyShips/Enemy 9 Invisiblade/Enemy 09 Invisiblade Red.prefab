@@ -257,6 +257,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 498598}
   - 212: {fileID: 21205604}
+  - 114: {fileID: 114000010984712498}
   m_Layer: 0
   m_Name: LockOn
   m_TagString: Untagged
@@ -4574,6 +4575,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000011774093868}
   - 212: {fileID: 212000013597937414}
+  - 114: {fileID: 114000010029389512}
   m_Layer: 0
   m_Name: LockOn
   m_TagString: Untagged
@@ -4660,12 +4662,23 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010950626696}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.494, y: 10.19, z: 0.56}
+  m_LocalPosition: {x: 0, y: 10, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 406516}
   m_RootOrder: 1
+--- !u!114 &114000010029389512
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013910940636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5fe9fa792377d74ab147dd91d935461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000010265271994
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4685,6 +4698,17 @@ MonoBehaviour:
   progressStyle: 1
   pointToPointThreshold: 2000
   target: {fileID: 448012}
+--- !u!114 &114000010984712498
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 197916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5fe9fa792377d74ab147dd91d935461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000011695905746
 MonoBehaviour:
   m_ObjectHideFlags: 1

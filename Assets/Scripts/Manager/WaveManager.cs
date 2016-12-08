@@ -61,6 +61,8 @@ public class WaveManager : MonoBehaviour
     bool carrierSpawned;
     PublicVariableHandler publicVariableHandler;
     float checkWave;
+    float checkWave2;
+
     void Start ()
     {
         canSpawn = true;
@@ -82,7 +84,7 @@ public class WaveManager : MonoBehaviour
     {        
         if (canSpawn)
         {
-            while (currentHPUsed < allowedHP)
+            while (currentHPUsed < maxHPAllowed)
             {
                 GameObject obj = regularEnemyPool[Random.Range(0, newEnemyCount)].GetPooledObject();
 
@@ -177,7 +179,8 @@ public class WaveManager : MonoBehaviour
         {
             if (!carrierSpawned)
             {
-                Instantiate(carrierEnemies[Random.Range(0, carrierEnemies.Length)], spawnLocation, Quaternion.identity);
+                GameObject clone = Instantiate(carrierEnemies[Random.Range(0, carrierEnemies.Length)], spawnLocation, Quaternion.identity) as GameObject;
+                clone.GetComponent<Enemy1Collision>().OnSpawned();
                 carrierSpawned = true;
             }
         }
@@ -211,6 +214,13 @@ public class WaveManager : MonoBehaviour
             publicVariableHandler.IncreaseDifficulty();
 
             checkWave = waveCount;
+        }
+        if (waveCount % 1 == 0 && waveCount != 0)
+        {
+            if (waveCount != checkWave2)
+                publicVariableHandler.IncreaseWavePool();
+
+            checkWave2 = waveCount;
         }
 
         waveStartingText.gameObject.SetActive(true);

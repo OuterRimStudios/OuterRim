@@ -24,28 +24,27 @@ public class EnemyState : MonoBehaviour {
 	void Update ()
     {
         //sets laser target
-        if (transform.position.z - player.transform.position.z < 7000 &&
-            transform.position.z - player.transform.position.z > 250 &&
-            transform.position.y - player.transform.position.y < 250 &&
-            transform.position.y - player.transform.position.y > -250 &&
-            transform.position.x - player.transform.position.x < 250 &&
-            transform.position.x - player.transform.position.x > -250)
+        if (transform.position.z - player.transform.position.z < 20000 &&
+            transform.position.z - player.transform.position.z > 100 &&
+            transform.position.y - player.transform.position.y < transform.position.z * .1f &&
+            transform.position.y - player.transform.position.y > -transform.position.z * .1f &&
+            transform.position.x - player.transform.position.x < transform.position.z * .1f &&
+            transform.position.x - player.transform.position.x > -transform.position.z * .1f)
         {
             player.GetComponent<AimAssist>().FoundTarget(gameObject);
         }
 
         //sets missile target
         if ( transform.position.z - player.transform.position.z < 8000 &&
-            transform.position.z - player.transform.position.z > -500 &&
-            transform.position.y - player.transform.position.y < 1000 &&
-            transform.position.y - player.transform.position.y > -1000 &&
-            transform.position.x - player.transform.position.x < 1000 &&
-            transform.position.x - player.transform.position.x > -1000)
+            transform.position.z - player.transform.position.z > 100 &&
+            transform.position.y - player.transform.position.y < transform.position.z * .25f &&
+            transform.position.y - player.transform.position.y > -transform.position.z * .25f &&
+            transform.position.x - player.transform.position.x < transform.position.z * .25f &&
+            transform.position.x - player.transform.position.x > -transform.position.z * .25f)
         {
             if (!fireMissile.targetsInRange.Contains(gameObject))
             {
                 fireMissile.targetsInRange.Add(gameObject);
-                print("is this calling?");
             }
         }
         else

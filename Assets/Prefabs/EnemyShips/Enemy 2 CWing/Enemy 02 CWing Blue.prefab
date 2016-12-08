@@ -109,6 +109,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 478098}
   - 212: {fileID: 21269754}
+  - 114: {fileID: 114000010462831000}
   m_Layer: 0
   m_Name: LockOn
   m_TagString: Untagged
@@ -1585,7 +1586,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 145644}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: -0.00000014901161}
-  m_LocalPosition: {x: -0.30001402, y: 3.699997, z: 106.79999}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 25, y: 25, z: 25}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -10257,6 +10258,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000010238850744}
   m_RootOrder: 1
+--- !u!114 &114000010462831000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 118376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5fe9fa792377d74ab147dd91d935461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000010752888502
 MonoBehaviour:
   m_ObjectHideFlags: 1

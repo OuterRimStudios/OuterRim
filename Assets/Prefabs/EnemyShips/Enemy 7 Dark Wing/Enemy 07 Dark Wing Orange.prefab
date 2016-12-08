@@ -92,6 +92,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 423558}
   - 212: {fileID: 21222668}
+  - 114: {fileID: 114000013463744234}
   m_Layer: 0
   m_Name: LockOn
   m_TagString: Untagged
@@ -4889,6 +4890,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000011386303722}
   - 212: {fileID: 212000012533091864}
+  - 114: {fileID: 114000010489069046}
   m_Layer: 0
   m_Name: LockOn
   m_TagString: Untagged
@@ -4993,7 +4995,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011425264838}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.05, y: 10.19, z: 0.56}
+  m_LocalPosition: {x: 0, y: 8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -5072,6 +5074,17 @@ MonoBehaviour:
   m_AirBrakesEffect: 0
   m_ThrottleChangeSpeed: 2
   m_DragIncreaseFactor: 0.00095
+--- !u!114 &114000010489069046
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010390810580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5fe9fa792377d74ab147dd91d935461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000011368473314
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5146,6 +5159,17 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   waittingTime: 0
   copy: 0
+--- !u!114 &114000013463744234
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 134986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5fe9fa792377d74ab147dd91d935461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212000012533091864
 SpriteRenderer:
   m_ObjectHideFlags: 1

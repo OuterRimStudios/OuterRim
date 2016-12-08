@@ -22,10 +22,12 @@ public class FireScript : MonoBehaviour {
     AudioClip level1Sound;
     AudioClip level2Sound;
     AudioClip level3Sound;
-
+    float laserActiveTime;
+    float dualLaserActiveTime;
     [HideInInspector]
     public Transform target;
-
+    bool laserPowerActive;
+    bool dualLaserActive;
     void Start()
     {
         laserPool = GameObject.Find("PlayerLasers").GetComponent<ObjectPooling>();
@@ -35,8 +37,9 @@ public class FireScript : MonoBehaviour {
         player = GameObject.Find("Player");
         baseFireFreq = publicVariableHandler.playerShootingFrequency;
 		fireFreq = baseFireFreq;
-
-		if (transform.tag == "PodLeft")
+        laserActiveTime = publicVariableHandler.laserPickUpActiveTime;
+        dualLaserActiveTime = publicVariableHandler.dualLaserPickUpActiveTime;
+        if (transform.tag == "PodLeft")
 			fireFreq = .5f;
 		else if (transform.tag == "PodRight")
 			fireFreq = .5f;
@@ -62,7 +65,6 @@ public class FireScript : MonoBehaviour {
             {
                 transform.LookAt(target);
                 Fire();
-                target = null;
                 transform.rotation = Quaternion.identity;
             }
         }
@@ -75,7 +77,6 @@ public class FireScript : MonoBehaviour {
         {
             laserSound.Shooting();
         }
-            //achievementManager.LaserShot();
             lastShot = Time.time;
 
             GameObject obj = laserPool.GetPooledObject();
@@ -84,63 +85,60 @@ public class FireScript : MonoBehaviour {
             {
                 return;
             }
-
             obj.transform.position = transform.position;
             obj.transform.rotation = transform.rotation;
             obj.SetActive(true);
-        }      
-    
-    public void LaserLevel1(bool levelUp)
-    {
-        if (levelUp)
-        {
-            if (laserSound)
-                laserSound.LevelChange(level1Sound);
-        }
-        else if (!levelUp)
-        {
-            if (laserSound)
-                laserSound.LevelChange(noLevelSound);
-        }
-    }
+    }      
 
-    public void LaserLevel2(bool levelUp)
+    public void LaserUpgrade()
     {
-        if (levelUp)
+        if(!laserPowerActive)
         {
+            laserPowerActive = true;
             fireFreq = fireFreq / 2;
-            if (laserSound)
-                laserSound.LevelChange(level2Sound);
-        }
-        else if (!levelUp)
-        {
-            fireFreq = fireFreq * 2;
-            if (laserSound)
-                laserSound.LevelChange(level1Sound);
+            // if (laserSound)
+            // laserSound.LevelChange(level2Sound);
+
+            StartCoroutine(LaserPickUpActive());
         }
     }
 
-    public void LaserLevel3(bool levelUp)
+    public void DualLaserUpgrade()
     {
-        if (levelUp)
+        if (!dualLaserActive)
         {
+            dualLaserActive = true;
             foreach (GameObject go in player.GetComponent<StoreVariables>().upgradeWeapons)
             {
                 go.SetActive(true);
             }
-
-            if (laserSound)
-                laserSound.LevelChange(level3Sound);
+            //  if (laserSound)
+            // laserSound.LevelChange(level3Sound);
+            StartCoroutine(DualLaserPickUpActive());
         }
-        else if (!levelUp)
+    }
+
+    IEnumerator LaserPickUpActive()
+    {
+        yield return new WaitForSeconds(laserActiveTime);
+        //  if (laserSound)
+        //  laserSound.LevelChange(level1Sound);
+        fireFreq = fireFreq * 2;
+        laserPowerActive = false;
+    }
+
+    IEnumerator DualLaserPickUpActive()
+    {
+        yield return new WaitForSeconds(dualLaserActiveTime);
+        //  if (laserSound)
+        //  laserSound.LevelChange(level1Sound);
+        foreach (GameObject go in player.GetComponent<StoreVariables>().upgradeWeapons)
         {
-              foreach (GameObject go in player.GetComponent<StoreVariables>().upgradeWeapons)
-            {
-				go.SetActive(false);
-            }
-
-            if (laserSound)
-                laserSound.LevelChange(level2Sound);
+            go.SetActive(false);
         }
+       // if (laserSound)
+         //   laserSound.LevelChange(level2Sound);
+
+        dualLaserActive = false;
     }
 }
