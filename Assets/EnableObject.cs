@@ -5,7 +5,7 @@ public class EnableObject : MonoBehaviour
 {
     public GameObject[] objects;
     
-	void Start ()
+	void Start()
     {
 	    foreach (GameObject go in objects)
         {
