@@ -17,7 +17,7 @@ public class RandomSkybox : MonoBehaviour
             sun.transform.position = new Vector3(Random.Range(-30000, 300000), Random.Range(-30000, 30000), 100000);
             if(sun.transform.position.x > -10000 && sun.transform.position.x < 10000 || sun.transform.position.y > -10000 && sun.transform.position.y < 10000)
             {
-                sun.transform.position += new Vector3(10000, 10000, 0);
+                sun.transform.position += new Vector3(20000, 20000, 0);
             }
         }
         random = Random.Range(0, skyboxes.Length);
