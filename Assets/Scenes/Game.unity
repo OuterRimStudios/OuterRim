@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.026
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0000350204, g: 0.00003516019, b: 0.000034967303,
+  m_IndirectSpecularColor: {r: 0.000034951663, g: 0.000035013225, b: 0.000034899087,
     a: 0.026}
 --- !u!157 &4
 LightmapSettings:
@@ -2369,6 +2369,69 @@ GameObject:
   m_PrefabParentObject: {fileID: 1000011403729412, guid: 5f48df3c34f55e84fbc493fe27bec9bb,
     type: 2}
   m_PrefabInternal: {fileID: 1516698649}
+--- !u!1 &459408146
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 459408148}
+  - 108: {fileID: 459408147}
+  m_Layer: 0
+  m_Name: Ship Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!108 &459408147
+Light:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 459408146}
+  m_Enabled: 1
+  serializedVersion: 7
+  m_Type: 0
+  m_Color: {r: 0.5960748, g: 0.633699, b: 0.77205884, a: 1}
+  m_Intensity: 8
+  m_Range: 800
+  m_SpotAngle: 120
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!4 &459408148
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 459408146}
+  m_LocalRotation: {x: 0.44251865, y: -0, z: -0, w: 0.89675933}
+  m_LocalPosition: {x: 0.7, y: 78.7, z: 253}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 62.512005, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1591680880}
+  m_RootOrder: 14
 --- !u!1 &523563351
 GameObject:
   m_ObjectHideFlags: 0
@@ -2597,7 +2660,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.1
+  m_Volume: 0.25
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -7927,6 +7990,7 @@ Transform:
   - {fileID: 1812510472}
   - {fileID: 1588113441}
   - {fileID: 339177874}
+  - {fileID: 459408148}
   m_Father: {fileID: 0}
   m_RootOrder: 1
 --- !u!114 &1591680881
