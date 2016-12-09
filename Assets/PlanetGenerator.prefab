@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1000013281298704}
+  m_IsPrefabParent: 1
+--- !u!1 &1000013281298704
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000012645356582}
+  - 114: {fileID: 114000011092923504}
+  m_Layer: 0
+  m_Name: PlanetGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4000012645356582
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013281298704}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &114000011092923504
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013281298704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc968189195ec9243a9faa833731637a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  planetModels:
+  - {fileID: 1000010419382242, guid: 9650bf0175b36ae488e03f0bdb81e773, type: 2}
+  - {fileID: 1000012945956780, guid: 53e73c345b1b2dd49934af3ce5053227, type: 2}
+  - {fileID: 1000011049687002, guid: a6ef5fc1a04c86743915155dd70eb5fb, type: 2}
+  - {fileID: 128632, guid: 836770c02ea056347a2033b490fe4f0d, type: 2}
+  - {fileID: 136468, guid: 3b6b2721de77cde4885fa48cd43c9f8d, type: 2}
+  - {fileID: 128724, guid: 47f548d426fb1914bae887785a512d4b, type: 2}
+  - {fileID: 102898, guid: 608f6bd5671f84c4eb4927a14bffe9fb, type: 2}
+  - {fileID: 144004, guid: 765d85c64e1e9854a94ccb1eaa1f56db, type: 2}
+  - {fileID: 134308, guid: 718940f807eb53f4aa0c16d70080432d, type: 2}
+  - {fileID: 180698, guid: 772a79796cfbe7149a55658d42b4726d, type: 2}
+  - {fileID: 175674, guid: 915aaf898641f4c42b5b0bf6777bf232, type: 2}
+  - {fileID: 150180, guid: 4645135d15e70fa45824a3a594cb2b46, type: 2}
+  - {fileID: 150000, guid: c9df427deb000b548ba87af31d666589, type: 2}
+  - {fileID: 109314, guid: 7e606bbd20845a246b693fca327ac9c5, type: 2}
+  - {fileID: 149356, guid: ed65deaeceb059846bd0dc4dfaf40fd7, type: 2}
+  - {fileID: 112350, guid: c38c830f1a01cc2419486a2e550473ee, type: 2}
+  - {fileID: 102396, guid: a5fa790eba0e807458c6a0149b16043f, type: 2}
+  - {fileID: 178520, guid: 55a4b4a0348dd55409e1bdada593125b, type: 2}
+  - {fileID: 155380, guid: c0f9f7c6aaa348943bb9c869a56d1ed7, type: 2}
+  - {fileID: 139196, guid: dfc748efdc709ea41b9061cdbad1d727, type: 2}
+  - {fileID: 102282, guid: 4798d46ab7d34ec4685f96b33cd57a4d, type: 2}
+  - {fileID: 181462, guid: 9ea611ca5dcb2fe49a5309e83ab7db2c, type: 2}
+  - {fileID: 141374, guid: 1396fe84f82548f4b91293bb18d7be22, type: 2}
+  - {fileID: 194324, guid: b81c1de5d7d77fa429f84cd7681603f4, type: 2}
+  - {fileID: 195412, guid: e79bdabf5dd420440932374f78529729, type: 2}
+  asteroidBelt: {fileID: 0}
+  rings:
+  - {fileID: 1000014139563280, guid: 8c12aaaf2f6043a469f6056cf63f7529, type: 2}
+  - {fileID: 1000011524595014, guid: 7a6b03638632bf64fa988b5215057621, type: 2}
+  - {fileID: 1000013371409620, guid: 398a43cf154856c49b4a9223268cdbdb, type: 2}
+  - {fileID: 1000010501861142, guid: 1349e85877f72484ca949ea82960b96f, type: 2}
+  - {fileID: 1000010910523890, guid: cb2a0bf215425d64c93ac0828aced2a4, type: 2}
+  - {fileID: 1000010711768804, guid: 918e25f67f0b152478b2ec41be38fc95, type: 2}
+  - {fileID: 1000012576752784, guid: d725d230fda42254bbdc8e80d710a1a0, type: 2}
+  - {fileID: 1000014235220908, guid: e869acf92d538b24fb7a14fd51089a65, type: 2}
+  - {fileID: 1000011276139848, guid: 77b6346f54746f448807f5d682767605, type: 2}
+  - {fileID: 1000010171177078, guid: 96433ccfbdc099847ae2f6abf7b35ca9, type: 2}
+  planetSpawnMinX: 0
+  planetSpawnMaxX: 0
+  planetSpawnMinY: 0
+  planetSpawnMaxY: 0
+  planetSpawnMinZ: 0
+  planetSpawnMaxZ: 0
+  planetMinSize: 5000
+  planetMaxSize: 80000
