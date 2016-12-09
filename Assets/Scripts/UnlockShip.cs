@@ -25,6 +25,11 @@ public class UnlockShip : MonoBehaviour
             Unlock.unlocking = false;
             confirmationWindow.SetActive(false);
         }
+        if (Input.GetKeyDown(KeyCode.R) && DevMode.devMove)
+        {
+            print("All currency reset");
+            PlayerPrefs.SetInt("Currency", 0);
+        }
     }
 
     public void ConfirmPurchase()

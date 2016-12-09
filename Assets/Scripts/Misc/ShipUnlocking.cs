@@ -14,7 +14,7 @@ public class ShipUnlocking : MonoBehaviour
 
 	void Start ()
     {
-        price = 100000;
+        price = 500000;
         realPrice = price;
         shipName = transform.name;
         if(PlayerPrefs.GetInt(transform.name) == 1)
@@ -40,6 +40,12 @@ public class ShipUnlocking : MonoBehaviour
             selectButton.SetActive(false);
             unlockButton.SetActive(true);
             lockedPanel.SetActive(true);
+        }
+
+        if (Input.GetKeyDown(KeyCode.R) && DevMode.devMove)
+        {
+            print("All ships reset");
+            PlayerPrefs.SetInt(transform.name, 0);
         }
     }
 }
