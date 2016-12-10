@@ -14,7 +14,7 @@ public class ShipUnlocking : MonoBehaviour
 
 	void Start ()
     {
-        price = 500000;
+        price = 0;
         realPrice = price;
         shipName = transform.name;
         if(PlayerPrefs.GetInt(transform.name) == 1)
