@@ -11,10 +11,9 @@ public class ShipUnlocking : MonoBehaviour
     public GameObject unlockButton;
     public GameObject lockedPanel;
 
-
 	void Start ()
     {
-        price = 0;
+        price = 500000;
         realPrice = price;
         shipName = transform.name;
         if(PlayerPrefs.GetInt(transform.name) == 1)
