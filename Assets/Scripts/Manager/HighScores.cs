@@ -17,6 +17,12 @@ public class HighScores : MonoBehaviour {
         instance = this;
     }
 
+    void Start()
+    {
+        HighScores.AddNewHighScore(EnterName.username, PlayerPrefs.GetInt("Score"));
+        //StartCoroutine(GetComponent<DisplayHighScores>().RefreshHighScores());
+    }
+
     public static void AddNewHighScore(string username, int score)
     {
         instance.StartCoroutine(instance.UploadNewHighscore(username, score));

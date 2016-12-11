@@ -13,9 +13,9 @@ public class PlayerScore : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        highScore = PlayerPrefs.GetInt("HighScore");
-        _highScoreText = GameObject.Find("HighScoreText");
-        highScoreText = _highScoreText.GetComponent<Text>();
+        //highScore = PlayerPrefs.GetInt("HighScore");
+        //_highScoreText = GameObject.Find("HighScoreText");
+        //highScoreText = _highScoreText.GetComponent<Text>();
         _scoreText = GameObject.Find("ScoreText");
         scoreText = _scoreText.GetComponent<Text>();
 	}
@@ -23,21 +23,21 @@ public class PlayerScore : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if (score > highScore)
-        {
-            highScore = score;
-            PlayerPrefs.SetInt("HighScore", highScore);
-        }
+        //if (score > highScore)
+        //{
+        //    highScore = score;
+        //    PlayerPrefs.SetInt("HighScore", highScore);
+        //}
 
-        if(Input.GetKeyDown("r"))
-        {
-             highScore = 0;
-            PlayerPrefs.SetInt("HighScore", highScore);            
-        }
+        //if(Input.GetKeyDown("r"))
+        //{
+        //     highScore = 0;
+        //    PlayerPrefs.SetInt("HighScore", highScore);            
+        //}
 
         PlayerPrefs.SetInt("Score", score);
             
-        highScoreText.text = "High Score: " + PlayerPrefs.GetInt("HighScore");
+        //highScoreText.text = "High Score: " + PlayerPrefs.GetInt("HighScore");
         scoreText.text = "Score: " + score;
 	}
 }

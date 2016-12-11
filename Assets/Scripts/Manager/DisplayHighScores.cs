@@ -31,7 +31,7 @@ public class DisplayHighScores : MonoBehaviour {
         }
     }
 
-    IEnumerator RefreshHighScores()
+    public IEnumerator RefreshHighScores()
     {
         while (true)
         {
