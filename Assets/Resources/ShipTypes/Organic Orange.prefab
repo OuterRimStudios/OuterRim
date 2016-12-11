@@ -1480,10 +1480,10 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
   m_Constraints: 36
-  m_CollisionDetection: 2
+  m_CollisionDetection: 0
 --- !u!65 &6501714
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -1773,17 +1773,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c91f64650f84c9f4dbe07c588b086a23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetsInRange: []
   missile: {fileID: 125306, guid: b0e3ff5bfaeca8d40a1cbaae32b2b920, type: 2}
-  missile1Img: {fileID: 0}
-  missile2Img: {fileID: 0}
-  missile3Img: {fileID: 0}
   target: {fileID: 0}
   noTarget: {fileID: 0}
-  missileRechargeLength: 9
   missileCooldown: 3
   lightningGunDuration: 0
   missileCount: 3
   missileMax: 3
+  hasTarget: 0
 --- !u!114 &11472760
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1810,16 +1808,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosion: {fileID: 100000, guid: c8fd86fe5050dc04bb501b291c30f591, type: 2}
   explosionSound: {fileID: 106574, guid: 3bccd5214c55ab54e842038afc0ebfbc, type: 2}
-  greenHealthRing: {fileID: 0}
-  yellowHealthRing: {fileID: 0}
-  redHealthRing: {fileID: 0}
-  lifeImage1: {fileID: 0}
-  lifeImage2: {fileID: 0}
+  healthBar: {fileID: 0}
+  healthBarSprites: []
   damageIndicatorIMG: {fileID: 0}
   meteorExplosionPrefab: {fileID: 100000, guid: 809320482fb694b6e8149a226202b86a,
     type: 2}
   playerHealth: 9
-  playerLives: 3
   gameOverScene: GameOver
   shieldActive: 0
 --- !u!114 &11478106
@@ -1962,7 +1956,7 @@ ParticleSystem:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 138634}
-  serializedVersion: 2
+  serializedVersion: 4
   lengthInSec: 1
   startDelay:
     scalar: 0
@@ -2000,12 +1994,13 @@ ParticleSystem:
       m_RotationOrder: 4
     minMaxState: 0
   speed: 1
-  randomSeed: 0
   looping: 1
   prewarm: 0
   playOnAwake: 1
   moveWithTransform: 1
+  autoRandomSeed: 1
   scalingMode: 2
+  randomSeed: 0
   InitialModule:
     serializedVersion: 2
     enabled: 1
@@ -3700,7 +3695,7 @@ ParticleSystem:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 134166}
-  serializedVersion: 2
+  serializedVersion: 4
   lengthInSec: 1
   startDelay:
     scalar: 0
@@ -3738,12 +3733,13 @@ ParticleSystem:
       m_RotationOrder: 4
     minMaxState: 0
   speed: 1
-  randomSeed: 0
   looping: 1
   prewarm: 0
   playOnAwake: 1
   moveWithTransform: 1
+  autoRandomSeed: 1
   scalingMode: 2
+  randomSeed: 0
   InitialModule:
     serializedVersion: 2
     enabled: 1

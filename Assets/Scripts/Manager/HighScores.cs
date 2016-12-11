@@ -11,6 +11,8 @@ public class HighScores : MonoBehaviour {
     public HighScore[] highScoresList;
     static HighScores instance;
 
+    public bool mainMenu;
+
     void Awake()
     {
         highScoreDisplay = GetComponent<DisplayHighScores>();
@@ -19,8 +21,8 @@ public class HighScores : MonoBehaviour {
 
     void Start()
     {
-        HighScores.AddNewHighScore(EnterName.username, PlayerPrefs.GetInt("Score"));
-        //StartCoroutine(GetComponent<DisplayHighScores>().RefreshHighScores());
+        if(!mainMenu)
+            AddNewHighScore(PlayerPrefs.GetString("Username"), PlayerPrefs.GetInt("Score"));
     }
 
     public static void AddNewHighScore(string username, int score)

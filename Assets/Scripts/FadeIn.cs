@@ -20,6 +20,8 @@ public class FadeIn : MonoBehaviour
         if(timer >= .7f)
         {
             StopAllCoroutines();
+            image.color = Color.white;
+            text.color = Color.white;
             timer = 0;
             SceneManager.LoadScene("Game");
         }

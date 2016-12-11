@@ -26,15 +26,25 @@ public class Destructable : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player" || other.tag == "Enemy" || other.tag == "Enemy Laser" || other.tag == "Laser")
+        if (other.tag == "Enemy Laser" || other.tag == "Laser")
         {
 			LoseHealth ();
-			if (other.tag == "Enemy Laser" || other.tag == "Laser") 
-			{
-				Instantiate (hitEffect, other.transform.position, other.transform.rotation);
-				other.GetComponentInChildren<Light> ().enabled = false;
-				other.gameObject.GetComponentInChildren<MeshRenderer>().enabled = false;
-			}
+			Instantiate (hitEffect, other.transform.position, other.transform.rotation);
+			other.GetComponentInChildren<Light> ().enabled = false;
+			other.gameObject.GetComponentInChildren<MeshRenderer>().enabled = false;
+        }
+
+        if(other.tag == "PlayerCollider")
+        {
+            other.GetComponent<PlayerCollision>().AsteroidHit();
+            Instantiate(explosion, transform.position, transform.rotation);
+            gameObject.SetActive(false);
+        }
+
+        if(other.tag == "Enemy")
+        {
+            Instantiate(explosion, transform.position, transform.rotation);
+            gameObject.SetActive(false);
         }
     }
 

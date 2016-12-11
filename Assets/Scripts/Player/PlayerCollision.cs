@@ -76,7 +76,7 @@ public class PlayerCollision : MonoBehaviour
             col.gameObject.SetActive(false);
             StartCoroutine(Immunity());
         }
-        else if (col.gameObject.tag == "Meteor" || col.gameObject.tag == "Carrier")
+        else if (col.gameObject.tag == "Carrier")
         {
             playerHealth -= 3;
             //pickUpManager.LoseLevel();
@@ -106,6 +106,12 @@ public class PlayerCollision : MonoBehaviour
             yield return new WaitForSeconds(.5f);
             takingDamage = false;
         }
+    }
+
+    public void AsteroidHit()
+    {
+        playerHealth -= 3;
+        CheckHealth();
     }
 
     //IEnumerator CheckScore()
