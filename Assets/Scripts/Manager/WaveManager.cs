@@ -27,8 +27,8 @@ public class WaveManager : MonoBehaviour
     [HideInInspector]
     public Vector3 spawnLocation;
 
-    public float sectorCompleteAt;
-    public float quadrentCompleteAt;
+   // public float sectorCompleteAt;
+  //  public float quadrentCompleteAt;
     public float spawnPickUpAt;
 
     public float minXSpawn;
@@ -42,22 +42,22 @@ public class WaveManager : MonoBehaviour
     public Text waveStartingText;
     public Text waveCompleteText;
 
-    public GameObject badge1;
-    public GameObject badge2;
-    public GameObject badge3;
-    public GameObject quadrentBadge;
-    public Text quadrentBadgeText;
+  //  public GameObject badge1;
+  //  public GameObject badge2;
+  //  public GameObject badge3;
+   // public GameObject quadrentBadge;
+  //  public Text quadrentBadgeText;
 
     private GameObject player;
     private PickUpManager pickUpManager;
     private bool canSpawn;
-    private bool sectorWasCompleted;
+  //  private bool sectorWasCompleted;
     private int newEnemyCount;  //This increases the pool size.
     [HideInInspector]
     public float waveCount;
-    float sectorNum;
-    float quadNum;
-    int badgeAmt;
+ //   float sectorNum;
+  //  float quadNum;
+  //  int badgeAmt;
     bool carrierSpawned;
     PublicVariableHandler publicVariableHandler;
     float checkWave;
@@ -111,62 +111,62 @@ public class WaveManager : MonoBehaviour
         }
 	}
 
-    IEnumerator SectorCompleted()
-    {
-        waveStartingText.gameObject.SetActive(false);
-        sectorNum++;
-        waveCompleteText.gameObject.SetActive(true);
-        waveCompleteText.text = "Sector " + sectorNum + " Cleared!";
+    //IEnumerator SectorCompleted()
+    //{
+    //    waveStartingText.gameObject.SetActive(false);
+    //    sectorNum++;
+    //    waveCompleteText.gameObject.SetActive(true);
+    //    waveCompleteText.text = "Sector " + sectorNum + " Cleared!";
        
-        if (badgeAmt < 4)
-        {
-            badgeAmt++;
-        }
-        else
-        {
-            badgeAmt = 1;
-        }
-        switch (badgeAmt)
-        {
-            case 1:
-                yield return new WaitForSeconds(1);
-                badge1.SetActive(true);
-                break;
-            case 2:
-                badge1.SetActive(true);
-                yield return new WaitForSeconds(1);
-                badge2.SetActive(true);
-                break;
-            case 3:
-                badge1.SetActive(true);
-                badge2.SetActive(true);
-                yield return new WaitForSeconds(1);
-                badge3.SetActive(true);
-                break;
-            case 4:
-                badge1.SetActive(false);
-                yield return new WaitForSeconds(.5f);
-                badge2.SetActive(false);
-                yield return new WaitForSeconds(.5f);
-                badge3.SetActive(false);
-                yield return new WaitForSeconds(.5f);
-                quadNum++;
-                quadrentBadge.SetActive(true);
-                quadrentBadgeText.text = "" + quadNum;
-                yield return new WaitForSeconds(2f);
-                quadrentBadge.SetActive(false);
-                break;
-        }
+    //    if (badgeAmt < 4)
+    //    {
+    //        badgeAmt++;
+    //    }
+    //    else
+    //    {
+    //        badgeAmt = 1;
+    //    }
+    //    switch (badgeAmt)
+    //    {
+    //        case 1:
+    //            yield return new WaitForSeconds(1);
+    //            badge1.SetActive(true);
+    //            break;
+    //        case 2:
+    //            badge1.SetActive(true);
+    //            yield return new WaitForSeconds(1);
+    //            badge2.SetActive(true);
+    //            break;
+    //        case 3:
+    //            badge1.SetActive(true);
+    //            badge2.SetActive(true);
+    //            yield return new WaitForSeconds(1);
+    //            badge3.SetActive(true);
+    //            break;
+    //        case 4:
+    //            badge1.SetActive(false);
+    //            yield return new WaitForSeconds(.5f);
+    //            badge2.SetActive(false);
+    //            yield return new WaitForSeconds(.5f);
+    //            badge3.SetActive(false);
+    //            yield return new WaitForSeconds(.5f);
+    //            quadNum++;
+    //            quadrentBadge.SetActive(true);
+    //            quadrentBadgeText.text = "" + quadNum;
+    //            yield return new WaitForSeconds(2f);
+    //            quadrentBadge.SetActive(false);
+    //            break;
+    //    }
 
-        yield return new WaitForSeconds(2);
-        waveCompleteText.gameObject.SetActive(false);
+    //    yield return new WaitForSeconds(2);
+    //    waveCompleteText.gameObject.SetActive(false);
 
-        badge1.SetActive(false);
-        badge2.SetActive(false);
-        badge3.SetActive(false);
-        yield return new WaitForSeconds(2);
-        sectorWasCompleted = false;
-    }
+    //    badge1.SetActive(false);
+    //    badge2.SetActive(false);
+    //    badge3.SetActive(false);
+    //    yield return new WaitForSeconds(2);
+    //    sectorWasCompleted = false;
+    //}
 
     IEnumerator WaveStarting()
     {
@@ -201,12 +201,12 @@ public class WaveManager : MonoBehaviour
         }
             waveCount++;
 
-        if (waveCount % sectorCompleteAt == 0 && waveCount != 0 && sectorCompleteAt != 0)
-        {
-            sectorWasCompleted = true;
-            StartCoroutine(SectorCompleted());
-            yield return new WaitForSeconds(3);
-        }
+        //if (waveCount % sectorCompleteAt == 0 && waveCount != 0 && sectorCompleteAt != 0)
+        //{
+        //    sectorWasCompleted = true;
+        //    StartCoroutine(SectorCompleted());
+        //    yield return new WaitForSeconds(3);
+        //}
 
         if(waveCount % 5 == 0 && waveCount != 0)
         {
