@@ -42,10 +42,10 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 8d649d7852799204aa7bac4a97ecc19a, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 90ccbd54819e8df49921c428ee4b6c68, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.81
-  m_Pitch: 1.43
+  m_Volume: 0.66
+  m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -57,7 +57,7 @@ AudioSource:
   rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
-  BypassReverbZones: 1
+  BypassReverbZones: 0
   rolloffCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -78,7 +78,7 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - time: 0
-      value: 0.159
+      value: 0.16
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -100,7 +100,7 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - time: 0
-      value: 0.93
+      value: 0.38
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -187,8 +187,8 @@ ParticleSystem:
   prewarm: 1
   playOnAwake: 1
   moveWithTransform: 1
-  autoRandomSeed: 1
-  scalingMode: 1
+  autoRandomSeed: 0
+  scalingMode: 0
   randomSeed: 0
   InitialModule:
     serializedVersion: 2
@@ -551,7 +551,7 @@ ParticleSystem:
       minMaxState: 0
     randomizeRotationDirection: 1
     gravityModifier: 0
-    maxNumParticles: 20
+    maxNumParticles: 10
     size3D: 0
     rotation3D: 0
   ShapeModule:
@@ -579,7 +579,7 @@ ParticleSystem:
     serializedVersion: 2
     m_Type: 0
     rate:
-      scalar: 20
+      scalar: 10
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -608,11 +608,11 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
       minMaxState: 0
-    cnt0: 20
+    cnt0: 10
     cnt1: 30
     cnt2: 30
     cnt3: 30
-    cntmax0: 20
+    cntmax0: 10
     cntmax1: 30
     cntmax2: 30
     cntmax3: 30
