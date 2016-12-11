@@ -191,8 +191,15 @@ public class Enemy1Collision : MonoBehaviour
             fireMissile.hasTarget = false;
         }
         _playerScore.score += laserScore;
-        if(gameObject.tag != "Carrier")
+        if (gameObject.tag != "Carrier")
+        {
+            PlayerCollision.fightersDestroyed++;
             gameManager.GetComponent<WaveManager>().ShipDestroyed(gameObject);
+        }
+        else
+        {
+            PlayerCollision.carriersDestroyed++;
+        }
         Instantiate(explosion, transform.position, transform.rotation);
         Instantiate(explosionSound, transform.position, transform.rotation);
         gameObject.SetActive(false);

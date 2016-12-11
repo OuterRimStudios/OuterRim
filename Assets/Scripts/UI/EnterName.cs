@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using System.Collections;
 
@@ -9,6 +10,7 @@ public class EnterName : MonoBehaviour {
     public InputField inField;
     public GameObject initialMenu;
     public GameObject warning;
+    public GameObject startButton;
     public static string username;
     bool remember;
     bool activated;
@@ -41,6 +43,7 @@ public class EnterName : MonoBehaviour {
             }
             UpdateGreeting();
             initialMenu.SetActive(false);
+            EventSystem.current.SetSelectedGameObject(startButton);
         }
         else
         {

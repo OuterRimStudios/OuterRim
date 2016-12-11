@@ -20,6 +20,8 @@ public class PlayerCollision : MonoBehaviour
     public GameObject meteorExplosionPrefab;
 
     public int playerHealth;
+    public static int fightersDestroyed;
+    public static int carriersDestroyed;
     int healthScore;
 
     public string gameOverScene;
@@ -234,6 +236,8 @@ public class PlayerCollision : MonoBehaviour
             {
                 {"waves", gameManager.GetComponent<WaveManager>().waveCount },
                 {"score", PlayerPrefs.GetInt("Score") },
+                {"fightersDestroyed", fightersDestroyed },
+                {"carriersDestroyed", carriersDestroyed },
                 {"shipName", PlayerPrefs.GetString("Ship") }
             });
             SceneManager.LoadScene("GameOver");
