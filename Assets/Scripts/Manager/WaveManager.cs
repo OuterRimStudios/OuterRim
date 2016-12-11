@@ -93,8 +93,7 @@ public class WaveManager : MonoBehaviour
                     return;
                 }                
 
-                obj.transform.position = new Vector3(player.transform.position.x + Random.Range(minXSpawn, maxXspawn),
-                player.transform.position.y + Random.Range(minYSpawn, maxYSpawn), player.transform.position.z + zSpawn);
+                obj.transform.position = new Vector3(Random.Range(minXSpawn, maxXspawn), Random.Range(minYSpawn, maxYSpawn), zSpawn);
                 obj.transform.rotation = transform.rotation;
                 obj.name = obj.name.Substring(0, 8);
                 obj.GetComponent<Enemy1Collision>().OnSpawned();
