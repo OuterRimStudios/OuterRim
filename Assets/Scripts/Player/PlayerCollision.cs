@@ -206,6 +206,8 @@ public class PlayerCollision : MonoBehaviour
                 playerHealth += 3;
                 break;
         }
+
+        CheckHealth();
     }
 
     public static class CoroutineUtil
