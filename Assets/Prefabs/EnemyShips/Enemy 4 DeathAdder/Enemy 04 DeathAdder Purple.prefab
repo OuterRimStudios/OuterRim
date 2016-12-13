@@ -163,6 +163,7 @@ GameObject:
   - 4: {fileID: 491446}
   - 212: {fileID: 21219862}
   - 114: {fileID: 114000012535440180}
+  - 114: {fileID: 114000013366601190}
   m_Layer: 0
   m_Name: LockOn
   m_TagString: Untagged
@@ -1638,7 +1639,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!135 &13535614
 SphereCollider:
@@ -9170,6 +9171,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   warpSpeed: 1500
   speed: 300
+--- !u!114 &114000013366601190
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 117294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5fe9fa792377d74ab147dd91d935461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212000013283240036
 SpriteRenderer:
   m_ObjectHideFlags: 1

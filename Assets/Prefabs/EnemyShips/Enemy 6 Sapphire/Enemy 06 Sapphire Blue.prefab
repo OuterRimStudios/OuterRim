@@ -44,6 +44,7 @@ GameObject:
   - 4: {fileID: 473474}
   - 212: {fileID: 21237272}
   - 114: {fileID: 114000013159466200}
+  - 114: {fileID: 114000011050918316}
   m_Layer: 0
   m_Name: LockOn
   m_TagString: Untagged
@@ -202,12 +203,12 @@ GameObject:
   - 114: {fileID: 11480988}
   - 114: {fileID: 11400216}
   - 54: {fileID: 5475874}
-  - 65: {fileID: 6591532}
   - 114: {fileID: 11419694}
   - 82: {fileID: 8251064}
   - 114: {fileID: 114000013261899372}
   - 114: {fileID: 114000012234970696}
   - 114: {fileID: 114000010147387046}
+  - 136: {fileID: 136000013298423034}
   m_Layer: 0
   m_Name: Enemy 06 Sapphire Blue
   m_TagString: Enemy
@@ -850,18 +851,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &6591532
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 147218}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 19.2, y: 4.09, z: 11.28}
-  m_Center: {x: 0.00000023841858, y: 1.75, z: -2.64}
 --- !u!82 &8251064
 AudioSource:
   m_ObjectHideFlags: 1
@@ -4835,6 +4824,17 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   waittingTime: 0
   copy: 0
+--- !u!114 &114000011050918316
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 115354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5fe9fa792377d74ab147dd91d935461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000012234970696
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4926,3 +4926,16 @@ MonoBehaviour:
   m_AirBrakesEffect: 0
   m_ThrottleChangeSpeed: 2
   m_DragIncreaseFactor: 0.00095
+--- !u!136 &136000013298423034
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 147218}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 6
+  m_Height: 20
+  m_Direction: 2
+  m_Center: {x: 0, y: 2, z: -3}

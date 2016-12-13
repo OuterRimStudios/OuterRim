@@ -154,6 +154,7 @@ public class Enemy1Collision : MonoBehaviour
         if (col.gameObject.tag == "Laser")
         {
             Instantiate(hitEffect, col.transform.position, col.transform.rotation);
+            //CreateHitEffect(col.gameObject);
             col.gameObject.SetActive(false);
             TookDamage();
         }
@@ -204,4 +205,16 @@ public class Enemy1Collision : MonoBehaviour
         Instantiate(explosionSound, transform.position, transform.rotation);
         gameObject.SetActive(false);
     }
+
+    //void CreateHitEffect(GameObject other)
+    //{
+    //    GameObject obj = hitEffect.GetPooledObject();
+
+    //    if (obj == null)
+    //        return;
+
+    //    obj.transform.position = other.transform.position;
+    //    obj.transform.rotation = other.transform.rotation;
+    //    obj.SetActive(true);
+    //}
 }

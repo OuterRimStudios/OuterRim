@@ -29,6 +29,7 @@ public class Destructable : MonoBehaviour
         if (other.tag == "Enemy Laser" || other.tag == "Laser")
         {
 			LoseHealth ();
+            //CreateHitEffect(other.gameObject);
 			Instantiate (hitEffect, other.transform.position, other.transform.rotation);
 			other.GetComponentInChildren<Light> ().enabled = false;
 			other.gameObject.GetComponentInChildren<MeshRenderer>().enabled = false;
@@ -57,4 +58,16 @@ public class Destructable : MonoBehaviour
 			gameObject.SetActive(false);
 		}
 	}
+
+    //void CreateHitEffect(GameObject other)
+    //{
+    //    GameObject obj = hitEffect.GetPooledObject();
+
+    //    if (obj == null)
+    //        return;
+
+    //    obj.transform.position = other.transform.position;
+    //    obj.transform.rotation = other.transform.rotation;
+    //    obj.SetActive(true);
+    //}
 }

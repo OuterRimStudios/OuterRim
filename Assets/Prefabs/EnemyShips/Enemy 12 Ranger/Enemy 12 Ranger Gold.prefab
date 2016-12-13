@@ -28,9 +28,9 @@ GameObject:
   - 114: {fileID: 11413896}
   - 114: {fileID: 11403062}
   - 54: {fileID: 5405162}
-  - 65: {fileID: 6515162}
   - 114: {fileID: 11479672}
   - 114: {fileID: 114000012814833476}
+  - 136: {fileID: 136000014159892922}
   m_Layer: 0
   m_Name: Enemy 12 Ranger Gold
   m_TagString: Enemy
@@ -67,6 +67,7 @@ GameObject:
   - 4: {fileID: 426360}
   - 212: {fileID: 21249938}
   - 114: {fileID: 114000012112523284}
+  - 114: {fileID: 114000011953263328}
   m_Layer: 0
   m_Name: LockOn
   m_TagString: Untagged
@@ -945,18 +946,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &6515162
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100886}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 6.53, y: 2.08, z: 7.93}
-  m_Center: {x: -0.3, y: 9.33, z: 1.94}
 --- !u!114 &11403062
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4737,6 +4726,7 @@ GameObject:
   - 4: {fileID: 4000014153511952}
   - 212: {fileID: 212000013009059200}
   - 114: {fileID: 114000011962463366}
+  - 114: {fileID: 114000013381223954}
   m_Layer: 0
   m_Name: LockOn (1)
   m_TagString: Untagged
@@ -4832,6 +4822,17 @@ Transform:
   - {fileID: 4000011900665816}
   m_Father: {fileID: 426360}
   m_RootOrder: 0
+--- !u!114 &114000011953263328
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 119084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5fe9fa792377d74ab147dd91d935461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000011962463366
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4937,6 +4938,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   warpSpeed: 1000
   speed: 500
+--- !u!114 &114000013381223954
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010928249012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5fe9fa792377d74ab147dd91d935461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!136 &136000014159892922
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100886}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 5
+  m_Height: 15
+  m_Direction: 2
+  m_Center: {x: 0, y: 10, z: 1}
 --- !u!212 &212000013009059200
 SpriteRenderer:
   m_ObjectHideFlags: 1

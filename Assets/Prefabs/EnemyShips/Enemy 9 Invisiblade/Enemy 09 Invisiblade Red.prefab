@@ -85,11 +85,11 @@ GameObject:
   - 114: {fileID: 11409696}
   - 114: {fileID: 11486506}
   - 54: {fileID: 5470800}
-  - 65: {fileID: 6508372}
   - 114: {fileID: 11471078}
   - 114: {fileID: 114000012973591120}
   - 114: {fileID: 114000011813173476}
   - 114: {fileID: 114000010265271994}
+  - 136: {fileID: 136000013094655896}
   m_Layer: 0
   m_Name: Enemy 09 Invisiblade Red
   m_TagString: Enemy
@@ -258,6 +258,7 @@ GameObject:
   - 4: {fileID: 498598}
   - 212: {fileID: 21205604}
   - 114: {fileID: 114000010984712498}
+  - 114: {fileID: 114000011891138630}
   m_Layer: 0
   m_Name: LockOn
   m_TagString: Untagged
@@ -813,18 +814,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &6508372
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 118884}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10.48, y: 1.33, z: 6.1}
-  m_Center: {x: 0.31, y: 10.33, z: 0.38}
 --- !u!114 &11409696
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4576,6 +4565,7 @@ GameObject:
   - 4: {fileID: 4000011774093868}
   - 212: {fileID: 212000013597937414}
   - 114: {fileID: 114000010029389512}
+  - 114: {fileID: 114000013281143938}
   m_Layer: 0
   m_Name: LockOn
   m_TagString: Untagged
@@ -4764,6 +4754,17 @@ MonoBehaviour:
   m_SpeedEffect: 0
   m_TakeoffHeight: 0
   m_Target: {fileID: 448012}
+--- !u!114 &114000011891138630
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 197916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5fe9fa792377d74ab147dd91d935461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000012973591120
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4789,6 +4790,17 @@ MonoBehaviour:
   m_AirBrakesEffect: 0
   m_ThrottleChangeSpeed: 2
   m_DragIncreaseFactor: 0.00095
+--- !u!114 &114000013281143938
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013910940636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5fe9fa792377d74ab147dd91d935461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000013761722734
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4824,6 +4836,19 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   waittingTime: 0
   copy: 0
+--- !u!136 &136000013094655896
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 118884}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 5
+  m_Height: 15
+  m_Direction: 2
+  m_Center: {x: 0, y: 10, z: 0}
 --- !u!212 &212000013597937414
 SpriteRenderer:
   m_ObjectHideFlags: 1

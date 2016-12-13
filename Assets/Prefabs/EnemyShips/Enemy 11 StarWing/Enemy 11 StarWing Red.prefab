@@ -254,9 +254,9 @@ GameObject:
   - 114: {fileID: 11474838}
   - 114: {fileID: 11496716}
   - 54: {fileID: 5414026}
-  - 65: {fileID: 6566238}
   - 114: {fileID: 11454170}
   - 114: {fileID: 114000012735752206}
+  - 136: {fileID: 136000011909917140}
   m_Layer: 0
   m_Name: Enemy 11 StarWing Red
   m_TagString: Enemy
@@ -308,6 +308,7 @@ GameObject:
   - 4: {fileID: 497082}
   - 212: {fileID: 21246490}
   - 114: {fileID: 114000013813267554}
+  - 114: {fileID: 114000013071243604}
   m_Layer: 0
   m_Name: LockOn
   m_TagString: Untagged
@@ -937,18 +938,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &6566238
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 180292}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 5.65, y: 1.16, z: 6.48}
-  m_Center: {x: -0.3, y: 9.33, z: 1.94}
 --- !u!82 &8244818
 AudioSource:
   m_ObjectHideFlags: 1
@@ -11921,6 +11910,7 @@ GameObject:
   - 4: {fileID: 4000011703700996}
   - 212: {fileID: 212000011624494032}
   - 114: {fileID: 114000011579745144}
+  - 114: {fileID: 114000014103424316}
   m_Layer: 0
   m_Name: LockOn
   m_TagString: Untagged
@@ -12094,6 +12084,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   warpSpeed: 1000
   speed: 500
+--- !u!114 &114000013071243604
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 187896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5fe9fa792377d74ab147dd91d935461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000013813267554
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -12105,6 +12106,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5fe9fa792377d74ab147dd91d935461, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114000014103424316
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013886256872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5fe9fa792377d74ab147dd91d935461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!136 &136000011909917140
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 180292}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 5
+  m_Height: 15
+  m_Direction: 2
+  m_Center: {x: 0, y: 10, z: 1}
 --- !u!212 &212000011624494032
 SpriteRenderer:
   m_ObjectHideFlags: 1

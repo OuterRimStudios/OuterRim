@@ -12,6 +12,7 @@ public class FadeOut : MonoBehaviour {
         text = transform.FindChild("Tip").GetComponent<Text>();
         StartCoroutine(Fade());
     }
+
     IEnumerator Fade()
     {
         yield return new WaitUntil(FadingOut);
@@ -19,8 +20,8 @@ public class FadeOut : MonoBehaviour {
 
     bool FadingOut()
     {
-        image.color = Color.Lerp(image.color, Color.clear, Time.deltaTime * 1f);
-        text.color = Color.Lerp(text.color, Color.clear, Time.deltaTime * 1f);
+        image.color = Color.Lerp(image.color, Color.clear, Time.deltaTime * 2f);
+        text.color = Color.Lerp(text.color, Color.clear, Time.deltaTime * 2f);
         if (image.color == Color.clear)
             return true;
         else

@@ -129,6 +129,7 @@ GameObject:
   - 4: {fileID: 472332}
   - 212: {fileID: 21205276}
   - 114: {fileID: 114000013293076178}
+  - 114: {fileID: 114000011403103002}
   m_Layer: 0
   m_Name: LockOn
   m_TagString: Untagged
@@ -324,11 +325,11 @@ GameObject:
   - 114: {fileID: 11471732}
   - 114: {fileID: 11472514}
   - 54: {fileID: 5437524}
-  - 65: {fileID: 6592904}
   - 114: {fileID: 11483110}
   - 114: {fileID: 114000010761666216}
   - 114: {fileID: 114000010762163136}
   - 114: {fileID: 114000011761689946}
+  - 136: {fileID: 136000012947785526}
   m_Layer: 0
   m_Name: Enemy 08 Metal Blade Blue
   m_TagString: Enemy
@@ -1048,18 +1049,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &6592904
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 197396}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 19.2, y: 2.24, z: 19.5}
-  m_Center: {x: 0.91, y: 10, z: -0.7}
 --- !u!95 &9538330
 Animator:
   serializedVersion: 3
@@ -6655,6 +6644,7 @@ GameObject:
   - 4: {fileID: 4000011915092578}
   - 212: {fileID: 212000011222602028}
   - 114: {fileID: 114000013756779144}
+  - 114: {fileID: 114000010799771132}
   m_Layer: 0
   m_Name: LockOn
   m_TagString: Untagged
@@ -6777,6 +6767,28 @@ MonoBehaviour:
   m_SpeedEffect: 0
   m_TakeoffHeight: 0
   m_Target: {fileID: 473074}
+--- !u!114 &114000010799771132
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013171886728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5fe9fa792377d74ab147dd91d935461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114000011403103002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 146662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5fe9fa792377d74ab147dd91d935461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000011761689946
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6888,6 +6900,19 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   waittingTime: 0
   copy: 0
+--- !u!136 &136000012947785526
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 197396}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 10
+  m_Height: 30
+  m_Direction: 2
+  m_Center: {x: 0, y: 10, z: 0}
 --- !u!212 &212000011222602028
 SpriteRenderer:
   m_ObjectHideFlags: 1

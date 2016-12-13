@@ -7,6 +7,7 @@ public class FadeIn : MonoBehaviour
     Image image;
     Text text;
     float timer;
+    public string TargetScene { get;  set;  }
 
     // Use this for initialization
     void Start()
@@ -19,11 +20,12 @@ public class FadeIn : MonoBehaviour
     {
         if(timer >= .7f)
         {
+
             StopAllCoroutines();
             image.color = Color.white;
             text.color = Color.white;
             timer = 0;
-            SceneManager.LoadScene("Game");
+            SceneManager.LoadScene(TargetScene);
         }
     }
     public void StartMyCoroutine()

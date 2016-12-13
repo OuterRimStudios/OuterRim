@@ -26,12 +26,12 @@ GameObject:
   - 114: {fileID: 11400580}
   - 114: {fileID: 11478336}
   - 54: {fileID: 5429116}
-  - 65: {fileID: 6550196}
   - 114: {fileID: 11449582}
   - 82: {fileID: 8227728}
   - 114: {fileID: 114000010315058942}
   - 114: {fileID: 114000011311602522}
   - 114: {fileID: 114000012421357796}
+  - 136: {fileID: 136000013897279524}
   m_Layer: 0
   m_Name: Enemy 06 Sapphire Orange
   m_TagString: Enemy
@@ -189,6 +189,7 @@ GameObject:
   - 4: {fileID: 483788}
   - 212: {fileID: 21214996}
   - 114: {fileID: 114000010821012958}
+  - 114: {fileID: 114000010548037354}
   m_Layer: 0
   m_Name: LockOn
   m_TagString: Untagged
@@ -850,18 +851,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &6550196
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 113626}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 19.2, y: 4.09, z: 11.28}
-  m_Center: {x: 0.00000023841858, y: 1.75, z: -2.64}
 --- !u!82 &8227728
 AudioSource:
   m_ObjectHideFlags: 1
@@ -4841,6 +4830,17 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   waittingTime: 0
   copy: 0
+--- !u!114 &114000010548037354
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 180292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5fe9fa792377d74ab147dd91d935461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000010821012958
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4926,3 +4926,16 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   waittingTime: 0
   copy: 0
+--- !u!136 &136000013897279524
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 113626}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 6
+  m_Height: 20
+  m_Direction: 2
+  m_Center: {x: 0, y: 2, z: -3}

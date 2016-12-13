@@ -110,6 +110,7 @@ GameObject:
   - 4: {fileID: 401864}
   - 212: {fileID: 21297022}
   - 114: {fileID: 114000011952845798}
+  - 114: {fileID: 114000010300089826}
   m_Layer: 0
   m_Name: LockOn
   m_TagString: Untagged
@@ -162,9 +163,9 @@ GameObject:
   - 114: {fileID: 11425400}
   - 114: {fileID: 11497140}
   - 54: {fileID: 5403482}
-  - 65: {fileID: 6572552}
   - 114: {fileID: 11481080}
   - 114: {fileID: 11485678}
+  - 136: {fileID: 136000013698734904}
   m_Layer: 0
   m_Name: Enemy 05 Organic Green
   m_TagString: Enemy
@@ -1328,18 +1329,6 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 1
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!65 &6572552
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 122096}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 40, y: 45, z: 120}
-  m_Center: {x: 0, y: 10, z: 0}
 --- !u!114 &11400086
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5190,6 +5179,7 @@ GameObject:
   - 4: {fileID: 4000011794310380}
   - 212: {fileID: 212000012923735026}
   - 114: {fileID: 114000014192155778}
+  - 114: {fileID: 114000011344040860}
   m_Layer: 0
   m_Name: LockOn
   m_TagString: Untagged
@@ -5254,6 +5244,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000011794310380}
   m_RootOrder: 1
+--- !u!114 &114000010300089826
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 115672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5fe9fa792377d74ab147dd91d935461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000010568209496
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5289,6 +5290,17 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   waittingTime: 0
   copy: 0
+--- !u!114 &114000011344040860
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012648455696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5fe9fa792377d74ab147dd91d935461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000011952845798
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5346,6 +5358,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5fe9fa792377d74ab147dd91d935461, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &136000013698734904
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 122096}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 50
+  m_Height: 160
+  m_Direction: 2
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &212000012923735026
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -154,6 +154,7 @@ public class ShipWrangler : MonoBehaviour {
         {
             ChooseShipTracker.currentShipName = ships[currentShip].name;
             PlayerPrefs.SetString("Ship", ChooseShipTracker.currentShipName);       //This doesn't really need to grab from the static
+            loadScreen.GetComponent<FadeIn>().TargetScene = "Game";
             loadScreen.GetComponent<FadeIn>().StartMyCoroutine();
         }
     }

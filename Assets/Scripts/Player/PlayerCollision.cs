@@ -66,6 +66,9 @@ public class PlayerCollision : MonoBehaviour
         playerHealth = publicVariableHandler.playerHealth;
         healthScore = publicVariableHandler.healthRecoverScore;
 
+        fightersDestroyed = 0;
+        carriersDestroyed = 0;
+
         //StartCoroutine(CheckScore());
     }
 
@@ -237,7 +240,7 @@ public class PlayerCollision : MonoBehaviour
             if (Time.timeScale >= .1f)
             {
                 fadeOut.color = new Color(0, 0, 0, aplh);
-                Time.timeScale -= .1f;
+                Time.timeScale -= .2f;
             }
             yield return StartCoroutine(CoroutineUtil.WaitForRealSeconds(3f));
             Analytics.CustomEvent("gameOver", new Dictionary<string, object>

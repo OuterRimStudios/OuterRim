@@ -115,11 +115,11 @@ GameObject:
   - 114: {fileID: 11492236}
   - 114: {fileID: 11460868}
   - 54: {fileID: 5412864}
-  - 65: {fileID: 6556188}
   - 114: {fileID: 11459098}
   - 114: {fileID: 114000013316338762}
   - 114: {fileID: 114000013753254726}
   - 114: {fileID: 114000013657362236}
+  - 136: {fileID: 136000012192580668}
   m_Layer: 0
   m_Name: Enemy 10 Wasp Pink
   m_TagString: Enemy
@@ -307,6 +307,7 @@ GameObject:
   - 4: {fileID: 487944}
   - 212: {fileID: 21266180}
   - 114: {fileID: 114000012748986808}
+  - 114: {fileID: 114000011910575050}
   m_Layer: 0
   m_Name: LockOn
   m_TagString: Untagged
@@ -984,18 +985,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &6556188
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 123162}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.29, y: 1.71, z: 6.48}
-  m_Center: {x: -0.3, y: 9.33, z: 1.94}
 --- !u!114 &11433416
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4776,6 +4765,7 @@ GameObject:
   - 4: {fileID: 4000012171854158}
   - 212: {fileID: 212000012416241858}
   - 114: {fileID: 114000013007147976}
+  - 114: {fileID: 114000011064541522}
   m_Layer: 0
   m_Name: LockOn
   m_TagString: Untagged
@@ -4899,6 +4889,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000012171854158}
   m_RootOrder: 0
+--- !u!114 &114000011064541522
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010504510802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5fe9fa792377d74ab147dd91d935461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114000011910575050
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 188372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5fe9fa792377d74ab147dd91d935461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000012177681298
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5055,6 +5067,19 @@ MonoBehaviour:
   m_SpeedEffect: 0
   m_TakeoffHeight: 0
   m_Target: {fileID: 433312}
+--- !u!136 &136000012192580668
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 123162}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 5
+  m_Height: 15
+  m_Direction: 2
+  m_Center: {x: 0, y: 10, z: 2}
 --- !u!212 &212000012416241858
 SpriteRenderer:
   m_ObjectHideFlags: 1

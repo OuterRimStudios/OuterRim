@@ -59,6 +59,7 @@ GameObject:
   - 4: {fileID: 445572}
   - 212: {fileID: 21246524}
   - 114: {fileID: 114000010659609890}
+  - 114: {fileID: 114000012239147170}
   m_Layer: 0
   m_Name: LockOn
   m_TagString: Untagged
@@ -147,9 +148,9 @@ GameObject:
   - 114: {fileID: 11473580}
   - 114: {fileID: 11433088}
   - 54: {fileID: 5455874}
-  - 65: {fileID: 6547584}
   - 114: {fileID: 11426034}
   - 114: {fileID: 114000014134450524}
+  - 136: {fileID: 136000011187599004}
   m_Layer: 0
   m_Name: Enemy 11 StarWing White
   m_TagString: Enemy
@@ -937,18 +938,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &6547584
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 149238}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 5.65, y: 1.16, z: 6.48}
-  m_Center: {x: -0.3, y: 9.33, z: 1.94}
 --- !u!82 &8283214
 AudioSource:
   m_ObjectHideFlags: 1
@@ -11904,6 +11893,7 @@ GameObject:
   - 4: {fileID: 4000013279291804}
   - 212: {fileID: 212000012299185242}
   - 114: {fileID: 114000010834213484}
+  - 114: {fileID: 114000013239749248}
   m_Layer: 0
   m_Name: LockOn
   m_TagString: Untagged
@@ -12092,6 +12082,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5fe9fa792377d74ab147dd91d935461, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114000012239147170
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 123814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5fe9fa792377d74ab147dd91d935461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114000013239749248
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011996338130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5fe9fa792377d74ab147dd91d935461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000014134450524
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -12105,6 +12117,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   warpSpeed: 1000
   speed: 500
+--- !u!136 &136000011187599004
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 149238}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 5
+  m_Height: 15
+  m_Direction: 2
+  m_Center: {x: 0, y: 10, z: 1}
 --- !u!212 &212000012299185242
 SpriteRenderer:
   m_ObjectHideFlags: 1

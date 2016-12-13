@@ -177,6 +177,7 @@ GameObject:
   - 4: {fileID: 420116}
   - 212: {fileID: 21283134}
   - 114: {fileID: 114000012235300910}
+  - 114: {fileID: 114000012205206078}
   m_Layer: 0
   m_Name: LockOn
   m_TagString: Untagged
@@ -1879,8 +1880,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 4
-  m_Height: 13
+  m_Radius: 5
+  m_Height: 15
   m_Direction: 2
   m_Center: {x: 0, y: 1.15, z: 0}
 --- !u!136 &13641478
@@ -9305,6 +9306,17 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   waittingTime: 0
   copy: 0
+--- !u!114 &114000012205206078
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 127430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5fe9fa792377d74ab147dd91d935461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000012235300910
 MonoBehaviour:
   m_ObjectHideFlags: 1

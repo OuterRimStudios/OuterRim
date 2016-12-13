@@ -182,6 +182,7 @@ GameObject:
   - 4: {fileID: 408396}
   - 212: {fileID: 21259468}
   - 114: {fileID: 114000012746958800}
+  - 114: {fileID: 114000012434297762}
   m_Layer: 0
   m_Name: LockOn
   m_TagString: Untagged
@@ -219,11 +220,11 @@ GameObject:
   - 114: {fileID: 11414186}
   - 114: {fileID: 11430734}
   - 54: {fileID: 5489862}
-  - 65: {fileID: 6522322}
   - 114: {fileID: 11455110}
   - 114: {fileID: 114000010144229696}
   - 114: {fileID: 114000010341605066}
   - 114: {fileID: 114000010503661750}
+  - 136: {fileID: 136000010067483190}
   m_Layer: 0
   m_Name: Enemy 10 Wasp Green
   m_TagString: Enemy
@@ -984,18 +985,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &6522322
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 176586}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.29, y: 1.71, z: 6.48}
-  m_Center: {x: -0.3, y: 9.33, z: 1.94}
 --- !u!114 &11404958
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4775,6 +4764,7 @@ GameObject:
   - 4: {fileID: 4000013473896730}
   - 212: {fileID: 212000012630425840}
   - 114: {fileID: 114000013167174324}
+  - 114: {fileID: 114000012609465418}
   m_Layer: 0
   m_Name: LockOn
   m_TagString: Untagged
@@ -4998,6 +4988,28 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   waittingTime: 0
   copy: 0
+--- !u!114 &114000012434297762
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 163906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5fe9fa792377d74ab147dd91d935461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114000012609465418
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011431922194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5fe9fa792377d74ab147dd91d935461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000012746958800
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5055,6 +5067,19 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   waittingTime: 0
   copy: 0
+--- !u!136 &136000010067483190
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 176586}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 5
+  m_Height: 15
+  m_Direction: 2
+  m_Center: {x: 0, y: 10, z: 2}
 --- !u!212 &212000012630425840
 SpriteRenderer:
   m_ObjectHideFlags: 1
