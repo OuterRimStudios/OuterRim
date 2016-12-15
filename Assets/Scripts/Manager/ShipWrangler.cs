@@ -47,15 +47,22 @@ public class ShipWrangler : MonoBehaviour {
 
             if ((Input.GetAxis("Horizontal") < -.99f && !hasMoved) || Input.GetKeyDown(KeyCode.A))      //left
             {
-                CallCoroutine("left");
+                CallCoroutine("Cycle", "left");
             }
             else if ((Input.GetAxis("Horizontal") > .99f && !hasMoved) || Input.GetKeyDown(KeyCode.D))  //right
             {
-                CallCoroutine("right");
+                CallCoroutine("Cycle", "right");
             }
             else if (Input.GetAxis("Horizontal") > -.09f && Input.GetAxis("Horizontal") < .09f)
             {
                 hasMoved = false;
+            }
+
+            if(Input.GetKeyDown(KeyCode.Q) && gameObject.name == "ShipContainer")
+            {
+                choosingContainer = true;
+                choosingShip = false;
+                SelectContainer();
             }
 
             if (Input.GetButtonDown("Submit"))
@@ -64,7 +71,11 @@ public class ShipWrangler : MonoBehaviour {
                 {
                     SelectContainer();
                 }
-                else if (choosingShip)
+                else if (choosingShip && gameObject.name == "ShipContainer")
+                {
+                    ships[currentShip].GetComponent<ShipWrangler>().SelectShip();
+                }
+                else if(choosingShip && gameObject.name != "ShipContainer")
                 {
                     SelectShip();
                 }
@@ -77,9 +88,14 @@ public class ShipWrangler : MonoBehaviour {
         }
     }
 
-    void CallCoroutine(string direction)
+    void CallCoroutine(string coroutine, string arg)
     {
-        StartCoroutine(Cycle(direction));
+        StartCoroutine(coroutine, arg);
+    }
+
+    void CallCoroutine(string coroutine)
+    {
+        StartCoroutine(coroutine);
     }
 
     public GameObject CurrentShip
@@ -119,7 +135,10 @@ public class ShipWrangler : MonoBehaviour {
             if (i == currentShip)
             {
                 ships[i].SetActive(true);
-                ChooseShipTracker.currentUnlockedShip = ships[i];
+                if (gameObject.name == "ShipContainer")
+                    ChooseShipTracker.currentUnlockedShip = ships[currentShip].GetComponent<ShipWrangler>().ships[ships[currentShip].GetComponent<ShipWrangler>().currentShip];
+                else
+                    ChooseShipTracker.currentUnlockedShip = ships[i];
             }
             else
             {
@@ -143,12 +162,10 @@ public class ShipWrangler : MonoBehaviour {
         }
 
         StartCoroutine(Transition());
-        playButton.SetActive(false);
-        backButton.SetActive(false);
         descriptionText.text = "Choose your color.";
     }
 
-    void SelectShip()
+    public void SelectShip()
     {
         if (ships[currentShip].GetComponent<ShipUnlocking>().unlocked)
         {
@@ -163,32 +180,33 @@ public class ShipWrangler : MonoBehaviour {
     {
         if (gameObject.name != "ShipContainer")
         {
-            foreach (GameObject go in ships)
-            {
-                go.GetComponent<ShipUnlocking>().enabled = false;
-            }
+            //foreach (GameObject go in ships)
+            //{
+            //    go.GetComponent<ShipUnlocking>().enabled = false;
+            //}
             unlockButton.SetActive(false);
             selectButton.SetActive(true);
             lockedPanel.SetActive(false);
             StartCoroutine(Transition());
             transform.parent.gameObject.GetComponent<ShipWrangler>().enabled = true;
             transform.parent.gameObject.GetComponent<ShipWrangler>().ResetWranglers();
-            descriptionText.text = "Choose your ship.";
+            descriptionText.text = "Choose your ship.";            
         }
         else if (gameObject.name == "ShipContainer")
         {
             MenuToggle.ToggleMenu(chooseShipMenu, startMenu, startButton);
             ToggleObject.Toggle(toggleObjects);
         }
-
-        playButton.SetActive(false);
-        //backButton.SetActive(false);
     }
 
     public void ResetWranglers()
     {
+        choosingShip = true;
+        choosingContainer = false;
         for (int i = 0; i < ships.Count; i++)
         {
+            ships[i].GetComponent<ShipWrangler>().currentShip = 0;
+            ships[i].GetComponent<ShipWrangler>().DisplayShip();
             ships[i].GetComponent<ShipWrangler>().enabled = false;
         }
     }
