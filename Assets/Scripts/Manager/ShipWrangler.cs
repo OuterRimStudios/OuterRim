@@ -34,6 +34,23 @@ public class ShipWrangler : MonoBehaviour {
     bool transitioned;
     float maskWidth;
     InputDevice inputDevice;
+
+    void Awake()
+    {
+        gameObject.SetActive(false); if (gameObject.name != "ShipContainer")
+        {
+            if (PlayerPrefs.GetString(gameObject.name + "Ship") != "")
+            {
+                for (int i = 0; i < ships.Count; i++)
+                {
+                    if (ships[i].name == PlayerPrefs.GetString(gameObject.name + "Ship")) { currentShip = i; break; }
+                    else { currentShip = 0; }
+                }
+            }
+        }
+        DisplayShip();
+    }
+
     // Use this for initialization
     void Start()
     {
@@ -175,6 +192,7 @@ public class ShipWrangler : MonoBehaviour {
         {
             ChooseShipTracker.currentShipName = ships[currentShip].name;
             PlayerPrefs.SetString("Ship", ChooseShipTracker.currentShipName);       //This doesn't really need to grab from the static
+            PlayerPrefs.SetString(gameObject.name + "Ship", ships[currentShip].name);
             loadScreen.GetComponent<FadeIn>().TargetScene = "Game";
             loadScreen.GetComponent<FadeIn>().StartMyCoroutine();
         }
