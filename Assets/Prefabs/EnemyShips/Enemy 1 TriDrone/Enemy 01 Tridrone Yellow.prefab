@@ -746,8 +746,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 172124}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: -0.00000016292068}
-  m_LocalPosition: {x: 124.458115, y: 111.41257, z: 554}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 20, y: 20, z: 20}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -1466,17 +1466,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 235a6615124795442b98c1f03500003e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MaxEnginePower: 400
-  m_Lift: 1
-  m_ZeroLiftSpeed: 0
-  m_RollEffect: 100
-  m_PitchEffect: 100
-  m_YawEffect: 100
+  m_MaxEnginePower: 0
+  m_Lift: 40
+  m_ZeroLiftSpeed: 40
+  m_RollEffect: 180
+  m_PitchEffect: 250
+  m_YawEffect: 500
   m_BankedTurnEffect: 1
-  m_AerodynamicEffect: 1
-  m_AutoTurnPitch: 15
-  m_AutoRollLevel: 1
-  m_AutoPitchLevel: 1
+  m_AerodynamicEffect: 30
+  m_AutoTurnPitch: 2
+  m_AutoRollLevel: 2
+  m_AutoPitchLevel: 2
   m_AirBrakesEffect: 0
   m_ThrottleChangeSpeed: 2
   m_DragIncreaseFactor: 0.00095
@@ -1523,10 +1523,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f947e56d54f4274896478766fef616c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_RollSensitivity: 0.2
-  m_PitchSensitivity: 0.2
-  m_LateralWanderDistance: 20
-  m_LateralWanderSpeed: 100
+  m_RollSensitivity: 0.5
+  m_PitchSensitivity: 1
+  m_LateralWanderDistance: 1
+  m_LateralWanderSpeed: 1
   m_MaxClimbAngle: 90
   m_MaxRollAngle: 90
   m_SpeedEffect: 0
@@ -1544,12 +1544,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   circuit: {fileID: 0}
-  lookAheadForTargetOffset: 2000
-  lookAheadForTargetFactor: 1000
-  lookAheadForSpeedOffset: 1000
-  lookAheadForSpeedFactor: 1000
-  progressStyle: 1
-  pointToPointThreshold: 2000
+  lookAheadForTargetOffset: 3000
+  lookAheadForTargetFactor: 2000
+  lookAheadForSpeedOffset: 2000
+  lookAheadForSpeedFactor: 2000
+  progressStyle: 0
+  pointToPointThreshold: 100
   target: {fileID: 460162}
 --- !u!114 &11496976
 MonoBehaviour:
@@ -1671,7 +1671,7 @@ CapsuleCollider:
   m_Radius: 4
   m_Height: 13
   m_Direction: 2
-  m_Center: {x: 0, y: 1.15, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!136 &13683820
 CapsuleCollider:
   m_ObjectHideFlags: 1

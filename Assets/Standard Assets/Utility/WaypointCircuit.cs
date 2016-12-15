@@ -14,7 +14,7 @@ namespace UnityStandardAssets.Utility
         [SerializeField] private bool smoothRoute = true;
         private int numPoints;
         private Vector3[] points;
-        private float[] distances;
+		private float[] distances;
 
         public float editorVisualisationSubsteps = 100;
         public float Length { get; private set; }
