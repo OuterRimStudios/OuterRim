@@ -6,14 +6,16 @@ public class ShipUnlocking : MonoBehaviour
     public string shipName;
     public int price;
     public static int realPrice;
+    public static bool choosingColor;
     public bool unlocked;
     public GameObject selectButton;
     public GameObject unlockButton;
+    public GameObject colorButton;
     public GameObject lockedPanel;
 
 	void Start ()
     {
-        price = 500000;
+        price = 1;
         realPrice = price;
         shipName = transform.name;
         if(PlayerPrefs.GetInt(transform.name) == 1)
@@ -33,11 +35,16 @@ public class ShipUnlocking : MonoBehaviour
             selectButton.SetActive(true);
             unlockButton.SetActive(false);
             lockedPanel.SetActive(false);
+            if (!choosingColor)
+                colorButton.SetActive(true);
+            else
+                colorButton.SetActive(false);
         }
         else if (!unlocked)
         {
             selectButton.SetActive(false);
             unlockButton.SetActive(true);
+            colorButton.SetActive(false);
             lockedPanel.SetActive(true);
         }
 

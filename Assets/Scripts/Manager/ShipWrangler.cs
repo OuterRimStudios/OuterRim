@@ -58,8 +58,9 @@ public class ShipWrangler : MonoBehaviour {
                 hasMoved = false;
             }
 
-            if(Input.GetKeyDown(KeyCode.Q) && gameObject.name == "ShipContainer")
+            if(Input.GetButtonDown("ChangeColor") && gameObject.name == "ShipContainer" && ships[currentShip].GetComponent<ShipWrangler>().ships[ships[currentShip].GetComponent<ShipWrangler>().currentShip].GetComponent<ShipUnlocking>().unlocked)
             {
+                ShipUnlocking.choosingColor = true;
                 choosingContainer = true;
                 choosingShip = false;
                 SelectContainer();
@@ -187,6 +188,7 @@ public class ShipWrangler : MonoBehaviour {
             unlockButton.SetActive(false);
             selectButton.SetActive(true);
             lockedPanel.SetActive(false);
+            ShipUnlocking.choosingColor = false;
             StartCoroutine(Transition());
             transform.parent.gameObject.GetComponent<ShipWrangler>().enabled = true;
             transform.parent.gameObject.GetComponent<ShipWrangler>().ResetWranglers();

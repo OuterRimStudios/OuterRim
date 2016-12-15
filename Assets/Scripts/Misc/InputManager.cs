@@ -6,6 +6,7 @@ public class InputManager : MonoBehaviour
 {
     public Image selectButtonImg;
     public Image unlockButtonImg;
+    public Image colorButtonImg;
     public Image backButtonImg;
     public Image confirmationWindowConfImg;
     public Image confirmationWindowBackImg;
@@ -20,6 +21,7 @@ public class InputManager : MonoBehaviour
     public Sprite enter;
     public Sprite esc;
     public Sprite eKey;
+    public Sprite qKey;
     public Text textBox;
 
 	void Start () {
@@ -31,6 +33,7 @@ public class InputManager : MonoBehaviour
         {
             selectButtonImg.sprite = xBoxSpriteA;
             unlockButtonImg.sprite = xBoxSpriteY;
+            colorButtonImg.sprite = xBoxSpriteX;
             backButtonImg.sprite = xBoxSpriteB;
             confirmationWindowConfImg.sprite = xBoxSpriteA;
             confirmationWindowBackImg.sprite = xBoxSpriteB;
@@ -39,6 +42,7 @@ public class InputManager : MonoBehaviour
         {
             selectButtonImg.sprite = psSpriteX;
             unlockButtonImg.sprite = psSpriteTr;
+            colorButtonImg.sprite = psSpriteSq;
             backButtonImg.sprite = psSpriteO;
             confirmationWindowConfImg.sprite = psSpriteX;
             confirmationWindowBackImg.sprite = psSpriteO;
@@ -47,6 +51,7 @@ public class InputManager : MonoBehaviour
         {
             selectButtonImg.sprite = enter;
             unlockButtonImg.sprite = eKey;
+            colorButtonImg.sprite = qKey;
             backButtonImg.sprite = esc;
             confirmationWindowConfImg.sprite = enter;
             confirmationWindowBackImg.sprite = esc;
