@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using InControl;
 
 public class Unlock : MonoBehaviour {
 
@@ -10,10 +11,12 @@ public class Unlock : MonoBehaviour {
     public Text priceText;
     public Text currencryText;
     public static bool unlocking;
+    InputDevice inputDevice;
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire5") || Input.GetKeyDown(KeyCode.E))
+        inputDevice = InputManager.ActiveDevice;
+        if ( inputDevice.Action4.WasPressed || Input.GetKeyDown(KeyCode.E))
         {
             unlocking = true;
             Purchase();
@@ -22,7 +25,6 @@ public class Unlock : MonoBehaviour {
     public void Purchase()
     {
         confirmationWindow.SetActive(true);
-        EventSystem.current.SetSelectedGameObject(confirmButton);
         priceText.text = "Costs: " + ShipUnlocking.realPrice;
         currencryText.text = "Points: " + PlayerPrefs.GetInt("Currency");
     }

@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0015531131, g: 0.0015549292, b: 0.0015507728, a: 1}
+  m_IndirectSpecularColor: {r: 0.0015574661, g: 0.0015632825, b: 0.0015551394, a: 1}
 --- !u!157 &4
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -101,6 +101,7 @@ GameObject:
   - 114: {fileID: 12777012}
   - 114: {fileID: 12777011}
   - 114: {fileID: 12777010}
+  - 114: {fileID: 12777014}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -165,6 +166,38 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
+--- !u!114 &12777014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 12777009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ec447b585604be4ca034314751fb8b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectButtonImg: {fileID: 0}
+  unlockButtonImg: {fileID: 0}
+  colorButtonImg: {fileID: 0}
+  backButtonImg: {fileID: 0}
+  confirmationWindowConfImg: {fileID: 0}
+  confirmationWindowBackImg: {fileID: 0}
+  xBoxSpriteA: {fileID: 0}
+  xBoxSpriteB: {fileID: 0}
+  xBoxSpriteX: {fileID: 0}
+  xBoxSpriteY: {fileID: 0}
+  psSpriteX: {fileID: 0}
+  psSpriteO: {fileID: 0}
+  psSpriteSq: {fileID: 0}
+  psSpriteTr: {fileID: 0}
+  enter: {fileID: 0}
+  esc: {fileID: 0}
+  eKey: {fileID: 0}
+  qKey: {fileID: 0}
+  textBox: {fileID: 0}
+  isMainMenu: 0
+  selectedGameObject: {fileID: 1412414209}
 --- !u!1001 &24439112
 Prefab:
   m_ObjectHideFlags: 0
@@ -2403,6 +2436,52 @@ MonoBehaviour:
   m_EffectColor: {r: 0.36764705, g: 0.36764705, b: 0.36764705, a: 0.5}
   m_EffectDistance: {x: 5, y: -5}
   m_UseGraphicAlpha: 1
+--- !u!1 &489440058
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 489440060}
+  - 114: {fileID: 489440059}
+  m_Layer: 0
+  m_Name: InControl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &489440059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 489440058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7b5e8de77c5b4597ae7fbfb49a95e22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  logDebugInfo: 0
+  invertYAxis: 0
+  enableXInput: 0
+  useFixedUpdate: 0
+  dontDestroyOnLoad: 0
+  customProfiles: []
+--- !u!4 &489440060
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 489440058}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
 --- !u!114 &627213900 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11437642, guid: e8ddaa4cc34080842a4ef288534ce7a3,

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using InControl;
 
 public class UnlockShip : MonoBehaviour
 {
@@ -11,16 +12,19 @@ public class UnlockShip : MonoBehaviour
     int price;
     int myCurrency;
     int newCurrency;
+    InputDevice inputDevice;
 
     void Update()
     {
-        if(Input.GetButtonDown("Submit"))
+        inputDevice = InputManager.ActiveDevice;
+
+        if(inputDevice.Action1.WasPressed || Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Return))
         {
             Unlock.unlocking = false;
             ConfirmPurchase();
         }
 
-        if (Input.GetButtonDown("Cancel"))
+        if (inputDevice.Action2.WasReleased || Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Backspace))
         {
             Unlock.unlocking = false;
             confirmationWindow.SetActive(false);

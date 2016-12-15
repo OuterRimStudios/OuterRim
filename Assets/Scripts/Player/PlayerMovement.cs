@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using InControl;
 
 public class PlayerMovement : MonoBehaviour {
 
@@ -16,6 +17,7 @@ public class PlayerMovement : MonoBehaviour {
 
     GameObject gameManager;
     public bool invertVertical;
+    InputDevice inputDevice;
 
     void Start()
     {
@@ -27,6 +29,7 @@ public class PlayerMovement : MonoBehaviour {
     // Update is called once per frame
     void FixedUpdate()
     {
+        inputDevice = InputManager.ActiveDevice;
         horizontalTurnAngle = -(Input.GetAxis("Horizontal") * Time.deltaTime * playerSpeed * 50) * 20;
         horizontalTurnAngle = Mathf.Clamp(horizontalTurnAngle, -maxTurnAngle, maxTurnAngle);
         moveX = Input.GetAxis("Horizontal") * Time.deltaTime * playerSpeed;

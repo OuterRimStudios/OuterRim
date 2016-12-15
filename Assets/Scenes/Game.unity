@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.026
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.000034951663, g: 0.000035013225, b: 0.000034899087,
+  m_IndirectSpecularColor: {r: 0.00003505448, g: 0.000035202116, b: 0.00003500223,
     a: 0.026}
 --- !u!157 &4
 LightmapSettings:
@@ -2754,6 +2754,7 @@ GameObject:
   - 82: {fileID: 555410812}
   - 114: {fileID: 555410813}
   - 114: {fileID: 555410809}
+  - 114: {fileID: 555410818}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Game Manager
@@ -2773,6 +2774,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pausePanel: {fileID: 1444352613}
+  selectedGameObject: {fileID: 1078906585}
 --- !u!4 &555410810
 Transform:
   m_ObjectHideFlags: 0
@@ -3078,6 +3080,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b441af83e280e140a345950848d7aee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &555410818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 555410808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ec447b585604be4ca034314751fb8b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectButtonImg: {fileID: 0}
+  unlockButtonImg: {fileID: 0}
+  colorButtonImg: {fileID: 0}
+  backButtonImg: {fileID: 0}
+  confirmationWindowConfImg: {fileID: 0}
+  confirmationWindowBackImg: {fileID: 0}
+  xBoxSpriteA: {fileID: 0}
+  xBoxSpriteB: {fileID: 0}
+  xBoxSpriteX: {fileID: 0}
+  xBoxSpriteY: {fileID: 0}
+  psSpriteX: {fileID: 0}
+  psSpriteO: {fileID: 0}
+  psSpriteSq: {fileID: 0}
+  psSpriteTr: {fileID: 0}
+  enter: {fileID: 0}
+  esc: {fileID: 0}
+  eKey: {fileID: 0}
+  qKey: {fileID: 0}
+  textBox: {fileID: 0}
+  isMainMenu: 0
+  selectedGameObject: {fileID: 1078906585}
 --- !u!1 &568474987
 GameObject:
   m_ObjectHideFlags: 0
@@ -11193,6 +11227,52 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objects:
   - {fileID: 1786650230}
+--- !u!1 &2011380345
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2011380347}
+  - 114: {fileID: 2011380346}
+  m_Layer: 0
+  m_Name: InControl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2011380346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2011380345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7b5e8de77c5b4597ae7fbfb49a95e22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  logDebugInfo: 0
+  invertYAxis: 0
+  enableXInput: 0
+  useFixedUpdate: 0
+  dontDestroyOnLoad: 0
+  customProfiles: []
+--- !u!4 &2011380347
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2011380345}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
 --- !u!4 &2021218171 stripped
 Transform:
   m_PrefabParentObject: {fileID: 438322, guid: 6f724ff67d8e9914ca0eed5b5b28631c, type: 2}

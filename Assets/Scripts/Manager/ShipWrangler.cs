@@ -3,6 +3,8 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.EventSystems;
+using InControl;
+
 
 public class ShipWrangler : MonoBehaviour {
 
@@ -31,7 +33,7 @@ public class ShipWrangler : MonoBehaviour {
     bool transitioning;
     bool transitioned;
     float maskWidth;
-
+    InputDevice inputDevice;
     // Use this for initialization
     void Start()
     {
@@ -41,6 +43,7 @@ public class ShipWrangler : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        inputDevice = InputManager.ActiveDevice;
         if (!Unlock.unlocking)
         {
             DisplayShip();
@@ -58,7 +61,7 @@ public class ShipWrangler : MonoBehaviour {
                 hasMoved = false;
             }
 
-            if(Input.GetButtonDown("ChangeColor") && gameObject.name == "ShipContainer" && ships[currentShip].GetComponent<ShipWrangler>().ships[ships[currentShip].GetComponent<ShipWrangler>().currentShip].GetComponent<ShipUnlocking>().unlocked)
+            if((inputDevice.Action3.WasReleased || Input.GetKeyDown(KeyCode.Q)) && gameObject.name == "ShipContainer" && ships[currentShip].GetComponent<ShipWrangler>().ships[ships[currentShip].GetComponent<ShipWrangler>().currentShip].GetComponent<ShipUnlocking>().unlocked)
             {
                 ShipUnlocking.choosingColor = true;
                 choosingContainer = true;
@@ -66,7 +69,7 @@ public class ShipWrangler : MonoBehaviour {
                 SelectContainer();
             }
 
-            if (Input.GetButtonDown("Submit"))
+            if (inputDevice.Action1.WasPressed || Input.GetKeyDown(KeyCode.Return))
             {
                 if (choosingContainer)
                 {
@@ -82,7 +85,7 @@ public class ShipWrangler : MonoBehaviour {
                 }
             }
 
-            if (Input.GetButtonDown("Cancel"))
+            if (inputDevice.Action2.WasReleased || Input.GetKeyDown(KeyCode.Backspace) || Input.GetKeyDown(KeyCode.Escape))
             {
                 CancelSelect();
             }

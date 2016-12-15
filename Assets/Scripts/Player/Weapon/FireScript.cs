@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using InControl;
 
 public class FireScript : MonoBehaviour {
 
@@ -28,6 +29,8 @@ public class FireScript : MonoBehaviour {
     public Transform target;
     bool laserPowerActive;
     bool dualLaserActive;
+    InputDevice inputDevice;
+
     void Start()
     {
         laserPool = GameObject.Find("PlayerLasers").GetComponent<ObjectPooling>();
@@ -57,6 +60,7 @@ public class FireScript : MonoBehaviour {
 
     void Update()
     {
+        inputDevice = InputManager.ActiveDevice;
         if ((Input.GetAxis("Fire1") > 0) && Time.time > lastShot + fireFreq)
         {
             if (target == null || target.tag != "Enemy")
