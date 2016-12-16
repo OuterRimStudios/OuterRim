@@ -15,9 +15,9 @@ public class PlayerMovement : MonoBehaviour {
     public float clampX;
     public float clampY;
 
-    GameObject gameManager;
     public bool invertVertical;
     InputDevice inputDevice;
+	GameObject gameManager;
 
     void Start()
     {
@@ -55,7 +55,7 @@ public class PlayerMovement : MonoBehaviour {
         }
 
         transform.position += new Vector3(moveX, moveY, moveZ);
-        //transform.position = new Vector3(Mathf.Clamp(transform.position.x, -clampX, clampX), Mathf.Clamp(transform.position.y, -clampY, clampY), transform.position.z);
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, -clampX, clampX), Mathf.Clamp(transform.position.y, -clampY, clampY), transform.position.z);
     }
 
     void ClampRotation(float minAngle, float maxAngle, float clampAroundAngle = 0)

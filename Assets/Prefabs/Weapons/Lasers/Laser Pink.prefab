@@ -45,6 +45,7 @@ GameObject:
   - 114: {fileID: 11401402}
   - 82: {fileID: 8211652}
   - 136: {fileID: 13647782}
+  - 54: {fileID: 54000013549811422}
   m_Layer: 0
   m_Name: Laser Pink
   m_TagString: Laser
@@ -324,3 +325,18 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 186514}
   m_IsPrefabParent: 1
+--- !u!54 &54000013549811422
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 186514}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
