@@ -161,7 +161,7 @@ public class Enemy1Collision : MonoBehaviour
         else if (col.gameObject.tag == "Missile")
         {
             fireMissile.hasTarget = false;
-            WasDestroyed();
+            WasDestroyed(true);
             Destroy(col.gameObject);
         }
         if (transform.tag != "Carrier")
@@ -170,7 +170,7 @@ public class Enemy1Collision : MonoBehaviour
             {
                 Instantiate(meteorExplosionPrefab, transform.position, transform.rotation);
                 col.gameObject.SetActive(false);
-                WasDestroyed();
+                WasDestroyed(false);
             }
         }
     }
@@ -180,18 +180,21 @@ public class Enemy1Collision : MonoBehaviour
         currentHealth--;
         if (currentHealth <= 0)
         {
-            WasDestroyed();
+            WasDestroyed(true);
         }
     }
 
-    public void WasDestroyed()
+    public void WasDestroyed(bool givePoints)
     {
         fireMissile.targetsInRange.Remove(gameObject);
         if(fireMissile.target == gameObject)
         {
             fireMissile.hasTarget = false;
         }
-        _playerScore.score += laserScore;
+
+        if(givePoints)
+            _playerScore.score += laserScore;
+
         if (gameObject.tag != "Carrier")
         {
             PlayerCollision.fightersDestroyed++;

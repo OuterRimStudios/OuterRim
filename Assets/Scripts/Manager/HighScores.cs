@@ -17,6 +17,7 @@ public class HighScores : MonoBehaviour {
     {
         highScoreDisplay = GetComponent<DisplayHighScores>();
         instance = this;
+        Time.timeScale = 1;
     }
 
     void Start()

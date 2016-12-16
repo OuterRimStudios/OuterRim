@@ -91,7 +91,7 @@ public class PlayerCollision : MonoBehaviour
         {
             playerHealth -= 3;
             //pickUpManager.LoseLevel();
-            col.GetComponent<Enemy1Collision>().WasDestroyed();
+            col.GetComponent<Enemy1Collision>().WasDestroyed(false);
             CheckHealth();
         }
     }
@@ -234,7 +234,7 @@ public class PlayerCollision : MonoBehaviour
     IEnumerator GameOver()
     {
         //yield return new WaitUntil(FadeOut);
-        for (int i = 0; i < 20; i++)
+        for (int i = 0; i < 10; i++)
         {
             aplh = aplh + .075f;
             if (Time.timeScale >= .1f)
@@ -242,17 +242,18 @@ public class PlayerCollision : MonoBehaviour
                 fadeOut.color = new Color(0, 0, 0, aplh);
                 Time.timeScale -= .2f;
             }
-            yield return StartCoroutine(CoroutineUtil.WaitForRealSeconds(3f));
-            Analytics.CustomEvent("gameOver", new Dictionary<string, object>
-            {
-                {"waves", gameManager.GetComponent<WaveManager>().waveCount },
-                {"score", PlayerPrefs.GetInt("Score") },
-                {"fightersDestroyed", fightersDestroyed },
-                {"carriersDestroyed", carriersDestroyed },
-                {"shipName", PlayerPrefs.GetString("Ship") }
-            });
-            SceneManager.LoadScene("GameOver");
+            yield return StartCoroutine(CoroutineUtil.WaitForRealSeconds(.25f));
         }
+
+        Analytics.CustomEvent("gameOver", new Dictionary<string, object>
+        {
+            {"waves", gameManager.GetComponent<WaveManager>().waveCount },
+            {"score", PlayerPrefs.GetInt("Score") },
+            {"fightersDestroyed", fightersDestroyed },
+            {"carriersDestroyed", carriersDestroyed },
+            {"shipName", PlayerPrefs.GetString("Ship") }
+        });
+        SceneManager.LoadScene("GameOver");
     }
 
     public void TakeDamage(int amount)

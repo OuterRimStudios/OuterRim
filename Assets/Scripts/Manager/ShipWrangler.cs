@@ -86,7 +86,7 @@ public class ShipWrangler : MonoBehaviour {
                 SelectContainer();
             }
 
-            if (inputDevice.Action1.WasPressed || Input.GetKeyDown(KeyCode.Return))
+            if (inputDevice.Action1.WasPressed || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.E))
             {
                 if (choosingContainer)
                 {
@@ -217,6 +217,7 @@ public class ShipWrangler : MonoBehaviour {
         }
         else if (gameObject.name == "ShipContainer")
         {
+            textMask.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 800);
             MenuToggle.ToggleMenu(chooseShipMenu, startMenu, startButton);
             ToggleObject.Toggle(toggleObjects);
         }
@@ -228,7 +229,7 @@ public class ShipWrangler : MonoBehaviour {
         choosingContainer = false;
         for (int i = 0; i < ships.Count; i++)
         {
-            ships[i].GetComponent<ShipWrangler>().currentShip = 0;
+            //ships[i].GetComponent<ShipWrangler>().currentShip = 0;
             ships[i].GetComponent<ShipWrangler>().DisplayShip();
             ships[i].GetComponent<ShipWrangler>().enabled = false;
         }

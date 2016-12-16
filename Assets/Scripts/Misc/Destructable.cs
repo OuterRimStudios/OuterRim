@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class Destructable : MonoBehaviour
 {
-	[HideInInspector]
+	//[HideInInspector]
 	public int baseHealth;
 	[HideInInspector]
 	public int currentHealth;

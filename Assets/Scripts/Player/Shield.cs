@@ -33,7 +33,7 @@ public class Shield : MonoBehaviour
         else if (other.tag == "Enemy")
         {
             Instantiate(explosion, transform.position, transform.rotation);
-            other.GetComponent<Enemy1Collision>().WasDestroyed();
+            other.GetComponent<Enemy1Collision>().WasDestroyed(false);
             ShieldDestroyed();
         }
     }
