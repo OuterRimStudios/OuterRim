@@ -15,7 +15,7 @@ public class ShipUnlocking : MonoBehaviour
 
 	void Start ()
     {
-        price = 500000;
+        price = 100;
         realPrice = price;
         choosingColor = false;
         shipName = transform.name;
