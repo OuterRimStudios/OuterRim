@@ -1975,9 +1975,9 @@ MonoBehaviour:
   playerShieldHealth: 3
   playerShieldCooldown: 15
   playerLives: 3
-  playerHealth: 10
-  playerSpeed: 1000
-  playerRotation: 20
+  playerHealth: 10000000
+  playerSpeed: 1100
+  playerRotation: 15
   laserPickUpActiveTime: 15
   dualLaserPickUpActiveTime: 15
   missileRechargeLength: 10
@@ -1985,63 +1985,63 @@ MonoBehaviour:
   actorSpeed: 600
   maneuverSpeed: 1
   strafeSpeed: 1.5
-  enemy1Speed: 150
+  enemy1Speed: 800
   enemy1FireFreq: 3
   enemy1BaseHealth: 2
   enemy1LaserScore: 1000
   enemy1MissileScore: 500
-  enemy2Speed: 600
+  enemy2Speed: 800
   enemy2FireFreq: 3
   enemy2BaseHealth: 6
   enemy2LaserScore: 1000
   enemy2MissileScore: 500
-  enemy3Speed: 1100
+  enemy3Speed: 800
   enemy3FireFreq: 3
   enemy3BaseHealth: 2
   enemy3LaserScore: 1000
   enemy3MissileScore: 500
-  enemy4Speed: 300
+  enemy4Speed: 800
   enemy4FireFreq: 3
   enemy4BaseHealth: 2
   enemy4ShieldHealth: 5
   enemy4LaserScore: 1000
   enemy4MissileScore: 500
-  enemy5Speed: 400
+  enemy5Speed: 800
   enemy5FireFreq: 3
   enemy5BaseHealth: 5
   enemy5LaserScore: 1000
   enemy5MissileScore: 500
-  enemy6Speed: 150
+  enemy6Speed: 800
   enemy6FireFreq: 3
   enemy6BaseHealth: 3
   enemy6LaserScore: 1000
   enemy6MissileScore: 500
-  enemy7Speed: 150
+  enemy7Speed: 800
   enemy7FireFreq: 3
   enemy7BaseHealth: 2
   enemy7LaserScore: 1000
   enemy7MissileScore: 500
-  enemy8Speed: 150
+  enemy8Speed: 800
   enemy8FireFreq: 3
   enemy8BaseHealth: 2
   enemy8LaserScore: 1000
   enemy8MissileScore: 500
-  enemy9Speed: 150
+  enemy9Speed: 800
   enemy9FireFreq: 3
   enemy9BaseHealth: 2
   enemy9LaserScore: 1000
   enemy9MissileScore: 500
-  enemy10Speed: 150
+  enemy10Speed: 800
   enemy10FireFreq: 3
   enemy10BaseHealth: 2
   enemy10LaserScore: 1000
   enemy10MissileScore: 500
-  enemy11Speed: 400
+  enemy11Speed: 800
   enemy11FireFreq: 3
   enemy11BaseHealth: 4
   enemy11LaserScore: 1000
   enemy11MissileScore: 500
-  enemy12Speed: 600
+  enemy12Speed: 800
   enemy12FireFreq: 3
   enemy12BaseHealth: 2
   enemy12LaserScore: 1000
@@ -3696,8 +3696,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1074457664}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -284, z: 940}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
+  m_LocalPosition: {x: 0, y: -202, z: 1405}
+  m_LocalScale: {x: 1.4308963, y: 0.3, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 235054872}
@@ -5110,8 +5110,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1447272288}
   m_LocalRotation: {x: 0, y: 0, z: 0.6697141, w: 0.74261904}
-  m_LocalPosition: {x: 121, y: -274, z: 999}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
+  m_LocalPosition: {x: -186, y: 13, z: 948}
+  m_LocalScale: {x: 0.3, y: -3.622773, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 2093367885}
@@ -8491,7 +8491,7 @@ Transform:
   m_GameObject: {fileID: 1889965053}
   m_LocalRotation: {x: 0, y: 0, z: -0.9040826, w: 0.4273578}
   m_LocalPosition: {x: -44, y: -69, z: 940}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
+  m_LocalScale: {x: 0.75952107, y: 0.3, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1122038468}
