@@ -32,6 +32,8 @@ public class FireMissile : MonoBehaviour
     PublicVariableHandler publicVariableHandler;
     WaveManager waveManager;
 
+    AudioSource source;
+
     bool missileUpgraded;
     
     void Start()
@@ -39,6 +41,7 @@ public class FireMissile : MonoBehaviour
         hasTarget = false;
         player = GameObject.Find("Player");
         gameManager = GameObject.Find("GameManager");
+        source = gameManager.transform.FindChild("MissileSource").GetComponent<AudioSource>();
         waveManager = gameManager.GetComponent<WaveManager>();
         publicVariableHandler = gameManager.GetComponent<PublicVariableHandler>();
         missile = player.GetComponent<StoreVariables>().missileColor;
@@ -82,6 +85,7 @@ public class FireMissile : MonoBehaviour
         lastShot = Time.time;
         GameObject clone = Instantiate(missile, transform.position, transform.rotation) as GameObject;
         clone.GetComponent<MissileMovement>().target = target;
+        source.PlayOneShot(publicVariableHandler.missileSound);
         missileCount--;
         target = null;
         if (missileCount < missileMax && !(missileCount >= missileMax))

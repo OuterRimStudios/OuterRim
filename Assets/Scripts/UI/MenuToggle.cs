@@ -22,7 +22,8 @@ public class MenuToggle : MonoBehaviour
 
     public void ToggleMenu(GameObject nextSelected)
     {
-        deactivate.SetActive(false);
+        if (deactivate != null)
+            deactivate.SetActive(false);
         activate.SetActive(true);
         if (nextSelected != null)
             EventSystem.current.SetSelectedGameObject(nextSelected);
@@ -30,7 +31,8 @@ public class MenuToggle : MonoBehaviour
 
     public void ToggleMenu()
     {
-        deactivate.SetActive(false);
+        if (deactivate != null)
+            deactivate.SetActive(false);
         activate.SetActive(true);
         if (nextSelected != null)
             EventSystem.current.SetSelectedGameObject(nextSelected);
@@ -38,7 +40,8 @@ public class MenuToggle : MonoBehaviour
 
     public static void ToggleMenu(GameObject deactivate, GameObject activate, GameObject nextSelected)
     {
-        deactivate.SetActive(false);
+        if(deactivate != null)
+            deactivate.SetActive(false);
         activate.SetActive(true);
         if (nextSelected != null)
             EventSystem.current.SetSelectedGameObject(nextSelected);

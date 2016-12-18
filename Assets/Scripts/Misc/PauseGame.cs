@@ -6,13 +6,15 @@ using UnityEngine.EventSystems;
 public class PauseGame : MonoBehaviour {
 
     public GameObject pausePanel;
+    public GameObject optionsPanel;
     public GameObject selectedGameObject;
     bool isPaused;
     InputDevice inputDevice;
 
 	// Use this for initialization
 	void Start () {
-	
+        pausePanel.SetActive(false);
+        optionsPanel.SetActive(false);
 	}
 	
 	// Update is called once per frame

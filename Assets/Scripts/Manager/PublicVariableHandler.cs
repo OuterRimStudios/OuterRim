@@ -17,6 +17,9 @@ public class PublicVariableHandler : MonoBehaviour
     public AudioClip laserLevel2Sound;
     public AudioClip laserLevel3Sound;
 
+    //Missile Sounds
+    public AudioClip missileSound;
+
     //User Interface Variables
     public Image fadeOut;
 

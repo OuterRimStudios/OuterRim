@@ -9,9 +9,11 @@ public class MainMenuManager : MonoBehaviour {
     public GameObject initialMenu;
     public GameObject greeting;
     public GameObject startButton;
+    public GameObject optionsMenu;
 
 	// Use this for initialization
 	void Start () {
+        optionsMenu.SetActive(false);
         if (PlayerPrefs.GetString("Remember") == "True")
         {
             initialMenu.SetActive(false);
