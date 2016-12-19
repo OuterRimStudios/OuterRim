@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3844916, g: 0.38281298, b: 0.368034, a: 1}
+  m_IndirectSpecularColor: {r: 0.38271093, g: 0.38051784, b: 0.36625648, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -2207,6 +2207,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 11476244, guid: 0e840130af9f18545a390484524a1c5b, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0e840130af9f18545a390484524a1c5b, type: 2}
   m_IsPrefabParent: 0
@@ -4365,6 +4369,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 11414334, guid: 6423a6f119edd6f49abb5cae05331dcc, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6423a6f119edd6f49abb5cae05331dcc, type: 2}
   m_IsPrefabParent: 0
@@ -4871,6 +4879,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 11421194, guid: b8bfade05d44ffc4a8f448d81571bb06, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b8bfade05d44ffc4a8f448d81571bb06, type: 2}
   m_IsPrefabParent: 0
@@ -5029,7 +5041,7 @@ MonoBehaviour:
   missile: {fileID: 1753743695}
   colliders: {fileID: 695614098}
   shield: {fileID: 1101157024}
-  meteorExplosion: {fileID: 100000, guid: 809320482fb694b6e8149a226202b86a, type: 2}
+  meteorExplosion: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
   lightningGun: {fileID: 825384891}
   laserColor: {fileID: 186514, guid: c361b9016c5897f46962e17b136b7536, type: 2}
   missileColor: {fileID: 114522, guid: 2d018c5daf88329488a3534d93000922, type: 2}
@@ -5207,6 +5219,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 11423368, guid: 56795a4fa5008a54cad4a956516bf46e, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 56795a4fa5008a54cad4a956516bf46e, type: 2}
   m_IsPrefabParent: 0
@@ -5457,6 +5473,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11403390, guid: c02bc5ead6f08d54aa4c10b039e76b49, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c02bc5ead6f08d54aa4c10b039e76b49, type: 2}
   m_IsPrefabParent: 0
@@ -5499,6 +5519,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11480590, guid: 29c6a577b4544de4682c311cfefa5eb9, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 29c6a577b4544de4682c311cfefa5eb9, type: 2}
   m_IsPrefabParent: 0
@@ -6267,6 +6291,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11464664, guid: 844675038a0d3e942af00c4b244f7f2f, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 844675038a0d3e942af00c4b244f7f2f, type: 2}
   m_IsPrefabParent: 0
@@ -12186,6 +12214,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11437076, guid: 7b73dc1f423064b46b01392dd55a1c89, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7b73dc1f423064b46b01392dd55a1c89, type: 2}
   m_IsPrefabParent: 0
@@ -14096,6 +14128,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 11444076, guid: 5b63acfaff858a24e97b8262481f625d, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5b63acfaff858a24e97b8262481f625d, type: 2}
   m_IsPrefabParent: 0
@@ -14214,6 +14250,10 @@ Prefab:
       propertyPath: m_Name
       value: Ranger Green
       objectReference: {fileID: 0}
+    - target: {fileID: 11419890, guid: 42a26d3ba9ca27049b6d9eb6499af71a, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 42a26d3ba9ca27049b6d9eb6499af71a, type: 2}
   m_IsPrefabParent: 0
@@ -14328,6 +14368,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11455278, guid: 1c423a9947af2d6469073eb0785231a1, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1c423a9947af2d6469073eb0785231a1, type: 2}
   m_IsPrefabParent: 0
@@ -26311,6 +26355,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 11440268, guid: f1a3ed4dd4254b243b3d376578322cd8, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f1a3ed4dd4254b243b3d376578322cd8, type: 2}
   m_IsPrefabParent: 0
@@ -26691,6 +26739,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 11422214, guid: 4bcc09f0ceb1be44db1e8d003d5ddb9d, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4bcc09f0ceb1be44db1e8d003d5ddb9d, type: 2}
   m_IsPrefabParent: 0
@@ -26849,6 +26901,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11405284, guid: 27e2adffc77ec6b419118a25c63b6ef4, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 27e2adffc77ec6b419118a25c63b6ef4, type: 2}
   m_IsPrefabParent: 0
@@ -26906,7 +26962,7 @@ MonoBehaviour:
   missile: {fileID: 1244445072}
   colliders: {fileID: 1130474355}
   shield: {fileID: 453628361}
-  meteorExplosion: {fileID: 100000, guid: 809320482fb694b6e8149a226202b86a, type: 2}
+  meteorExplosion: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
   lightningGun: {fileID: 980921014}
   laserColor: {fileID: 188982, guid: e76b7fb8090ece44d848b9ea2b17832c, type: 2}
   missileColor: {fileID: 128558, guid: 2bfca4e69e1f8b944b7dc5bab39ebf7a, type: 2}
@@ -27084,6 +27140,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 11487926, guid: 3101350c1fa029544bab163ab02c86e0, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3101350c1fa029544bab163ab02c86e0, type: 2}
   m_IsPrefabParent: 0
@@ -27145,7 +27205,7 @@ MonoBehaviour:
   missile: {fileID: 678838310}
   colliders: {fileID: 148367883}
   shield: {fileID: 1255041316}
-  meteorExplosion: {fileID: 100000, guid: 809320482fb694b6e8149a226202b86a, type: 2}
+  meteorExplosion: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
   lightningGun: {fileID: 7718914}
   laserColor: {fileID: 174594, guid: 653804ebb40bfe24296eac47db49cb67, type: 2}
   missileColor: {fileID: 180120, guid: 2115e84f6090ad54989729519f1c1c3e, type: 2}
@@ -30994,6 +31054,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 11421328, guid: f86479f2fcb11cb4a9f141e38b0a1e6f, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f86479f2fcb11cb4a9f141e38b0a1e6f, type: 2}
   m_IsPrefabParent: 0
@@ -31407,6 +31471,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11404880, guid: 92e42bc708a8fc7449643097e51d8488, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 92e42bc708a8fc7449643097e51d8488, type: 2}
   m_IsPrefabParent: 0
@@ -32133,6 +32201,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 11420994, guid: f281673bc815fd140b1449975f25ab0e, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f281673bc815fd140b1449975f25ab0e, type: 2}
   m_IsPrefabParent: 0
@@ -32685,6 +32757,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 11439672, guid: 6bcc8a93bad7d874a8b7e82b30e9f30b, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6bcc8a93bad7d874a8b7e82b30e9f30b, type: 2}
   m_IsPrefabParent: 0
@@ -32935,6 +33011,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 11449574, guid: f3c90b640bd12d542b5e28fabde21f20, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f3c90b640bd12d542b5e28fabde21f20, type: 2}
   m_IsPrefabParent: 0
@@ -33172,6 +33252,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 11470950, guid: 031f56f2d56535645bfaebfc1dac0404, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 031f56f2d56535645bfaebfc1dac0404, type: 2}
   m_IsPrefabParent: 0
@@ -33301,6 +33385,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 11413982, guid: 164caf8bbe368274fa1da68886dbb8bf, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 164caf8bbe368274fa1da68886dbb8bf, type: 2}
   m_IsPrefabParent: 0
@@ -33569,6 +33657,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 11496392, guid: 12b5529146c19a94c99dde16c5db81fd, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12b5529146c19a94c99dde16c5db81fd, type: 2}
   m_IsPrefabParent: 0
@@ -33615,6 +33707,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11429258, guid: bc9eb6daf96669e4aa4361effc63730e, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bc9eb6daf96669e4aa4361effc63730e, type: 2}
   m_IsPrefabParent: 0
@@ -33805,6 +33901,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11426952, guid: 2654971a407d7a0459a1898fdac3c723, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2654971a407d7a0459a1898fdac3c723, type: 2}
   m_IsPrefabParent: 0
@@ -35799,6 +35899,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 11443584, guid: 1a2e17ec3241b3b4cb95893b315c11c5, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1a2e17ec3241b3b4cb95893b315c11c5, type: 2}
   m_IsPrefabParent: 0
@@ -37713,6 +37817,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11448112, guid: e3cdac3d3435a7f418c78e20b2a47593, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e3cdac3d3435a7f418c78e20b2a47593, type: 2}
   m_IsPrefabParent: 0
@@ -37995,6 +38103,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 11410026, guid: dc425a9b4817f1f4c9cf729dd0b158b2, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dc425a9b4817f1f4c9cf729dd0b158b2, type: 2}
   m_IsPrefabParent: 0
@@ -38105,6 +38217,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11484364, guid: 32323c244dd4a7f47a58a4601b6bf3dc, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 32323c244dd4a7f47a58a4601b6bf3dc, type: 2}
   m_IsPrefabParent: 0
@@ -38212,6 +38328,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 11461814, guid: 86c38b986b1b18f429f53f8c88a9ac5b, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 86c38b986b1b18f429f53f8c88a9ac5b, type: 2}
   m_IsPrefabParent: 0
@@ -40597,6 +40717,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 11441626, guid: c829fd56f8dc09b40b363fb550874619, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c829fd56f8dc09b40b363fb550874619, type: 2}
   m_IsPrefabParent: 0
@@ -41236,6 +41360,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 11412978, guid: 87a044ec9ae12384196f67d4808c8f5b, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 87a044ec9ae12384196f67d4808c8f5b, type: 2}
   m_IsPrefabParent: 0
@@ -42246,6 +42374,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 11440510, guid: 185048f692d89a1428ed44e2793e7cd7, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 185048f692d89a1428ed44e2793e7cd7, type: 2}
   m_IsPrefabParent: 0
@@ -42424,6 +42556,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11488532, guid: 227b7206660f3b241886631c27da03df, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 227b7206660f3b241886631c27da03df, type: 2}
   m_IsPrefabParent: 0
@@ -42470,6 +42606,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 11480982, guid: 1b6088cd1ef5f2b43be93fef27413df4, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1b6088cd1ef5f2b43be93fef27413df4, type: 2}
   m_IsPrefabParent: 0
@@ -42616,6 +42756,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11442074, guid: 02a9d4bc488a5ca4f9b8c2be4b469e3e, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 02a9d4bc488a5ca4f9b8c2be4b469e3e, type: 2}
   m_IsPrefabParent: 0
@@ -44854,6 +44998,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 11445508, guid: d0d99087a5cf1dc4a9c892edef6b2b2e, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d0d99087a5cf1dc4a9c892edef6b2b2e, type: 2}
   m_IsPrefabParent: 0
@@ -46728,6 +46876,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11477106, guid: 33bb1f3e92f40dc408a8195afd233f3c, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 33bb1f3e92f40dc408a8195afd233f3c, type: 2}
   m_IsPrefabParent: 0
@@ -48760,6 +48912,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 11475530, guid: c14b5f2969658b440859e9b63593eabe, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c14b5f2969658b440859e9b63593eabe, type: 2}
   m_IsPrefabParent: 0
@@ -49025,7 +49181,7 @@ MonoBehaviour:
   missile: {fileID: 1990168056}
   colliders: {fileID: 2050062220}
   shield: {fileID: 1335942844}
-  meteorExplosion: {fileID: 100000, guid: 809320482fb694b6e8149a226202b86a, type: 2}
+  meteorExplosion: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
   lightningGun: {fileID: 1403701972}
   laserColor: {fileID: 165504, guid: 6664cc5098b02354faa5d538e77f545c, type: 2}
   missileColor: {fileID: 120438, guid: a82e2840f8a9ed6488a5601f3763c97d, type: 2}
@@ -49247,7 +49403,7 @@ MonoBehaviour:
   missile: {fileID: 2093646528}
   colliders: {fileID: 190077783}
   shield: {fileID: 1958380517}
-  meteorExplosion: {fileID: 100000, guid: 809320482fb694b6e8149a226202b86a, type: 2}
+  meteorExplosion: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
   lightningGun: {fileID: 1432657008}
   laserColor: {fileID: 165434, guid: 2e8fdad0009633242970ae3d52603b79, type: 2}
   missileColor: {fileID: 143826, guid: 85207ef3c2c9725488a3a50c23d33a97, type: 2}
@@ -49357,6 +49513,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11410938, guid: 481e88c4e0119074b97b3fff7c5adad1, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 481e88c4e0119074b97b3fff7c5adad1, type: 2}
   m_IsPrefabParent: 0
@@ -49590,6 +49750,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11477650, guid: c1b2045961e82ea4d8a99c99563f9d2b, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c1b2045961e82ea4d8a99c99563f9d2b, type: 2}
   m_IsPrefabParent: 0
@@ -49783,7 +49947,7 @@ MonoBehaviour:
   missile: {fileID: 2073346503}
   colliders: {fileID: 158738803}
   shield: {fileID: 250877757}
-  meteorExplosion: {fileID: 100000, guid: 809320482fb694b6e8149a226202b86a, type: 2}
+  meteorExplosion: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
   lightningGun: {fileID: 1739544534}
   laserColor: {fileID: 158440, guid: 8d4f9d14fe7437b4b9f522281e4472fb, type: 2}
   missileColor: {fileID: 157856, guid: e7b40c124712f9c4dba68ad96e383e89, type: 2}
@@ -50101,6 +50265,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 11408114, guid: 37118fa4d268bae4f839686ce0e61720, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 37118fa4d268bae4f839686ce0e61720, type: 2}
   m_IsPrefabParent: 0
@@ -52045,6 +52213,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 11401012, guid: d45d9ae7a36b92f4993a2186964d2c25, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d45d9ae7a36b92f4993a2186964d2c25, type: 2}
   m_IsPrefabParent: 0
@@ -52091,6 +52263,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11462218, guid: 6a523328efe09b94c920132f9ce4f3b6, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6a523328efe09b94c920132f9ce4f3b6, type: 2}
   m_IsPrefabParent: 0
@@ -52310,6 +52486,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 11483368, guid: 75aa27133cf841642b03c5bd9cf17faf, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 75aa27133cf841642b03c5bd9cf17faf, type: 2}
   m_IsPrefabParent: 0
@@ -52492,6 +52672,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11457600, guid: bd449cfcbec88f7468b201c8eab7c04e, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bd449cfcbec88f7468b201c8eab7c04e, type: 2}
   m_IsPrefabParent: 0
@@ -52585,6 +52769,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 11410482, guid: b4aad86a61bb0f34daa5ca7d69c69dce, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b4aad86a61bb0f34daa5ca7d69c69dce, type: 2}
   m_IsPrefabParent: 0
@@ -52627,6 +52815,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 11425182, guid: 6869832fd861c824fb3b7026c7c75960, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6869832fd861c824fb3b7026c7c75960, type: 2}
   m_IsPrefabParent: 0
@@ -52673,6 +52865,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 11420448, guid: 549468772fb0bc84086c7b2babbd5823, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 549468772fb0bc84086c7b2babbd5823, type: 2}
   m_IsPrefabParent: 0
@@ -52948,6 +53144,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 11407864, guid: a42fb7656436977408ee07b1addb270b, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a42fb7656436977408ee07b1addb270b, type: 2}
   m_IsPrefabParent: 0
@@ -52990,6 +53190,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11453346, guid: 461bf2fc8b5a00345a56b7892a4c24a5, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 461bf2fc8b5a00345a56b7892a4c24a5, type: 2}
   m_IsPrefabParent: 0
@@ -55189,6 +55393,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 11429854, guid: 3c8f0aeb94d2be2479e7e02d82adeb96, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3c8f0aeb94d2be2479e7e02d82adeb96, type: 2}
   m_IsPrefabParent: 0
@@ -57702,6 +57910,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11432956, guid: 27615deab395ba74cb3085a447d854a1, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 27615deab395ba74cb3085a447d854a1, type: 2}
   m_IsPrefabParent: 0
@@ -59711,6 +59923,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 11499268, guid: d1808dc5cb033734ba58fd5c0b847168, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d1808dc5cb033734ba58fd5c0b847168, type: 2}
   m_IsPrefabParent: 0
@@ -59757,6 +59973,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 11430452, guid: 64204763aaf67ac40b94a2421a6f091b, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 64204763aaf67ac40b94a2421a6f091b, type: 2}
   m_IsPrefabParent: 0
@@ -59867,6 +60087,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11494434, guid: 4c9a572f8c1c9144a9cc88722e67cc76, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4c9a572f8c1c9144a9cc88722e67cc76, type: 2}
   m_IsPrefabParent: 0
@@ -59996,7 +60220,7 @@ MonoBehaviour:
   missile: {fileID: 194192686}
   colliders: {fileID: 1890740953}
   shield: {fileID: 1830050972}
-  meteorExplosion: {fileID: 100000, guid: 809320482fb694b6e8149a226202b86a, type: 2}
+  meteorExplosion: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
   lightningGun: {fileID: 1657180472}
   laserColor: {fileID: 197788, guid: c860f022ab389dc48b501ccfe5603a82, type: 2}
   missileColor: {fileID: 165350, guid: 9f08530d1b822bf4b8fa033d4a107415, type: 2}
@@ -60265,6 +60489,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11434736, guid: 80297ae0516a39e4c9251abdd5a5015c, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 80297ae0516a39e4c9251abdd5a5015c, type: 2}
   m_IsPrefabParent: 0
@@ -62718,6 +62946,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 11433136, guid: a30b276eaf94cb14d8cd4110a27d6e47, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a30b276eaf94cb14d8cd4110a27d6e47, type: 2}
   m_IsPrefabParent: 0
@@ -62961,6 +63193,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11404472, guid: 2065f86d08c9cfd41ade7dc101b16630, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2065f86d08c9cfd41ade7dc101b16630, type: 2}
   m_IsPrefabParent: 0
@@ -63007,6 +63243,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 11450360, guid: ec9714af4b370454aa8ff0a87d4edb70, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ec9714af4b370454aa8ff0a87d4edb70, type: 2}
   m_IsPrefabParent: 0
@@ -63053,6 +63293,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 11470644, guid: 5495cbdfc7d27404c9349e96d7ac4dd2, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5495cbdfc7d27404c9349e96d7ac4dd2, type: 2}
   m_IsPrefabParent: 0
@@ -63261,6 +63505,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11444236, guid: 36e2e7bda7fb6714992643a435b7dfe6, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 36e2e7bda7fb6714992643a435b7dfe6, type: 2}
   m_IsPrefabParent: 0
@@ -63307,6 +63555,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 11438744, guid: 3c8101751d4ad834181dd1e615af361e, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3c8101751d4ad834181dd1e615af361e, type: 2}
   m_IsPrefabParent: 0
@@ -63758,6 +64010,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 11464608, guid: 9baaeb7accf600c4fbb3894d6082ff1c, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9baaeb7accf600c4fbb3894d6082ff1c, type: 2}
   m_IsPrefabParent: 0
@@ -66123,6 +66379,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[2]
       value: 
       objectReference: {fileID: 2100000, guid: d124387e99a1fee4caa7cdc89b30ceee, type: 2}
+    - target: {fileID: 11427050, guid: 83befba8b5ac60d49a4f7d3944ac206e, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 83befba8b5ac60d49a4f7d3944ac206e, type: 2}
   m_IsPrefabParent: 0
@@ -66282,6 +66542,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11480124, guid: 41cbef568c03d50459596f5c80c06d70, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 41cbef568c03d50459596f5c80c06d70, type: 2}
   m_IsPrefabParent: 0
@@ -68265,6 +68529,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 11474224, guid: de69a2f4193e52c478164f1b23eee931, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: de69a2f4193e52c478164f1b23eee931, type: 2}
   m_IsPrefabParent: 0
@@ -69074,6 +69342,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 11448552, guid: ca4eca690031e5c41b34cfc62a08dcf2, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ca4eca690031e5c41b34cfc62a08dcf2, type: 2}
   m_IsPrefabParent: 0
@@ -69120,6 +69392,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 11442652, guid: b91ac89779521f540a1a3b2e4e1f7fa7, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b91ac89779521f540a1a3b2e4e1f7fa7, type: 2}
   m_IsPrefabParent: 0
@@ -69557,6 +69833,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 11458364, guid: 12ce708288faa4148a242c6c3f86e829, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12ce708288faa4148a242c6c3f86e829, type: 2}
   m_IsPrefabParent: 0
@@ -69667,6 +69947,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11489158, guid: cd4cc0d278cb8e6419cad37a123501ae, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cd4cc0d278cb8e6419cad37a123501ae, type: 2}
   m_IsPrefabParent: 0
@@ -71750,6 +72034,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 11413566, guid: 203f5d5a9b9f63f4988af69a2cc39d30, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 203f5d5a9b9f63f4988af69a2cc39d30, type: 2}
   m_IsPrefabParent: 0
@@ -73852,6 +74140,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 11424502, guid: eb4bbac241443c447ab33418fa198670, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: eb4bbac241443c447ab33418fa198670, type: 2}
   m_IsPrefabParent: 0
@@ -74814,6 +75106,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 11437028, guid: 5723b550c5f802b42a50400588b61c96, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5723b550c5f802b42a50400588b61c96, type: 2}
   m_IsPrefabParent: 0
@@ -74897,6 +75193,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 11458658, guid: 158a4ad3a0c578449bd21717f1365c18, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 158a4ad3a0c578449bd21717f1365c18, type: 2}
   m_IsPrefabParent: 0
@@ -75267,6 +75567,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 11470182, guid: 52d5a6e36d097964193fab0a4d7f8e31, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 52d5a6e36d097964193fab0a4d7f8e31, type: 2}
   m_IsPrefabParent: 0
@@ -75872,6 +76176,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 11411984, guid: b307494784d3dcb49af245cf285bfd36, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b307494784d3dcb49af245cf285bfd36, type: 2}
   m_IsPrefabParent: 0
@@ -75918,6 +76226,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 11427122, guid: 302e33e621e976f48b3fedc2a5c6f92e, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 302e33e621e976f48b3fedc2a5c6f92e, type: 2}
   m_IsPrefabParent: 0
@@ -76079,7 +76391,7 @@ MonoBehaviour:
   missile: {fileID: 1553729070}
   colliders: {fileID: 1509071851}
   shield: {fileID: 1002748035}
-  meteorExplosion: {fileID: 100000, guid: 809320482fb694b6e8149a226202b86a, type: 2}
+  meteorExplosion: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
   lightningGun: {fileID: 581620608}
   laserColor: {fileID: 164644, guid: 77b08284e0b139f43aa3b1a8188f821d, type: 2}
   missileColor: {fileID: 145910, guid: 83904708eae581b4b90eddc05bddf6d5, type: 2}
@@ -76265,6 +76577,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[2]
       value: 
       objectReference: {fileID: 2100000, guid: d124387e99a1fee4caa7cdc89b30ceee, type: 2}
+    - target: {fileID: 11428106, guid: f486ad6226ef0234598bd63cc7ed2bdb, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f486ad6226ef0234598bd63cc7ed2bdb, type: 2}
   m_IsPrefabParent: 0
@@ -80079,6 +80395,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11405642, guid: 8857d67cc5eca1c4ea7465a626f74e0d, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8857d67cc5eca1c4ea7465a626f74e0d, type: 2}
   m_IsPrefabParent: 0
@@ -80162,6 +80482,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 11459190, guid: 1a214db686510a2489d2b7fa0d2d9cb3, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1a214db686510a2489d2b7fa0d2d9cb3, type: 2}
   m_IsPrefabParent: 0
@@ -80561,6 +80885,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11463576, guid: 02f82e171a66b44498773b4260c5c44c, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 02f82e171a66b44498773b4260c5c44c, type: 2}
   m_IsPrefabParent: 0
@@ -80603,6 +80931,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 11491022, guid: 85067726959ed5748b7bfa08b72c8837, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 85067726959ed5748b7bfa08b72c8837, type: 2}
   m_IsPrefabParent: 0
@@ -80726,6 +81058,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11497556, guid: aab86de582acdf04e83f24ec2e47507b, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aab86de582acdf04e83f24ec2e47507b, type: 2}
   m_IsPrefabParent: 0
@@ -80772,6 +81108,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11471494, guid: 1c03b9fd53e878e468dcc032f0ae4639, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1c03b9fd53e878e468dcc032f0ae4639, type: 2}
   m_IsPrefabParent: 0
@@ -80911,6 +81251,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 11445050, guid: 3b8894d40325a4f40b0cc03d6c54eedc, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3b8894d40325a4f40b0cc03d6c54eedc, type: 2}
   m_IsPrefabParent: 0
@@ -80961,6 +81305,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 11448034, guid: 19ef29c6aa0f2ed469966a74734e8308, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 19ef29c6aa0f2ed469966a74734e8308, type: 2}
   m_IsPrefabParent: 0
@@ -81648,6 +81996,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 11441596, guid: ec63f9398a4140c44b88a2e2c68a72a0, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ec63f9398a4140c44b88a2e2c68a72a0, type: 2}
   m_IsPrefabParent: 0
@@ -81762,6 +82114,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11473008, guid: e60b13cd1efb1f6448ba7db9950ade3d, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e60b13cd1efb1f6448ba7db9950ade3d, type: 2}
   m_IsPrefabParent: 0
@@ -82107,6 +82463,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11470136, guid: 101d04a5a289a5c449622287f12d631c, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 101d04a5a289a5c449622287f12d631c, type: 2}
   m_IsPrefabParent: 0
@@ -82153,6 +82513,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11493508, guid: da0b805065002534daddc43ecbd78d9b, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: da0b805065002534daddc43ecbd78d9b, type: 2}
   m_IsPrefabParent: 0
@@ -82231,6 +82595,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 11489042, guid: e374708ff48bb554d8c89b7cf6ccfbd6, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e374708ff48bb554d8c89b7cf6ccfbd6, type: 2}
   m_IsPrefabParent: 0
@@ -82277,6 +82645,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11403318, guid: 1f3528f163f010c43848cf01c748f25a, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1f3528f163f010c43848cf01c748f25a, type: 2}
   m_IsPrefabParent: 0
@@ -82319,6 +82691,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 11464078, guid: ac2a40e9139272d47ad81aec5811fb3d, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ac2a40e9139272d47ad81aec5811fb3d, type: 2}
   m_IsPrefabParent: 0
@@ -84701,6 +85077,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 11426294, guid: 2eb0609b5c000c44ebcae1e2b4acf9e7, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2eb0609b5c000c44ebcae1e2b4acf9e7, type: 2}
   m_IsPrefabParent: 0
@@ -84815,6 +85195,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11496864, guid: f32e9b30598d58a4eb41838c70e3032b, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f32e9b30598d58a4eb41838c70e3032b, type: 2}
   m_IsPrefabParent: 0
@@ -85094,6 +85478,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 11417662, guid: 0668db2ae3f099249884bef176b03a76, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0668db2ae3f099249884bef176b03a76, type: 2}
   m_IsPrefabParent: 0
@@ -85549,6 +85937,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 11448684, guid: 885734afb5b936d4dbbc4f80c6ec4ad4, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 885734afb5b936d4dbbc4f80c6ec4ad4, type: 2}
   m_IsPrefabParent: 0
@@ -85695,6 +86087,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11435584, guid: 8b833c0f75eb24c4c953cbbe4a14e4e3, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8b833c0f75eb24c4c953cbbe4a14e4e3, type: 2}
   m_IsPrefabParent: 0
@@ -86009,6 +86405,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 11458750, guid: 9c7e25068b6e0544da5194d44ee5ec49, type: 2}
+      propertyPath: meteorExplosion
+      value: 
+      objectReference: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9c7e25068b6e0544da5194d44ee5ec49, type: 2}
   m_IsPrefabParent: 0
