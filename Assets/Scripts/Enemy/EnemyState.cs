@@ -8,21 +8,37 @@ public class EnemyState : MonoBehaviour {
     GameObject player;
     FireMissile fireMissile;
     bool canBeTarget;
-	// Use this for initialization
-	void Start () {
+    GameObject arrow;
+    ObjectPooling arrowPool;
+
+    void Start ()
+    {
         player = GameObject.Find("Player");
+        arrowPool = GameObject.FindGameObjectWithTag("ArrowPool").GetComponent<ObjectPooling>();
         fireMissile =GameObject.Find("MissileNozzle").GetComponent<FireMissile>();
         canBeTarget = true;
-	}
+       // arrow = arrowPool.GetPooledObject();
+        foreach (GameObject arrows in arrowPool.pooledObjects)
+        {
+            arrows.SetActive(false);
+        }
+    }
 
     void OnEnable()
     {
         isTarget = false;
     }
 	
-	// Update is called once per frame
 	void Update ()
     {
+        Vector3 v3Pos = Camera.main.WorldToViewportPoint(transform.position);
+        bool onScreen = v3Pos.z > 0 && v3Pos.x > 0 && v3Pos.x < 1 && v3Pos.y > 0 && v3Pos.y < 1;
+
+        if (!onScreen)
+            PositionArrow(new Vector3(v3Pos.x, v3Pos.y, v3Pos.z));
+        else if (onScreen && arrow != null)
+            arrow.SetActive(false);
+
         //sets laser target
         if (transform.position.z - player.transform.position.z < 20000 &&
             transform.position.z - player.transform.position.z > 100 &&
@@ -65,4 +81,22 @@ public class EnemyState : MonoBehaviour {
             lockOn.SetActive(false);
         }
 	}
+
+    void PositionArrow(Vector3 _v3Pos)
+    {
+        if(arrow == null)
+        arrow = arrowPool.GetPooledObject();
+
+        _v3Pos.x -= 0.5f;
+        _v3Pos.y -= 0.5f;
+        _v3Pos.z = 0;
+        arrow.SetActive(true);
+        float fAngle = Mathf.Atan2(_v3Pos.x, _v3Pos.y);
+        transform.localEulerAngles = new Vector3(0.0f, 0.0f, -fAngle * Mathf.Rad2Deg);
+
+        _v3Pos.x = 0.5f * Mathf.Sin(fAngle) + 0.5f;
+        _v3Pos.y = 0.5f * Mathf.Cos(fAngle) + 0.4999f;
+        _v3Pos.z = Camera.main.nearClipPlane + 0.01f;
+        arrow.transform.position = Camera.main.ViewportToWorldPoint(_v3Pos);
+    }
 }

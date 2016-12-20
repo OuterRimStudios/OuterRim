@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.026
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.000034951663, g: 0.000035013225, b: 0.000034899087,
+  m_IndirectSpecularColor: {r: 0.00003505448, g: 0.000035202116, b: 0.00003500223,
     a: 0.026}
 --- !u!157 &4
 LightmapSettings:
@@ -1292,6 +1292,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 339177874}
+  - 114: {fileID: 339177875}
   m_Layer: 0
   m_Name: HoldArrows
   m_TagString: Untagged
@@ -1312,6 +1313,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1591680880}
   m_RootOrder: 13
+--- !u!114 &339177875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 339177873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5309640ceb4621e4cb55fe34206af79c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &347016044 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1000011737922604, guid: 3989cbbc547bf5949a8981cd31fc6da9,
@@ -3363,7 +3375,7 @@ GameObject:
   - 114: {fileID: 973250901}
   m_Layer: 0
   m_Name: Arrows
-  m_TagString: Untagged
+  m_TagString: ArrowPool
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3394,9 +3406,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pooledObject:
   - {fileID: 1000013548090822, guid: 6ce95ed98a1d5a14bbbb9e7fcf08dcec, type: 2}
-  pooledAmount: 720
+  pooledAmount: 50
   waitTime: 0.01
-  willGrow: 0
+  willGrow: 1
   pooledObjects: []
 --- !u!1001 &974219664
 Prefab:

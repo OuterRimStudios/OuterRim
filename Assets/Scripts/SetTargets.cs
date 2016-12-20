@@ -29,7 +29,7 @@ public class SetTargets : MonoBehaviour
             }
             obj.SetActive(true);
             obj.transform.SetParent(arrowHolder.transform);
-            obj.GetComponent<TargetTracker>().target = pooledShips[k];
+           // obj.GetComponent<TargetTracker>().target = pooledShips[k];
         }
     }
 }
