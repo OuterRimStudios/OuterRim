@@ -11,11 +11,6 @@ public class PlayerCollision : MonoBehaviour
     public GameObject explosionSound;
     public Image healthBar;
     public Sprite[] healthBarSprites;
-    //public GameObject healthBar1;
-    //public GameObject healthBar2;
-    //public GameObject healthBar3;
-    //public GameObject lifeImage1;
-    //public GameObject lifeImage2;
     public GameObject damageIndicatorIMG;
     public GameObject meteorExplosionPrefab;
 
@@ -40,6 +35,10 @@ public class PlayerCollision : MonoBehaviour
     Image fadeOut;
     float aplh = 0;
 
+    ObjectPooling explosionPool1;
+    ObjectPooling explosionPool2;
+    ObjectPooling explosionPool;
+
     void Start()
     {
         player = GameObject.Find("Player");
@@ -54,14 +53,8 @@ public class PlayerCollision : MonoBehaviour
         healthBar = GameObject.Find("HealthBar").GetComponent<Image>();
 
         healthBarSprites = Resources.LoadAll<Sprite>("HealthBarSprites");
-        //healthBar1 = GameObject.Find("HealthBar1");
-        //healthBar2 = GameObject.Find("HealthBar2");
-        //healthBar3 = GameObject.Find("HealthBar3");
         damageIndicatorIMG = GameObject.Find("HitEffect");
-        damageIndicatorIMG.SetActive(false);
-
-        //lifeImage1 = publicVariableHandler.shipIMG1;
-        //lifeImage2 = publicVariableHandler.shipIMG2;        
+        damageIndicatorIMG.SetActive(false);    
 
         playerHealth = publicVariableHandler.playerHealth;
         healthScore = publicVariableHandler.healthRecoverScore;
@@ -69,7 +62,7 @@ public class PlayerCollision : MonoBehaviour
         fightersDestroyed = 0;
         carriersDestroyed = 0;
 
-        //StartCoroutine(CheckScore());
+        explosionPool = GameObject.Find("EnemyExplosionPools").GetComponent<ObjectPooling>();
     }
 
     void OnTriggerEnter(Collider col)
@@ -82,15 +75,19 @@ public class PlayerCollision : MonoBehaviour
         else if (col.gameObject.tag == "Carrier")
         {
             playerHealth -= 3;
-            //pickUpManager.LoseLevel();
-            Instantiate(meteorExplosionPrefab, transform.position, transform.rotation);
+
+            if (explosionPool != null)
+            {
+                GameObject shipExplosion = explosionPool.GetPooledObject();
+                shipExplosion.transform.position = transform.position;
+                shipExplosion.SetActive(true);
+            }
             col.gameObject.SetActive(false);
             CheckHealth();
         }
         else if (col.gameObject.tag == "Enemy")
         {
             playerHealth -= 3;
-            //pickUpManager.LoseLevel();
             col.GetComponent<Enemy1Collision>().WasDestroyed(false);
             CheckHealth();
         }
@@ -103,7 +100,6 @@ public class PlayerCollision : MonoBehaviour
             takingDamage = true;
             StartCoroutine(DamageIndicator());
             playerHealth--;
-            //pickUpManager.LoseLevel();
 
             CheckHealth();
             yield return new WaitForSeconds(.5f);
@@ -116,24 +112,6 @@ public class PlayerCollision : MonoBehaviour
         playerHealth -= 3;
         CheckHealth();
     }
-
-    //IEnumerator CheckScore()
-    //{
-    //    if (playerScoreOBJ.score % healthScore == 0 && playerScoreOBJ.score != 0)
-    //    {
-    //        playerHealth++;
-
-    //        CheckHealth();
-    //        yield return new WaitForSeconds(10f);
-    //    }
-    //    else
-    //    {
-    //        CheckHealth();
-    //        yield return new WaitForSeconds(0f);
-    //    }
-
-    //    StartCoroutine(CheckScore());
-    //}
 
     IEnumerator DamageIndicator()
     {
@@ -156,46 +134,6 @@ public class PlayerCollision : MonoBehaviour
         else
         {
             healthBar.sprite = healthBarSprites[playerHealth];
-            //if (playerHealth % 3 == 0)
-            //{
-            //    healthBar1.SetActive(true);
-            //    healthBar2.SetActive(true);
-            //    healthBar3.SetActive(true);
-            //}
-            //else if (playerHealth % 3 == 2)
-            //{
-            //    healthBar1.SetActive(true);
-            //    healthBar2.SetActive(true);
-            //    healthBar3.SetActive(false);
-            //}
-            //else if (playerHealth % 3 == 1)
-            //{
-            //    healthBar1.SetActive(true);
-            //    healthBar2.SetActive(false);
-            //    healthBar3.SetActive(false);
-            //}
-            //else if (playerHealth % 3 == 4)
-            //{
-            //    healthBar1.SetActive(false);
-            //    healthBar2.SetActive(false);
-            //    healthBar3.SetActive(false);
-            //}
-
-            //if (playerLives % 3 == 0)
-            //{
-            //    lifeImage1.SetActive(true);
-            //    lifeImage2.SetActive(true);
-            //}
-            //else if (playerLives % 3 == 2)
-            //{
-            //    lifeImage1.SetActive(true);
-            //    lifeImage2.SetActive(false);
-            //}
-            //else if (playerLives % 3 == 1)
-            //{
-            //    lifeImage1.SetActive(false);
-            //    lifeImage2.SetActive(false);
-            //}
         }        
     }
 
@@ -233,7 +171,6 @@ public class PlayerCollision : MonoBehaviour
 
     IEnumerator GameOver()
     {
-        //yield return new WaitUntil(FadeOut);
         for (int i = 0; i < 10; i++)
         {
             aplh = aplh + .075f;
@@ -260,7 +197,6 @@ public class PlayerCollision : MonoBehaviour
     {
         StartCoroutine(DamageIndicator());
         playerHealth -= amount;
-        //pickUpManager.LoseLevel();
 
         CheckHealth();
     }

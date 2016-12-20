@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 461190}
   - 123: {fileID: 12342010}
   - 95: {fileID: 9591146}
-  - 114: {fileID: 114000011513718666}
+  - 114: {fileID: 114000010600347510}
   m_Layer: 0
   m_Name: Meteor and Enemy  hit
   m_TagString: Untagged
@@ -74,7 +74,7 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 164108}
   m_IsPrefabParent: 1
---- !u!114 &114000011513718666
+--- !u!114 &114000010600347510
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -82,8 +82,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 164108}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db27baa30b076e8458d6a2c4c33ca1b1, type: 3}
+  m_Script: {fileID: 11500000, guid: 222b72afd65c99b4d9c878e8fd9bc7c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeOut: 1
-  destroy: 0

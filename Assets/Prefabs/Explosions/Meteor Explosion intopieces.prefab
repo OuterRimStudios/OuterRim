@@ -14,7 +14,7 @@ GameObject:
   - 95: {fileID: 9563716}
   - 82: {fileID: 8222926}
   - 114: {fileID: 114000011422180756}
-  - 114: {fileID: 114000011753296368}
+  - 114: {fileID: 114000013216944730}
   m_Layer: 0
   m_Name: Meteor Explosion intopieces
   m_TagString: Untagged
@@ -1912,7 +1912,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   volumeType: ExplosionAudio
---- !u!114 &114000011753296368
+--- !u!114 &114000013216944730
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -1920,8 +1920,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 183352}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db27baa30b076e8458d6a2c4c33ca1b1, type: 3}
+  m_Script: {fileID: 11500000, guid: 222b72afd65c99b4d9c878e8fd9bc7c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeOut: 1
-  destroy: 0

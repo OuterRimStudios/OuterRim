@@ -14,7 +14,7 @@ GameObject:
   - 95: {fileID: 9588256}
   - 82: {fileID: 8263010}
   - 82: {fileID: 8215144}
-  - 114: {fileID: 114000014155836878}
+  - 114: {fileID: 114000012157163194}
   m_Layer: 0
   m_Name: Explosion 1 Enemy
   m_TagString: Untagged
@@ -29,7 +29,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 139146}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -353.8314, y: 293.37222, z: -712.8899}
+  m_LocalPosition: {x: 514.26294, y: -588.9127, z: 4061.4192}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -2004,7 +2004,7 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 139146}
   m_IsPrefabParent: 1
---- !u!114 &114000014155836878
+--- !u!114 &114000012157163194
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -2012,8 +2012,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 139146}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db27baa30b076e8458d6a2c4c33ca1b1, type: 3}
+  m_Script: {fileID: 11500000, guid: 222b72afd65c99b4d9c878e8fd9bc7c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeOut: 1
-  destroy: 0

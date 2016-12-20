@@ -14,13 +14,17 @@ public class Enemy1Collision : MonoBehaviour
     public int baseHealth;
     public int currentHealth;
 
+	GameObject hitEffect;
+    GameObject gameManager;
+    FireMissile fireMissile;
     PlayerScore _playerScore;
+    PlayerCollision playerCollision;
     AchievementManager achievementManager;
     PublicVariableHandler publicVariableHandler;
-    GameObject gameManager;
-	GameObject hitEffect;
-    PlayerCollision playerCollision;
-    FireMissile fireMissile;
+
+    ObjectPooling explosionPool;
+    ObjectPooling hitEffectsPool;
+    ObjectPooling meteorExplosions;
 
     void Awake()
     {
@@ -31,47 +35,11 @@ public class Enemy1Collision : MonoBehaviour
         achievementManager = gameManager.GetComponent<AchievementManager>();
         hitEffect = publicVariableHandler.hitEffect;
         fireMissile = GameObject.Find("MissileNozzle").GetComponent<FireMissile>();
+        hitEffectsPool = GameObject.Find("HitEffectPool").GetComponent<ObjectPooling>(); 
+        meteorExplosions = GameObject.Find("MeteorExplosions").GetComponent<ObjectPooling>();
+        explosionPool = GameObject.Find("EnemyExplosionPools").GetComponent<ObjectPooling>();
     }
-
-    void Start()
-    {
-  //      player = GameObject.Find("Player");
-  //      _playerScore = player.GetComponent<PlayerScore>();
-  //      gameManager = GameObject.Find("GameManager");
-  //      publicVariableHandler = gameManager.GetComponent<PublicVariableHandler>();
-  //      achievementManager = gameManager.GetComponent<AchievementManager>();
-		//hitEffect = publicVariableHandler.hitEffect;
-  //      fireMissile = GameObject.Find("MissileNozzle").GetComponent<FireMissile>();
-        //switch (transform.name)
-        //{
-        //    case "Enemy 1":
-        //        laserScore = publicVariableHandler.enemy1LaserScore;
-        //        missileScore = publicVariableHandler.enemy1MissileScore;
-        //        baseHealth = publicVariableHandler.enemy1BaseHealth;
-        //        break;
-        //    case "Enemy 2":
-        //        laserScore = publicVariableHandler.enemy2LaserScore;
-        //        missileScore = publicVariableHandler.enemy2MissileScore;
-        //        baseHealth = publicVariableHandler.enemy2BaseHealth;
-        //        break;
-        //    case "Enemy 3":
-        //        laserScore = publicVariableHandler.enemy3LaserScore;
-        //        missileScore = publicVariableHandler.enemy3MissileScore;
-        //        baseHealth = publicVariableHandler.enemy3BaseHealth;
-        //        break;
-        //    case "Enemy 4":
-        //        laserScore = publicVariableHandler.enemy4LaserScore;
-        //        missileScore = publicVariableHandler.enemy4MissileScore;
-        //        baseHealth = publicVariableHandler.enemy4BaseHealth;
-        //        break;
-        //    case "Enemy 5":
-        //        laserScore = publicVariableHandler.enemy5LaserScore;
-        //        baseHealth = publicVariableHandler.enemy5BaseHealth;
-        //        break;
-        //}
-        //currentHealth = baseHealth;
-    }
-
+    
     public void OnSpawned()
     {
         if (transform.tag == "Enemy")
@@ -145,7 +113,6 @@ public class Enemy1Collision : MonoBehaviour
             laserScore = publicVariableHandler.carrierScore;
             baseHealth = publicVariableHandler.carrierBaseHealth;
         }
-
         currentHealth = baseHealth;
     }
 
@@ -153,8 +120,12 @@ public class Enemy1Collision : MonoBehaviour
     {
         if (col.gameObject.tag == "Laser")
         {
-            Instantiate(hitEffect, col.transform.position, col.transform.rotation);
-            //CreateHitEffect(col.gameObject);
+            if(hitEffectsPool != null)
+            {
+                GameObject hitEffect = hitEffectsPool.GetPooledObject();
+                hitEffect.transform.position = transform.position;
+                hitEffect.SetActive(true);
+            }
             col.gameObject.SetActive(false);
             TookDamage();
         }
@@ -168,7 +139,12 @@ public class Enemy1Collision : MonoBehaviour
         {
             if (col.gameObject.tag == "Meteor")
             {
-                Instantiate(meteorExplosionPrefab, transform.position, transform.rotation);
+                if (meteorExplosions != null)
+                {
+                    GameObject explosion = meteorExplosions.GetPooledObject();
+                    explosion.transform.position = transform.position;
+                    explosion.SetActive(true);
+                }
                 col.gameObject.SetActive(false);
                 WasDestroyed(false);
             }
@@ -204,20 +180,13 @@ public class Enemy1Collision : MonoBehaviour
         {
             PlayerCollision.carriersDestroyed++;
         }
-        Instantiate(explosion, transform.position, transform.rotation);
-        Instantiate(explosionSound, transform.position, transform.rotation);
+
+        if (explosionPool != null)
+        {
+            GameObject shipExplosion = explosionPool.GetPooledObject();
+            explosion.transform.position = transform.position;
+            explosion.SetActive(true);
+        }
         gameObject.SetActive(false);
     }
-
-    //void CreateHitEffect(GameObject other)
-    //{
-    //    GameObject obj = hitEffect.GetPooledObject();
-
-    //    if (obj == null)
-    //        return;
-
-    //    obj.transform.position = other.transform.position;
-    //    obj.transform.rotation = other.transform.rotation;
-    //    obj.SetActive(true);
-    //}
 }
