@@ -708,8 +708,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 178886}
-  m_LocalRotation: {x: -0.262101, y: 0.14441504, z: 0.03970361, w: 0.95334727}
-  m_LocalPosition: {x: -4.566475, y: -76.06031, z: 380.93683}
+  m_LocalRotation: {x: 0.03724669, y: 0.078796, z: -0.90064234, w: 0.42573157}
+  m_LocalPosition: {x: 61.81835, y: 524.37213, z: 383.04382}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -1322,17 +1322,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_MaxEnginePower: 50
   m_Lift: 1
-  m_ZeroLiftSpeed: 1
-  m_RollEffect: 100
-  m_PitchEffect: 100
-  m_YawEffect: 75
+  m_ZeroLiftSpeed: 0
+  m_RollEffect: 200
+  m_PitchEffect: 200
+  m_YawEffect: 200
   m_BankedTurnEffect: 1
-  m_AerodynamicEffect: 0.4
-  m_AutoTurnPitch: 0
+  m_AerodynamicEffect: 1
+  m_AutoTurnPitch: 15
   m_AutoRollLevel: 1
   m_AutoPitchLevel: 1
   m_AirBrakesEffect: 0
-  m_ThrottleChangeSpeed: 1
+  m_ThrottleChangeSpeed: 2
   m_DragIncreaseFactor: 0.00095
 --- !u!114 &11433696
 MonoBehaviour:
@@ -1374,13 +1374,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f947e56d54f4274896478766fef616c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_RollSensitivity: 5
-  m_PitchSensitivity: 5
+  m_RollSensitivity: 0.4
+  m_PitchSensitivity: 0.4
   m_LateralWanderDistance: 5
   m_LateralWanderSpeed: 10
   m_MaxClimbAngle: 90
   m_MaxRollAngle: 90
-  m_SpeedEffect: 1
+  m_SpeedEffect: 0
   m_TakeoffHeight: 0
   m_Target: {fileID: 443704}
 --- !u!114 &11464680

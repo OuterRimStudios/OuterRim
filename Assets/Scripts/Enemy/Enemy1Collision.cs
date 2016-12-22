@@ -120,12 +120,7 @@ public class Enemy1Collision : MonoBehaviour
     {
         if (col.gameObject.tag == "Laser")
         {
-            if(hitEffectsPool != null)
-            {
-                GameObject hitEffect = hitEffectsPool.GetPooledObject();
-                hitEffect.transform.position = transform.position;
-                hitEffect.SetActive(true);
-            }
+            SpawnEffect("Hit");
             col.gameObject.SetActive(false);
             TookDamage();
         }
@@ -139,12 +134,7 @@ public class Enemy1Collision : MonoBehaviour
         {
             if (col.gameObject.tag == "Meteor")
             {
-                if (meteorExplosions != null)
-                {
-                    GameObject explosion = meteorExplosions.GetPooledObject();
-                    explosion.transform.position = transform.position;
-                    explosion.SetActive(true);
-                }
+                SpawnEffect("MeteorExplosion");
                 col.gameObject.SetActive(false);
                 WasDestroyed(false);
             }
@@ -181,12 +171,34 @@ public class Enemy1Collision : MonoBehaviour
             PlayerCollision.carriersDestroyed++;
         }
 
-        if (explosionPool != null)
-        {
-            GameObject shipExplosion = explosionPool.GetPooledObject();
-            explosion.transform.position = transform.position;
-            explosion.SetActive(true);
-        }
+        SpawnEffect("ShipExplosion");
         gameObject.SetActive(false);
+    }
+
+    void SpawnEffect(string type)
+    {
+        GameObject effect = null;
+        switch (type)
+        {
+            case "Hit":
+                effect = hitEffectsPool.GetPooledObject();
+                break;
+            case "ShipExplosion":
+                effect = explosionPool.GetPooledObject();
+                break;
+            case "MeteorExplosion":
+                effect = meteorExplosions.GetPooledObject();
+                break;
+            default:
+                effect = null;
+                break;
+        }
+        
+
+        if (effect == null)
+            return;
+
+        effect.transform.position = transform.position;
+        effect.SetActive(true);
     }
 }

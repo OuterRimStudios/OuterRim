@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.026
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.00003505448, g: 0.000035202116, b: 0.00003500223,
+  m_IndirectSpecularColor: {r: 0.000034951663, g: 0.000035013225, b: 0.000034899087,
     a: 0.026}
 --- !u!157 &4
 LightmapSettings:
@@ -2088,12 +2088,12 @@ MonoBehaviour:
   actorSpeed: 600
   maneuverSpeed: 1
   strafeSpeed: 1.5
-  enemy1Speed: 800
+  enemy1Speed: 200
   enemy1FireFreq: 3
   enemy1BaseHealth: 2
   enemy1LaserScore: 1000
   enemy1MissileScore: 500
-  enemy2Speed: 800
+  enemy2Speed: 200
   enemy2FireFreq: 3
   enemy2BaseHealth: 6
   enemy2LaserScore: 1000
@@ -2114,27 +2114,27 @@ MonoBehaviour:
   enemy5BaseHealth: 5
   enemy5LaserScore: 1000
   enemy5MissileScore: 500
-  enemy6Speed: 800
+  enemy6Speed: 200
   enemy6FireFreq: 3
   enemy6BaseHealth: 3
   enemy6LaserScore: 1000
   enemy6MissileScore: 500
-  enemy7Speed: 800
+  enemy7Speed: 200
   enemy7FireFreq: 3
   enemy7BaseHealth: 2
   enemy7LaserScore: 1000
   enemy7MissileScore: 500
-  enemy8Speed: 800
+  enemy8Speed: 200
   enemy8FireFreq: 3
   enemy8BaseHealth: 2
   enemy8LaserScore: 1000
   enemy8MissileScore: 500
-  enemy9Speed: 800
+  enemy9Speed: 200
   enemy9FireFreq: 3
   enemy9BaseHealth: 2
   enemy9LaserScore: 1000
   enemy9MissileScore: 500
-  enemy10Speed: 800
+  enemy10Speed: 200
   enemy10FireFreq: 3
   enemy10BaseHealth: 2
   enemy10LaserScore: 1000
@@ -3214,7 +3214,7 @@ MonoBehaviour:
   - {fileID: 126360, guid: 5b10d5fdd0055da4c8686d050496e823, type: 2}
   pooledAmount: 100
   waitTime: 0.02
-  willGrow: 1
+  willGrow: 0
   pooledObjects: []
 --- !u!1 &825245193
 GameObject:
@@ -6807,7 +6807,7 @@ MonoBehaviour:
   - {fileID: 139146, guid: 8a4967d62235453468658ed59536870e, type: 2}
   pooledAmount: 100
   waitTime: 0.02
-  willGrow: 1
+  willGrow: 0
   pooledObjects: []
 --- !u!1 &1544002020
 GameObject:
@@ -7834,7 +7834,7 @@ MonoBehaviour:
   - {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
   pooledAmount: 25
   waitTime: 0.02
-  willGrow: 1
+  willGrow: 0
   pooledObjects: []
 --- !u!1 &1660281895
 GameObject:
@@ -10688,7 +10688,7 @@ MonoBehaviour:
   - {fileID: 192464, guid: 840150134efd3124e882f180badc4e67, type: 2}
   pooledAmount: 100
   waitTime: 0.02
-  willGrow: 1
+  willGrow: 0
   pooledObjects: []
 --- !u!1 &2089538379
 GameObject:
