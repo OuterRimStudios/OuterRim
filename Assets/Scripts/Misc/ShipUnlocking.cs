@@ -36,7 +36,7 @@ public class ShipUnlocking : MonoBehaviour
             selectButton.SetActive(true);
             unlockButton.SetActive(false);
             lockedPanel.SetActive(false);
-            if (!choosingColor)
+            if (!choosingColor && gameObject.name != "Nora")
                 colorButton.SetActive(true);
             else
                 colorButton.SetActive(false);
