@@ -39,6 +39,9 @@ public class EnemyState : MonoBehaviour {
         else if (onScreen && arrow != null)
             arrow.SetActive(false);
 
+        if ((Mathf.Abs(transform.position.x - player.transform.position.x) > 2500 || Mathf.Abs(transform.position.y - player.transform.position.y) > 2500 || Mathf.Abs(transform.position.z - player.transform.position.z) > 9500) && !onScreen)
+            Respawn();
+
         //sets laser target
         if (transform.position.z - player.transform.position.z < 20000 &&
             transform.position.z - player.transform.position.z > 100 &&
@@ -47,7 +50,7 @@ public class EnemyState : MonoBehaviour {
             transform.position.x - player.transform.position.x < transform.position.z * .1f &&
             transform.position.x - player.transform.position.x > -transform.position.z * .1f)
         {
-            player.GetComponent<AimAssist>().FoundTarget(gameObject);
+            player.GetComponent<AimAssist>().FoundTarget(transform.FindChild("LookAtPoint").gameObject);
         }
 
         //sets missile target
@@ -98,5 +101,10 @@ public class EnemyState : MonoBehaviour {
         _v3Pos.y = 0.5f * Mathf.Cos(fAngle) + 0.4999f;
         _v3Pos.z = Camera.main.nearClipPlane + 0.01f;
         arrow.transform.position = Camera.main.ViewportToWorldPoint(_v3Pos);
+    }
+
+    void Respawn()
+    {
+        transform.position = new Vector3(Random.Range(-3000, 3000), Random.Range(-3000, 3000), 9000);
     }
 }

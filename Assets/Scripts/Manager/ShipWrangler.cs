@@ -229,7 +229,7 @@ public class ShipWrangler : MonoBehaviour {
         choosingContainer = false;
         for (int i = 0; i < ships.Count; i++)
         {
-            //ships[i].GetComponent<ShipWrangler>().currentShip = 0;
+            ships[i].GetComponent<ShipWrangler>().currentShip = 0;
             ships[i].GetComponent<ShipWrangler>().DisplayShip();
             ships[i].GetComponent<ShipWrangler>().enabled = false;
         }
