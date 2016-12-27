@@ -13,7 +13,11 @@ public class OptionsScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        slider.value = PlayerPrefs.GetFloat(volumeType);
+        if (PlayerPrefs.GetInt(volumeType + "Changed") != 0)
+            slider.value = PlayerPrefs.GetFloat(volumeType);
+        else
+            slider.value = 50f;
+
         sliderText.text = slider.value.ToString();
 
         foreach (AudioSource source in sources)
@@ -21,11 +25,6 @@ public class OptionsScript : MonoBehaviour {
 
         sliderText.text = PlayerPrefs.GetFloat(volumeType).ToString();
     }
-	
-	// Update is called once per frame
-	void Update () {
-	    
-	}
 
     public void UpdateAudioLevel()
     {
@@ -37,5 +36,6 @@ public class OptionsScript : MonoBehaviour {
 
         sliderText.text = slider.value.ToString();
         PlayerPrefs.SetFloat(volumeType, slider.value);
+        PlayerPrefs.SetInt(volumeType + "Changed", 1);
     }
 }
