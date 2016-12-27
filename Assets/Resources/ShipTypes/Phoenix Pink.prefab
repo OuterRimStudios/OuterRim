@@ -26,7 +26,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 409846}
   - 33: {fileID: 3384052}
-  - 135: {fileID: 13525560}
   - 23: {fileID: 2304274}
   - 114: {fileID: 11452248}
   m_Layer: 0
@@ -98,7 +97,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 440450}
   - 33: {fileID: 3352604}
-  - 135: {fileID: 13555318}
   - 23: {fileID: 2300482}
   - 114: {fileID: 11497004}
   m_Layer: 0
@@ -238,7 +236,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 413854}
   - 33: {fileID: 3322258}
-  - 135: {fileID: 13562252}
   - 23: {fileID: 2313318}
   - 114: {fileID: 11440676}
   m_Layer: 0
@@ -292,7 +289,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 435380}
   - 33: {fileID: 3305530}
-  - 135: {fileID: 13580334}
   - 23: {fileID: 2396314}
   - 114: {fileID: 11497196}
   - 114: {fileID: 11478022}
@@ -312,9 +308,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 401726}
   - 33: {fileID: 3348938}
-  - 135: {fileID: 13590800}
   - 23: {fileID: 2301706}
   - 114: {fileID: 11435104}
+  - 114: {fileID: 114000012451921296}
   m_Layer: 0
   m_Name: Gun1
   m_TagString: Untagged
@@ -891,7 +887,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 114968}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_MotionVectors: 1
@@ -920,7 +916,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 166516}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_MotionVectors: 1
@@ -1007,7 +1003,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 103972}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_MotionVectors: 1
@@ -1036,7 +1032,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 159826}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_MotionVectors: 1
@@ -1941,42 +1937,6 @@ MonoBehaviour:
   startingHealth: 0
   currentHealth: 0
   explosion: {fileID: 0}
---- !u!135 &13525560
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 103972}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!135 &13555318
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 114968}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!135 &13562252
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 159826}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!135 &13564720
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -2010,30 +1970,6 @@ SphereCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 0
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!135 &13580334
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 164140}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!135 &13590800
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 166516}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -7352,3 +7288,15 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 179330}
   m_IsPrefabParent: 1
+--- !u!114 &114000012451921296
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 166516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81db0c625e2aa0447a1e8bc61424e971, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laserSound: {fileID: 0}

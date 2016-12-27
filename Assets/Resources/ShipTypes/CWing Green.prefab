@@ -24,7 +24,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 439488}
   - 33: {fileID: 3325188}
-  - 135: {fileID: 13570186}
   - 23: {fileID: 2352370}
   - 114: {fileID: 11472260}
   - 114: {fileID: 11459430}
@@ -44,7 +43,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 444388}
   - 33: {fileID: 3335028}
-  - 135: {fileID: 13596606}
   - 23: {fileID: 2308492}
   - 114: {fileID: 11497206}
   m_Layer: 0
@@ -131,7 +129,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 423738}
   - 33: {fileID: 3339112}
-  - 135: {fileID: 13551394}
   - 23: {fileID: 2355636}
   - 114: {fileID: 11445970}
   m_Layer: 0
@@ -287,7 +284,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 421708}
   - 33: {fileID: 3342012}
-  - 135: {fileID: 13503522}
   - 23: {fileID: 2316948}
   - 114: {fileID: 11400290}
   m_Layer: 0
@@ -666,7 +662,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 474234}
   - 33: {fileID: 3390504}
-  - 135: {fileID: 13548342}
   - 23: {fileID: 2347784}
   - 114: {fileID: 11442978}
   - 114: {fileID: 11490232}
@@ -2359,7 +2354,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -2381,7 +2376,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
 --- !u!114 &11400290
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2678,18 +2673,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!135 &13503522
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 142794}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!135 &13505366
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -2702,60 +2685,12 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!135 &13548342
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 198948}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!135 &13551394
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 112510}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!135 &13570186
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 103852}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!135 &13589062
 SphereCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 181984}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!135 &13596606
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 106026}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
