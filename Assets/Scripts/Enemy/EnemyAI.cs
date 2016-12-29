@@ -81,6 +81,9 @@ public class EnemyAI : MonoBehaviour
             warped = true;
         }
 
+        if(transform.position.z - player.transform.position.z > 1000)
+            transform.LookAt(player.transform);
+
         if (warped) //If you are warped in.
         {
             if(tag == "Carrier")
@@ -88,7 +91,7 @@ public class EnemyAI : MonoBehaviour
                 transform.position = Vector3.Lerp(transform.position, new Vector3(playerPosition.x, playerPosition.y, playerPosition.z - 1000f), 0.05f * Time.deltaTime);
             }
             else
-            transform.position = Vector3.Lerp(transform.position, new Vector3 (playerPosition.x, playerPosition.y, playerPosition.z - 1000f), 0.25f * Time.deltaTime);    //Move forward
+                transform.position = Vector3.Lerp(transform.position, new Vector3 (playerPosition.x, playerPosition.y, playerPosition.z - 1000f), 0.25f * Time.deltaTime);    //Move forward
 
             if (transform.position.z <= -250)   //If you go to far, shut off.
             {
