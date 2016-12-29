@@ -4,6 +4,7 @@ using System.Collections;
 public class ActivateShield : MonoBehaviour
 {
     GameObject shield;
+    GameObject player;
     GameObject gameManager;
     GameObject shieldLevel1Bar;
     GameObject shieldLevel2Bar;
@@ -23,9 +24,12 @@ public class ActivateShield : MonoBehaviour
         publicVariableHandler = gameManager.GetComponent<PublicVariableHandler>();
         shield = GetComponent<StoreVariables>().shield;
         shieldScript = shield.GetComponent<Shield>();
+        player = GameObject.Find("Player");
     }
-    void ShieldActive()
+
+    public void ShieldActive()
     {
+        player.transform.FindChild("ShipContainer").FindChild("Colliders").GetComponent<PlayerCollision>().enabled = false;
         shield.SetActive(true);
     }
 }

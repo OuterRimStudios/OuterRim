@@ -39,6 +39,8 @@ public class Enemy1Collision : MonoBehaviour
         meteorExplosions = GameObject.Find("MeteorExplosions").GetComponent<ObjectPooling>();
         explosionPool = GameObject.Find("EnemyExplosionPools").GetComponent<ObjectPooling>();
     }
+
+    void Start() { }
     
     public void OnSpawned()
     {
@@ -65,6 +67,7 @@ public class Enemy1Collision : MonoBehaviour
                     laserScore = publicVariableHandler.enemy4LaserScore;
                     missileScore = publicVariableHandler.enemy4MissileScore;
                     baseHealth = publicVariableHandler.enemy4BaseHealth;
+                    transform.FindChild("Shield").gameObject.SetActive(true);
                     break;
                 case "Enemy 05":
                     laserScore = publicVariableHandler.enemy5LaserScore;
@@ -119,8 +122,7 @@ public class Enemy1Collision : MonoBehaviour
     void OnTriggerEnter(Collider col)
     {
         if (col.gameObject.tag == "Laser")
-        {
-            SpawnEffect("Hit");
+        {            
             col.gameObject.SetActive(false);
             TookDamage();
         }
@@ -143,6 +145,7 @@ public class Enemy1Collision : MonoBehaviour
 
     public void TookDamage()
     {
+        SpawnEffect("Hit");
         currentHealth--;
         if (currentHealth <= 0)
         {

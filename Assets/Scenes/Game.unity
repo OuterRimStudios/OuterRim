@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.026
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.000034951663, g: 0.000035013225, b: 0.000034899087,
+  m_IndirectSpecularColor: {r: 0.00003505448, g: 0.000035202116, b: 0.00003500223,
     a: 0.026}
 --- !u!157 &4
 LightmapSettings:
@@ -3142,7 +3142,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1000011721444238, guid: f5ae4a9c6b0c9504d9c155fa77054bc2, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f5ae4a9c6b0c9504d9c155fa77054bc2, type: 2}
@@ -3802,8 +3802,8 @@ Transform:
   - {fileID: 825245194}
   - {fileID: 973250900}
   - {fileID: 1791152550}
-  - {fileID: 1542139033}
   - {fileID: 1660174633}
+  - {fileID: 1542139033}
   - {fileID: 821850057}
   - {fileID: 2088659258}
   m_Father: {fileID: 0}
@@ -6840,7 +6840,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 986097446}
-  m_RootOrder: 19
+  m_RootOrder: 20
 --- !u!114 &1542139034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7867,7 +7867,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 986097446}
-  m_RootOrder: 20
+  m_RootOrder: 19
 --- !u!114 &1660174634
 MonoBehaviour:
   m_ObjectHideFlags: 0

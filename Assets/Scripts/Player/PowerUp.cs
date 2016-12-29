@@ -58,7 +58,7 @@ public class PowerUp : MonoBehaviour
             case PowerUpType.SHIELD:
                 shieldType = "shield";
                // pickUpManager.LevelUp(shieldType);
-                player.GetComponent<StoreVariables>().shield.SetActive(true);
+                player.GetComponent<ActivateShield>().ShieldActive();
                 break;
 
             case PowerUpType.LASER:

@@ -67,29 +67,32 @@ public class PlayerCollision : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.tag == "Enemy Laser")
+        if (this.enabled)
         {
-            col.gameObject.SetActive(false);
-            StartCoroutine(Immunity());
-        }
-        else if (col.gameObject.tag == "Carrier")
-        {
-            playerHealth -= 3;
-
-            if (explosionPool != null)
+            if (col.gameObject.tag == "Enemy Laser")
             {
-                GameObject shipExplosion = explosionPool.GetPooledObject();
-                shipExplosion.transform.position = transform.position;
-                shipExplosion.SetActive(true);
+                col.gameObject.SetActive(false);
+                StartCoroutine(Immunity());
             }
-            col.gameObject.SetActive(false);
-            CheckHealth();
-        }
-        else if (col.gameObject.tag == "Enemy")
-        {
-            playerHealth -= 3;
-            col.GetComponent<Enemy1Collision>().WasDestroyed(false);
-            CheckHealth();
+            else if (col.gameObject.tag == "Carrier")
+            {
+                playerHealth -= 3;
+
+                if (explosionPool != null)
+                {
+                    GameObject shipExplosion = explosionPool.GetPooledObject();
+                    shipExplosion.transform.position = transform.position;
+                    shipExplosion.SetActive(true);
+                }
+                col.gameObject.SetActive(false);
+                CheckHealth();
+            }
+            else if (col.gameObject.tag == "Enemy")
+            {
+                playerHealth -= 3;
+                col.GetComponent<Enemy1Collision>().WasDestroyed(false);
+                CheckHealth();
+            }
         }
     }
 

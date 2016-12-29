@@ -28,10 +28,12 @@ public class EnemyShield : MonoBehaviour
         GetComponentInParent<Enemy1Collision>().enabled = false;
         meteorExplosionPrefab = player.GetComponent<StoreVariables>().meteorExplosion;
     }
+
     public void OnSpawn()
     {
         currentHealth = startingHealth;
     }
+
     void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Laser")
