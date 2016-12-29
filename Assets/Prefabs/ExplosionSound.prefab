@@ -11,7 +11,7 @@ GameObject:
   - 82: {fileID: 8207154}
   - 114: {fileID: 11414852}
   - 82: {fileID: 8228240}
-  - 114: {fileID: 114000013746918056}
+  - 114: {fileID: 114000012247484528}
   m_Layer: 0
   m_Name: ExplosionSound
   m_TagString: Untagged
@@ -212,7 +212,7 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 120490}
   m_IsPrefabParent: 1
---- !u!114 &114000013746918056
+--- !u!114 &114000012247484528
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -220,8 +220,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 120490}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db27baa30b076e8458d6a2c4c33ca1b1, type: 3}
+  m_Script: {fileID: 11500000, guid: d89b88d91eaf433408d6135e6d22325e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeOut: 0
-  destroy: 0
+  volumeType: ExplosionVolume

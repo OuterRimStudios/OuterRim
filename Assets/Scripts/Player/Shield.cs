@@ -8,6 +8,7 @@ public class Shield : MonoBehaviour
     public GameObject explosion;
     GameObject gameManager;
     GameObject player;
+
     void Start()
     {
         player = GameObject.Find("Player");
@@ -16,6 +17,7 @@ public class Shield : MonoBehaviour
         startingHealth = gameManager.GetComponent<PublicVariableHandler>().playerShieldHealth;
         currentHealth = startingHealth;
     }
+
     void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Enemy Laser")
@@ -49,6 +51,7 @@ public class Shield : MonoBehaviour
 
     void ShieldDestroyed()
     {
+        player.transform.FindChild("ShipContainer").FindChild("Colliders").GetComponent<PlayerCollision>().enabled = false;
         gameObject.SetActive(false);
     }
 }

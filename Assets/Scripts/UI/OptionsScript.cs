@@ -9,7 +9,7 @@ public class OptionsScript : MonoBehaviour {
     public Text sliderText;
     public AudioSource[] sources;
 
-    public bool isMainMenu;
+    float volume;
 
 	// Use this for initialization
 	void Start () {
@@ -19,9 +19,9 @@ public class OptionsScript : MonoBehaviour {
             slider.value = 50f;
 
         sliderText.text = slider.value.ToString();
-
+        volume = PlayerPrefs.GetFloat(volumeType) / 100.0f;
         foreach (AudioSource source in sources)
-            source.volume = PlayerPrefs.GetFloat(volumeType) / 100.0f;
+            source.volume = volume;
 
         sliderText.text = PlayerPrefs.GetFloat(volumeType).ToString();
     }
@@ -30,8 +30,9 @@ public class OptionsScript : MonoBehaviour {
     {
         if (sources.Length > 0)
         {
+            volume = slider.value/100.0f;
             foreach (AudioSource source in sources)
-                source.volume = slider.value/100.0f;
+                source.volume = volume;
         }
 
         sliderText.text = slider.value.ToString();
