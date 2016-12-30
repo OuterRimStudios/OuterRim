@@ -14,7 +14,8 @@ public class PowerUp : MonoBehaviour
 
     public PowerUpType type = PowerUpType.HEALTH;
     PickUpManager pickUpManager;
-    AudioSource audioSource;
+    PublicVariableHandler publicVariableHandler;
+    public AudioSource audioSource;
     public int powerUpLength;
     GameObject player;
     GameObject shield;
@@ -41,27 +42,33 @@ public class PowerUp : MonoBehaviour
     {
         player = GameObject.Find("Player");
         shield = player.transform.FindChild("Shield").gameObject;
-        audioSource = GetComponent<AudioSource>();
+        audioSource = GameObject.Find("Canvas").GetComponent<AudioSource>();
         gameManager = GameObject.Find("GameManager");
         pickUpManager = gameManager.GetComponent<PickUpManager>();
+        publicVariableHandler = gameManager.GetComponent<PublicVariableHandler>();
     }
     void ApplyPower()
     {
         switch (type)
         {
-            case PowerUpType.HEALTH:
-                healthType = "health";
-                //pickUpManager.LevelUp(healthType);
-                player.GetComponentInChildren<PlayerCollision>().GainLife();
-                break;
+            //case PowerUpType.HEALTH:
+            //    healthType = "health";
+            //    audioSource.clip = publicVariableHandler.
+            //    //pickUpManager.LevelUp(healthType);
+            //    player.GetComponentInChildren<PlayerCollision>().GainLife();
+            //    break;
 
             case PowerUpType.SHIELD:
                 shieldType = "shield";
-               // pickUpManager.LevelUp(shieldType);
+                // pickUpManager.LevelUp(shieldType);
+                audioSource.clip = publicVariableHandler.shieldPickUpSound;
+                audioSource.PlayOneShot(audioSource.clip);
                 player.GetComponent<ActivateShield>().ShieldActive();
                 break;
 
             case PowerUpType.LASER:
+                audioSource.clip = publicVariableHandler.laserPickUpSound;
+                audioSource.PlayOneShot(audioSource.clip);
                 foreach (GameObject go in player.GetComponent<StoreVariables>().lasers)
                 {
                     go.GetComponent<FireScript>().LaserUpgrade();
@@ -69,6 +76,8 @@ public class PowerUp : MonoBehaviour
                 break;
 
             case PowerUpType.DUALLASER:
+                audioSource.clip = publicVariableHandler.dualLaserPickUpSound;
+                audioSource.PlayOneShot(audioSource.clip);
                 foreach (GameObject go in player.GetComponent<StoreVariables>().lasers)
                 {
                     go.GetComponent<FireScript>().DualLaserUpgrade();
@@ -76,6 +85,8 @@ public class PowerUp : MonoBehaviour
                 break;
 
             case PowerUpType.Missile:
+                audioSource.clip = publicVariableHandler.missilePickUpSound;
+                audioSource.PlayOneShot(audioSource.clip);
                 player.GetComponent<StoreVariables>().missile.GetComponent<FireMissile>().MissilePickUp();
                 break;
         }
@@ -89,7 +100,7 @@ public class PowerUp : MonoBehaviour
             {
                 hit = true;
                 ApplyPower();
-                Destroy(this.gameObject);
+                Destroy(gameObject);
             }
         }
     }

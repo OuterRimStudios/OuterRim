@@ -50,7 +50,7 @@ public class PickUpManager : MonoBehaviour
     }
     public void SpawnPickUp(bool weaponPickUp)
     {
-        choose = Random.Range(0, 5);
+        choose = Random.Range(0, 4);
 
         switch(choose)
         {
@@ -76,14 +76,15 @@ public class PickUpManager : MonoBehaviour
                 spawnPoint = new Vector3(Random.Range(player.transform.position.x + xMinSpawn, player.transform.position.x + xMaxSpawn),
                 Random.Range(player.transform.position.y + yMinSpawn, player.transform.position.y + yMaxSpawn),
                 Random.Range(player.transform.position.z + zSpawnMin, player.transform.position.z + zSpawnMax));
-                Instantiate(healthPickUp, spawnPoint, Quaternion.identity);
-                break;
-            case 4:
-                spawnPoint = new Vector3(Random.Range(player.transform.position.x + xMinSpawn, player.transform.position.x + xMaxSpawn),
-                Random.Range(player.transform.position.y + yMinSpawn, player.transform.position.y + yMaxSpawn),
-                Random.Range(player.transform.position.z + zSpawnMin, player.transform.position.z + zSpawnMax));
                 Instantiate(dualLaserPickUp, spawnPoint, Quaternion.identity);
                 break;
+                //case 3:
+                //    spawnPoint = new Vector3(Random.Range(player.transform.position.x + xMinSpawn, player.transform.position.x + xMaxSpawn),
+                //    Random.Range(player.transform.position.y + yMinSpawn, player.transform.position.y + yMaxSpawn),
+                //    Random.Range(player.transform.position.z + zSpawnMin, player.transform.position.z + zSpawnMax));
+                //    Instantiate(healthPickUp, spawnPoint, Quaternion.identity);
+                //    break;
+
         }
     }
 }

@@ -124,7 +124,7 @@ public class Enemy1Collision : MonoBehaviour
         if (col.gameObject.tag == "Laser")
         {            
             col.gameObject.SetActive(false);
-            TookDamage();
+            TookDamage(col.transform.position);
         }
         else if (col.gameObject.tag == "Missile")
         {
@@ -138,7 +138,7 @@ public class Enemy1Collision : MonoBehaviour
             {
                 SpawnEffect("MeteorExplosion");
                 col.gameObject.SetActive(false);
-                WasDestroyed(false);
+               // WasDestroyed(false);
             }
         }
     }
@@ -146,6 +146,16 @@ public class Enemy1Collision : MonoBehaviour
     public void TookDamage()
     {
         SpawnEffect("Hit");
+        currentHealth--;
+        if (currentHealth <= 0)
+        {
+            WasDestroyed(true);
+        }
+    }
+
+    public void TookDamage(Vector3 hitPosition)
+    {
+        SpawnEffect(hitPosition);
         currentHealth--;
         if (currentHealth <= 0)
         {
@@ -183,9 +193,6 @@ public class Enemy1Collision : MonoBehaviour
         GameObject effect = null;
         switch (type)
         {
-            case "Hit":
-                effect = hitEffectsPool.GetPooledObject();
-                break;
             case "ShipExplosion":
                 effect = explosionPool.GetPooledObject();
                 break;
@@ -202,6 +209,17 @@ public class Enemy1Collision : MonoBehaviour
             return;
 
         effect.transform.position = transform.position;
+        effect.SetActive(true);
+    }
+
+    void SpawnEffect(Vector3 positionHit)
+    {
+        GameObject effect = null;
+        effect = hitEffectsPool.GetPooledObject();
+        if (effect == null)
+            return;
+
+        effect.transform.position = positionHit;
         effect.SetActive(true);
     }
 }

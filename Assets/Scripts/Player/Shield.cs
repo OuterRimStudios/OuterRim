@@ -25,7 +25,6 @@ public class Shield : MonoBehaviour
             other.gameObject.SetActive(false);
             TookDamage();
         }
-
         else if (other.tag == "Meteor")
         {
             Instantiate(explosion, transform.position, transform.rotation);
@@ -51,7 +50,7 @@ public class Shield : MonoBehaviour
 
     void ShieldDestroyed()
     {
-        player.transform.FindChild("ShipContainer").FindChild("Colliders").GetComponent<PlayerCollision>().enabled = false;
+        player.transform.FindChild("ShipContainer").FindChild("Colliders").GetComponent<PlayerCollision>().enabled = true;
         gameObject.SetActive(false);
     }
 }

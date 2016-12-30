@@ -29,6 +29,11 @@ public class PublicVariableHandler : MonoBehaviour
     //Player Variables
 	public GameObject hitEffect;
     public AudioClip hitSound;
+    public AudioClip shieldPickUpSound;
+    public AudioClip dualLaserPickUpSound;
+    public AudioClip laserPickUpSound;
+    public AudioClip missilePickUpSound;
+
     public int healthRecoverScore;
     public float playerShootingFrequency;
     public float lightningGunDuration;

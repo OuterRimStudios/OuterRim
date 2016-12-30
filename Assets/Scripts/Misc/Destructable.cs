@@ -12,12 +12,14 @@ public class Destructable : MonoBehaviour
     GameObject explosion;
 	GameObject gameManager;
 	GameObject hitEffect;
+    PlayerScore playerScore;
 
 	PublicVariableHandler publicVariableHandler;
 
     void Start()
     {
 		gameManager = GameObject.Find("GameManager");
+        playerScore = GameObject.Find("Player").GetComponent<PlayerScore>();
 		publicVariableHandler = gameManager.GetComponent<PublicVariableHandler> ();
 		explosion = publicVariableHandler.meteorExplosion;
 		hitEffect = publicVariableHandler.hitEffect;
@@ -26,7 +28,7 @@ public class Destructable : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Enemy Laser" || other.tag == "Laser")
+        if (other.tag == "Laser")
         {
 			LoseHealth ();
             //CreateHitEffect(other.gameObject);
@@ -52,22 +54,11 @@ public class Destructable : MonoBehaviour
 	void LoseHealth()
 	{
 		currentHealth--;
-		if (currentHealth <= 0) 
-		{
+        if (currentHealth <= 0)
+        {
+            playerScore.score += 100;
 			Instantiate(explosion, transform.position, transform.rotation);
 			gameObject.SetActive(false);
 		}
 	}
-
-    //void CreateHitEffect(GameObject other)
-    //{
-    //    GameObject obj = hitEffect.GetPooledObject();
-
-    //    if (obj == null)
-    //        return;
-
-    //    obj.transform.position = other.transform.position;
-    //    obj.transform.rotation = other.transform.rotation;
-    //    obj.SetActive(true);
-    //}
 }

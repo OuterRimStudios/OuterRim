@@ -2039,7 +2039,7 @@ MonoBehaviour:
   - {fileID: 131540, guid: dcb47bf9ecd4c58449cdbeaf0d18bea7, type: 2}
   spawnCarrierAt: 5
   spawnLocation: {x: 0, y: 0, z: 0}
-  spawnPickUpAt: 4
+  spawnPickUpAt: 1
   minXSpawn: -3000
   maxXspawn: 3000
   minYSpawn: -3000
@@ -2072,10 +2072,15 @@ MonoBehaviour:
   shipIMG2: {fileID: 809921980}
   hitEffect: {fileID: 164108, guid: 617ad9e000e6e794996337449785aa1b, type: 2}
   hitSound: {fileID: 8300000, guid: 77e3e012ba915ac47aaf30c11ab78ba0, type: 3}
+  shieldPickUpSound: {fileID: 8300000, guid: 470326cb67134ca449d25b18717b3a05, type: 3}
+  dualLaserPickUpSound: {fileID: 8300000, guid: 7ce8a0af584d2da4b9ea15343dd2140c,
+    type: 3}
+  laserPickUpSound: {fileID: 8300000, guid: f1cbc985b74d1e743844f1a01fcc1afb, type: 3}
+  missilePickUpSound: {fileID: 8300000, guid: 5337b2d04cc82524d9738674ab508e5c, type: 3}
   healthRecoverScore: 100000
   playerShootingFrequency: 0.15
   lightningGunDuration: 30
-  playerShieldHealth: 3
+  playerShieldHealth: 12
   playerShieldCooldown: 15
   playerLives: 3
   playerHealth: 10
@@ -2083,7 +2088,7 @@ MonoBehaviour:
   playerRotation: 15
   laserPickUpActiveTime: 15
   dualLaserPickUpActiveTime: 15
-  missileRechargeLength: 10
+  missileRechargeLength: 15
   enemyAISpeed: 500
   actorSpeed: 600
   maneuverSpeed: 1
@@ -2197,8 +2202,8 @@ MonoBehaviour:
   xMaxSpawn: 400
   yMinSpawn: -300
   yMaxSpawn: 300
-  zSpawnMin: 7500
-  zSpawnMax: 10000
+  zSpawnMin: 6000
+  zSpawnMax: 8000
   leveled: 0
 --- !u!114 &555410817
 MonoBehaviour:
@@ -2986,7 +2991,7 @@ Prefab:
         type: 2}
       propertyPath: m_Navigation.m_SelectOnUp
       value: 
-      objectReference: {fileID: 733522201}
+      objectReference: {fileID: 1731002603}
     - target: {fileID: 114000013901475614, guid: f5ae4a9c6b0c9504d9c155fa77054bc2,
         type: 2}
       propertyPath: m_Navigation.m_Mode
@@ -3031,7 +3036,7 @@ Prefab:
         type: 2}
       propertyPath: m_Navigation.m_SelectOnDown
       value: 
-      objectReference: {fileID: 718320170}
+      objectReference: {fileID: 1731002603}
     - target: {fileID: 114000013826714454, guid: f5ae4a9c6b0c9504d9c155fa77054bc2,
         type: 2}
       propertyPath: m_Sprite
@@ -3144,6 +3149,11 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114000013733787454, guid: f5ae4a9c6b0c9504d9c155fa77054bc2,
+        type: 2}
+      propertyPath: m_Navigation.m_SelectOnDown
+      value: 
+      objectReference: {fileID: 1526504799}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f5ae4a9c6b0c9504d9c155fa77054bc2, type: 2}
   m_IsPrefabParent: 0
@@ -6974,7 +6984,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
@@ -8829,6 +8839,12 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1728028128}
+--- !u!114 &1731002603 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000010516839632, guid: f5ae4a9c6b0c9504d9c155fa77054bc2,
+    type: 2}
+  m_PrefabInternal: {fileID: 768716009}
+  m_Script: {fileID: -113659843, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1001 &1757681438
 Prefab:
   m_ObjectHideFlags: 0

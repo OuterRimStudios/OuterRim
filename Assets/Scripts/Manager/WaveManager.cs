@@ -218,13 +218,12 @@ public class WaveManager : MonoBehaviour
         {
             if (waveCount != checkWave2)
                 publicVariableHandler.IncreaseWavePool();
-
             checkWave2 = waveCount;
         }
 
         waveStartingText.gameObject.SetActive(true);
         waveStartingText.text = "Wave " + waveCount;
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(1);
         waveStartingText.gameObject.SetActive(false);
         canSpawn = true;
         Spawn();
