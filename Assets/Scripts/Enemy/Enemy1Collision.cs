@@ -47,6 +47,12 @@ public class Enemy1Collision : MonoBehaviour
         {
             switch (transform.name)
             {
+                case "BasicShip":
+                    laserScore = publicVariableHandler.enemy4LaserScore;
+                    missileScore = publicVariableHandler.enemy4MissileScore;
+                    baseHealth = publicVariableHandler.enemy4BaseHealth;
+                    transform.FindChild("Shield").gameObject.SetActive(true);
+                    break;
                 case "Enemy 01":
                     laserScore = publicVariableHandler.enemy1LaserScore;
                     missileScore = publicVariableHandler.enemy1MissileScore;

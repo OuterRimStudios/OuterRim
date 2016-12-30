@@ -59,7 +59,7 @@ public class EnemyState : MonoBehaviour {
                 hasArrow = true;
                 pointer = pointerPool.GetPooledObject();
                 pointer.transform.SetParent(transform);
-                pointer.transform.rotation = new Quaternion(180, 0, 0, 0);
+                pointer.transform.rotation = new Quaternion(180, pointer.transform.rotation.y, pointer.transform.rotation.z, 0);
                 pointer.transform.position = new Vector3(transform.position.x, transform.position.y + 100, transform.position.z);
 
                 if (transform.name == "BasicShip")
