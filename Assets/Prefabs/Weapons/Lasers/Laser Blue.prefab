@@ -51,7 +51,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &454492
 Transform:
   m_ObjectHideFlags: 1
@@ -59,7 +59,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 164644}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 835.3223, y: 178.80875, z: -846.6901}
+  m_LocalPosition: {x: -675.3373, y: 724.3325, z: 6460.0005}
   m_LocalScale: {x: 0.25, y: 0.1, z: 15}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -106,7 +106,7 @@ MeshRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4c259942f5d3f7e409f945cb9232cc16, type: 2}
+  - {fileID: 2100000, guid: 356909a526799534085f25e3f13d4e52, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
@@ -158,9 +158,9 @@ TrailRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Time: 0.1
+  m_Time: 0.05
   m_StartWidth: 5
-  m_EndWidth: 0.1
+  m_EndWidth: 0.5
   m_Colors:
     m_Color[0]:
       serializedVersion: 2

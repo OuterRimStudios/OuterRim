@@ -37,7 +37,8 @@ public class ShipWrangler : MonoBehaviour {
 
     void Awake()
     {
-        gameObject.SetActive(false); if (gameObject.name != "ShipContainer")
+        gameObject.SetActive(false);
+        if (gameObject.name != "ShipContainer")
         {
             if (PlayerPrefs.GetString(gameObject.name + "Ship") != "")
             {
@@ -60,6 +61,18 @@ public class ShipWrangler : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+
+        if(DevMode.devMove && Input.GetKeyDown(KeyCode.R) && gameObject.name == "ShipContainer")
+        {
+            for(int i = 0; i < ships.Count; i++)
+            {
+                PlayerPrefs.SetString(ships[i].gameObject.name + "Ship", "");
+            }
+            ResetWranglers();
+            DisplayShip();
+            print("All ship containers reset");
+        }
+
         inputDevice = InputManager.ActiveDevice;
         if (!Unlock.unlocking)
         {

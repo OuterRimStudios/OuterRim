@@ -186,6 +186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 2
+  audioSource: {fileID: 0}
   powerUpLength: 25
   shieldType: 
   laserType: 
@@ -202,7 +203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 622a6f80f8cf60448827b790c081fb6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minSpeed: 350
+  minSpeed: 1000
   maxSpeed: 1200
 --- !u!135 &13502126
 SphereCollider:
