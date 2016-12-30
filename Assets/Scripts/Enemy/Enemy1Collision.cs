@@ -37,7 +37,6 @@ public class Enemy1Collision : MonoBehaviour
         fireMissile = GameObject.Find("MissileNozzle").GetComponent<FireMissile>();
         hitEffectsPool = GameObject.Find("HitEffectPool").GetComponent<ObjectPooling>(); 
         meteorExplosions = GameObject.Find("MeteorExplosions").GetComponent<ObjectPooling>();
-        explosionPool = GameObject.Find("EnemyExplosionPools").GetComponent<ObjectPooling>();
     }
 
     void Start() { }
@@ -132,14 +131,11 @@ public class Enemy1Collision : MonoBehaviour
             WasDestroyed(true);
             Destroy(col.gameObject);
         }
-        if (transform.tag != "Carrier")
+        if (col.gameObject.tag == "Meteor")
         {
-            if (col.gameObject.tag == "Meteor")
-            {
-                SpawnEffect("MeteorExplosion");
-                col.gameObject.SetActive(false);
-               // WasDestroyed(false);
-            }
+            SpawnEffect("MeteorExplosion");
+            col.gameObject.SetActive(false);
+            // WasDestroyed(false);
         }
     }
 
@@ -184,8 +180,16 @@ public class Enemy1Collision : MonoBehaviour
             PlayerCollision.carriersDestroyed++;
         }
 
-        SpawnEffect("ShipExplosion");
-        gameObject.SetActive(false);
+        if(transform.tag != "Carrier")
+        {
+            SpawnEffect("ShipExplosion");
+            gameObject.SetActive(false);
+        }
+        else
+        {
+            SpawnEffect("CarrierExplosion");
+            gameObject.SetActive(false);
+        }
     }
 
     void SpawnEffect(string type)
@@ -194,7 +198,10 @@ public class Enemy1Collision : MonoBehaviour
         switch (type)
         {
             case "ShipExplosion":
-                effect = explosionPool.GetPooledObject();
+                effect = publicVariableHandler.shipExplosionPools[Random.Range(0, publicVariableHandler.shipExplosionPools.Length)].GetPooledObject();
+                break;
+            case "CarrierExplosion":
+                effect = publicVariableHandler.carrierExplosionPools[Random.Range(0, publicVariableHandler.carrierExplosionPools.Length)].GetPooledObject();
                 break;
             case "MeteorExplosion":
                 effect = meteorExplosions.GetPooledObject();

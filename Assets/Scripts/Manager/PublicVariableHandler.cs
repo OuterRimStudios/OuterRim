@@ -7,6 +7,9 @@ public class PublicVariableHandler : MonoBehaviour
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     //Public Variables
 
+    //Explosion Variables
+    public ObjectPooling[] shipExplosionPools;
+    public ObjectPooling[] carrierExplosionPools;
     //Meteor Variables
     public GameObject meteorExplosion;
 	public int meteorHealth;
