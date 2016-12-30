@@ -1093,6 +1093,80 @@ GameObject:
   m_PrefabParentObject: {fileID: 1000010509569822, guid: cfdb0045f205a404c961ac5c8ed21abd,
     type: 2}
   m_PrefabInternal: {fileID: 319308921}
+--- !u!1 &286680614
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 286680615}
+  - 222: {fileID: 286680617}
+  - 114: {fileID: 286680616}
+  m_Layer: 5
+  m_Name: ActiveEnemies
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &286680615
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 286680614}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1544002024}
+  m_RootOrder: 13
+  m_AnchorMin: {x: 0.43421134, y: 0.929}
+  m_AnchorMax: {x: 0.55600005, y: 0.9842942}
+  m_AnchoredPosition: {x: 9.5, y: -7}
+  m_SizeDelta: {x: 767, y: 940}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &286680616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 286680614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 106
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 106
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Enemies Left: 00'
+--- !u!222 &286680617
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 286680614}
 --- !u!1 &288597122
 GameObject:
   m_ObjectHideFlags: 0
@@ -1599,9 +1673,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pooledObject:
   - {fileID: 1000011325267444, guid: 08728dd358cbb4c49b1f341e90e89a15, type: 2}
-  pooledAmount: 100
+  pooledAmount: 3
   waitTime: 0.02
-  willGrow: 0
+  willGrow: 1
   pooledObjects: []
 --- !u!1 &417838581 stripped
 GameObject:
@@ -2067,7 +2141,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHPAllowed: 10
   currentHPUsed: 0
-  allowHPIncreaseAmount: 5
+  allowHPIncreaseAmount: 3
   regularEnemyPool:
   - {fileID: 11046876}
   - {fileID: 930241600}
@@ -2094,7 +2168,10 @@ MonoBehaviour:
   activeEnemies: []
   waveStartingText: {fileID: 1457899846}
   waveCompleteText: {fileID: 1716084577}
+  enemiesLeft: {fileID: 286680616}
   waveCount: 0
+  basicEnemyPool: {fileID: 1939050016}
+  allowedBasicEnemies: 2
 --- !u!114 &555410814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2116,7 +2193,7 @@ MonoBehaviour:
   - {fileID: 1838805899}
   meteorExplosion: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
   meteorHealth: 8
-  laserNoLevelSound: {fileID: 8300000, guid: a8c82b3dd073d3a4589f528e85b5560b, type: 3}
+  laserNoLevelSound: {fileID: 8300000, guid: 1b54b9b6383350844bc63bc202881293, type: 3}
   laserLevel1Sound: {fileID: 8300000, guid: d6690401f8a263e4a927e136c14d7131, type: 3}
   laserLevel2Sound: {fileID: 8300000, guid: 8fb2a93bd17cea74ca6ffb03a5df0d79, type: 3}
   laserLevel3Sound: {fileID: 8300000, guid: 52212d344f5f019409266df5986aba62, type: 3}
@@ -2126,7 +2203,7 @@ MonoBehaviour:
   shipIMG2: {fileID: 809921980}
   hitEffect: {fileID: 164108, guid: 617ad9e000e6e794996337449785aa1b, type: 2}
   hitSound: {fileID: 8300000, guid: 77e3e012ba915ac47aaf30c11ab78ba0, type: 3}
-  shieldPickUpSound: {fileID: 8300000, guid: 470326cb67134ca449d25b18717b3a05, type: 3}
+  shieldPickUpSound: {fileID: 8300000, guid: a11f457188108e646afafe4189cf7778, type: 3}
   dualLaserPickUpSound: {fileID: 8300000, guid: 7ce8a0af584d2da4b9ea15343dd2140c,
     type: 3}
   laserPickUpSound: {fileID: 8300000, guid: f1cbc985b74d1e743844f1a01fcc1afb, type: 3}
@@ -2140,14 +2217,14 @@ MonoBehaviour:
   playerHealth: 10
   playerSpeed: 1100
   playerRotation: 15
-  laserPickUpActiveTime: 15
-  dualLaserPickUpActiveTime: 15
-  missileRechargeLength: 15
+  laserPickUpActiveTime: 25
+  dualLaserPickUpActiveTime: 25
+  missileRechargeLength: 9
   enemyAISpeed: 500
   actorSpeed: 600
   maneuverSpeed: 1
   strafeSpeed: 1.5
-  enemy1Speed: 200
+  enemy1Speed: 800
   enemy1FireFreq: 3
   enemy1BaseHealth: 2
   enemy1LaserScore: 1000
@@ -3325,9 +3402,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pooledObject:
   - {fileID: 126360, guid: 5b10d5fdd0055da4c8686d050496e823, type: 2}
-  pooledAmount: 100
+  pooledAmount: 30
   waitTime: 0.02
-  willGrow: 0
+  willGrow: 1
   pooledObjects: []
 --- !u!1 &825245193
 GameObject:
@@ -3413,7 +3490,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 77e3e012ba915ac47aaf30c11ab78ba0, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -3633,6 +3710,52 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 937920456}
+--- !u!1 &964205445
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 964205446}
+  - 114: {fileID: 964205447}
+  m_Layer: 0
+  m_Name: PointerPool
+  m_TagString: PointerPool
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &964205446
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 964205445}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 986097446}
+  m_RootOrder: 27
+--- !u!114 &964205447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 964205445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66660a5e36fd8db4fb043f994e607fdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pooledObject:
+  - {fileID: 1000013548090822, guid: 6ce95ed98a1d5a14bbbb9e7fcf08dcec, type: 2}
+  pooledAmount: 50
+  waitTime: 0.01
+  willGrow: 1
+  pooledObjects: []
 --- !u!1 &964560978
 GameObject:
   m_ObjectHideFlags: 0
@@ -3766,7 +3889,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pooledObject:
   - {fileID: 1000013548090822, guid: 6ce95ed98a1d5a14bbbb9e7fcf08dcec, type: 2}
-  pooledAmount: 50
+  pooledAmount: 30
   waitTime: 0.01
   willGrow: 1
   pooledObjects: []
@@ -3873,6 +3996,8 @@ Transform:
   - {fileID: 1242481582}
   - {fileID: 408239524}
   - {fileID: 1838805898}
+  - {fileID: 1939050015}
+  - {fileID: 964205446}
   m_Father: {fileID: 0}
   m_RootOrder: 3
 --- !u!1 &1016499999
@@ -5262,9 +5387,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pooledObject:
   - {fileID: 1000011055700466, guid: 794cb62ba0b095f498d0eba766e972d9, type: 2}
-  pooledAmount: 100
+  pooledAmount: 3
   waitTime: 0.02
-  willGrow: 0
+  willGrow: 1
   pooledObjects: []
 --- !u!1 &1250030430
 GameObject:
@@ -6967,9 +7092,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pooledObject:
   - {fileID: 139146, guid: 8a4967d62235453468658ed59536870e, type: 2}
-  pooledAmount: 100
+  pooledAmount: 30
   waitTime: 0.02
-  willGrow: 0
+  willGrow: 1
   pooledObjects: []
 --- !u!1 &1544002020
 GameObject:
@@ -7070,6 +7195,7 @@ RectTransform:
   - {fileID: 1235783939}
   - {fileID: 1444352614}
   - {fileID: 122263422}
+  - {fileID: 286680615}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_AnchorMin: {x: 0, y: 0}
@@ -9694,9 +9820,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pooledObject:
   - {fileID: 1000012325200254, guid: f94c21d00b7042b4ca8da916cd80ab95, type: 2}
-  pooledAmount: 100
+  pooledAmount: 3
   waitTime: 0.02
-  willGrow: 0
+  willGrow: 1
   pooledObjects: []
 --- !u!1 &1839656611
 GameObject:
@@ -10249,6 +10375,52 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1932161369}
+--- !u!1 &1939050014
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1939050015}
+  - 114: {fileID: 1939050016}
+  m_Layer: 0
+  m_Name: BasicEnemyShips
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1939050015
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1939050014}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 986097446}
+  m_RootOrder: 26
+--- !u!114 &1939050016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1939050014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66660a5e36fd8db4fb043f994e607fdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pooledObject:
+  - {fileID: 1000010779012810, guid: c76dec167f4f3b944b507ce1ad3ac0da, type: 2}
+  pooledAmount: 100
+  waitTime: 0.01
+  willGrow: 1
+  pooledObjects: []
 --- !u!1001 &1960045524
 Prefab:
   m_ObjectHideFlags: 0
@@ -10894,9 +11066,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pooledObject:
   - {fileID: 192464, guid: 840150134efd3124e882f180badc4e67, type: 2}
-  pooledAmount: 100
+  pooledAmount: 30
   waitTime: 0.02
-  willGrow: 0
+  willGrow: 1
   pooledObjects: []
 --- !u!1 &2089538379
 GameObject:
