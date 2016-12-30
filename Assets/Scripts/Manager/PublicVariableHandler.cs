@@ -190,11 +190,14 @@ public class PublicVariableHandler : MonoBehaviour
     public void IncreaseWavePool()
     {
         if (waveManager.maxHPAllowed <= 250)
-            waveManager.maxHPAllowed += 5;
+            waveManager.maxHPAllowed += 3;
+        //Increases the allowed amount of basic enemies
+        if (waveManager.allowedBasicEnemies <= 50)
+            waveManager.allowedBasicEnemies += 1;
     }
+
     public void IncreaseDifficulty()
     {
-
         //Increases the fire rate for all ships
         if (enemy1FireFreq < fireRateCap)
             enemy1FireFreq -= .2f;

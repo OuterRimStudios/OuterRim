@@ -26,6 +26,10 @@ public class EnemyAI : MonoBehaviour
         {
             switch (transform.name)
             {
+                case "BaseShip":
+                    speed = 100;
+                    warpSpeed = 100;
+                    break;
                 case "Enemy 01":
                     speed = publicVariableHandler.enemy1Speed;
                     break;
@@ -74,26 +78,33 @@ public class EnemyAI : MonoBehaviour
     {
         playerPosition = new Vector3(Random.Range(player.transform.position.x - 100, player.transform.position.x + 100), Random.Range(player.transform.position.y - 100, player.transform.position.y + 100), player.transform.position.z);
 
-        if (Vector3.Distance(transform.position, player.transform.position) > 7000)  //If the AI is furthure than 500 meters from the player.
+        if (Vector3.Distance(transform.position, player.transform.position) > 3500)  //If the AI is furthure than 500 meters from the player.
         {
             transform.LookAt(player.transform);
-            transform.position = Vector3.MoveTowards(transform.position, playerPosition, warpSpeed);     //Warp In
+            transform.Translate(Vector3.forward * warpSpeed * Time.deltaTime);
+           // transform.position = Vector3.MoveTowards(transform.position, playerPosition, warpSpeed);     //Warp In
             warped = true;
         }
 
-        if(transform.position.z - player.transform.position.z > 1000)
+        if (transform.position.z - player.transform.position.z < 1000)
+            transform.LookAt(transform.forward);
+        else
             transform.LookAt(player.transform);
 
         if (warped) //If you are warped in.
         {
-            if(tag == "Carrier")
+            if (tag == "Carrier")
             {
                 transform.position = Vector3.Lerp(transform.position, new Vector3(playerPosition.x, playerPosition.y, playerPosition.z - 1000f), 0.05f * Time.deltaTime);
             }
             else
-                transform.position = Vector3.Lerp(transform.position, new Vector3 (playerPosition.x, playerPosition.y, playerPosition.z - 1000f), 0.25f * Time.deltaTime);    //Move forward
+            {
+                transform.LookAt(transform.forward);
+                transform.Translate(Vector3.forward * speed * Time.deltaTime);
+            }
+                    //(transform.position, new Vector3 (playerPosition.x, playerPosition.y, playerPosition.z - 1000f), 0.25f * Time.deltaTime);    //Move forward
 
-            if (transform.position.z <= -250)   //If you go to far, shut off.
+            if (transform.position.z <= 0)   //If you go to far, shut off.
             {
                 if (transform.tag == "Carrier")
                 {

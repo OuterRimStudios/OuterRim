@@ -41,6 +41,7 @@ public class WaveManager : MonoBehaviour
 
     public Text waveStartingText;
     public Text waveCompleteText;
+    public Text enemiesLeft;
 
   //  public GameObject badge1;
   //  public GameObject badge2;
@@ -63,9 +64,16 @@ public class WaveManager : MonoBehaviour
     float checkWave;
     float checkWave2;
 
+    public ObjectPooling basicEnemyPool;
+    [Tooltip("This is the max amount of basic enemies that can be spawned. This number will increase each wave by 2")]
+    public int allowedBasicEnemies;
+    int currentBasicEnemyCount;
+    bool canSpawnBasicEnemies;
+
     void Start ()
     {
         canSpawn = true;
+        canSpawnBasicEnemies = true;
         player = GameObject.Find("Player");
         pickUpManager = GetComponent<PickUpManager>();
         publicVariableHandler = GetComponent<PublicVariableHandler>();
@@ -81,7 +89,33 @@ public class WaveManager : MonoBehaviour
     }
 
 	void Spawn ()
-    {        
+    {
+        if (canSpawnBasicEnemies)
+        {
+            while (currentBasicEnemyCount < allowedBasicEnemies)
+            {
+                GameObject basicE = basicEnemyPool.GetPooledObject();
+
+                if (basicE == null)
+                {
+                    return;
+                }
+
+                basicE.transform.position = new Vector3(Random.Range(minXSpawn, maxXspawn), Random.Range(minYSpawn, maxYSpawn), zSpawn);
+                basicE.transform.rotation = transform.rotation;
+                basicE.name = "BasicShip";
+                basicE.GetComponent<Enemy1Collision>().OnSpawned();
+                basicE.SetActive(true);
+                activeEnemies.Add(basicE);
+                currentBasicEnemyCount++;
+
+                if (currentBasicEnemyCount >= allowedBasicEnemies)
+                {
+                    canSpawnBasicEnemies = false;
+                }
+            }
+        }
+
         if (canSpawn)
         {
             while (currentHPUsed < maxHPAllowed)
@@ -107,6 +141,7 @@ public class WaveManager : MonoBehaviour
                     canSpawn = false;
                 }
             }
+            enemiesLeft.text = "Enemies Left: " + activeEnemies.Count;
         }
 	}
 
@@ -226,14 +261,22 @@ public class WaveManager : MonoBehaviour
         yield return new WaitForSeconds(1);
         waveStartingText.gameObject.SetActive(false);
         canSpawn = true;
+        canSpawnBasicEnemies = true;
         Spawn();
     }
 
     public void ShipDestroyed(GameObject ship)
     {
+        if(ship.name == "BasicShip")
+        {
+            currentBasicEnemyCount--;
+        }
+        else
         currentHPUsed -= ship.GetComponent<Enemy1Collision>().baseHealth;
+
         activeEnemies.Remove(ship);
-        if (currentHPUsed <= 0)
+        enemiesLeft.text = "Enemies Left: " + activeEnemies.Count;
+        if (currentHPUsed <= 0 && activeEnemies.Count <= 0)
         {
             StartCoroutine(WaveStarting());
         }

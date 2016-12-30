@@ -192,7 +192,7 @@ public class Enemy1Collision : MonoBehaviour
         }
     }
 
-    void SpawnEffect(string type)
+    public void SpawnEffect(string type)
     {
         GameObject effect = null;
         switch (type)

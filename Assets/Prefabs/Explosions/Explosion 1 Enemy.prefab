@@ -666,7 +666,7 @@ ParticleSystem:
     serializedVersion: 2
     m_Type: 0
     rate:
-      scalar: 400
+      scalar: 0
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -703,7 +703,7 @@ ParticleSystem:
     cntmax1: 30
     cntmax2: 30
     cntmax3: 30
-    time0: 0.01
+    time0: 0
     time1: 0
     time2: 0
     time3: 0
@@ -1159,7 +1159,7 @@ ParticleSystem:
         m_RotationOrder: 4
       minMaxState: 0
     z:
-      scalar: 4000
+      scalar: -4000
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1305,7 +1305,7 @@ ParticleSystem:
         m_RotationOrder: 4
       minMaxState: 0
     z:
-      scalar: 2000
+      scalar: -2000
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -2017,6 +2017,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   volumeType: ExplosionVolume
+  sources: []
 --- !u!114 &114000012157163194
 MonoBehaviour:
   m_ObjectHideFlags: 1

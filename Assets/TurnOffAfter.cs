@@ -3,9 +3,14 @@ using System.Collections;
 
 public class TurnOffAfter : MonoBehaviour
 {
-	IEnumerator Start ()
+	void Awake ()
     {
-        yield return new WaitForSeconds(1.5f);
-        gameObject.SetActive(false);
+        StartCoroutine(Despawn());
 	}
+
+    IEnumerator Despawn()
+    {
+        yield return new WaitForSeconds(3f);
+        gameObject.SetActive(false);
+    }
 }

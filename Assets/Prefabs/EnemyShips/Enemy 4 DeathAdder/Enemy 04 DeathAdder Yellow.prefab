@@ -546,8 +546,8 @@ GameObject:
   - 114: {fileID: 11443256}
   - 54: {fileID: 5498020}
   - 114: {fileID: 11402458}
-  - 136: {fileID: 13601716}
   - 114: {fileID: 114000011196128860}
+  - 135: {fileID: 135000010529595118}
   m_Layer: 0
   m_Name: Enemy 04 DeathAdder Yellow
   m_TagString: Enemy
@@ -1663,7 +1663,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1
+  m_Radius: 1.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!135 &13571294
 SphereCollider:
@@ -1677,19 +1677,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &13601716
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 190918}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 80
-  m_Height: 260
-  m_Direction: 2
-  m_Center: {x: 0, y: 1.15, z: 0}
 --- !u!136 &13657274
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -9182,6 +9169,18 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   waittingTime: 0
   copy: 0
+--- !u!135 &135000010529595118
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 190918}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 100
+  m_Center: {x: 0, y: 3.81, z: -3.94}
 --- !u!212 &212000012837733008
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -89,9 +89,9 @@ public class PlayerCollision : MonoBehaviour
             }
             else if (col.gameObject.tag == "Enemy")
             {
-                playerHealth -= 3;
-                col.GetComponent<Enemy1Collision>().WasDestroyed(false);
-                CheckHealth();
+             //   playerHealth -= 3;
+                col.GetComponent<Enemy1Collision>().SpawnEffect("ShipExplosion");
+              //  CheckHealth();
             }
         }
     }

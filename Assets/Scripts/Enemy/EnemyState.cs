@@ -10,10 +10,16 @@ public class EnemyState : MonoBehaviour {
     bool canBeTarget;
     GameObject arrow;
     ObjectPooling arrowPool;
-
+    GameObject pointerPoolObject;
+    ObjectPooling pointerPool;
+    GameObject pointer;
+    bool hasArrow;
+    Vector3 storeSize;
     void Start ()
     {
         player = GameObject.Find("Player");
+       // pointerPoolObject = GameObject.FindGameObjectWithTag("PointerPool");
+        pointerPool = GameObject.FindGameObjectWithTag("PointerPool").GetComponent<ObjectPooling>();
         arrowPool = GameObject.FindGameObjectWithTag("ArrowPool").GetComponent<ObjectPooling>();
         fireMissile =GameObject.Find("MissileNozzle").GetComponent<FireMissile>();
         canBeTarget = true;
@@ -42,6 +48,30 @@ public class EnemyState : MonoBehaviour {
         if ((Mathf.Abs(transform.position.x - player.transform.position.x) > 2500 || Mathf.Abs(transform.position.y - player.transform.position.y) > 2500 || Mathf.Abs(transform.position.z - player.transform.position.z) > 9500) && !onScreen)
             Respawn();
 
+       if (transform.position.z - player.transform.position.z > 4000 && onScreen)
+        {
+            if(!hasArrow)
+            {
+                hasArrow = true;
+                pointer = pointerPool.GetPooledObject();
+                pointer.transform.SetParent(transform);
+                pointer.transform.rotation = new Quaternion(180, 0, 0, 0);
+                pointer.transform.position = new Vector3(transform.position.x, transform.position.y + 100, transform.position.z);
+
+                if (transform.name == "BasicShip")
+                    pointer.transform.localScale = new Vector3(25f, 25f, 25f);
+                else
+                    pointer.transform.localScale = new Vector3(4.5f, 4.5f, 4.5f);
+                
+                pointer.SetActive(true);
+            }
+        }
+       else if (transform.position.z - player.transform.position.z < 4500 || !onScreen)
+        {
+            hasArrow = false;
+           // pointer.transform.SetParent(pointerPoolObject.transform);
+            pointer.SetActive(false);
+        }
         //sets laser target
         if (transform.position.z - player.transform.position.z < 20000 &&
             transform.position.z - player.transform.position.z > 100 &&
