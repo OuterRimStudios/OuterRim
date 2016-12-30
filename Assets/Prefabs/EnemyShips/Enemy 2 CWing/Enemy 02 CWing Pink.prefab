@@ -724,6 +724,7 @@ GameObject:
   - 4: {fileID: 498686}
   - 212: {fileID: 21207432}
   - 114: {fileID: 114000011473426314}
+  - 114: {fileID: 114000011805418458}
   m_Layer: 0
   m_Name: LockOn
   m_TagString: Untagged
@@ -1625,7 +1626,7 @@ Transform:
   m_GameObject: {fileID: 176496}
   m_LocalRotation: {x: 0, y: 0.7071066, z: -0, w: -0.70710695}
   m_LocalPosition: {x: 53.499996, y: 17.05683, z: -0.167363}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 4000012587864870}
@@ -10329,6 +10330,17 @@ MonoBehaviour:
   waittingTime: 0
   copy: 0
 --- !u!114 &114000011473426314
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 176496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5fe9fa792377d74ab147dd91d935461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114000011805418458
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

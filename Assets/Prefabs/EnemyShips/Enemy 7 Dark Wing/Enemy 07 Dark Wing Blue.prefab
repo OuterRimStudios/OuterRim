@@ -239,6 +239,7 @@ GameObject:
   - 4: {fileID: 444806}
   - 212: {fileID: 21205616}
   - 114: {fileID: 114000011669859614}
+  - 114: {fileID: 114000012398238790}
   m_Layer: 0
   m_Name: LockOn
   m_TagString: Untagged
@@ -501,7 +502,7 @@ Transform:
   m_GameObject: {fileID: 145186}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.11, y: 8.4, z: 9.06}
-  m_LocalScale: {x: 8.5, y: 8.5, z: 8.5}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 4000013272806000}
@@ -4937,6 +4938,7 @@ GameObject:
   - 4: {fileID: 4000013272806000}
   - 212: {fileID: 212000010013421224}
   - 114: {fileID: 114000010007594528}
+  - 114: {fileID: 114000010326396450}
   m_Layer: 0
   m_Name: LockOn
   m_TagString: Untagged
@@ -4994,7 +4996,7 @@ Transform:
   m_GameObject: {fileID: 1000014162543688}
   m_LocalRotation: {x: 0, y: 0.7071066, z: -0, w: -0.70710695}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 50, y: 50, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 4000013505500006}
@@ -5015,6 +5017,17 @@ Transform:
   m_Father: {fileID: 4000013272806000}
   m_RootOrder: 0
 --- !u!114 &114000010007594528
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000014162543688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5fe9fa792377d74ab147dd91d935461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114000010326396450
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -5075,6 +5088,17 @@ MonoBehaviour:
   m_SpeedEffect: 1
   m_TakeoffHeight: 0
   m_Target: {fileID: 443704, guid: d181b18c457379142a5c1ff373318a37, type: 2}
+--- !u!114 &114000012398238790
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 145186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5fe9fa792377d74ab147dd91d935461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000012823411546
 MonoBehaviour:
   m_ObjectHideFlags: 1
