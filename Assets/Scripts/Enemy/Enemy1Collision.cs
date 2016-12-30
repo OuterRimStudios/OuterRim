@@ -39,7 +39,13 @@ public class Enemy1Collision : MonoBehaviour
         meteorExplosions = GameObject.Find("MeteorExplosions").GetComponent<ObjectPooling>();
     }
 
-    void Start() { }
+    void Start()
+    {
+        if(transform.name == "BasicShip")
+        {
+            transform.FindChild("Shield").gameObject.SetActive(true);
+        }
+    }
     
     public void OnSpawned()
     {
