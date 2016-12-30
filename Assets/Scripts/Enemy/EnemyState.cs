@@ -45,10 +45,14 @@ public class EnemyState : MonoBehaviour {
         else if (onScreen && arrow != null)
             arrow.SetActive(false);
 
-        if ((Mathf.Abs(transform.position.x - player.transform.position.x) > 2500 || Mathf.Abs(transform.position.y - player.transform.position.y) > 2500 || Mathf.Abs(transform.position.z - player.transform.position.z) > 9500) && !onScreen)
+        if ((Mathf.Abs(transform.position.x - player.transform.position.x) > 2500 ||
+            Mathf.Abs(transform.position.x - player.transform.position.x) > -2500 || 
+            Mathf.Abs(transform.position.y - player.transform.position.y) > 2500 ||
+                Mathf.Abs(transform.position.y - player.transform.position.y) > -2500
+            || Mathf.Abs(transform.position.z - player.transform.position.z) > 9500) && !onScreen)
             Respawn();
 
-       if (transform.position.z - player.transform.position.z > 4000 && onScreen)
+       if (transform.position.z - player.transform.position.z > 100)
         {
             if(!hasArrow)
             {
@@ -66,7 +70,7 @@ public class EnemyState : MonoBehaviour {
                 pointer.SetActive(true);
             }
         }
-       else if (transform.position.z - player.transform.position.z < 4500 || !onScreen)
+       else
         {
             hasArrow = false;
            // pointer.transform.SetParent(pointerPoolObject.transform);

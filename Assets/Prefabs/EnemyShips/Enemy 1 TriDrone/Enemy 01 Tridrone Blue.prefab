@@ -708,8 +708,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 178886}
-  m_LocalRotation: {x: 0.08715575, y: -0, z: -0, w: 0.9961947}
-  m_LocalPosition: {x: -785.9472, y: -129.96663, z: 396.6541}
+  m_LocalRotation: {x: 0.03724669, y: 0.078796, z: -0.90064234, w: 0.42573157}
+  m_LocalPosition: {x: -47.799824, y: -144.23305, z: 383.10455}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -1291,12 +1291,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   circuit: {fileID: 0}
-  lookAheadForTargetOffset: 50
-  lookAheadForTargetFactor: 50
-  lookAheadForSpeedOffset: 50
-  lookAheadForSpeedFactor: 50
+  lookAheadForTargetOffset: 500
+  lookAheadForTargetFactor: 1000
+  lookAheadForSpeedOffset: 500
+  lookAheadForSpeedFactor: 500
   progressStyle: 0
-  pointToPointThreshold: 50
+  pointToPointThreshold: 1
   target: {fileID: 443704}
 --- !u!114 &11408128
 MonoBehaviour:
@@ -1320,19 +1320,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 235a6615124795442b98c1f03500003e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MaxEnginePower: 50
+  m_MaxEnginePower: 0
   m_Lift: 1
   m_ZeroLiftSpeed: 0
-  m_RollEffect: 200
-  m_PitchEffect: 200
-  m_YawEffect: 200
-  m_BankedTurnEffect: 1
+  m_RollEffect: 15
+  m_PitchEffect: 15
+  m_YawEffect: 5
+  m_BankedTurnEffect: 5
   m_AerodynamicEffect: 1
-  m_AutoTurnPitch: 15
-  m_AutoRollLevel: 1
-  m_AutoPitchLevel: 1
+  m_AutoTurnPitch: 5
+  m_AutoRollLevel: 0
+  m_AutoPitchLevel: 5
   m_AirBrakesEffect: 0
-  m_ThrottleChangeSpeed: 2
+  m_ThrottleChangeSpeed: 1
   m_DragIncreaseFactor: 0.00095
 --- !u!114 &11433696
 MonoBehaviour:
@@ -1374,13 +1374,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f947e56d54f4274896478766fef616c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_RollSensitivity: 0.4
-  m_PitchSensitivity: 0.4
-  m_LateralWanderDistance: 5
-  m_LateralWanderSpeed: 10
+  m_RollSensitivity: 1.1
+  m_PitchSensitivity: 1.1
+  m_LateralWanderDistance: 1000
+  m_LateralWanderSpeed: 1
   m_MaxClimbAngle: 90
   m_MaxRollAngle: 90
-  m_SpeedEffect: 0
+  m_SpeedEffect: 5
   m_TakeoffHeight: 0
   m_Target: {fileID: 443704}
 --- !u!114 &11464680
