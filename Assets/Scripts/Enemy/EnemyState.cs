@@ -32,7 +32,7 @@ public class EnemyState : MonoBehaviour {
 
     void OnEnable()
     {
-        isTarget = false;
+        isTarget = false; 
     }
 	
 	void Update ()
@@ -54,21 +54,24 @@ public class EnemyState : MonoBehaviour {
 
        if (transform.position.z - player.transform.position.z > 4000)
         {
-            if(!hasArrow)
-            {
-                hasArrow = true;
-                pointer = pointerPool.GetPooledObject();
-                pointer.transform.SetParent(transform);
-                pointer.transform.rotation = new Quaternion(180, pointer.transform.rotation.y, pointer.transform.rotation.z, 0);
+			if (!hasArrow) {
+				hasArrow = true;
+				pointer = pointerPool.GetPooledObject ();
+				pointer.transform.SetParent (transform);
+				pointer.transform.rotation = new Quaternion (180, pointer.transform.rotation.y, pointer.transform.rotation.z, 0);
 				pointer.transform.position = transform.position;
-                pointer.transform.localScale = new Vector3(4.5f, 4.5f, 4.5f);
+				pointer.transform.localScale = new Vector3 (4.5f, 4.5f, 4.5f);
                 
-                pointer.SetActive(true);
-            }
+				pointer.SetActive (true);
+			} 
+			else
+            {
+				pointer.SetActive (true);
+			}
+
         }
        else
         {
-            hasArrow = false;
            // pointer.transform.SetParent(pointerPoolObject.transform);
             pointer.SetActive(false);
         }

@@ -1412,12 +1412,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   circuit: {fileID: 0}
-  lookAheadForTargetOffset: 500
-  lookAheadForTargetFactor: 1000
-  lookAheadForSpeedOffset: 500
-  lookAheadForSpeedFactor: 500
+  lookAheadForTargetOffset: 1000
+  lookAheadForTargetFactor: 10
+  lookAheadForSpeedOffset: 1000
+  lookAheadForSpeedFactor: 50
   progressStyle: 0
-  pointToPointThreshold: 1
+  pointToPointThreshold: 50
   target: {fileID: 443734}
 --- !u!114 &11408354
 MonoBehaviour:
@@ -1459,17 +1459,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 235a6615124795442b98c1f03500003e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MaxEnginePower: 0
+  m_MaxEnginePower: 1
   m_Lift: 1
   m_ZeroLiftSpeed: 0
-  m_RollEffect: 15
-  m_PitchEffect: 15
-  m_YawEffect: 5
-  m_BankedTurnEffect: 5
+  m_RollEffect: 20
+  m_PitchEffect: 30
+  m_YawEffect: 15
+  m_BankedTurnEffect: 1
   m_AerodynamicEffect: 1
   m_AutoTurnPitch: 5
-  m_AutoRollLevel: 0
-  m_AutoPitchLevel: 5
+  m_AutoRollLevel: 1
+  m_AutoPitchLevel: 1
   m_AirBrakesEffect: 0
   m_ThrottleChangeSpeed: 1
   m_DragIncreaseFactor: 0.00095
@@ -1484,10 +1484,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f947e56d54f4274896478766fef616c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_RollSensitivity: 1.1
-  m_PitchSensitivity: 1.1
-  m_LateralWanderDistance: 1000
-  m_LateralWanderSpeed: 1
+  m_RollSensitivity: 0.3
+  m_PitchSensitivity: 0.3
+  m_LateralWanderDistance: 500
+  m_LateralWanderSpeed: 0.5
   m_MaxClimbAngle: 90
   m_MaxRollAngle: 90
   m_SpeedEffect: 5
