@@ -42,6 +42,7 @@ public class WaveManager : MonoBehaviour
     public Text waveStartingText;
     public Text waveCompleteText;
     public Text enemiesLeft;
+    public Text sectorCleared;
 
   //  public GameObject badge1;
   //  public GameObject badge2;
@@ -63,6 +64,7 @@ public class WaveManager : MonoBehaviour
     PublicVariableHandler publicVariableHandler;
     float checkWave;
     float checkWave2;
+    float checkWave3;
 
     public ObjectPooling basicEnemyPool;
     [Tooltip("This is the max amount of basic enemies that can be spawned. This number will increase each wave by 2")]
@@ -70,10 +72,14 @@ public class WaveManager : MonoBehaviour
     int currentBasicEnemyCount;
     bool canSpawnBasicEnemies;
 
+    public Warp warp;
+    int sectorNum;
+
     void Start ()
     {
         canSpawn = true;
         canSpawnBasicEnemies = true;
+        sectorCleared.gameObject.SetActive(false);
         player = GameObject.Find("Player");
         pickUpManager = GetComponent<PickUpManager>();
         publicVariableHandler = GetComponent<PublicVariableHandler>();
@@ -260,9 +266,35 @@ public class WaveManager : MonoBehaviour
         waveStartingText.text = "Wave " + waveCount;
         yield return new WaitForSeconds(1);
         waveStartingText.gameObject.SetActive(false);
-        canSpawn = true;
-        canSpawnBasicEnemies = true;
-        Spawn();
+
+        if (waveCount % 5 == 0 && waveCount != 0)
+        {
+            canSpawn = false;
+            if (waveCount != checkWave3)
+            {
+                checkWave3 = waveCount;
+                sectorNum++;
+            }
+            sectorCleared.gameObject.SetActive(true);
+            sectorCleared.text = "Sector " + sectorNum + " Cleared!";
+            yield return new WaitForSeconds(1f);
+            sectorCleared.text = "Warping in 3...";
+            yield return new WaitForSeconds(1f);
+            sectorCleared.text = "Warping in 2...";
+            yield return new WaitForSeconds(1f);
+            sectorCleared.text = "Warping in 1...";
+            yield return new WaitForSeconds(1f);
+            sectorCleared.gameObject.SetActive(false);
+            StartCoroutine(warp.BeginWarp());
+
+    
+        }
+        else
+        {
+            canSpawn = true;
+            canSpawnBasicEnemies = true;
+            Spawn();
+        }
     }
 
     public void ShipDestroyed(GameObject ship)
@@ -280,5 +312,12 @@ public class WaveManager : MonoBehaviour
         {
             StartCoroutine(WaveStarting());
         }
+    }
+
+    public void CanSpawn()
+    {
+        canSpawn = true;
+        canSpawnBasicEnemies = true;
+        Spawn();
     }
 }

@@ -10,17 +10,34 @@ public class RandomSkybox : MonoBehaviour
 
     void Start()
     {
-    //    isSunOn = 1;
-    //    if(isSunOn == 1)
-    //    {
-    //        sun.SetActive(true);
-    //        sun.transform.position = new Vector3(Random.Range(-30000, 300000), Random.Range(-30000, 30000), 100000);
-    //        if(sun.transform.position.x > -10000 && sun.transform.position.x < 10000 || sun.transform.position.y > -10000 && sun.transform.position.y < 10000)
-    //        {
-    //            sun.transform.position += new Vector3(20000, 20000, 0);
-    //        }
-    //    }
         random = Random.Range(0, skyboxes.Length);
         skyboxes[random].SetActive(true);
     }
+
+    public void NewSkybox()
+    {
+        foreach(GameObject go in skyboxes)
+        {
+            if(go.activeInHierarchy)
+            {
+                GameObject oldSkybox = go;
+                go.SetActive(false);
+
+                int newRandom = Random.Range(0, skyboxes.Length);
+                while (skyboxes[newRandom] == oldSkybox)
+                {
+                    newRandom = Random.Range(0, skyboxes.Length);
+                    if (skyboxes[newRandom] != oldSkybox)
+                    {
+                        skyboxes[newRandom].SetActive(true);
+                    }
+                }
+                if (skyboxes[newRandom] != oldSkybox)
+                {
+                    skyboxes[newRandom].SetActive(true);
+                }
+            }
+        }
+    }
+
 }
