@@ -3,62 +3,40 @@ using System.Collections;
 
 public class Warp : MonoBehaviour
 {
-    public GameObject[] warpTunnels;
-    public Light warpLight;
-    public Flare[] warpFlares;
-    public GameObject warpParticles;
+    public GameObject warpTunnel;
     public RandomSkybox randomSkybox;
     public WaveManager waveManager;
     public GameObject debrisField;
+    Animator warpAnim;
+    Vector3 targetScale = new Vector3(20, 20, 40);
 
-    void OnEnable()
+    void Start()
     {
-        warpParticles.SetActive(false);
-        warpLight.gameObject.SetActive(false);
-        foreach (GameObject go in warpTunnels)
-        {
-            go.SetActive(false);
-        }
+        warpAnim = warpTunnel.GetComponent<Animator>();
     }
-
+    
     public IEnumerator BeginWarp()
     {
         debrisField.SetActive(false);
-        warpParticles.SetActive(true);
+        warpTunnel.SetActive(true);
+        warpAnim.SetBool("IsWarping", false);
+        warpTunnel.transform.localScale = new Vector3(1, 1, 2);
 
-        yield return new WaitForSeconds(3f);
+        float overTime = 3;
+        float startTime = Time.time;
 
-        foreach(GameObject go in warpTunnels)
+        while (Time.time < startTime + overTime)
         {
-            go.SetActive(true);
+            warpTunnel.transform.localScale = Vector3.Lerp(warpAnim.transform.localScale, targetScale, .5f * Time.deltaTime);
+            yield return null;
         }
-        foreach(GameObject go in warpTunnels)
-        {
-            go.transform.localScale = new Vector3(1, 1, 15);
-        }
-
+        warpAnim.SetBool("IsWarping", true);
         yield return new WaitForSeconds(3);
-
-        warpLight.gameObject.SetActive(true);
-
-        for (int i = 0; i < warpFlares.Length; i++)
-        {
-            warpLight.flare = warpFlares[i];
-            yield return new WaitForSeconds(1f);
-        }
-
         randomSkybox.NewSkybox();
-        yield return new WaitForSeconds(.5f);
-
-        warpLight.gameObject.SetActive(false);
-        foreach(GameObject go in warpTunnels)
-        {
-            go.SetActive(false);
-        }
         yield return new WaitForSeconds(2);
-        warpParticles.SetActive(false);
-
         debrisField.SetActive(true);
         waveManager.CanSpawn();
+        yield return new WaitForSeconds(2);
+        warpTunnel.SetActive(false);
     }
 }
