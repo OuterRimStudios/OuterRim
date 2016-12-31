@@ -29,12 +29,14 @@ public class PauseGame : MonoBehaviour {
                 EventSystem.current.SetSelectedGameObject(selectedGameObject);
                 isPaused = true;
                 Time.timeScale = 0;
+                Cursor.visible = true;
                 pausePanel.SetActive(true);
             }
             else if(isPaused)
             {
                 isPaused = false;
                 Time.timeScale = 1;
+                Cursor.visible = false;
                 pausePanel.SetActive(false);
             }
         }
@@ -46,6 +48,7 @@ public class PauseGame : MonoBehaviour {
         {
             isPaused = false;
             Time.timeScale = 1;
+            Cursor.visible = false;
             pausePanel.SetActive(false);
         }
     }

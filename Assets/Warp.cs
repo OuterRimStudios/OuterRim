@@ -9,6 +9,7 @@ public class Warp : MonoBehaviour
     public GameObject warpParticles;
     public RandomSkybox randomSkybox;
     public WaveManager waveManager;
+    public GameObject debrisField;
 
     void OnEnable()
     {
@@ -22,6 +23,7 @@ public class Warp : MonoBehaviour
 
     public IEnumerator BeginWarp()
     {
+        debrisField.SetActive(false);
         warpParticles.SetActive(true);
 
         yield return new WaitForSeconds(3f);
@@ -56,6 +58,7 @@ public class Warp : MonoBehaviour
         yield return new WaitForSeconds(2);
         warpParticles.SetActive(false);
 
+        debrisField.SetActive(true);
         waveManager.CanSpawn();
     }
 }

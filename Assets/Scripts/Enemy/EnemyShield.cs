@@ -8,6 +8,7 @@ public class EnemyShield : MonoBehaviour
     public GameObject meteorExplosionPrefab;
     GameObject gameManager;
     GameObject player;
+    Enemy1Collision collisionScript;
 
     void Start()
     {
@@ -16,6 +17,9 @@ public class EnemyShield : MonoBehaviour
 
         switch (transform.parent.name)
         {
+            case "BasicShip":
+                startingHealth = gameManager.GetComponent<PublicVariableHandler>().enemy4ShieldHealth;
+                break;
             case "Enemy 04":
                 startingHealth = gameManager.GetComponent<PublicVariableHandler>().enemy4ShieldHealth;
                 break;
@@ -25,7 +29,8 @@ public class EnemyShield : MonoBehaviour
         }
 
         currentHealth = startingHealth;
-        GetComponentInParent<Enemy1Collision>().enabled = false;
+        collisionScript = GetComponentInParent<Enemy1Collision>();
+        collisionScript.enabled = false;
         meteorExplosionPrefab = player.GetComponent<StoreVariables>().meteorExplosion;
     }
 
@@ -42,7 +47,7 @@ public class EnemyShield : MonoBehaviour
             currentHealth--;
             if (currentHealth <= 0)
             {
-                GetComponentInParent<Enemy1Collision>().enabled = true;
+                collisionScript.enabled = true;
                 gameObject.SetActive(false);
             }
         }
