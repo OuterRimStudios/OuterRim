@@ -10,16 +10,14 @@ public class EnemyState : MonoBehaviour {
     bool canBeTarget;
     GameObject arrow;
     ObjectPooling arrowPool;
-    GameObject pointerPoolObject;
-    ObjectPooling pointerPool;
     GameObject pointer;
     bool hasArrow;
     Vector3 storeSize;
+
     void Start ()
     {
         player = GameObject.Find("Player");
-       // pointerPoolObject = GameObject.FindGameObjectWithTag("PointerPool");
-        pointerPool = GameObject.FindGameObjectWithTag("PointerPool").GetComponent<ObjectPooling>();
+        pointer = transform.FindChild("Pointer").gameObject;
         arrowPool = GameObject.FindGameObjectWithTag("ArrowPool").GetComponent<ObjectPooling>();
         fireMissile =GameObject.Find("MissileNozzle").GetComponent<FireMissile>();
         canBeTarget = true;
@@ -53,28 +51,10 @@ public class EnemyState : MonoBehaviour {
             Respawn();
 
        if (transform.position.z - player.transform.position.z > 4000)
-        {
-			if (!hasArrow) {
-				hasArrow = true;
-				pointer = pointerPool.GetPooledObject ();
-				pointer.transform.SetParent (transform);
-				pointer.transform.rotation = new Quaternion (180, pointer.transform.rotation.y, pointer.transform.rotation.z, 0);
-				pointer.transform.position = transform.position;
-				pointer.transform.localScale = new Vector3 (4.5f, 4.5f, 4.5f);
-                
-				pointer.SetActive (true);
-			} 
-			else
-            {
-				pointer.SetActive (true);
-			}
-
-        }
+			pointer.SetActive (true);
        else
-        {
-           // pointer.transform.SetParent(pointerPoolObject.transform);
             pointer.SetActive(false);
-        }
+
         //sets laser target
         if (transform.position.z - player.transform.position.z < 20000 &&
             transform.position.z - player.transform.position.z > 100 &&
