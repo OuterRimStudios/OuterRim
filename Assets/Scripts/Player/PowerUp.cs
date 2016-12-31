@@ -96,7 +96,7 @@ public class PowerUp : MonoBehaviour
     {
         if (!hit)
         {
-            if (other.name == "Colliders")
+            if (other.name == "Colliders" || other.tag == "PlayerCollider")
             {
                 hit = true;
                 ApplyPower();
