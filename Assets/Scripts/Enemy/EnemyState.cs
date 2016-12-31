@@ -52,7 +52,7 @@ public class EnemyState : MonoBehaviour {
             || Mathf.Abs(transform.position.z - player.transform.position.z) > 9500) && !onScreen)
             Respawn();
 
-       if (transform.position.z - player.transform.position.z > 100)
+       if (transform.position.z - player.transform.position.z > 4000)
         {
             if(!hasArrow)
             {
@@ -60,12 +60,8 @@ public class EnemyState : MonoBehaviour {
                 pointer = pointerPool.GetPooledObject();
                 pointer.transform.SetParent(transform);
                 pointer.transform.rotation = new Quaternion(180, pointer.transform.rotation.y, pointer.transform.rotation.z, 0);
-                pointer.transform.position = new Vector3(transform.position.x, transform.position.y + 100, transform.position.z);
-
-                if (transform.name == "BasicShip")
-                    pointer.transform.localScale = new Vector3(25f, 25f, 25f);
-                else
-                    pointer.transform.localScale = new Vector3(4.5f, 4.5f, 4.5f);
+				pointer.transform.position = transform.position;
+                pointer.transform.localScale = new Vector3(4.5f, 4.5f, 4.5f);
                 
                 pointer.SetActive(true);
             }
