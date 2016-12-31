@@ -85,6 +85,13 @@ public class EnemyAI : MonoBehaviour
            // transform.position = Vector3.MoveTowards(transform.position, playerPosition, warpSpeed);     //Warp In
             warped = true;
         }
+        else
+        {
+            if(transform.tag == "Carrier")
+            {
+                transform.LookAt(transform);
+            }
+        }
 
         if (transform.position.z - player.transform.position.z < 1000)
             transform.LookAt(transform.forward);

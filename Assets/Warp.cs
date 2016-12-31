@@ -6,7 +6,6 @@ public class Warp : MonoBehaviour
     public GameObject warpTunnel;
     public RandomSkybox randomSkybox;
     public WaveManager waveManager;
-    public GameObject debrisField;
     Animator warpAnim;
     Vector3 targetScale = new Vector3(20, 20, 40);
 
@@ -17,7 +16,7 @@ public class Warp : MonoBehaviour
     
     public IEnumerator BeginWarp()
     {
-        debrisField.SetActive(false);
+        DebrisField.canSpawn = false;
         warpTunnel.SetActive(true);
         warpAnim.SetBool("IsWarping", false);
         warpTunnel.transform.localScale = new Vector3(1, 1, 2);
@@ -34,7 +33,7 @@ public class Warp : MonoBehaviour
         yield return new WaitForSeconds(3);
         randomSkybox.NewSkybox();
         yield return new WaitForSeconds(2);
-        debrisField.SetActive(true);
+        DebrisField.canSpawn = true;
         waveManager.CanSpawn();
         yield return new WaitForSeconds(2);
         warpTunnel.SetActive(false);

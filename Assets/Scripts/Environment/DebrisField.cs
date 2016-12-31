@@ -15,6 +15,7 @@ public class DebrisField : MonoBehaviour
     public float objSpawnZ;
     bool spawning;
     public Vector3[] sizes;
+    public static bool canSpawn;
 	// Use this for initialization
 	void Start () 
     {
@@ -24,11 +25,13 @@ public class DebrisField : MonoBehaviour
         {
             objectPools[i] = objectTypes[i].GetComponent<ObjectPooling>();
         }
+        canSpawn = true;
 	}
 	
 	// Update is called once per frame
     void Update()
     {
+        if(canSpawn)
         StartSpawning();
     }
 
