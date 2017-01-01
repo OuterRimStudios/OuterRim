@@ -27,7 +27,7 @@ public class EnemyAI : MonoBehaviour
             switch (transform.name)
             {
                 case "BaseShip":
-                    speed = 100;
+                    speed = 300;
                     warpSpeed = 100;
                     break;
                 case "Enemy 01":
@@ -76,50 +76,27 @@ public class EnemyAI : MonoBehaviour
 	
 	void FixedUpdate ()
     {
-        playerPosition = new Vector3(Random.Range(player.transform.position.x - 100, player.transform.position.x + 100), Random.Range(player.transform.position.y - 100, player.transform.position.y + 100), player.transform.position.z);
+        playerPosition = new Vector3(Random.Range(player.transform.position.x - 50, player.transform.position.x + 50), Random.Range(player.transform.position.y - 50, player.transform.position.y + 50), player.transform.position.z);
 
         if (Vector3.Distance(transform.position, player.transform.position) > 3500)  //If the AI is furthure than 500 meters from the player.
         {
-            transform.LookAt(player.transform);
-            transform.Translate(Vector3.forward * warpSpeed * Time.deltaTime);
-           // transform.position = Vector3.MoveTowards(transform.position, playerPosition, warpSpeed);     //Warp In
-            warped = true;
+            transform.LookAt(playerPosition);
+            transform.Translate(Vector3.forward * speed * Time.deltaTime);
         }
         else
         {
-            if(transform.tag == "Carrier")
-            {
-                transform.LookAt(transform);
-            }
+            transform.LookAt(transform);
+            transform.Translate(Vector3.forward * speed * Time.deltaTime);
         }
 
-        if (transform.position.z - player.transform.position.z < 1000)
-            transform.LookAt(transform.forward);
-        else
-            transform.LookAt(player.transform);
-
-        if (warped) //If you are warped in.
+        if (transform.position.z <= -70)   //If you go to far, shut off.
         {
-            if (tag == "Carrier")
+            if (transform.tag == "Carrier")
             {
-                transform.position = Vector3.Lerp(transform.position, new Vector3(playerPosition.x, playerPosition.y, playerPosition.z - 1000f), 0.05f * Time.deltaTime);
+                gameObject.SetActive(false);
             }
-            else
-            {
-                transform.LookAt(transform.forward);
-                transform.Translate(Vector3.forward * speed * Time.deltaTime);
-            }
-                    //(transform.position, new Vector3 (playerPosition.x, playerPosition.y, playerPosition.z - 1000f), 0.25f * Time.deltaTime);    //Move forward
 
-            if (transform.position.z <= 0)   //If you go to far, shut off.
-            {
-                if (transform.tag == "Carrier")
-                {
-                    gameObject.SetActive(false);
-                }
-
-                transform.position = gameManager.GetComponent<WaveManager>().ChooseLocation();
-            }
+            transform.position = gameManager.GetComponent<WaveManager>().ChooseLocation();
         }
     }
 }

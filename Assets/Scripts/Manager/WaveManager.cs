@@ -65,6 +65,7 @@ public class WaveManager : MonoBehaviour
     float checkWave;
     float checkWave2;
     float checkWave3;
+    float checkWave4;
 
     public ObjectPooling basicEnemyPool;
     [Tooltip("This is the max amount of basic enemies that can be spawned. This number will increase each wave by 2")]
@@ -260,6 +261,12 @@ public class WaveManager : MonoBehaviour
             if (waveCount != checkWave2)
                 publicVariableHandler.IncreaseWavePool();
             checkWave2 = waveCount;
+        }
+        if (waveCount % 2 == 0 && waveCount != 0)
+        {
+            if (waveCount != checkWave4)
+                publicVariableHandler.IncreaseBasicEnemies();
+            checkWave4 = waveCount;
         }
 
         waveStartingText.gameObject.SetActive(true);

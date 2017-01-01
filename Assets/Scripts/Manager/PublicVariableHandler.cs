@@ -191,8 +191,12 @@ public class PublicVariableHandler : MonoBehaviour
     {
         if (waveManager.maxHPAllowed <= 250)
             waveManager.maxHPAllowed += 3;
+    }
+
+    public void IncreaseBasicEnemies()
+    {
         //Increases the allowed amount of basic enemies
-        if (waveManager.allowedBasicEnemies <= 50)
+        if (waveManager.allowedBasicEnemies <= 30)
             waveManager.allowedBasicEnemies += 1;
     }
 
