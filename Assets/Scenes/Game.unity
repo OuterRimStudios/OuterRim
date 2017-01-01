@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.026
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.00003505448, g: 0.000035202116, b: 0.00003500223,
+  m_IndirectSpecularColor: {r: 0.000034951663, g: 0.000035013225, b: 0.000034899087,
     a: 0.026}
 --- !u!157 &4
 LightmapSettings:
@@ -774,7 +774,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 77e3e012ba915ac47aaf30c11ab78ba0, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 7509faa3976b6d64aaf6fb8cf491ef9b, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -4548,8 +4548,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1074457664}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -202, z: 2228}
-  m_LocalScale: {x: 1.4308963, y: 0.3, z: 0.3427398}
+  m_LocalPosition: {x: -67.1, y: -29, z: 345.2}
+  m_LocalScale: {x: 0.5471069, y: 0.09312019, z: 0.028153498}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 235054872}
@@ -6324,10 +6324,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1447272288}
-  m_LocalRotation: {x: 0, y: 0, z: 0.6697141, w: 0.74261904}
-  m_LocalPosition: {x: -186, y: 13, z: 2011}
-  m_LocalScale: {x: 0.3, y: -3.622773, z: 0.6256558}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.0000000037252899, y: 0.0000000037252899, z: 0.6993428, w: 0.71478647}
+  m_LocalPosition: {x: -186, y: -17.4, z: 330.2}
+  m_LocalScale: {x: 0.08934391, y: -1.1245109, z: 0.051392917}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 88.785}
   m_Children:
   - {fileID: 2093367885}
   - {fileID: 642741201}
@@ -6549,7 +6549,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: fe8125d0625ce3a43ae6fcdecfb0548b, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d78f2b730792f92479c646c658121822, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -7775,7 +7775,7 @@ MonoBehaviour:
   sepBlurSpread: 3.61
   quality: 1
   bloomIntensity: 1.3
-  bloomThreshold: 0.55
+  bloomThreshold: 0.48
   bloomThresholdColor: {r: 1, g: 1, b: 1, a: 1}
   bloomBlurIterations: 2
   hollywoodFlareBlurIterations: 2
@@ -8900,7 +8900,6 @@ MonoBehaviour:
   warpTunnel: {fileID: 1458398165}
   randomSkybox: {fileID: 1250030432}
   waveManager: {fileID: 555410813}
-  debrisField: {fileID: 568474987}
 --- !u!1 &1692531980 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1000012727074922, guid: d5d340159cd934f4288ac85ee4b4944f,
@@ -10167,10 +10166,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1889965053}
-  m_LocalRotation: {x: 0, y: 0, z: -0.9040826, w: 0.4273578}
-  m_LocalPosition: {x: -44, y: -69, z: 2156}
-  m_LocalScale: {x: 0.75952107, y: 0.3, z: 0.42084596}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0.000000006200935, y: -0.000000007450581, z: -1, w: 0.00033964159}
+  m_LocalPosition: {x: -42, y: -11.4, z: 359.2}
+  m_LocalScale: {x: 0.48429155, y: 0.09312019, z: 0.03456933}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -179.962}
   m_Children:
   - {fileID: 1122038468}
   - {fileID: 1517421542}
