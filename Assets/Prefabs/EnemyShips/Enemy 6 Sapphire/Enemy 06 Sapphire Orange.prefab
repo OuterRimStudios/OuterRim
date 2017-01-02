@@ -32,6 +32,7 @@ GameObject:
   - 114: {fileID: 114000011311602522}
   - 114: {fileID: 114000012421357796}
   - 136: {fileID: 136000013897279524}
+  - 114: {fileID: 114000012348528814}
   m_Layer: 0
   m_Name: Enemy 06 Sapphire Orange
   m_TagString: Enemy
@@ -4983,6 +4984,19 @@ MonoBehaviour:
   m_SpeedEffect: 5
   m_TakeoffHeight: 0
   m_Target: {fileID: 443704, guid: d181b18c457379142a5c1ff373318a37, type: 2}
+--- !u!114 &114000012348528814
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 113626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4380c6f1428ce44bb134f1dc143816e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minSpeed: 800
+  maxSpeed: 1200
 --- !u!114 &114000012421357796
 MonoBehaviour:
   m_ObjectHideFlags: 1

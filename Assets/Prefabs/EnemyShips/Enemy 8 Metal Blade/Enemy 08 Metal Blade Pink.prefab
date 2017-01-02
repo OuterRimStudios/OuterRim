@@ -311,6 +311,7 @@ GameObject:
   - 114: {fileID: 114000011722212454}
   - 114: {fileID: 114000010716038036}
   - 136: {fileID: 136000014160404926}
+  - 114: {fileID: 114000013180009912}
   m_Layer: 0
   m_Name: Enemy 08 Metal Blade Pink
   m_TagString: Enemy
@@ -7011,6 +7012,19 @@ MonoBehaviour:
   m_AirBrakesEffect: 0
   m_ThrottleChangeSpeed: 2
   m_DragIncreaseFactor: 0.00095
+--- !u!114 &114000013180009912
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 196692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4380c6f1428ce44bb134f1dc143816e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minSpeed: 800
+  maxSpeed: 1200
 --- !u!114 &114000014101020210
 MonoBehaviour:
   m_ObjectHideFlags: 1

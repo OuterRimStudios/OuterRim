@@ -835,6 +835,7 @@ GameObject:
   - 114: {fileID: 11489428}
   - 136: {fileID: 13605322}
   - 114: {fileID: 11431522}
+  - 114: {fileID: 114000014081837892}
   m_Layer: 0
   m_Name: Enemy 02 CWing Yellow
   m_TagString: Enemy
@@ -10474,6 +10475,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5fe9fa792377d74ab147dd91d935461, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114000014081837892
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 195414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4380c6f1428ce44bb134f1dc143816e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minSpeed: 800
+  maxSpeed: 1200
 --- !u!114 &114000014242388316
 MonoBehaviour:
   m_ObjectHideFlags: 1

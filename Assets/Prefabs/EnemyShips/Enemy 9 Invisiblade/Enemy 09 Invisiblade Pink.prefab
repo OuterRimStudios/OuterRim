@@ -50,6 +50,7 @@ GameObject:
   - 114: {fileID: 114000012141971918}
   - 114: {fileID: 114000014107178572}
   - 136: {fileID: 136000010942446932}
+  - 114: {fileID: 114000012300586632}
   m_Layer: 0
   m_Name: Enemy 09 Invisiblade Pink
   m_TagString: Enemy
@@ -4884,6 +4885,19 @@ MonoBehaviour:
   m_SpeedEffect: 0
   m_TakeoffHeight: 0
   m_Target: {fileID: 437730, guid: 15275c4ee1c1b7148b92e6123cce0587, type: 2}
+--- !u!114 &114000012300586632
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 105972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4380c6f1428ce44bb134f1dc143816e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minSpeed: 800
+  maxSpeed: 1200
 --- !u!114 &114000012332260454
 MonoBehaviour:
   m_ObjectHideFlags: 1

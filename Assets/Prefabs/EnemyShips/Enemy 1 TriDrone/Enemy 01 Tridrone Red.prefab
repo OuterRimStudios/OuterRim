@@ -514,6 +514,7 @@ GameObject:
   - 114: {fileID: 11493390}
   - 136: {fileID: 13649900}
   - 114: {fileID: 11474038}
+  - 114: {fileID: 114000010351936038}
   m_Layer: 0
   m_Name: Enemy 01 Tridrone Red
   m_TagString: Enemy
@@ -768,7 +769,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 123194}
   m_LocalRotation: {x: 0.12499033, y: 0.00086336216, z: 0.6993425, w: 0.70377326}
-  m_LocalPosition: {x: 304.9904, y: -448.79456, z: 128.57256}
+  m_LocalPosition: {x: 431.9889, y: 342.0213, z: 114.60433}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -5559,6 +5560,19 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   waittingTime: 0
   copy: 0
+--- !u!114 &114000010351936038
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 197876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4380c6f1428ce44bb134f1dc143816e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minSpeed: 800
+  maxSpeed: 1200
 --- !u!114 &114000010374913504
 MonoBehaviour:
   m_ObjectHideFlags: 1

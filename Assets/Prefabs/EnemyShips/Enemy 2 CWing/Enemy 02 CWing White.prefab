@@ -867,6 +867,7 @@ GameObject:
   - 114: {fileID: 11421792}
   - 136: {fileID: 13690464}
   - 114: {fileID: 11425304}
+  - 114: {fileID: 114000010549402706}
   m_Layer: 0
   m_Name: Enemy 02 CWing White
   m_TagString: Enemy
@@ -10382,6 +10383,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5fe9fa792377d74ab147dd91d935461, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114000010549402706
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 198274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4380c6f1428ce44bb134f1dc143816e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minSpeed: 800
+  maxSpeed: 1200
 --- !u!114 &114000010761587232
 MonoBehaviour:
   m_ObjectHideFlags: 1

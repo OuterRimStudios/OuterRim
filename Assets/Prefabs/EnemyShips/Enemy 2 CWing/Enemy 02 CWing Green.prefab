@@ -133,6 +133,7 @@ GameObject:
   - 114: {fileID: 11420032}
   - 136: {fileID: 13655600}
   - 114: {fileID: 11430648}
+  - 114: {fileID: 114000010300485454}
   m_Layer: 0
   m_Name: Enemy 02 CWing Green
   m_TagString: Enemy
@@ -10418,6 +10419,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1500
+--- !u!114 &114000010300485454
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 115532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4380c6f1428ce44bb134f1dc143816e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minSpeed: 800
+  maxSpeed: 1200
 --- !u!114 &114000011866787538
 MonoBehaviour:
   m_ObjectHideFlags: 1

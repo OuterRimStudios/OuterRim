@@ -55,16 +55,16 @@ public class EnemyState : MonoBehaviour {
        else
             pointer.SetActive(false);
 
-        //sets laser target
-        if (transform.position.z - player.transform.position.z < 20000 &&
-            transform.position.z - player.transform.position.z > 100 &&
-            transform.position.y - player.transform.position.y < transform.position.z * .1f &&
-            transform.position.y - player.transform.position.y > -transform.position.z * .1f &&
-            transform.position.x - player.transform.position.x < transform.position.z * .1f &&
-            transform.position.x - player.transform.position.x > -transform.position.z * .1f)
-        {
-            player.GetComponent<AimAssist>().FoundTarget(transform.FindChild("LookAtPoint").gameObject);
-        }
+        ////sets laser target
+        //if (transform.position.z - player.transform.position.z < 20000 &&
+        //    transform.position.z - player.transform.position.z > 100 &&
+        //    transform.position.y - player.transform.position.y < transform.position.z * .1f &&
+        //    transform.position.y - player.transform.position.y > -transform.position.z * .1f &&
+        //    transform.position.x - player.transform.position.x < transform.position.z * .1f &&
+        //    transform.position.x - player.transform.position.x > -transform.position.z * .1f)
+        //{
+        //    player.GetComponent<AimAssist>().FoundTarget(transform.FindChild("LookAtPoint").gameObject);
+        //}
 
         //sets missile target
         if ( transform.position.z - player.transform.position.z < 8000 &&
