@@ -9,22 +9,22 @@ public class Destructable : MonoBehaviour
 	[HideInInspector]
 	public int currentHealth;
 
-    GameObject explosion;
 	GameObject gameManager;
-	GameObject hitEffect;
     PlayerScore playerScore;
 
 	PublicVariableHandler publicVariableHandler;
+    ObjectPooling hitEffectsPool;
+    ObjectPooling meteorExplosions;
 
     void Start()
     {
 		gameManager = GameObject.Find("GameManager");
         playerScore = GameObject.Find("Player").GetComponent<PlayerScore>();
 		publicVariableHandler = gameManager.GetComponent<PublicVariableHandler> ();
-		explosion = publicVariableHandler.meteorExplosion;
-		hitEffect = publicVariableHandler.hitEffect;
 		baseHealth = publicVariableHandler.meteorHealth;
 		currentHealth = baseHealth;
+        hitEffectsPool = GameObject.Find("HitEffectPool").GetComponent<ObjectPooling>();
+        meteorExplosions = GameObject.Find("MeteorExplosions").GetComponent<ObjectPooling>();
     }
     void OnTriggerEnter(Collider other)
     {
@@ -32,21 +32,24 @@ public class Destructable : MonoBehaviour
         {
 			LoseHealth ();
             //CreateHitEffect(other.gameObject);
-			Instantiate (hitEffect, other.transform.position, other.transform.rotation);
-			other.GetComponentInChildren<Light> ().enabled = false;
+            //Instantiate (hitEffect, other.transform.position, other.transform.rotation);
+            SpawnEffect("Hit");
+            other.GetComponentInChildren<Light> ().enabled = false;
 			other.gameObject.GetComponentInChildren<MeshRenderer>().enabled = false;
         }
 
         if(other.tag == "PlayerCollider")
         {
             other.GetComponent<PlayerCollision>().AsteroidHit();
-            Instantiate(explosion, transform.position, transform.rotation);
+            //Instantiate(explosion, transform.position, transform.rotation);
+            SpawnEffect("Explosion");
             gameObject.SetActive(false);
         }
 
         if(other.tag == "Enemy")
         {
-            Instantiate(explosion, transform.position, transform.rotation);
+            //Instantiate(explosion, transform.position, transform.rotation);
+            SpawnEffect("Explosion");
             gameObject.SetActive(false);
         }
     }
@@ -57,8 +60,44 @@ public class Destructable : MonoBehaviour
         if (currentHealth <= 0)
         {
             playerScore.score += 100;
-			Instantiate(explosion, transform.position, transform.rotation);
-			gameObject.SetActive(false);
+            //Instantiate(explosion, transform.position, transform.rotation);
+            SpawnEffect("Explosion");
+            gameObject.SetActive(false);
 		}
 	}
+
+    public void SpawnEffect(string type)
+    {
+        GameObject effect = null;
+        switch (type)
+        {
+            case "Explosion":
+                effect = meteorExplosions.GetPooledObject();
+                break;
+            case "Hit":
+                effect = hitEffectsPool.GetPooledObject();
+                break;
+            default:
+                effect = null;
+                break;
+        }
+
+
+        if (effect == null)
+            return;
+
+        effect.transform.position = transform.position;
+        effect.SetActive(true);
+    }
+
+    void SpawnEffect(Vector3 positionHit)
+    {
+        GameObject effect = null;
+        effect = hitEffectsPool.GetPooledObject();
+        if (effect == null)
+            return;
+
+        effect.transform.position = positionHit;
+        effect.SetActive(true);
+    }
 }

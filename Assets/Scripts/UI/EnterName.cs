@@ -37,11 +37,9 @@ public class EnterName : MonoBehaviour {
         if (textBox.text.Trim().Length > 0)
         {
             username = textBox.text;
-            if (remember)
-            {
-                PlayerPrefs.SetString("Username", username);
-            }
+            PlayerPrefs.SetString("Username", username);
             UpdateGreeting();
+            PlayerPrefs.SetString("Remember", remember.ToString());
             initialMenu.SetActive(false);
             EventSystem.current.SetSelectedGameObject(startButton);
         }
@@ -67,7 +65,6 @@ public class EnterName : MonoBehaviour {
     {
         remember = !remember;
         PlayerPrefs.SetString("Remember", remember.ToString());
-        print(remember.ToString());
     }
 
     public void UpdateGreeting()

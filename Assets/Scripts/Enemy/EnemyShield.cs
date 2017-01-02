@@ -5,10 +5,10 @@ public class EnemyShield : MonoBehaviour
 {
     public int startingHealth;
     public int currentHealth;
-    public GameObject meteorExplosionPrefab;
     GameObject gameManager;
     GameObject player;
     Enemy1Collision collisionScript;
+    ObjectPooling meteorExplosions;
 
     void Start()
     {
@@ -31,7 +31,7 @@ public class EnemyShield : MonoBehaviour
         currentHealth = startingHealth;
         collisionScript = GetComponentInParent<Enemy1Collision>();
         collisionScript.enabled = false;
-        meteorExplosionPrefab = player.GetComponent<StoreVariables>().meteorExplosion;
+        meteorExplosions = GameObject.Find("MeteorExplosions").GetComponent<ObjectPooling>();
     }
 
     public void OnSpawn()
@@ -56,10 +56,32 @@ public class EnemyShield : MonoBehaviour
         {
             if (other.tag == "Meteor")
             {
-                Instantiate(meteorExplosionPrefab, transform.position, transform.rotation);
+                SpawnEffect("Explosion");
+                //Instantiate(meteorExplosionPrefab, transform.position, transform.rotation);
                 other.gameObject.SetActive(false);
                 gameObject.SetActive(false);
             }
         }
+    }
+
+    public void SpawnEffect(string type)
+    {
+        GameObject effect = null;
+        switch (type)
+        {
+            case "Explosion":
+                effect = meteorExplosions.GetPooledObject();
+                break;
+            default:
+                effect = null;
+                break;
+        }
+
+
+        if (effect == null)
+            return;
+
+        effect.transform.position = transform.position;
+        effect.SetActive(true);
     }
 }

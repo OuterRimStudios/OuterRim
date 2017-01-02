@@ -3,7 +3,7 @@ using System.Collections;
 
 public class TurnOffAfter : MonoBehaviour
 {
-	void Awake ()
+	void OnEnable ()
     {
         StartCoroutine(Despawn());
 	}

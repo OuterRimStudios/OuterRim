@@ -8,14 +8,17 @@ public class Shield : MonoBehaviour
     public GameObject explosion;
     GameObject gameManager;
     GameObject player;
+    PublicVariableHandler publicVariableHandler;
+    ObjectPooling meteorExplosions;
 
     void Start()
     {
         player = GameObject.Find("Player");
         gameManager = GameObject.Find("GameManager");
-		explosion = gameManager.GetComponent<PublicVariableHandler> ().meteorExplosion;
-        startingHealth = gameManager.GetComponent<PublicVariableHandler>().playerShieldHealth;
+        publicVariableHandler = gameManager.GetComponent<PublicVariableHandler>();
+        startingHealth = publicVariableHandler.playerShieldHealth;
         currentHealth = startingHealth;
+        meteorExplosions = GameObject.Find("MeteorExplosions").GetComponent<ObjectPooling>();
     }
 
     void OnTriggerEnter(Collider other)
@@ -27,13 +30,15 @@ public class Shield : MonoBehaviour
         }
         else if (other.tag == "Meteor")
         {
-            Instantiate(explosion, transform.position, transform.rotation);
+            SpawnEffect("MeteorExplosion");
+            //Instantiate(explosion, transform.position, transform.rotation);
             other.gameObject.SetActive(false);
             ShieldDestroyed();
         }
         else if (other.tag == "Enemy")
         {
-            Instantiate(explosion, transform.position, transform.rotation);
+            SpawnEffect("ShipExplosion");
+            //Instantiate(explosion, transform.position, transform.rotation);
             other.GetComponent<Enemy1Collision>().WasDestroyed(false);
             ShieldDestroyed();
         }
@@ -44,6 +49,7 @@ public class Shield : MonoBehaviour
         currentHealth--;
         if (currentHealth <= 0)
         {
+            player.transform.FindChild("ShipContainer").FindChild("Colliders").GetComponent<PlayerCollision>().enabled = true;
             gameObject.SetActive(false);
         }
     }
@@ -52,5 +58,29 @@ public class Shield : MonoBehaviour
     {
         player.transform.FindChild("ShipContainer").FindChild("Colliders").GetComponent<PlayerCollision>().enabled = true;
         gameObject.SetActive(false);
+    }
+
+    public void SpawnEffect(string type)
+    {
+        GameObject effect = null;
+        switch (type)
+        {
+            case "ShipExplosion":
+                effect = publicVariableHandler.shipExplosionPools[Random.Range(0, publicVariableHandler.shipExplosionPools.Length)].GetPooledObject();
+                break;
+            case "MeteorExplosion":
+                effect = meteorExplosions.GetPooledObject();
+                break;
+            default:
+                effect = null;
+                break;
+        }
+
+
+        if (effect == null)
+            return;
+
+        effect.transform.position = transform.position;
+        effect.SetActive(true);
     }
 }

@@ -22,7 +22,6 @@ public class Enemy1Collision : MonoBehaviour
     AchievementManager achievementManager;
     PublicVariableHandler publicVariableHandler;
 
-    ObjectPooling explosionPool;
     ObjectPooling hitEffectsPool;
     ObjectPooling meteorExplosions;
 
@@ -139,15 +138,19 @@ public class Enemy1Collision : MonoBehaviour
         }
         else if (col.gameObject.tag == "Missile")
         {
-            fireMissile.hasTarget = false;
-            WasDestroyed(true);
+            if (gameObject.tag == "Carrier")
+                TookDamage(3);
+            else
+                WasDestroyed(true);
+
+            fireMissile.hasTarget = false;            
             Destroy(col.gameObject);
         }
+
         if (col.gameObject.tag == "Meteor")
         {
             SpawnEffect("MeteorExplosion");
             col.gameObject.SetActive(false);
-            // WasDestroyed(false);
         }
     }
 
@@ -155,6 +158,16 @@ public class Enemy1Collision : MonoBehaviour
     {
         SpawnEffect("Hit");
         currentHealth--;
+        if (currentHealth <= 0)
+        {
+            WasDestroyed(true);
+        }
+    }
+
+    public void TookDamage(int amount)
+    {
+        SpawnEffect("Hit");
+        currentHealth -= amount;
         if (currentHealth <= 0)
         {
             WasDestroyed(true);

@@ -67,8 +67,9 @@ public class PlayerCollision : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        if (this.enabled)
+        if (enabled)
         {
+            
             if (col.gameObject.tag == "Enemy Laser")
             {
                 col.gameObject.SetActive(false);
@@ -112,8 +113,11 @@ public class PlayerCollision : MonoBehaviour
 
     public void AsteroidHit()
     {
-        playerHealth -= 3;
-        CheckHealth();
+        if (enabled)
+        {
+            playerHealth -= 3;
+            CheckHealth();
+        }
     }
 
     IEnumerator DamageIndicator()

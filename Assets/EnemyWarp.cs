@@ -26,7 +26,7 @@ public class EnemyWarp : MonoBehaviour
 
     void Update()
     {
-        if(transform.position.z - player.transform.position.z > 4500)
+        if(transform.position.z - player.transform.position.z > 2750)
         {
             transform.LookAt(player.transform);
             transform.Translate(Vector3.forward * speed * Time.deltaTime);

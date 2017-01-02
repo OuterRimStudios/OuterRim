@@ -16,7 +16,6 @@ public class OptionsScript : MonoBehaviour {
 	void Start () {
         if (isMuteToggle)
         {
-            print(PlayerPrefs.GetString("Muted"));
             if (PlayerPrefs.GetString("Muted") == "False")
             {
                 GetComponent<Toggle>().isOn = true;
@@ -62,6 +61,5 @@ public class OptionsScript : MonoBehaviour {
     {
         listner.enabled = !listner.enabled;
         PlayerPrefs.SetString("Muted", listner.enabled.ToString());
-        print(PlayerPrefs.GetString("Muted"));
     }
 }
