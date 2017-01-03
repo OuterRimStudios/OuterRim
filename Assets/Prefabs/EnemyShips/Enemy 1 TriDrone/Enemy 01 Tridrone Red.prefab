@@ -508,7 +508,6 @@ GameObject:
   - 114: {fileID: 11486208}
   - 54: {fileID: 5420524}
   - 114: {fileID: 11490926}
-  - 82: {fileID: 8209160}
   - 114: {fileID: 11404404}
   - 114: {fileID: 11489230}
   - 114: {fileID: 11493390}
@@ -768,8 +767,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 123194}
-  m_LocalRotation: {x: 0.1748639, y: 3.5953462e-12, z: -3.1213077e-10, w: 0.9845927}
-  m_LocalPosition: {x: -461.9215, y: -341.75034, z: 135.73512}
+  m_LocalRotation: {x: 0.000059384936, y: -0.0012346281, z: -0.99999917, w: 0.00033440965}
+  m_LocalPosition: {x: -173.16808, y: -191.76962, z: 122.753006}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -1328,80 +1327,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 6, y: 0.5, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!82 &8209160
-AudioSource:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 197876}
-  m_Enabled: 0
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 111a6bf7867ea2e46bbc8b293182ef19, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 0.5
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Spatialize: 0
-  Priority: 128
-  DopplerLevel: 0.01
-  MinDistance: 150
-  MaxDistance: 202
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0.44166666
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0.468
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
 --- !u!114 &11404404
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -46,7 +46,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 90ccbd54819e8df49921c428ee4b6c68, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.66
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -80,7 +80,7 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - time: 0
-      value: 0.16
+      value: 0.52
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -102,7 +102,7 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - time: 0
-      value: 0.38
+      value: 0.5
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -1912,6 +1912,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   volumeType: ExplosionVolume
+  sources: []
 --- !u!114 &114000013216944730
 MonoBehaviour:
   m_ObjectHideFlags: 1
