@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.026
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.000034951663, g: 0.000035013225, b: 0.000034899087,
+  m_IndirectSpecularColor: {r: 0.00003505448, g: 0.000035202116, b: 0.00003500223,
     a: 0.026}
 --- !u!157 &4
 LightmapSettings:
@@ -2256,10 +2256,8 @@ MonoBehaviour:
   - {fileID: 1838805899}
   meteorExplosion: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
   meteorHealth: 8
-  laserNoLevelSound: {fileID: 8300000, guid: 1b54b9b6383350844bc63bc202881293, type: 3}
-  laserLevel1Sound: {fileID: 8300000, guid: d6690401f8a263e4a927e136c14d7131, type: 3}
-  laserLevel2Sound: {fileID: 8300000, guid: 8fb2a93bd17cea74ca6ffb03a5df0d79, type: 3}
-  laserLevel3Sound: {fileID: 8300000, guid: 52212d344f5f019409266df5986aba62, type: 3}
+  normalLaserSound: {fileID: 8300000, guid: 831129b7c8fa8614486591982f672161, type: 3}
+  dualLaserSound: {fileID: 8300000, guid: 1b54b9b6383350844bc63bc202881293, type: 3}
   missileSound: {fileID: 8300000, guid: f9ea50d7c90c4804cb7a4db912925ba7, type: 3}
   fadeOut: {fileID: 1494826401}
   shipIMG1: {fileID: 1760556309}

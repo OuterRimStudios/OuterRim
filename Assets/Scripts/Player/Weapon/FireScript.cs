@@ -47,11 +47,7 @@ public class FireScript : MonoBehaviour {
 		else if (transform.tag == "PodRight")
 			fireFreq = .5f;
 
-        noLevelSound = publicVariableHandler.laserNoLevelSound;
-        level1Sound = publicVariableHandler.laserLevel1Sound;
-        level2Sound = publicVariableHandler.laserLevel2Sound;
-        level3Sound = publicVariableHandler.laserLevel3Sound;
-
+        noLevelSound = publicVariableHandler.normalLaserSound;
         if (GetComponent<LaserSound>() != null)
         {
             laserSound = GetComponent<LaserSound>();
@@ -134,8 +130,10 @@ public class FireScript : MonoBehaviour {
     IEnumerator DualLaserPickUpActive()
     {
         yield return new WaitForSeconds(dualLaserActiveTime);
-        //  if (laserSound)
-        //  laserSound.LevelChange(level1Sound);
+
+        if (laserSound)
+        laserSound.LevelChange();
+
         foreach (GameObject go in player.GetComponent<StoreVariables>().upgradeWeapons)
         {
             go.SetActive(false);

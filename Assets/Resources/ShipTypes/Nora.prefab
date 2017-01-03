@@ -110,6 +110,7 @@ GameObject:
   - 33: {fileID: 33000012432575992}
   - 23: {fileID: 23000013793608904}
   - 114: {fileID: 114000012142529322}
+  - 114: {fileID: 114000013411734904}
   m_Layer: 0
   m_Name: Gun2 (1)
   m_TagString: PodLeft
@@ -446,7 +447,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1000013211796406
 GameObject:
   m_ObjectHideFlags: 1
@@ -1783,7 +1784,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a75bf0112ddc314c813a5f59fe73ec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  launcher: {fileID: 114000010542300892}
 --- !u!114 &114000010542300892
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1795,52 +1795,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c74922679efb7e64da460a0825d58bb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arcPrefab: {fileID: 100000, guid: 65892b8e90c174047af5617380d97366, type: 2}
-  helperPrefab: {fileID: 0}
-  launchMethod: 0
-  Distance: 5000
-  PropagationSpeed: 10000
-  layers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  startBehaviour: 1
-  endBehaviour: 1
-  SendMessageToHitObjects: 0
-  SendMessageToTouchedObjects: 0
-  touchLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  reflectionSettings:
-    reflections: 0
-    reflectors: []
-    reflectLayers:
-      serializedVersion: 2
-      m_Bits: 0
-    thickness: 0.05
-    sendMessageToReflectors: 0
-  rayInertiaSettings:
-    type: 0
-    speed: 8
-    detalization: 10
-    localDetalization: 1
-    snapbackForceCurve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    maxSnapBackDistance: 100
-  globalSpaceTransform: {fileID: 0}
 --- !u!114 &114000010631017334
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1970,6 +1924,18 @@ MonoBehaviour:
   startingHealth: 0
   currentHealth: 0
   explosion: {fileID: 0}
+--- !u!114 &114000013411734904
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010565355026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81db0c625e2aa0447a1e8bc61424e971, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laserSound: {fileID: 0}
 --- !u!114 &114000013493300234
 MonoBehaviour:
   m_ObjectHideFlags: 1

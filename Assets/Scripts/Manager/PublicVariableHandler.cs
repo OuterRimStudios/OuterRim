@@ -15,10 +15,8 @@ public class PublicVariableHandler : MonoBehaviour
 	public int meteorHealth;
 
     //Laser Sounds
-    public AudioClip laserNoLevelSound;
-    public AudioClip laserLevel1Sound;
-    public AudioClip laserLevel2Sound;
-    public AudioClip laserLevel3Sound;
+    public AudioClip normalLaserSound;
+    public AudioClip dualLaserSound;
 
     //Missile Sounds
     public AudioClip missileSound;

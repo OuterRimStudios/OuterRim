@@ -2129,7 +2129,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a75bf0112ddc314c813a5f59fe73ec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  launcher: {fileID: 345088771}
 --- !u!114 &7718917
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4210,52 +4209,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c74922679efb7e64da460a0825d58bb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arcPrefab: {fileID: 100000, guid: 65892b8e90c174047af5617380d97366, type: 2}
-  helperPrefab: {fileID: 0}
-  launchMethod: 0
-  Distance: 5000
-  PropagationSpeed: 10000
-  layers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  startBehaviour: 1
-  endBehaviour: 1
-  SendMessageToHitObjects: 0
-  SendMessageToTouchedObjects: 0
-  touchLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  reflectionSettings:
-    reflections: 0
-    reflectors: []
-    reflectLayers:
-      serializedVersion: 2
-      m_Bits: 0
-    thickness: 0.05
-    sendMessageToReflectors: 0
-  rayInertiaSettings:
-    type: 0
-    speed: 8
-    detalization: 10
-    localDetalization: 1
-    snapbackForceCurve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    maxSnapBackDistance: 100
-  globalSpaceTransform: {fileID: 0}
 --- !u!1 &34854509
 GameObject:
   m_ObjectHideFlags: 0
@@ -4833,6 +4786,7 @@ GameObject:
   - 33: {fileID: 81212592}
   - 23: {fileID: 81212590}
   - 114: {fileID: 81212589}
+  - 114: {fileID: 81212591}
   m_Layer: 0
   m_Name: Gun2 (1)
   m_TagString: PowerUpLasers
@@ -4897,6 +4851,19 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
+--- !u!114 &81212591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 114000012149700502, guid: c84b420e100f12043b62ab3a69833666,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 81212587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81db0c625e2aa0447a1e8bc61424e971, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laserSound: {fileID: 0}
 --- !u!33 &81212592
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -22622,52 +22589,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c74922679efb7e64da460a0825d58bb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arcPrefab: {fileID: 100000, guid: 65892b8e90c174047af5617380d97366, type: 2}
-  helperPrefab: {fileID: 0}
-  launchMethod: 0
-  Distance: 5000
-  PropagationSpeed: 10000
-  layers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  startBehaviour: 1
-  endBehaviour: 1
-  SendMessageToHitObjects: 0
-  SendMessageToTouchedObjects: 0
-  touchLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  reflectionSettings:
-    reflections: 0
-    reflectors: []
-    reflectLayers:
-      serializedVersion: 2
-      m_Bits: 0
-    thickness: 0.05
-    sendMessageToReflectors: 0
-  rayInertiaSettings:
-    type: 0
-    speed: 8
-    detalization: 10
-    localDetalization: 1
-    snapbackForceCurve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    maxSnapBackDistance: 100
-  globalSpaceTransform: {fileID: 0}
 --- !u!4 &347164655
 Transform:
   m_ObjectHideFlags: 0
@@ -31760,52 +31681,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c74922679efb7e64da460a0825d58bb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arcPrefab: {fileID: 100000, guid: 65892b8e90c174047af5617380d97366, type: 2}
-  helperPrefab: {fileID: 0}
-  launchMethod: 0
-  Distance: 5000
-  PropagationSpeed: 10000
-  layers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  startBehaviour: 1
-  endBehaviour: 1
-  SendMessageToHitObjects: 0
-  SendMessageToTouchedObjects: 0
-  touchLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  reflectionSettings:
-    reflections: 0
-    reflectors: []
-    reflectLayers:
-      serializedVersion: 2
-      m_Bits: 0
-    thickness: 0.05
-    sendMessageToReflectors: 0
-  rayInertiaSettings:
-    type: 0
-    speed: 8
-    detalization: 10
-    localDetalization: 1
-    snapbackForceCurve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    maxSnapBackDistance: 100
-  globalSpaceTransform: {fileID: 0}
 --- !u!1 &470683858
 GameObject:
   m_ObjectHideFlags: 0
@@ -33603,7 +33478,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a75bf0112ddc314c813a5f59fe73ec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  launcher: {fileID: 1534184132}
 --- !u!114 &581620611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42121,7 +41995,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a75bf0112ddc314c813a5f59fe73ec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  launcher: {fileID: 1096821641}
 --- !u!114 &825384894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47003,52 +46876,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c74922679efb7e64da460a0825d58bb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arcPrefab: {fileID: 100000, guid: 65892b8e90c174047af5617380d97366, type: 2}
-  helperPrefab: {fileID: 0}
-  launchMethod: 0
-  Distance: 5000
-  PropagationSpeed: 10000
-  layers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  startBehaviour: 1
-  endBehaviour: 1
-  SendMessageToHitObjects: 0
-  SendMessageToTouchedObjects: 0
-  touchLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  reflectionSettings:
-    reflections: 0
-    reflectors: []
-    reflectLayers:
-      serializedVersion: 2
-      m_Bits: 0
-    thickness: 0.05
-    sendMessageToReflectors: 0
-  rayInertiaSettings:
-    type: 0
-    speed: 8
-    detalization: 10
-    localDetalization: 1
-    snapbackForceCurve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    maxSnapBackDistance: 100
-  globalSpaceTransform: {fileID: 0}
 --- !u!4 &905438635
 Transform:
   m_ObjectHideFlags: 0
@@ -50118,7 +49945,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a75bf0112ddc314c813a5f59fe73ec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  launcher: {fileID: 468421126}
 --- !u!114 &980921017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52701,10 +52527,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1000013043220398, guid: a1b9fc988ee19e1418b14fe859dbac63, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a1b9fc988ee19e1418b14fe859dbac63, type: 2}
   m_IsPrefabParent: 0
@@ -52837,6 +52659,7 @@ GameObject:
   - 33: {fileID: 1062200048}
   - 23: {fileID: 1062200046}
   - 114: {fileID: 1062200045}
+  - 114: {fileID: 1062200047}
   m_Layer: 0
   m_Name: Gun2 (1)
   m_TagString: PowerUpLasers
@@ -52901,6 +52724,19 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
+--- !u!114 &1062200047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 114000012005512344, guid: 12c37153d68a78e449a2c452c4458555,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1062200043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81db0c625e2aa0447a1e8bc61424e971, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laserSound: {fileID: 0}
 --- !u!33 &1062200048
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -55132,52 +54968,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c74922679efb7e64da460a0825d58bb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arcPrefab: {fileID: 100000, guid: 65892b8e90c174047af5617380d97366, type: 2}
-  helperPrefab: {fileID: 0}
-  launchMethod: 0
-  Distance: 5000
-  PropagationSpeed: 10000
-  layers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  startBehaviour: 1
-  endBehaviour: 1
-  SendMessageToHitObjects: 0
-  SendMessageToTouchedObjects: 0
-  touchLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  reflectionSettings:
-    reflections: 0
-    reflectors: []
-    reflectLayers:
-      serializedVersion: 2
-      m_Bits: 0
-    thickness: 0.05
-    sendMessageToReflectors: 0
-  rayInertiaSettings:
-    type: 0
-    speed: 8
-    detalization: 10
-    localDetalization: 1
-    snapbackForceCurve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    maxSnapBackDistance: 100
-  globalSpaceTransform: {fileID: 0}
 --- !u!1 &1098118072
 GameObject:
   m_ObjectHideFlags: 0
@@ -60358,52 +60148,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c74922679efb7e64da460a0825d58bb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arcPrefab: {fileID: 100000, guid: 65892b8e90c174047af5617380d97366, type: 2}
-  helperPrefab: {fileID: 0}
-  launchMethod: 0
-  Distance: 5000
-  PropagationSpeed: 10000
-  layers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  startBehaviour: 1
-  endBehaviour: 1
-  SendMessageToHitObjects: 0
-  SendMessageToTouchedObjects: 0
-  touchLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  reflectionSettings:
-    reflections: 0
-    reflectors: []
-    reflectLayers:
-      serializedVersion: 2
-      m_Bits: 0
-    thickness: 0.05
-    sendMessageToReflectors: 0
-  rayInertiaSettings:
-    type: 0
-    speed: 8
-    detalization: 10
-    localDetalization: 1
-    snapbackForceCurve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    maxSnapBackDistance: 100
-  globalSpaceTransform: {fileID: 0}
 --- !u!4 &1238551951 stripped
 Transform:
   m_PrefabParentObject: {fileID: 413368, guid: 80297ae0516a39e4c9251abdd5a5015c, type: 2}
@@ -60689,6 +60433,7 @@ GameObject:
   - 33: {fileID: 1255696493}
   - 23: {fileID: 1255696491}
   - 114: {fileID: 1255696490}
+  - 114: {fileID: 1255696492}
   m_Layer: 0
   m_Name: Gun2 (1)
   m_TagString: PowerUpLasers
@@ -60753,6 +60498,19 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
+--- !u!114 &1255696492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 114000013758902580, guid: 41530e4a9e271d242b1708e3db1bad98,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1255696488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81db0c625e2aa0447a1e8bc61424e971, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laserSound: {fileID: 0}
 --- !u!33 &1255696493
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -63733,6 +63491,7 @@ GameObject:
   - 33: {fileID: 1364940832}
   - 23: {fileID: 1364940830}
   - 114: {fileID: 1364940829}
+  - 114: {fileID: 1364940831}
   m_Layer: 0
   m_Name: Gun2 (1)
   m_TagString: PowerUpLasers
@@ -63797,6 +63556,19 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
+--- !u!114 &1364940831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 114000011271611520, guid: 64d9ec957d4c11c45bbd065027291508,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1364940827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81db0c625e2aa0447a1e8bc61424e971, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laserSound: {fileID: 0}
 --- !u!33 &1364940832
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -66028,7 +65800,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a75bf0112ddc314c813a5f59fe73ec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  launcher: {fileID: 2108360599}
 --- !u!114 &1403701975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66393,12 +66164,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 2343964, guid: 83befba8b5ac60d49a4f7d3944ac206e, type: 2}
-      propertyPath: m_Materials.Array.data[2]
-      value: 
-      objectReference: {fileID: 2100000, guid: d124387e99a1fee4caa7cdc89b30ceee, type: 2}
     - target: {fileID: 2374560, guid: 83befba8b5ac60d49a4f7d3944ac206e, type: 2}
       propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: d124387e99a1fee4caa7cdc89b30ceee, type: 2}
+    - target: {fileID: 2343964, guid: 83befba8b5ac60d49a4f7d3944ac206e, type: 2}
+      propertyPath: m_Materials.Array.data[2]
       value: 
       objectReference: {fileID: 2100000, guid: d124387e99a1fee4caa7cdc89b30ceee, type: 2}
     m_RemovedComponents: []
@@ -68691,7 +68462,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a75bf0112ddc314c813a5f59fe73ec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  launcher: {fileID: 1230539658}
 --- !u!114 &1432657011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69041,6 +68811,7 @@ GameObject:
   - 33: {fileID: 1463971455}
   - 23: {fileID: 1463971453}
   - 114: {fileID: 1463971452}
+  - 114: {fileID: 1463971454}
   m_Layer: 0
   m_Name: Gun2 (1)
   m_TagString: PowerUpLasers
@@ -69105,6 +68876,19 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
+--- !u!114 &1463971454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 114000012379854364, guid: 157255c235c3e16449ac5dc4c5e8f53c,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1463971450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81db0c625e2aa0447a1e8bc61424e971, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laserSound: {fileID: 0}
 --- !u!33 &1463971455
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -69596,6 +69380,22 @@ Prefab:
     - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 42a26d3ba9ca27049b6d9eb6499af71a, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1492316122 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 160458, guid: 42a26d3ba9ca27049b6d9eb6499af71a, type: 2}
+  m_PrefabInternal: {fileID: 1492316121}
+--- !u!114 &1492316123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1492316122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81db0c625e2aa0447a1e8bc61424e971, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laserSound: {fileID: 0}
 --- !u!1 &1493680636
 GameObject:
   m_ObjectHideFlags: 0
@@ -71944,52 +71744,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c74922679efb7e64da460a0825d58bb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arcPrefab: {fileID: 100000, guid: 65892b8e90c174047af5617380d97366, type: 2}
-  helperPrefab: {fileID: 0}
-  launchMethod: 0
-  Distance: 5000
-  PropagationSpeed: 10000
-  layers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  startBehaviour: 1
-  endBehaviour: 1
-  SendMessageToHitObjects: 0
-  SendMessageToTouchedObjects: 0
-  touchLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  reflectionSettings:
-    reflections: 0
-    reflectors: []
-    reflectLayers:
-      serializedVersion: 2
-      m_Bits: 0
-    thickness: 0.05
-    sendMessageToReflectors: 0
-  rayInertiaSettings:
-    type: 0
-    speed: 8
-    detalization: 10
-    localDetalization: 1
-    snapbackForceCurve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    maxSnapBackDistance: 100
-  globalSpaceTransform: {fileID: 0}
 --- !u!1 &1537896463
 GameObject:
   m_ObjectHideFlags: 0
@@ -74074,52 +73828,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c74922679efb7e64da460a0825d58bb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arcPrefab: {fileID: 100000, guid: 65892b8e90c174047af5617380d97366, type: 2}
-  helperPrefab: {fileID: 0}
-  launchMethod: 0
-  Distance: 5000
-  PropagationSpeed: 10000
-  layers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  startBehaviour: 1
-  endBehaviour: 1
-  SendMessageToHitObjects: 0
-  SendMessageToTouchedObjects: 0
-  touchLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  reflectionSettings:
-    reflections: 0
-    reflectors: []
-    reflectLayers:
-      serializedVersion: 2
-      m_Bits: 0
-    thickness: 0.05
-    sendMessageToReflectors: 0
-  rayInertiaSettings:
-    type: 0
-    speed: 8
-    detalization: 10
-    localDetalization: 1
-    snapbackForceCurve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    maxSnapBackDistance: 100
-  globalSpaceTransform: {fileID: 0}
 --- !u!1 &1561509716
 GameObject:
   m_ObjectHideFlags: 0
@@ -75569,7 +75277,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a75bf0112ddc314c813a5f59fe73ec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  launcher: {fileID: 899646671}
 --- !u!114 &1657180475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75789,6 +75496,7 @@ GameObject:
   - 33: {fileID: 1683449468}
   - 23: {fileID: 1683449466}
   - 114: {fileID: 1683449465}
+  - 114: {fileID: 1683449467}
   m_Layer: 0
   m_Name: Gun2 (1)
   m_TagString: PowerUpLasers
@@ -75853,6 +75561,19 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
+--- !u!114 &1683449467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 114000011679337106, guid: 80fa727b8eb892740906e9852a5519b0,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1683449463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81db0c625e2aa0447a1e8bc61424e971, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laserSound: {fileID: 0}
 --- !u!33 &1683449468
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -76355,7 +76076,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a75bf0112ddc314c813a5f59fe73ec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  launcher: {fileID: 34332443}
 --- !u!114 &1739544537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76790,12 +76510,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2305080, guid: f486ad6226ef0234598bd63cc7ed2bdb, type: 2}
-      propertyPath: m_Materials.Array.data[2]
-      value: 
-      objectReference: {fileID: 2100000, guid: d124387e99a1fee4caa7cdc89b30ceee, type: 2}
     - target: {fileID: 2342520, guid: f486ad6226ef0234598bd63cc7ed2bdb, type: 2}
       propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: d124387e99a1fee4caa7cdc89b30ceee, type: 2}
+    - target: {fileID: 2305080, guid: f486ad6226ef0234598bd63cc7ed2bdb, type: 2}
+      propertyPath: m_Materials.Array.data[2]
       value: 
       objectReference: {fileID: 2100000, guid: d124387e99a1fee4caa7cdc89b30ceee, type: 2}
     m_RemovedComponents: []
@@ -82013,7 +81733,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a75bf0112ddc314c813a5f59fe73ec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  launcher: {fileID: 1558388602}
 --- !u!114 &1920332923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85791,6 +85510,7 @@ GameObject:
   - 33: {fileID: 2060171375}
   - 23: {fileID: 2060171373}
   - 114: {fileID: 2060171372}
+  - 114: {fileID: 2060171374}
   m_Layer: 0
   m_Name: Gun2 (1)
   m_TagString: PowerUpLasers
@@ -85855,6 +85575,19 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
+--- !u!114 &2060171374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 114000013196911048, guid: 15afbff08185a2f4f8605fbf91b49c95,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2060171370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81db0c625e2aa0447a1e8bc61424e971, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laserSound: {fileID: 0}
 --- !u!33 &2060171375
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -86687,6 +86420,7 @@ GameObject:
   - 33: {fileID: 2097845871}
   - 23: {fileID: 2097845869}
   - 114: {fileID: 2097845868}
+  - 114: {fileID: 2097845870}
   m_Layer: 0
   m_Name: Gun2 (1)
   m_TagString: PowerUpLasers
@@ -86751,6 +86485,18 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
+--- !u!114 &2097845870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2097845866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81db0c625e2aa0447a1e8bc61424e971, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laserSound: {fileID: 0}
 --- !u!33 &2097845871
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -86968,52 +86714,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c74922679efb7e64da460a0825d58bb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arcPrefab: {fileID: 100000, guid: 65892b8e90c174047af5617380d97366, type: 2}
-  helperPrefab: {fileID: 0}
-  launchMethod: 0
-  Distance: 5000
-  PropagationSpeed: 10000
-  layers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  startBehaviour: 1
-  endBehaviour: 1
-  SendMessageToHitObjects: 0
-  SendMessageToTouchedObjects: 0
-  touchLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  reflectionSettings:
-    reflections: 0
-    reflectors: []
-    reflectLayers:
-      serializedVersion: 2
-      m_Bits: 0
-    thickness: 0.05
-    sendMessageToReflectors: 0
-  rayInertiaSettings:
-    type: 0
-    speed: 8
-    detalization: 10
-    localDetalization: 1
-    snapbackForceCurve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    maxSnapBackDistance: 100
-  globalSpaceTransform: {fileID: 0}
 --- !u!1 &2110155678
 GameObject:
   m_ObjectHideFlags: 0
@@ -87608,6 +87308,7 @@ GameObject:
   - 33: {fileID: 2136444566}
   - 23: {fileID: 2136444564}
   - 114: {fileID: 2136444563}
+  - 114: {fileID: 2136444565}
   m_Layer: 0
   m_Name: Gun2 (1)
   m_TagString: PowerUpLasers
@@ -87672,6 +87373,19 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
+--- !u!114 &2136444565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 114000013052317684, guid: ef5d8a721fc15fe48ba30ef8be3b735b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2136444561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81db0c625e2aa0447a1e8bc61424e971, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laserSound: {fileID: 0}
 --- !u!33 &2136444566
 MeshFilter:
   m_ObjectHideFlags: 0

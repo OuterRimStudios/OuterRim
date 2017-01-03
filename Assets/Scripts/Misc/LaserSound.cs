@@ -5,12 +5,39 @@ public class LaserSound : MonoBehaviour
 {
     [HideInInspector]
     public AudioSource laserSound;
+    AudioClip normalLaserSound;
+    AudioClip dualLaserSound;
     GameObject gameManager;
     void Start()
     {
         gameManager = GameObject.Find("GameManager");
         laserSound = gameManager.transform.FindChild("GunSource").GetComponent<AudioSource>();
-        laserSound.clip = gameManager.GetComponent<PublicVariableHandler>().laserNoLevelSound;
+        normalLaserSound = gameManager.GetComponent<PublicVariableHandler>().normalLaserSound;
+        if (transform.tag == "PowerUpLasers" || transform.tag == "PodLeft" || transform.tag == "PodRight")
+        {
+            dualLaserSound = gameManager.GetComponent<PublicVariableHandler>().dualLaserSound;
+            laserSound.clip = dualLaserSound;
+        }
+        else
+        {
+            laserSound.clip = normalLaserSound;
+        }
+    }
+
+    void OnEnable()
+    {
+        gameManager = GameObject.Find("GameManager");
+        laserSound = gameManager.transform.FindChild("GunSource").GetComponent<AudioSource>();
+        normalLaserSound = gameManager.GetComponent<PublicVariableHandler>().normalLaserSound;
+        if (transform.tag == "PowerUpLasers" || transform.tag == "PodLeft" || transform.tag == "PodRight")
+        {
+            dualLaserSound = gameManager.GetComponent<PublicVariableHandler>().dualLaserSound;
+            laserSound.clip = dualLaserSound;
+        }
+        else
+        {
+            laserSound.clip = normalLaserSound;
+        }
     }
 
     public void Shooting()
@@ -18,8 +45,8 @@ public class LaserSound : MonoBehaviour
         laserSound.Play();
     }
 
-    public void LevelChange(AudioClip audioClip)
+    public void LevelChange()
     {
-        laserSound.clip = audioClip;
+        laserSound.clip = normalLaserSound;
     }
 }
