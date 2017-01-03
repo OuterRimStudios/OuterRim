@@ -51,7 +51,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &409878
 Transform:
   m_ObjectHideFlags: 1
@@ -224,8 +224,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b17535fe6f515cc46ad8d884212bc8a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laserSpeed: 9000
-  laserRange: 15001
+  laserSpeedMin: 9000
+  laserSpeedMax: 9000
+  laserRange: 8000
 --- !u!136 &13668122
 CapsuleCollider:
   m_ObjectHideFlags: 1

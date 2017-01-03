@@ -3,13 +3,16 @@ using System.Collections;
 
 public class LaserMovement : MonoBehaviour {
 
-    public float laserSpeed;
+    public float laserSpeedMin;
+    public float laserSpeedMax;
     public float laserRange;
+    float laserSpeed;
     GameObject player;
 
     void Start()
     {
         player = GameObject.Find("Player");
+        laserSpeed = Random.Range(laserSpeedMin, laserSpeedMax);
     }
 	
 	// Update is called once per frame
