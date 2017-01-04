@@ -40,6 +40,7 @@ GameObject:
   - 114: {fileID: 114000011760808936}
   - 135: {fileID: 135000012047366868}
   - 82: {fileID: 82000010511555106}
+  - 114: {fileID: 114000013063007604}
   m_Layer: 0
   m_Name: DualLaserPickUp
   m_TagString: Untagged
@@ -216,6 +217,18 @@ MonoBehaviour:
   laserType: 
   missileType: 
   healthType: 
+--- !u!114 &114000013063007604
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011556323172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 858aa75149d6e784b9de0b3c49359ebb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 200
 --- !u!135 &135000012047366868
 SphereCollider:
   m_ObjectHideFlags: 1

@@ -40,6 +40,7 @@ GameObject:
   - 114: {fileID: 114000012479799664}
   - 135: {fileID: 135000012268622216}
   - 82: {fileID: 82000012694102524}
+  - 114: {fileID: 114000010090007664}
   m_Layer: 0
   m_Name: MissilePickUp
   m_TagString: Untagged
@@ -185,6 +186,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &114000010090007664
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010681365900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 858aa75149d6e784b9de0b3c49359ebb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 200
 --- !u!114 &114000010194419838
 MonoBehaviour:
   m_ObjectHideFlags: 1
