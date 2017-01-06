@@ -46,7 +46,7 @@ public class Destructable : MonoBehaviour
             gameObject.SetActive(false);
         }
 
-        if(other.tag == "Enemy")
+        if(other.tag == "Enemy" || other.tag == "WarpTunnel")
         {
             //Instantiate(explosion, transform.position, transform.rotation);
             SpawnEffect("Explosion");

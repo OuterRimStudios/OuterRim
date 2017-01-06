@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.026
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.000034951663, g: 0.000035013225, b: 0.000034899087,
+  m_IndirectSpecularColor: {r: 0.00003505448, g: 0.000035202116, b: 0.00003500223,
     a: 0.026}
 --- !u!157 &4
 LightmapSettings:
@@ -7388,6 +7388,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!65 &1458398169
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1458398165}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 50, y: 50, z: 80}
+  m_Center: {x: 0, y: 0, z: 20}
 --- !u!224 &1459910420 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 22410778, guid: 6cf7126f929d1e1448a7b42572fd2a5a,
@@ -11100,6 +11112,10 @@ Prefab:
         type: 2}
       propertyPath: m_ReceiveShadows
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011031903538, guid: e456e10a03702e341aeae21b47dc82e4, type: 2}
+      propertyPath: m_TagString
+      value: WarpTunnel
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e456e10a03702e341aeae21b47dc82e4, type: 2}

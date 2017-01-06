@@ -50,7 +50,7 @@ public class PickUpManager : MonoBehaviour
     }
     public void SpawnPickUp(bool weaponPickUp)
     {
-        choose = Random.Range(0, 0);
+        choose = Random.Range(0, 4);
 
         switch(choose)
         {

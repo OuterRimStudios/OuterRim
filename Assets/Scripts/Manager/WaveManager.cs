@@ -97,6 +97,10 @@ public class WaveManager : MonoBehaviour
 
 	void Spawn ()
     {
+        if (waveCount % spawnPickUpAt == 0 && waveCount != 0)
+        {
+            pickUpManager.SpawnPickUp(true);    //if true, weapon pick up spawns
+        }
         if (canSpawnBasicEnemies)
         {
             while (currentBasicEnemyCount < allowedBasicEnemies)
@@ -226,10 +230,7 @@ public class WaveManager : MonoBehaviour
             }
         }
 
-        if (waveCount % spawnPickUpAt == 0 && waveCount != 0)
-        {
-            pickUpManager.SpawnPickUp(true);    //if true, weapon pick up spawns
-        }
+       
 
         if (waveCount % spawnCarrierAt != 0)
         {
@@ -293,8 +294,6 @@ public class WaveManager : MonoBehaviour
             yield return new WaitForSeconds(1f);
             sectorCleared.gameObject.SetActive(false);
             StartCoroutine(warp.BeginWarp());
-
-    
         }
         else
         {
