@@ -31,6 +31,9 @@ public class FireScript : MonoBehaviour {
     bool dualLaserActive;
     InputDevice inputDevice;
 
+    Coroutine laserCoroutine;
+    Coroutine dualLaserCoroutine;
+
     void Start()
     {
         laserPool = GameObject.Find("PlayerLasers").GetComponent<ObjectPooling>();
@@ -99,7 +102,12 @@ public class FireScript : MonoBehaviour {
             // if (laserSound)
             // laserSound.LevelChange(level2Sound);
 
-            StartCoroutine(LaserPickUpActive());
+            laserCoroutine = StartCoroutine(LaserPickUpActive());
+        }
+        else
+        {
+            StopCoroutine(laserCoroutine);
+            laserCoroutine = StartCoroutine(LaserPickUpActive());
         }
     }
 
@@ -114,7 +122,12 @@ public class FireScript : MonoBehaviour {
             }
             //  if (laserSound)
             // laserSound.LevelChange(level3Sound);
-            StartCoroutine(DualLaserPickUpActive());
+            dualLaserCoroutine = StartCoroutine(DualLaserPickUpActive());
+        }
+        else
+        {
+            StopCoroutine(dualLaserCoroutine);
+            dualLaserCoroutine = StartCoroutine(DualLaserPickUpActive());
         }
     }
 
