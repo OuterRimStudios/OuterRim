@@ -34,6 +34,7 @@ public class PublicVariableHandler : MonoBehaviour
     public AudioClip dualLaserPickUpSound;
     public AudioClip laserPickUpSound;
     public AudioClip missilePickUpSound;
+    public AudioClip healthPickUpSound;
 
     public int healthRecoverScore;
     public float playerShootingFrequency;

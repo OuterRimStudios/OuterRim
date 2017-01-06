@@ -51,12 +51,12 @@ public class PowerUp : MonoBehaviour
     {
         switch (type)
         {
-            //case PowerUpType.HEALTH:
-            //    healthType = "health";
-            //    audioSource.clip = publicVariableHandler.
-            //    //pickUpManager.LevelUp(healthType);
-            //    player.GetComponentInChildren<PlayerCollision>().GainLife();
-            //    break;
+            case PowerUpType.HEALTH:
+                healthType = "health";
+                audioSource.clip = publicVariableHandler.shieldPickUpSound;
+                audioSource.PlayOneShot(audioSource.clip);
+                player.GetComponentInChildren<PlayerCollision>().GainLife();
+                break;
 
             case PowerUpType.SHIELD:
                 shieldType = "shield";

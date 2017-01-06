@@ -146,21 +146,10 @@ public class PlayerCollision : MonoBehaviour
 
     public void GainLife()
     {
-        switch (playerHealth)
+        if (playerHealth < 10)
         {
-            case 10:
-                break;
-            case 9:
-                playerHealth++;
-                break;
-            case 8:
-                playerHealth += 2;
-                break;
-            default:
-                playerHealth += 3;
-                break;
+            playerHealth++;
         }
-
         CheckHealth();
     }
 

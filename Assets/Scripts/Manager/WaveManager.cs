@@ -97,9 +97,16 @@ public class WaveManager : MonoBehaviour
 
 	void Spawn ()
     {
-        if (waveCount % spawnPickUpAt == 0 && waveCount != 0)
+        if (waveCount % spawnPickUpAt == 0 && waveCount != 0 && waveCount != 1)
         {
-            pickUpManager.SpawnPickUp(true);    //if true, weapon pick up spawns
+            if (waveCount % 10 != 0)
+            {
+                pickUpManager.SpawnPickUp();    //if true, weapon pick up spawns
+            }
+            else
+            {
+                pickUpManager.SpawnHealth();
+            }
         }
         if (canSpawnBasicEnemies)
         {

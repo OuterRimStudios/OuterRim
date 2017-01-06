@@ -48,7 +48,7 @@ public class PickUpManager : MonoBehaviour
         playerScore = player.GetComponent<PlayerScore>();
         publicVariableHandler = GetComponent<PublicVariableHandler>();
     }
-    public void SpawnPickUp(bool weaponPickUp)
+    public void SpawnPickUp()
     {
         choose = Random.Range(0, 4);
 
@@ -86,5 +86,13 @@ public class PickUpManager : MonoBehaviour
                 //    break;
 
         }
+    }
+
+    public void SpawnHealth()
+    {
+        spawnPoint = new Vector3(Random.Range(player.transform.position.x + xMinSpawn, player.transform.position.x + xMaxSpawn),
+        Random.Range(player.transform.position.y + yMinSpawn, player.transform.position.y + yMaxSpawn),
+        Random.Range(player.transform.position.z + zSpawnMin, player.transform.position.z + zSpawnMax));
+        Instantiate(healthPickUp, spawnPoint, Quaternion.identity);
     }
 }
