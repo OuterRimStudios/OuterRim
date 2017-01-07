@@ -32,15 +32,9 @@ public class MusicManager : MonoBehaviour {
                 tempList.AddRange(tempArray);
                 masterList.Add(tempList);
             }
-            currentGenre = Random.Range(0, masterList.Count);
             StartCoroutine(Play());
         }
     }
-
-	// Use this for initialization
-	void Start () {
-	
-	}
 	
 	// Update is called once per frame
 	void Update () {
@@ -85,16 +79,17 @@ public class MusicManager : MonoBehaviour {
     public void SetSong(int value)
     {
         source.Stop();
-        //StopAllCoroutines();
-        if (currentSong + value == masterList[currentGenre].Count)
-            currentSong = 0;
-        else if (currentSong + value < 0)
-            currentSong = masterList[currentGenre].Count - 1;
+        if (masterList[currentGenre].Count == 1)
+            SetGenre(Random.Range(1, masterList.Count));
         else
-            currentSong += value;
-
-        //isPlaying = false;
-        //CallCoroutine("Play");
+        {
+            if (currentSong + value == masterList[currentGenre].Count)
+                currentSong = 0;
+            else if (currentSong + value < 0)
+                currentSong = masterList[currentGenre].Count - 1;
+            else
+                currentSong += value;
+        }
     }
 
     public void ButtonSetSong(int value)

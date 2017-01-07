@@ -10,6 +10,8 @@ public class MainMenuManager : MonoBehaviour {
     public GameObject greeting;
     public GameObject startButton;
     public GameObject optionsMenu;
+    public GameObject musicManagerPrefab;
+    GameObject musicManager;
 
 	// Use this for initialization
 	void Start () {
@@ -24,6 +26,13 @@ public class MainMenuManager : MonoBehaviour {
         else
         {
             initialMenu.SetActive(true);
+        }
+
+        musicManager = GameObject.Find("MusicManager");
+        if(musicManager == null)
+        {
+            musicManager = Instantiate(musicManagerPrefab);
+            musicManager.name = "MusicManager";
         }
 
         CheckSystem();
