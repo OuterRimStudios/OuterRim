@@ -249,6 +249,8 @@ GameObject:
   - 54: {fileID: 5413330}
   - 65: {fileID: 6585870}
   - 65: {fileID: 6521202}
+  - 64: {fileID: 64000010643623654}
+  - 64: {fileID: 64000012660979120}
   m_Layer: 0
   m_Name: Carrier Sapphire
   m_TagString: Carrier
@@ -949,7 +951,7 @@ BoxCollider:
   m_GameObject: {fileID: 169792}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 42.7, y: 22.1, z: 78.59}
   m_Center: {x: 0.00000023841858, y: 7.3, z: -11}
@@ -961,7 +963,7 @@ BoxCollider:
   m_GameObject: {fileID: 169792}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 42.7, y: 22.1, z: 78.59}
   m_Center: {x: 0.00000023841858, y: 7.3, z: -11}
@@ -19173,6 +19175,30 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012645401028}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!64 &64000010643623654
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 169792}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_Mesh: {fileID: 0}
+--- !u!64 &64000012660979120
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 169792}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 1
+  m_Mesh: {fileID: 0}
 --- !u!114 &114000011434864072
 MonoBehaviour:
   m_ObjectHideFlags: 1
