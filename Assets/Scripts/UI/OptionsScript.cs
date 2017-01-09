@@ -41,6 +41,12 @@ public class OptionsScript : MonoBehaviour {
 
             sliderText.text = PlayerPrefs.GetFloat(volumeType).ToString();
         }
+
+        if (volumeType == "MusicVolume")
+        {
+            sources = new AudioSource[1];
+            sources[0] = GameObject.Find("MusicManager").GetComponent<AudioSource>();
+        }
     }
 
     public void UpdateAudioLevel()
