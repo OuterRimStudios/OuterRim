@@ -7,4 +7,11 @@ public class EnemyStoreVariables : MonoBehaviour
     public GameObject gun2;
     public GameObject gun3;
     public Transform lookAtPoint;
+
+	void Start ()
+	{
+		lookAtPoint=transform.FindChild ("LookAtPoint");
+			
+	}
+
 }
