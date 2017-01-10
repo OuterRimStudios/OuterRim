@@ -2810,7 +2810,7 @@ MonoBehaviour:
   enemy6BaseHealth: 3
   enemy6LaserScore: 1000
   enemy6MissileScore: 500
-  enemy7Speed: 400
+  enemy7Speed: 200
   enemy7FireFreq: 3
   enemy7BaseHealth: 2
   enemy7LaserScore: 1000
@@ -2825,7 +2825,7 @@ MonoBehaviour:
   enemy9BaseHealth: 2
   enemy9LaserScore: 1000
   enemy9MissileScore: 500
-  enemy10Speed: 400
+  enemy10Speed: 200
   enemy10FireFreq: 3
   enemy10BaseHealth: 2
   enemy10LaserScore: 1000
@@ -5006,7 +5006,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
 --- !u!1001 &1030943714
 Prefab:
   m_ObjectHideFlags: 0
@@ -6651,7 +6651,7 @@ Transform:
   - {fileID: 99706627}
   - {fileID: 173915329}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
 --- !u!114 &1250030432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12800,7 +12800,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
 --- !u!1 &2018727807 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1000010610819450, guid: f5ae4a9c6b0c9504d9c155fa77054bc2,
@@ -13134,7 +13134,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012645356582, guid: 0cf93e4473aeff441a3bb00a391cc103, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 114000011092923504, guid: 0cf93e4473aeff441a3bb00a391cc103,
         type: 2}
@@ -13868,69 +13868,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2117746129}
---- !u!1 &2121521051
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 2121521053}
-  - 108: {fileID: 2121521052}
-  m_Layer: 0
-  m_Name: Spotlight
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!108 &2121521052
-Light:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2121521051}
-  m_Enabled: 1
-  serializedVersion: 7
-  m_Type: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 4.1
-  m_Range: 1000
-  m_SpotAngle: 79
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 0
-    m_Resolution: -1
-    m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_Lightmapping: 4
-  m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
---- !u!4 &2121521053
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2121521051}
-  m_LocalRotation: {x: 0.5716206, y: 0, z: 0, w: 0.8205181}
-  m_LocalPosition: {x: -8.7, y: 53.5, z: -193.1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
 --- !u!1 &2136135722
 GameObject:
   m_ObjectHideFlags: 0

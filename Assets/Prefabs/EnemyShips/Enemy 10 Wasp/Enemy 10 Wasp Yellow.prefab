@@ -5036,8 +5036,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f947e56d54f4274896478766fef616c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_RollSensitivity: 0.2
-  m_PitchSensitivity: 0.2
+  m_RollSensitivity: 1
+  m_PitchSensitivity: 1
   m_LateralWanderDistance: 500
   m_LateralWanderSpeed: 10000
   m_MaxClimbAngle: 90
@@ -5061,7 +5061,7 @@ MonoBehaviour:
   m_ZeroLiftSpeed: 0
   m_RollEffect: 100
   m_PitchEffect: 100
-  m_YawEffect: 10
+  m_YawEffect: 100
   m_BankedTurnEffect: 2
   m_AerodynamicEffect: 1
   m_AutoTurnPitch: 2
