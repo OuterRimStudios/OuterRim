@@ -2810,7 +2810,7 @@ MonoBehaviour:
   enemy6BaseHealth: 3
   enemy6LaserScore: 1000
   enemy6MissileScore: 500
-  enemy7Speed: 200
+  enemy7Speed: 600
   enemy7FireFreq: 3
   enemy7BaseHealth: 2
   enemy7LaserScore: 1000
@@ -2825,7 +2825,7 @@ MonoBehaviour:
   enemy9BaseHealth: 2
   enemy9LaserScore: 1000
   enemy9MissileScore: 500
-  enemy10Speed: 200
+  enemy10Speed: 500
   enemy10FireFreq: 3
   enemy10BaseHealth: 2
   enemy10LaserScore: 1000
@@ -6659,6 +6659,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 2080774088}
   - {fileID: 1239045638}
   - {fileID: 1287429818}
   - {fileID: 616565279}
@@ -6671,7 +6672,6 @@ Transform:
   - {fileID: 239230468}
   - {fileID: 61605428}
   - {fileID: 2060217164}
-  - {fileID: 2080774088}
   - {fileID: 1596094918}
   - {fileID: 1365630365}
   - {fileID: 1274786869}
@@ -13384,7 +13384,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 10.167001, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1250030431}
-  m_RootOrder: 12
+  m_RootOrder: 0
 --- !u!212 &2080774089
 SpriteRenderer:
   m_ObjectHideFlags: 0
