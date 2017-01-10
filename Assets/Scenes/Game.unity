@@ -328,7 +328,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 10.167001, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1250030431}
-  m_RootOrder: 17
+  m_RootOrder: 16
 --- !u!212 &59165542
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -649,7 +649,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 10.167001, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1250030431}
-  m_RootOrder: 18
+  m_RootOrder: 17
 --- !u!212 &99706628
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1057,7 +1057,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 10.167001, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1250030431}
-  m_RootOrder: 19
+  m_RootOrder: 18
 --- !u!114 &173915330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6402,6 +6402,35 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1184490061}
+--- !u!1 &1220225218
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1220225219}
+  m_Layer: 0
+  m_Name: Outer Rim nebula
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1220225219
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1220225218}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 4957727}
+  m_Father: {fileID: 1250030431}
+  m_RootOrder: 19
 --- !u!1 &1235783936
 GameObject:
   m_ObjectHideFlags: 0
@@ -6630,7 +6659,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 4957727}
   - {fileID: 1239045638}
   - {fileID: 1287429818}
   - {fileID: 616565279}
@@ -6650,6 +6678,7 @@ Transform:
   - {fileID: 59165541}
   - {fileID: 99706627}
   - {fileID: 173915329}
+  - {fileID: 1220225219}
   m_Father: {fileID: 0}
   m_RootOrder: 7
 --- !u!114 &1250030432
@@ -6902,7 +6931,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 10.167001, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1250030431}
-  m_RootOrder: 16
+  m_RootOrder: 15
 --- !u!212 &1274786870
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7474,7 +7503,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 10.167001, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1250030431}
-  m_RootOrder: 15
+  m_RootOrder: 14
 --- !u!212 &1365630366
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9624,7 +9653,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 10.167001, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1250030431}
-  m_RootOrder: 14
+  m_RootOrder: 13
 --- !u!212 &1596094919
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10778,7 +10807,7 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1250030431}
+    m_TransformParent: {fileID: 1220225219}
     m_Modifications:
     - target: {fileID: 4000013620980610, guid: ac3e83aa377a5d448b825a2271107233, type: 2}
       propertyPath: m_LocalPosition.x
@@ -10814,7 +10843,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1000011209827476, guid: ac3e83aa377a5d448b825a2271107233, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 212000010177138248, guid: ac3e83aa377a5d448b825a2271107233,
         type: 2}
@@ -13355,7 +13384,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 10.167001, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1250030431}
-  m_RootOrder: 13
+  m_RootOrder: 12
 --- !u!212 &2080774089
 SpriteRenderer:
   m_ObjectHideFlags: 0
