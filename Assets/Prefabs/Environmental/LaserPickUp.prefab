@@ -30,6 +30,7 @@ GameObject:
   - 135: {fileID: 13502126}
   - 82: {fileID: 8218866}
   - 114: {fileID: 114000011783563356}
+  - 114: {fileID: 114000012131709484}
   m_Layer: 0
   m_Name: LaserPickUp
   m_TagString: Untagged
@@ -241,3 +242,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 200
+--- !u!114 &114000012131709484
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 192852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d89b88d91eaf433408d6135e6d22325e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeType: WeaponVolume
+  sources:
+  - {fileID: 8218866}

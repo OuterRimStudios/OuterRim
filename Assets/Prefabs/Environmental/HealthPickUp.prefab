@@ -13,6 +13,7 @@ GameObject:
   - 135: {fileID: 13565102}
   - 82: {fileID: 8240710}
   - 114: {fileID: 114000012989830718}
+  - 114: {fileID: 114000010495119254}
   m_Layer: 0
   m_Name: HealthPickUp
   m_TagString: Untagged
@@ -230,6 +231,20 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 155664}
   m_IsPrefabParent: 1
+--- !u!114 &114000010495119254
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 155664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d89b88d91eaf433408d6135e6d22325e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeType: WeaponVolume
+  sources:
+  - {fileID: 8240710}
 --- !u!114 &114000012989830718
 MonoBehaviour:
   m_ObjectHideFlags: 1
