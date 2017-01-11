@@ -4436,6 +4436,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 898407213}
   - 82: {fileID: 898407214}
+  - 114: {fileID: 898407215}
   m_Layer: 0
   m_Name: HitSourceManager
   m_TagString: Untagged
@@ -4530,6 +4531,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &898407215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 898407212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d89b88d91eaf433408d6135e6d22325e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeType: ExplosionVolume
+  sources:
+  - {fileID: 898407214}
 --- !u!1 &922496377
 GameObject:
   m_ObjectHideFlags: 0
@@ -7505,7 +7520,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 2fb612b17d263f14ca1f43a96f64de50, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.6666667}
+  m_Color: {r: 0.8308824, g: 0.8308824, b: 0.8308824, a: 0.6666667}
   m_FlipX: 0
   m_FlipY: 0
 --- !u!114 &1365630367

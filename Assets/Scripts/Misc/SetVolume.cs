@@ -15,7 +15,7 @@ public class SetVolume : MonoBehaviour {
         }
 	}
 
-    void Start()
+    void OnEnable()
     {
         sources = GetComponents<AudioSource>();
         for (int i = 0; i < sources.Length; i++)
