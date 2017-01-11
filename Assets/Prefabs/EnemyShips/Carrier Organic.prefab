@@ -148,7 +148,7 @@ GameObject:
   - 114: {fileID: 11451696}
   - 54: {fileID: 5433176}
   - 65: {fileID: 6505222}
-  - 65: {fileID: 65000011744020154}
+  - 65: {fileID: 65000010872441666}
   m_Layer: 0
   m_Name: Carrier Organic
   m_TagString: Carrier
@@ -623,7 +623,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68b50cc832fad3b4b82da02f79b1bf0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  warpSpeed: 100000
+  warpSpeed: 6000
   speed: 200
 --- !u!198 &19816046
 ParticleSystem:
@@ -4631,7 +4631,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012994250918}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!65 &65000011744020154
+--- !u!65 &65000010872441666
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

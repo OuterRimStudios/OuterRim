@@ -213,7 +213,7 @@ public class Enemy1Collision : MonoBehaviour
         else
         {
             SpawnEffect("CarrierExplosion");
-            gameObject.SetActive(false);
+            Destroy(gameObject);
         }
     }
 

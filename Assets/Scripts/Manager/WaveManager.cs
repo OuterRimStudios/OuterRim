@@ -231,7 +231,7 @@ public class WaveManager : MonoBehaviour
         {
             if (!carrierSpawned)
             {
-                GameObject clone = Instantiate(carrierEnemies[Random.Range(0, carrierEnemies.Length)], spawnLocation, Quaternion.identity) as GameObject;
+                GameObject clone = Instantiate(carrierEnemies[Random.Range(0, carrierEnemies.Length)], spawnLocation + new Vector3(0f, 0f, spawnLocation.z), Quaternion.identity) as GameObject;
                 clone.GetComponent<Enemy1Collision>().OnSpawned();
                 carrierSpawned = true;
             }

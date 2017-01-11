@@ -80,7 +80,7 @@ public class EnemyAI : MonoBehaviour
 
         if(transform.tag != "Carrier")
         {
-            if (Vector3.Distance(transform.position, player.transform.position) > 5000)  //If the AI is furthure than 500 meters from the player.
+            if (Vector3.Distance(transform.position, player.transform.position) > 8000)  //If the AI is furthure than 500 meters from the player.
             {
                 transform.LookAt(playerPosition);
                 transform.Translate(Vector3.forward * warpSpeed * Time.deltaTime);
@@ -109,6 +109,7 @@ public class EnemyAI : MonoBehaviour
         {
             if (transform.tag == "Carrier")
             {
+                print("too far");
                 gameObject.SetActive(false);
             }
 

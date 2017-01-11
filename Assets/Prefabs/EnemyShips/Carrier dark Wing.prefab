@@ -61,7 +61,7 @@ GameObject:
   - 114: {fileID: 11404860}
   - 54: {fileID: 5419338}
   - 65: {fileID: 6519020}
-  - 65: {fileID: 65000010048886454}
+  - 65: {fileID: 65000014110117370}
   m_Layer: 0
   m_Name: Carrier dark Wing
   m_TagString: Carrier
@@ -1170,7 +1170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68b50cc832fad3b4b82da02f79b1bf0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  warpSpeed: 100000
+  warpSpeed: 6000
   speed: 200
 --- !u!135 &13512778
 SphereCollider:
@@ -5212,7 +5212,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013014630238}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!65 &65000010048886454
+--- !u!65 &65000014110117370
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
