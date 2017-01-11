@@ -61,7 +61,7 @@ GameObject:
   - 114: {fileID: 11404860}
   - 54: {fileID: 5419338}
   - 65: {fileID: 6519020}
-  - 65: {fileID: 6549740}
+  - 65: {fileID: 65000010048886454}
   m_Layer: 0
   m_Name: Carrier dark Wing
   m_TagString: Carrier
@@ -1123,9 +1123,9 @@ Rigidbody:
   m_AngularDrag: 0.05
   m_UseGravity: 0
   m_IsKinematic: 1
-  m_Interpolate: 1
-  m_Constraints: 80
-  m_CollisionDetection: 2
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!65 &6519020
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -1136,20 +1136,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 50.42, y: 41.09, z: 118.7}
-  m_Center: {x: 0.00000023841858, y: 34, z: 1.7}
---- !u!65 &6549740
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 128138}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 50.42, y: 41.09, z: 118.7}
-  m_Center: {x: 0.00000023841858, y: 34, z: 1.7}
+  m_Size: {x: 97.9825, y: 36.0186, z: 118.69979}
+  m_Center: {x: -0.4500863, y: 41.055523, z: 1.7}
 --- !u!114 &11404860
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1182,7 +1170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68b50cc832fad3b4b82da02f79b1bf0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  warpSpeed: 2000
+  warpSpeed: 100000
   speed: 200
 --- !u!135 &13512778
 SphereCollider:
@@ -5224,6 +5212,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013014630238}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &65000010048886454
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 128138}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 97.9825, y: 36.0186, z: 118.69979}
+  m_Center: {x: -0.4500863, y: 41.055523, z: 1.7}
 --- !u!114 &114000010231090810
 MonoBehaviour:
   m_ObjectHideFlags: 1

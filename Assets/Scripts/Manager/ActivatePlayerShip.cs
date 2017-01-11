@@ -8,15 +8,15 @@ public class ActivatePlayerShip : MonoBehaviour {
     public List<GameObject> shipPrefabs;
     public GameObject player;
 
-	// Use this for initialization
-	void Start ()
+    // Use this for initialization
+    void Start()
     {
-        Object[] subListObjects = Resources.LoadAll("ShipTypes", typeof(GameObject));
+        //Object[] subListObjects = Resources.LoadAll("ShipTypes", typeof(GameObject));
 
-        foreach (GameObject go in subListObjects)
-        {
-            shipPrefabs.Add(go);
-        }
+        //foreach (GameObject go in subListObjects)
+        //{
+        //    shipPrefabs.Add(go);
+        //}
 
         if (!debugMode)
         {
@@ -30,7 +30,7 @@ public class ActivatePlayerShip : MonoBehaviour {
             {
                 for (int i = 0; i < shipPrefabs.Count; i++)
                 {
-                
+
                     if (shipPrefabs[i].name == PlayerPrefs.GetString("Ship"))
                     {
                         player = Instantiate(shipPrefabs[i], Vector3.zero, Quaternion.identity) as GameObject;
@@ -40,15 +40,5 @@ public class ActivatePlayerShip : MonoBehaviour {
                 }
             }
         }
-        else
-        {
-            //do nothing
-        }
-	}
-
-    // Update is called once per frame
-    void Update()
-    {
-	
-	}
+    }
 }
