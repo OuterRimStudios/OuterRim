@@ -99,22 +99,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &138174
-GameObject:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 402768}
-  - 114: {fileID: 11485592}
-  m_Layer: 0
-  m_Name: LightingPulseLauncher
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &142240
 GameObject:
   m_ObjectHideFlags: 1
@@ -204,7 +188,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &174562
 GameObject:
   m_ObjectHideFlags: 0
@@ -245,25 +229,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &181734
-GameObject:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 499280}
-  - 33: {fileID: 3361258}
-  - 23: {fileID: 2315312}
-  - 114: {fileID: 11473658}
-  - 114: {fileID: 11472848}
-  m_Layer: 0
-  m_Name: LightningGun
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &182416
 GameObject:
   m_ObjectHideFlags: 1
@@ -299,7 +264,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &189292
 GameObject:
   m_ObjectHideFlags: 1
@@ -329,20 +294,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 445688}
-  m_RootOrder: 7
---- !u!4 &402768
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 138174}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
-  m_Father: {fileID: 499280}
-  m_RootOrder: 0
+  m_RootOrder: 6
 --- !u!4 &403672
 Transform:
   m_ObjectHideFlags: 1
@@ -355,7 +307,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 445688}
-  m_RootOrder: 5
+  m_RootOrder: 4
 --- !u!4 &408238
 Transform:
   m_ObjectHideFlags: 1
@@ -381,7 +333,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 445688}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!4 &432714
 Transform:
   m_ObjectHideFlags: 1
@@ -408,7 +360,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 445688}
-  m_RootOrder: 8
+  m_RootOrder: 7
 --- !u!4 &443906
 Transform:
   m_ObjectHideFlags: 1
@@ -437,7 +389,6 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 461690}
-  - {fileID: 499280}
   - {fileID: 483626}
   - {fileID: 419696}
   - {fileID: 492942}
@@ -459,7 +410,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 445688}
-  m_RootOrder: 6
+  m_RootOrder: 5
 --- !u!4 &461690
 Transform:
   m_ObjectHideFlags: 1
@@ -524,7 +475,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 445688}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!4 &492942
 Transform:
   m_ObjectHideFlags: 1
@@ -537,7 +488,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 445688}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!4 &493682
 Transform:
   m_ObjectHideFlags: 1
@@ -554,49 +505,6 @@ Transform:
   - {fileID: 432714}
   m_Father: {fileID: 443906}
   m_RootOrder: 1
---- !u!4 &499280
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 181734}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 37.2, y: -64.7, z: -0.7}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children:
-  - {fileID: 402768}
-  m_Father: {fileID: 445688}
-  m_RootOrder: 1
---- !u!23 &2315312
-MeshRenderer:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 181734}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
 --- !u!23 &2317312
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -911,13 +819,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 171100}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!33 &3361258
-MeshFilter:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 181734}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &3366250
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -943,7 +844,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
@@ -1039,7 +940,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 174562}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6eef9f28a9c0b804ba08fcfdcb28d269, type: 3}
   m_Name: 
@@ -1085,7 +986,7 @@ MonoBehaviour:
   colliders: {fileID: 189292}
   shield: {fileID: 105484}
   meteorExplosion: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
-  lightningGun: {fileID: 181734}
+  lightningGun: {fileID: 0}
   laserColor: {fileID: 165504, guid: 6664cc5098b02354faa5d538e77f545c, type: 2}
   missileColor: {fileID: 120438, guid: a82e2840f8a9ed6488a5601f3763c97d, type: 2}
 --- !u!114 &11440700
@@ -1128,6 +1029,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laser: {fileID: 0}
+  canOverheat: 0
+  toggledOverheat: 0
   target: {fileID: 0}
 --- !u!114 &11457034
 MonoBehaviour:
@@ -1196,30 +1099,6 @@ MonoBehaviour:
   clampX: 5500
   clampY: 5500
   invertVertical: 0
---- !u!114 &11472848
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 181734}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a75bf0112ddc314c813a5f59fe73ec9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &11473658
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 181734}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc4275d6c96284a4192a40f413d9bdcb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  noTarget: {fileID: 0}
 --- !u!114 &11483352
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1232,18 +1111,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laser: {fileID: 0}
+  canOverheat: 0
+  toggledOverheat: 0
   target: {fileID: 0}
---- !u!114 &11485592
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 138174}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c74922679efb7e64da460a0825d58bb8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &11490352
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1256,6 +1126,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laser: {fileID: 0}
+  canOverheat: 0
+  toggledOverheat: 0
   target: {fileID: 0}
 --- !u!114 &11498732
 MonoBehaviour:
@@ -1269,6 +1141,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laser: {fileID: 0}
+  canOverheat: 0
+  toggledOverheat: 0
   target: {fileID: 0}
 --- !u!135 &13564616
 SphereCollider:

@@ -23,7 +23,7 @@ public class PublicVariableHandler : MonoBehaviour
 
     //User Interface Variables
     public Image fadeOut;
-
+    public Slider overheatSlider;
     public GameObject shipIMG1;
     public GameObject shipIMG2;
 
@@ -36,7 +36,6 @@ public class PublicVariableHandler : MonoBehaviour
     public AudioClip missilePickUpSound;
     public AudioClip healthPickUpSound;
 
-    public int healthRecoverScore;
     public float playerShootingFrequency;
     public float lightningGunDuration;
     public int playerShieldHealth;
@@ -45,6 +44,7 @@ public class PublicVariableHandler : MonoBehaviour
     public int playerHealth;
     public float playerSpeed;
     public float playerRotation;
+    public int laserOverheatMax = 50;
     public float laserPickUpActiveTime;
     public float dualLaserPickUpActiveTime;
     public float missileRechargeLength;

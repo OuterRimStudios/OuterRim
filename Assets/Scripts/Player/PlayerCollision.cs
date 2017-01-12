@@ -17,7 +17,6 @@ public class PlayerCollision : MonoBehaviour
     public int playerHealth;
     public static int fightersDestroyed;
     public static int carriersDestroyed;
-    int healthScore;
 
     public string gameOverScene;
 
@@ -57,7 +56,6 @@ public class PlayerCollision : MonoBehaviour
         damageIndicatorIMG.SetActive(false);    
 
         playerHealth = publicVariableHandler.playerHealth;
-        healthScore = publicVariableHandler.healthRecoverScore;
 
         fightersDestroyed = 0;
         carriersDestroyed = 0;

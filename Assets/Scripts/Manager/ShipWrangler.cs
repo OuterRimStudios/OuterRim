@@ -192,7 +192,8 @@ public class ShipWrangler : MonoBehaviour {
 
         foreach (Transform child in ships[currentShip].transform)
         {
-            child.GetComponent<ShipUnlocking>().enabled = true;
+            if(child.name != "Canvas")
+                child.GetComponent<ShipUnlocking>().enabled = true;
         }
 
         StartCoroutine(Transition());
