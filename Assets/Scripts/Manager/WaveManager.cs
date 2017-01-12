@@ -282,7 +282,7 @@ public class WaveManager : MonoBehaviour
         yield return new WaitForSeconds(1);
         waveStartingText.gameObject.SetActive(false);
 
-        if (waveCount % 5 == 0 && waveCount != 0)
+        if (waveCount % 1 == 0 && waveCount != 0)
         {
             canSpawn = false;
             if (waveCount != checkWave3)
