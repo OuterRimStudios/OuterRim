@@ -1,43 +1,68 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class RandomSkybox : MonoBehaviour
 {
-    public GameObject[] skyboxes;
- //   public GameObject sun;
-    int random;
-   // int isSunOn;
+	public List<GameObject> skyboxes;
+	public List<GameObject> originalSkyboxes;
+	int random;
 
-    void Start()
-    {
-        random = Random.Range(0, skyboxes.Length);
-        skyboxes[random].SetActive(true);
-    }
+	void Start()
+	{
+		foreach (GameObject skybox in skyboxes)
+		{
+			originalSkyboxes.Add(skybox);
+		}
+		random = Random.Range(0, skyboxes.Count);
+		skyboxes[random].SetActive(true);
+	}
 
-    public void NewSkybox()
-    {
-        foreach(GameObject go in skyboxes)
-        {
-            if(go.activeInHierarchy)
-            {
-                GameObject oldSkybox = go;
-                go.SetActive(false);
+	public void NewSkybox()
+	{
+		if(skyboxes.Count != 0)
+		{
+			foreach (GameObject go in skyboxes)
+			{
+				if(go.activeInHierarchy)
+				{
+					StartCoroutine (Warping (go));
+					break;
+				}
 
-                int newRandom = Random.Range(0, skyboxes.Length);
-                while (skyboxes[newRandom] == oldSkybox)
-                {
-                    newRandom = Random.Range(0, skyboxes.Length);
-                    if (skyboxes[newRandom] != oldSkybox)
-                    {
-                        skyboxes[newRandom].SetActive(true);
-                    }
-                }
-                if (skyboxes[newRandom] != oldSkybox)
-                {
-                    skyboxes[newRandom].SetActive(true);
-                }
-            }
-        }
-    }
+			}
+		}
+		else
+		{
+			foreach(GameObject originalSkybox in originalSkyboxes)
+			{
+				skyboxes.Add(originalSkybox);
+			}
 
+			int newRandom = Random.Range(0, skyboxes.Count);
+			skyboxes[newRandom].SetActive(true);
+		}
+	}  
+
+	IEnumerator Warping (GameObject oldSkybox)
+	{
+		yield return new WaitForSeconds (3);
+		oldSkybox.SetActive (false);
+		skyboxes.Remove(oldSkybox);	
+		int newRandom = Random.Range(0, skyboxes.Count);
+		if (skyboxes.Count != 0)
+		{
+			skyboxes[newRandom].SetActive(true);		
+		}
+		else
+		{
+			foreach (GameObject originalSkybox in originalSkyboxes)
+			{
+				skyboxes.Add(originalSkybox);
+			}
+
+			newRandom = Random.Range(0, skyboxes.Count);
+			skyboxes[newRandom].SetActive(true);
+		}
+	}
 }

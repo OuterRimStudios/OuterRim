@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Planet Brown Dirty Tan
-  m_Shader: {fileID: 4800000, guid: 15b34b8b84b905b48b023325751abf42, type: 3}
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _EMISSION
   m_LightmapFlags: 1
   m_CustomRenderQueue: -1
@@ -87,13 +87,13 @@ Material:
       second: 1
     - first:
         name: _Glossiness
-      second: 0.5
+      second: 0.2
     - first:
         name: _GlossyReflections
       second: 1
     - first:
         name: _Metallic
-      second: 0
+      second: 0.55
     - first:
         name: _Mode
       second: 0
@@ -105,10 +105,10 @@ Material:
       second: 0.02
     - first:
         name: _RimPower
-      second: 8
+      second: 1.16
     - first:
         name: _Shininess
-      second: 1
+      second: 0.028
     - first:
         name: _SmoothnessTextureChannel
       second: 0
@@ -127,7 +127,7 @@ Material:
     m_Colors:
     - first:
         name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+      second: {r: 0.1677231, g: 0.34589955, b: 0.46323532, a: 1}
     - first:
         name: _Emission
       second: {r: 0, g: 0, b: 0, a: 0}
@@ -139,4 +139,4 @@ Material:
       second: {r: 0.26, g: 0.19, b: 0.16, a: 0}
     - first:
         name: _SpecColor
-      second: {r: 0.3602941, g: 0.3602941, b: 0.3602941, a: 1}
+      second: {r: 1, g: 1, b: 1, a: 1}
