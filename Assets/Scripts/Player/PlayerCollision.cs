@@ -57,7 +57,6 @@ public class PlayerCollision : MonoBehaviour
         damageIndicatorIMG.SetActive(false);    
 
         playerHealth = publicVariableHandler.playerHealth;
-        healthScore = publicVariableHandler.healthRecoverScore;
 
         fightersDestroyed = 0;
         carriersDestroyed = 0;

@@ -1,21 +1,30 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using InControl;
 
-public class FireScript : MonoBehaviour {
-
+public class FireScript : MonoBehaviour
+{
     public GameObject laser;
-	float baseFireFreq;
+    public bool canOverheat = true;
+    public bool toggledOverheat;
+    float baseFireFreq;
     float fireFreq;
 
     float lastShot;
-    float laserTimer;
+    float laserHeat;
+    int overheatMax;
+    bool overheated;
+    Slider overheatSlider;
+    bool cooldown;
+    bool isHoldingTrigger;
 
     ObjectPooling laserPool;
     GameObject gameManager;
     AchievementManager achievementManager;
     PublicVariableHandler publicVariableHandler;
     LaserSound laserSound;
+    Toggle overheatToggle;
 
     GameObject player;
 
@@ -34,68 +43,116 @@ public class FireScript : MonoBehaviour {
     Coroutine laserCoroutine;
     Coroutine dualLaserCoroutine;
 
-    void Start()
+    IEnumerator Start()
     {
         laserPool = GameObject.Find("PlayerLasers").GetComponent<ObjectPooling>();
         gameManager = GameObject.Find("GameManager");
-        publicVariableHandler = gameManager. GetComponent<PublicVariableHandler>();
+        publicVariableHandler = gameManager.GetComponent<PublicVariableHandler>();
         achievementManager = gameManager.GetComponent<AchievementManager>();
         player = GameObject.Find("Player");
         baseFireFreq = publicVariableHandler.playerShootingFrequency;
-		fireFreq = baseFireFreq;
+        fireFreq = baseFireFreq;
         laserActiveTime = publicVariableHandler.laserPickUpActiveTime;
         dualLaserActiveTime = publicVariableHandler.dualLaserPickUpActiveTime;
-        if (transform.tag == "PodLeft")
-			fireFreq = .5f;
-		else if (transform.tag == "PodRight")
-			fireFreq = .5f;
+        overheatMax = publicVariableHandler.laserOverheatMax;
+        overheatSlider = publicVariableHandler.overheatSlider;
+        overheatSlider.maxValue = overheatMax;
+        overheatToggle = GameObject.Find("OverheatToggle").GetComponent<Toggle>();
+        overheatToggle.onValueChanged.AddListener((value) => ToggleOverheat());
+        toggledOverheat = overheatToggle.isOn;
+        canOverheat = toggledOverheat;
 
         noLevelSound = publicVariableHandler.normalLaserSound;
+
         if (GetComponent<LaserSound>() != null)
-        {
             laserSound = GetComponent<LaserSound>();
+
+        if (transform.tag == "PowerUpLasers")
+        {
+            fireFreq = .15f;
+            gameObject.SetActive(false);
+        }
+
+        yield return new WaitForSeconds(0.05f);
+        overheatToggle.transform.parent.gameObject.SetActive(false);
+    }
+
+    void ToggleOverheat()
+    {
+        toggledOverheat = overheatToggle.isOn;
+        canOverheat = toggledOverheat;
+        if (gameObject.name == "Gun1")
+        {
+            overheatSlider.value = 0;
+            overheatSlider.gameObject.SetActive(canOverheat);
         }
     }
 
-    void Update()
+    void FixedUpdate()
     {
         inputDevice = InputManager.ActiveDevice;
-        if ((Input.GetAxis("Fire1") > 0) && Time.time > lastShot + fireFreq)
+        if (laserHeat >= overheatMax)
         {
-            if (target == null || target.tag != "Enemy")
+            overheated = true;
+        }
+
+        if (Input.GetAxis("Fire1") > 0)
+        {
+            isHoldingTrigger = true;
+            if (Time.time > lastShot + fireFreq && !overheated)
                 Fire();
+        }
+
+        if (Input.GetAxis("Fire1") < 0.1f)
+        {
+            isHoldingTrigger = false;
+            if (overheated)
+            {
+                CallCoroutine("Overheat");
+            }
             else
             {
-                transform.LookAt(target);
-                Fire();
-                transform.rotation = Quaternion.identity;
+                laserHeat = Mathf.Lerp(laserHeat, 0, 0.07f);
+                if (gameObject.name == "Gun1")
+                    overheatSlider.value = laserHeat;
             }
         }
+    }
+
+    void CallCoroutine(string coroutine)
+    {
+        StartCoroutine(coroutine);
     }
 
     void Fire()
     {
         target = null;
         if (laserSound != null)
-        {
             laserSound.Shooting();
+
+        lastShot = Time.time;
+
+        if (canOverheat)
+        {
+            laserHeat++;
+            if (gameObject.name == "Gun1")
+                overheatSlider.value = laserHeat;
         }
-            lastShot = Time.time;
 
-            GameObject obj = laserPool.GetPooledObject();
+        GameObject obj = laserPool.GetPooledObject();
 
-            if (obj == null)
-            {
-                return;
-            }
-            obj.transform.position = transform.position;
-            obj.transform.rotation = transform.rotation;
-            obj.SetActive(true);
-    }      
+        if (obj == null)
+        {
+            return;
+        }
+        obj.transform.position = transform.position;
+        obj.transform.rotation = transform.rotation;
+        obj.SetActive(true);
+    }
 
     public void LaserUpgrade()
     {
-        if(!laserPowerActive)
+        if (!laserPowerActive)
         {
             laserPowerActive = true;
             fireFreq = fireFreq / 2;
@@ -133,27 +190,61 @@ public class FireScript : MonoBehaviour {
 
     IEnumerator LaserPickUpActive()
     {
+        canOverheat = false;
+        laserHeat = 0;
+        if (gameObject.name == "Gun1")
+            overheatSlider.value = laserHeat;
         yield return new WaitForSeconds(laserActiveTime);
         //  if (laserSound)
         //  laserSound.LevelChange(level1Sound);
         fireFreq = fireFreq * 2;
         laserPowerActive = false;
+        if (toggledOverheat)
+            canOverheat = true;
     }
 
     IEnumerator DualLaserPickUpActive()
     {
+        laserHeat = 0;
+        if (gameObject.name == "Gun1")
+            overheatSlider.value = laserHeat;
         yield return new WaitForSeconds(dualLaserActiveTime);
 
         if (laserSound)
-        laserSound.LevelChange();
+            laserSound.LevelChange();
 
         foreach (GameObject go in player.GetComponent<StoreVariables>().upgradeWeapons)
         {
             go.SetActive(false);
         }
-       // if (laserSound)
-         //   laserSound.LevelChange(level2Sound);
+        // if (laserSound)
+        //   laserSound.LevelChange(level2Sound);
 
         dualLaserActive = false;
+    }
+
+    IEnumerator Overheat()
+    {
+        if (!cooldown)
+        {
+            cooldown = true;
+            for (int i = 0; i < overheatMax; i++)
+            {
+                if (!isHoldingTrigger)
+                {
+                    laserHeat--;
+                    if (gameObject.name == "Gun1")
+                        overheatSlider.value = laserHeat;
+                    yield return new WaitForSeconds(0.07f);
+                }
+                else
+                {
+                    i--;
+                    yield return new WaitForSeconds(0f);
+                }
+            }
+            overheated = false;
+            cooldown = false;
+        }
     }
 }
