@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: BlackHole
+  m_Shader: {fileID: 4800000, guid: f9ef0bcc99f1c3d4abb7db36792ff8a8, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs: []
+    m_Floats:
+    - first:
+        name: _Black
+      second: 0
+    - first:
+        name: _Cutoff
+      second: 0.5
+    - first:
+        name: _Offset
+      second: 0.1
+    - first:
+        name: _Rad
+      second: 35.3
+    - first:
+        name: _Refraction
+      second: 1
+    m_Colors: []
