@@ -25,7 +25,5 @@ public class Debris : MonoBehaviour
 
     void Update()
     {
-        //transform.Rotate(chosenDirection * Time.deltaTime * rotationSpeed);
     }
-
 }

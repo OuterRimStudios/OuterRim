@@ -16,7 +16,7 @@ public class DebrisField : MonoBehaviour
     bool spawning;
     public Vector3[] sizes;
     public static bool canSpawn;
-	// Use this for initialization
+
 	void Start () 
     {
         player = GameObject.Find("Player");
@@ -28,7 +28,6 @@ public class DebrisField : MonoBehaviour
         canSpawn = true;
 	}
 	
-	// Update is called once per frame
     void Update()
     {
         if(canSpawn)
@@ -37,7 +36,6 @@ public class DebrisField : MonoBehaviour
 
     IEnumerator ObjSpawn() 
     {
-
         if (!spawning)
         {
             spawning = true;
@@ -50,13 +48,11 @@ public class DebrisField : MonoBehaviour
             {
                 yield break;
             }
-
-            //objectTypes[Random.Range(0, objectTypes.Length)].gameObject.transform.localScale = sizes[Random.Range(0, sizes.Length)];
+            
             objectSpawn = new Vector3(player.transform.position.x + Random.Range(objSpawnMinX, objSpawnMaxX), 
-                player.transform.position.y + Random.Range(objSpawnMinY, objSpawnMaxY), player.transform.position.z + objSpawnZ);
+            player.transform.position.y + Random.Range(objSpawnMinY, objSpawnMaxY), player.transform.position.z + objSpawnZ);
             obj.transform.position = objectSpawn;
             obj.transform.localScale = sizes[Random.Range(0, sizes.Length)];
-           // obj.GetComponent<Destructable>().sploded = true;
             obj.SetActive(true);
             spawning = false;
         }

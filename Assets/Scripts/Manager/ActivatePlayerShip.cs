@@ -7,17 +7,9 @@ public class ActivatePlayerShip : MonoBehaviour {
     public bool debugMode;
     public List<GameObject> shipPrefabs;
     public GameObject player;
-
-    // Use this for initialization
+    
     void Start()
     {
-        //Object[] subListObjects = Resources.LoadAll("ShipTypes", typeof(GameObject));
-
-        //foreach (GameObject go in subListObjects)
-        //{
-        //    shipPrefabs.Add(go);
-        //}
-
         if (!debugMode)
         {
             if (PlayerPrefs.GetString("Ship") == "")

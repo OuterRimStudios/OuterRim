@@ -1,9 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EnemyState : MonoBehaviour {
-
-    public GameObject lockOn;
+public class EnemyState : MonoBehaviour
+{
     public bool isTarget;
     GameObject player;
     FireMissile fireMissile;
@@ -21,7 +20,6 @@ public class EnemyState : MonoBehaviour {
         arrowPool = GameObject.FindGameObjectWithTag("ArrowPool").GetComponent<ObjectPooling>();
         fireMissile =GameObject.Find("MissileNozzle").GetComponent<FireMissile>();
         canBeTarget = true;
-       // arrow = arrowPool.GetPooledObject();
         foreach (GameObject arrows in arrowPool.pooledObjects)
         {
             arrows.SetActive(false);
@@ -55,17 +53,6 @@ public class EnemyState : MonoBehaviour {
        else
             pointer.SetActive(false);
 
-        ////sets laser target
-        //if (transform.position.z - player.transform.position.z < 20000 &&
-        //    transform.position.z - player.transform.position.z > 100 &&
-        //    transform.position.y - player.transform.position.y < transform.position.z * .1f &&
-        //    transform.position.y - player.transform.position.y > -transform.position.z * .1f &&
-        //    transform.position.x - player.transform.position.x < transform.position.z * .1f &&
-        //    transform.position.x - player.transform.position.x > -transform.position.z * .1f)
-        //{
-        //    player.GetComponent<AimAssist>().FoundTarget(transform.FindChild("LookAtPoint").gameObject);
-        //}
-
         //sets missile target
         if ( transform.position.z - player.transform.position.z < 8000 &&
             transform.position.z - player.transform.position.z > 100 &&
@@ -89,12 +76,7 @@ public class EnemyState : MonoBehaviour {
 
 	    if(isTarget)
         {
-            lockOn.SetActive(true);
             fireMissile.hasTarget = true;
-        }
-        else
-        {
-            lockOn.SetActive(false);
         }
 	}
 
