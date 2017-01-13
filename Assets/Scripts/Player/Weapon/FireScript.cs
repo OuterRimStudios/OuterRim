@@ -7,7 +7,7 @@ public class FireScript : MonoBehaviour
 {
     public GameObject laser;
     public bool canOverheat = true;
-    public bool toggledOverheat;
+    //public bool toggledOverheat;
     float baseFireFreq;
     float fireFreq;
 
@@ -24,7 +24,7 @@ public class FireScript : MonoBehaviour
     AchievementManager achievementManager;
     PublicVariableHandler publicVariableHandler;
     LaserSound laserSound;
-    Toggle overheatToggle;
+    //Toggle overheatToggle;
 
     GameObject player;
 
@@ -57,10 +57,10 @@ public class FireScript : MonoBehaviour
         overheatMax = publicVariableHandler.laserOverheatMax;
         overheatSlider = publicVariableHandler.overheatSlider;
         overheatSlider.maxValue = overheatMax;
-        overheatToggle = GameObject.Find("OverheatToggle").GetComponent<Toggle>();
-        overheatToggle.onValueChanged.AddListener((value) => ToggleOverheat());
-        toggledOverheat = overheatToggle.isOn;
-        canOverheat = toggledOverheat;
+        //overheatToggle = GameObject.Find("OverheatToggle").GetComponent<Toggle>();
+        //overheatToggle.onValueChanged.AddListener((value) => ToggleOverheat());
+        //toggledOverheat = overheatToggle.isOn;
+        //canOverheat = toggledOverheat;
 
         noLevelSound = publicVariableHandler.normalLaserSound;
 
@@ -74,13 +74,13 @@ public class FireScript : MonoBehaviour
         }
 
         yield return new WaitForSeconds(0.05f);
-        overheatToggle.transform.parent.gameObject.SetActive(false);
+        //overheatToggle.transform.parent.gameObject.SetActive(false);
     }
 
     void ToggleOverheat()
     {
-        toggledOverheat = overheatToggle.isOn;
-        canOverheat = toggledOverheat;
+        //toggledOverheat = overheatToggle.isOn;
+        //canOverheat = toggledOverheat;
         if (gameObject.name == "Gun1")
         {
             overheatSlider.value = 0;
@@ -199,7 +199,7 @@ public class FireScript : MonoBehaviour
         //  laserSound.LevelChange(level1Sound);
         fireFreq = fireFreq * 2;
         laserPowerActive = false;
-        if (toggledOverheat)
+        //if (toggledOverheat)
             canOverheat = true;
     }
 

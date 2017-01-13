@@ -93,7 +93,7 @@ public class EnemyAI : MonoBehaviour
         }
         else
         {
-            if (Vector3.Distance(transform.position, player.transform.position) > 4000)  //If the AI is furthure than 500 meters from the player.
+            if (Vector3.Distance(transform.position, player.transform.position) > 7000)  //If the AI is furthure than 500 meters from the player.
             {
                 transform.LookAt(playerPosition);
 				transform.Translate(Vector3.forward * (warpSpeed * 10f) * Time.deltaTime);
