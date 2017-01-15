@@ -372,7 +372,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 125330}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071067}
-  m_LocalPosition: {x: 56.811783, y: 19.4, z: -18.432642}
+  m_LocalPosition: {x: 15, y: -2.6, z: -18.4}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -411,7 +411,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 198648}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071067}
-  m_LocalPosition: {x: 71.5, y: 19.4, z: -4.4}
+  m_LocalPosition: {x: 29.7, y: -2.6, z: -4.4}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -437,7 +437,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 168328}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071067}
-  m_LocalPosition: {x: 71.5, y: 19.4, z: 3.2}
+  m_LocalPosition: {x: 29.7, y: -2.6, z: 3.2}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -543,7 +543,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 171584}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071067}
-  m_LocalPosition: {x: 56.811802, y: 19.4, z: 17.567354}
+  m_LocalPosition: {x: 15, y: -2.6, z: 17.6}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -1236,7 +1236,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laser: {fileID: 0}
   canOverheat: 1
-  toggledOverheat: 0
   target: {fileID: 0}
 --- !u!114 &11419946
 MonoBehaviour:
@@ -1292,7 +1291,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laser: {fileID: 0}
   canOverheat: 1
-  toggledOverheat: 0
   target: {fileID: 0}
 --- !u!114 &11465680
 MonoBehaviour:
@@ -1327,7 +1325,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laser: {fileID: 0}
   canOverheat: 1
-  toggledOverheat: 0
   target: {fileID: 0}
 --- !u!114 &11484684
 MonoBehaviour:
@@ -1363,7 +1360,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laser: {fileID: 0}
   canOverheat: 1
-  toggledOverheat: 0
   target: {fileID: 0}
 --- !u!135 &13535666
 SphereCollider:

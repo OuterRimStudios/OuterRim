@@ -371,7 +371,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 196496}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071067}
-  m_LocalPosition: {x: 71.5, y: 19.4, z: 3.2}
+  m_LocalPosition: {x: 29.2, y: -4.9, z: 3.2}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -481,7 +481,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 110682}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071067}
-  m_LocalPosition: {x: 71.5, y: 19.4, z: -4.4}
+  m_LocalPosition: {x: 29.2, y: -4.9, z: -4.4}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -548,7 +548,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 102886}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071067}
-  m_LocalPosition: {x: 56.811783, y: 19.4, z: -18.432642}
+  m_LocalPosition: {x: 14.5, y: -4.9, z: -18.4}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -561,7 +561,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 144154}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071067}
-  m_LocalPosition: {x: 56.811802, y: 19.4, z: 17.567354}
+  m_LocalPosition: {x: 14.5, y: -4.9, z: 17.6}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -649,7 +649,7 @@ MeshRenderer:
   - {fileID: 2100000, guid: c1c5c8b4b55a6ea42bd3959cb40d2a34, type: 2}
   - {fileID: 2100000, guid: c1c5c8b4b55a6ea42bd3959cb40d2a34, type: 2}
   - {fileID: 2100000, guid: c1c5c8b4b55a6ea42bd3959cb40d2a34, type: 2}
-  - {fileID: 2100000, guid: 2cdfdb18113ae4348918ab1e27af480f, type: 2}
+  - {fileID: 2100000, guid: 13654adade4357c4e8dcb5d759e55237, type: 2}
   - {fileID: 2100000, guid: 13654adade4357c4e8dcb5d759e55237, type: 2}
   - {fileID: 2100000, guid: b5e8c55f42646a74a8e0efa4dfd5a8e0, type: 2}
   - {fileID: 2100000, guid: b5e8c55f42646a74a8e0efa4dfd5a8e0, type: 2}
@@ -943,7 +943,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: c1c5c8b4b55a6ea42bd3959cb40d2a34, type: 2}
-  - {fileID: 2100000, guid: 2cdfdb18113ae4348918ab1e27af480f, type: 2}
+  - {fileID: 2100000, guid: 13654adade4357c4e8dcb5d759e55237, type: 2}
   - {fileID: 2100000, guid: c1c5c8b4b55a6ea42bd3959cb40d2a34, type: 2}
   - {fileID: 2100000, guid: c1c5c8b4b55a6ea42bd3959cb40d2a34, type: 2}
   m_SubsetIndices: 
@@ -1206,7 +1206,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laser: {fileID: 0}
   canOverheat: 1
-  toggledOverheat: 0
   target: {fileID: 0}
 --- !u!114 &11442074
 MonoBehaviour:
@@ -1244,7 +1243,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laser: {fileID: 0}
   canOverheat: 1
-  toggledOverheat: 0
   target: {fileID: 0}
 --- !u!114 &11461048
 MonoBehaviour:
@@ -1279,7 +1277,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laser: {fileID: 0}
   canOverheat: 1
-  toggledOverheat: 0
   target: {fileID: 0}
 --- !u!114 &11477692
 MonoBehaviour:
@@ -1363,7 +1360,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laser: {fileID: 0}
   canOverheat: 1
-  toggledOverheat: 0
   target: {fileID: 0}
 --- !u!135 &13509638
 SphereCollider:
