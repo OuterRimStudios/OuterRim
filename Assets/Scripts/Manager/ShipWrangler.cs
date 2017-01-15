@@ -6,7 +6,8 @@ using UnityEngine.EventSystems;
 using InControl;
 
 
-public class ShipWrangler : MonoBehaviour {
+public class ShipWrangler : MonoBehaviour
+{
 
     public GameObject loadScreen;
     public GameObject startMenu;
@@ -62,9 +63,9 @@ public class ShipWrangler : MonoBehaviour {
     void Update()
     {
 
-        if(DevMode.devMove && Input.GetKeyDown(KeyCode.R) && gameObject.name == "ShipContainer")
+        if (DevMode.devMove && Input.GetKeyDown(KeyCode.R) && gameObject.name == "ShipContainer")
         {
-            for(int i = 0; i < ships.Count; i++)
+            for (int i = 0; i < ships.Count; i++)
             {
                 PlayerPrefs.SetString(ships[i].gameObject.name + "Ship", "");
             }
@@ -91,7 +92,7 @@ public class ShipWrangler : MonoBehaviour {
                 hasMoved = false;
             }
 
-            if((inputDevice.Action3.WasReleased || Input.GetKeyDown(KeyCode.Q)) && gameObject.name == "ShipContainer" && ships[currentShip].GetComponent<ShipWrangler>().ships[ships[currentShip].GetComponent<ShipWrangler>().currentShip].GetComponent<ShipUnlocking>().unlocked)
+            if ((inputDevice.Action3.WasReleased || Input.GetKeyDown(KeyCode.Q)) && gameObject.name == "ShipContainer" && ships[currentShip].GetComponent<ShipWrangler>().ships[ships[currentShip].GetComponent<ShipWrangler>().currentShip].GetComponent<ShipUnlocking>().unlocked)
             {
                 ShipUnlocking.choosingColor = true;
                 choosingContainer = true;
@@ -109,7 +110,7 @@ public class ShipWrangler : MonoBehaviour {
                 {
                     ships[currentShip].GetComponent<ShipWrangler>().SelectShip();
                 }
-                else if(choosingShip && gameObject.name != "ShipContainer")
+                else if (choosingShip && gameObject.name != "ShipContainer")
                 {
                     SelectShip();
                 }
@@ -119,6 +120,22 @@ public class ShipWrangler : MonoBehaviour {
             {
                 CancelSelect();
             }
+        }
+    }
+
+    public void Choose()
+    {
+        if (choosingContainer)
+        {
+            SelectContainer();
+        }
+        else if (choosingShip && gameObject.name == "ShipContainer")
+        {
+            ships[currentShip].GetComponent<ShipWrangler>().SelectShip();
+        }
+        else if (choosingShip && gameObject.name != "ShipContainer")
+        {
+            SelectShip();
         }
     }
 
@@ -181,7 +198,17 @@ public class ShipWrangler : MonoBehaviour {
         }
     }
 
-    void SelectContainer()
+    public void GoNext()
+    {
+        ships[currentShip].GetComponent<ShipWrangler>().NextSelection();
+    }
+
+    public void GoBack()
+    {
+        ships[currentShip].GetComponent<ShipWrangler>().PreviousSelection();
+    }
+
+    public void SelectContainer()
     {
         enabled = false;
 
@@ -210,30 +237,42 @@ public class ShipWrangler : MonoBehaviour {
             loadScreen.GetComponent<FadeIn>().StartMyCoroutine();
         }
     }
-    
+
     public void CancelSelect()
     {
-        if (gameObject.name != "ShipContainer")
-        {
-            //foreach (GameObject go in ships)
-            //{
-            //    go.GetComponent<ShipUnlocking>().enabled = false;
-            //}
-            unlockButton.SetActive(false);
-            selectButton.SetActive(true);
-            lockedPanel.SetActive(false);
-            ShipUnlocking.choosingColor = false;
-            StartCoroutine(Transition());
-            transform.parent.gameObject.GetComponent<ShipWrangler>().enabled = true;
-            transform.parent.gameObject.GetComponent<ShipWrangler>().ResetWranglers();
-            descriptionText.text = "Choose your ship.";            
-        }
-        else if (gameObject.name == "ShipContainer")
-        {
-            textMask.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 800);
-            MenuToggle.ToggleMenu(chooseShipMenu, startMenu, startButton);
-            ToggleObject.Toggle(toggleObjects);
-        }
+        //if (gameObject.name != "ShipContainer")
+        //{
+        //    //foreach (GameObject go in ships)
+        //    //{
+        //    //    go.GetComponent<ShipUnlocking>().enabled = false;
+        //    //}
+        //    unlockButton.SetActive(false);
+        //    selectButton.SetActive(true);
+        //    lockedPanel.SetActive(false);
+        //    ShipUnlocking.choosingColor = false;
+        //    StartCoroutine(Transition());
+        //    transform.parent.gameObject.GetComponent<ShipWrangler>().enabled = true;
+        //    transform.parent.gameObject.GetComponent<ShipWrangler>().ResetWranglers();
+        //    descriptionText.text = "Choose your ship.";            
+        //}
+        //else if (gameObject.name == "ShipContainer")
+        //{
+        textMask.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 800);
+        MenuToggle.ToggleMenu(chooseShipMenu, startMenu, startButton);
+        ToggleObject.Toggle(toggleObjects);
+        // }
+    }
+
+    public void ExitColor()
+    {
+        unlockButton.SetActive(false);
+        selectButton.SetActive(true);
+        lockedPanel.SetActive(false);
+        ShipUnlocking.choosingColor = false;
+        StartCoroutine(Transition());
+        GetComponent<ShipWrangler>().enabled = true;
+        GetComponent<ShipWrangler>().ResetWranglers();
+        descriptionText.text = "Choose your ship.";
     }
 
     public void ResetWranglers()
@@ -293,4 +332,4 @@ public class ShipWrangler : MonoBehaviour {
     }
 }
 
-//Condense next/previous selection functions
+//Condense next/previous

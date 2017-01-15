@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using InControl;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class PlayerMovement : MonoBehaviour {
 
@@ -30,28 +31,28 @@ public class PlayerMovement : MonoBehaviour {
     void FixedUpdate()
     {
         inputDevice = InputManager.ActiveDevice;
-        horizontalTurnAngle = -(Input.GetAxis("Horizontal") * Time.deltaTime * playerSpeed * 50) * 20;
+        horizontalTurnAngle = -(CrossPlatformInputManager.GetAxis("Horizontal") * Time.deltaTime * playerSpeed * 50) * 20;
         horizontalTurnAngle = Mathf.Clamp(horizontalTurnAngle, -maxTurnAngle, maxTurnAngle);
-        moveX = Input.GetAxis("Horizontal") * Time.deltaTime * playerSpeed;
+        moveX = CrossPlatformInputManager.GetAxis("Horizontal") * Time.deltaTime * playerSpeed;
 
-        if (Input.GetAxis("Horizontal") != 0)       // && transform.rotation.z > -45 && transform.rotation.z < 45
+        if (CrossPlatformInputManager.GetAxis("Horizontal") != 0)       // && transform.rotation.z > -45 && transform.rotation.z < 45
         {
             transform.Rotate((Vector3.forward * horizontalTurnAngle * Time.deltaTime) * 7);
             ClampRotation(-maxTurnAngle, maxTurnAngle, 0);
         }
 
-        if (Input.GetAxis("Horizontal") == 0)
+        if (CrossPlatformInputManager.GetAxis("Horizontal") == 0)
         {
             transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.identity, Time.deltaTime * 5f);
         }
 
         if (invertVertical)           //inverted vertical movement
         {
-            moveY = -(Input.GetAxis("Vertical") * Time.deltaTime * (playerSpeed / 2));
+            moveY = -(CrossPlatformInputManager.GetAxis("Vertical") * Time.deltaTime * (playerSpeed / 2));
         }
         else if (!invertVertical)     //normal vertical movement
         {
-            moveY = Input.GetAxis("Vertical") * Time.deltaTime * (playerSpeed / 2);
+            moveY = CrossPlatformInputManager.GetAxis("Vertical") * Time.deltaTime * (playerSpeed / 2);
         }
 
         transform.position += new Vector3(moveX, moveY, moveZ);

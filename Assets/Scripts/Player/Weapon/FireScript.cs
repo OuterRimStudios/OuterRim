@@ -96,14 +96,14 @@ public class FireScript : MonoBehaviour
             overheated = true;
         }
 
-        if (Input.GetAxis("Fire1") > 0)
+        if (MobileControls.shootLaser)
         {
             isHoldingTrigger = true;
             if (Time.time > lastShot + fireFreq && !overheated)
                 Fire();
         }
 
-        if (Input.GetAxis("Fire1") < 0.1f)
+        if (!MobileControls.shootLaser)
         {
             isHoldingTrigger = false;
             if (overheated)

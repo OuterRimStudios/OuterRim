@@ -58,7 +58,7 @@ public class FireMissile : MonoBehaviour
         {
             FindEnemy();
         }
-        if (((Input.GetAxis("Fire2") > 0) && Time.time > (lastShot + missileCooldown) && hasTarget && missileCount > 0) && target != null)   // || (Input.GetAxis("Secondary")) != 0)
+        if ((MobileControls.shootMissile && Time.time > (lastShot + missileCooldown) && hasTarget && missileCount > 0) && target != null)   // || (Input.GetAxis("Secondary")) != 0)
         {
             target.transform.parent.GetComponent<EnemyState>().isTarget = false;
             if (missileUpgraded)
