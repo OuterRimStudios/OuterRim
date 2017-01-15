@@ -641,7 +641,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: f7c6e7d70c4bd714d8ea5d23ad76dbba, type: 2}
+  - {fileID: 2100000, guid: 3103298321a4eed4bbb7d90cf2b3dc88, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
@@ -670,7 +670,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: f69840f702830ba42ac47cb3c441d19d, type: 2}
+  - {fileID: 2100000, guid: f5ad7de779b549e4e975f6b5fbf3ec6b, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
@@ -757,7 +757,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: f69840f702830ba42ac47cb3c441d19d, type: 2}
+  - {fileID: 2100000, guid: 2e6359b7f1b9855408b5a945bf57e91b, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
@@ -902,7 +902,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 6e6a93be387198f45a0525912718c9ba, type: 2}
+  - {fileID: 2100000, guid: 3103298321a4eed4bbb7d90cf2b3dc88, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
@@ -1183,7 +1183,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laser: {fileID: 0}
   canOverheat: 1
-  toggledOverheat: 0
   target: {fileID: 0}
 --- !u!114 &11449816
 MonoBehaviour:
@@ -1219,7 +1218,7 @@ MonoBehaviour:
   colliders: {fileID: 143104}
   shield: {fileID: 180240}
   meteorExplosion: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
-  laserColor: {fileID: 188982, guid: e76b7fb8090ece44d848b9ea2b17832c, type: 2}
+  laserColor: {fileID: 174594, guid: 653804ebb40bfe24296eac47db49cb67, type: 2}
   missileColor: {fileID: 128558, guid: 2bfca4e69e1f8b944b7dc5bab39ebf7a, type: 2}
 --- !u!114 &11473236
 MonoBehaviour:
@@ -1265,7 +1264,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laser: {fileID: 0}
   canOverheat: 1
-  toggledOverheat: 0
   target: {fileID: 0}
 --- !u!114 &11481622
 MonoBehaviour:
@@ -1280,7 +1278,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laser: {fileID: 0}
   canOverheat: 1
-  toggledOverheat: 0
   target: {fileID: 0}
 --- !u!114 &11486274
 MonoBehaviour:
@@ -1315,7 +1312,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laser: {fileID: 0}
   canOverheat: 1
-  toggledOverheat: 0
   target: {fileID: 0}
 --- !u!114 &11495506
 MonoBehaviour:
@@ -1444,7 +1440,7 @@ ParticleSystem:
   moveWithTransform: 1
   autoRandomSeed: 1
   scalingMode: 2
-  randomSeed: 0
+  randomSeed: -2063808839
   InitialModule:
     serializedVersion: 2
     enabled: 1
@@ -3143,7 +3139,7 @@ ParticleSystem:
   moveWithTransform: 1
   autoRandomSeed: 1
   scalingMode: 2
-  randomSeed: 0
+  randomSeed: -1851506521
   InitialModule:
     serializedVersion: 2
     enabled: 1
@@ -4819,7 +4815,7 @@ ParticleSystemRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedWireframeHidden: 1
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -4863,7 +4859,7 @@ ParticleSystemRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedWireframeHidden: 1
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89

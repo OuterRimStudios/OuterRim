@@ -703,7 +703,7 @@ MeshRenderer:
   m_Materials:
   - {fileID: 2100000, guid: 37c42c4e7a4c84044bd2bc4db207005c, type: 2}
   - {fileID: 2100000, guid: dcb9182fdb7dbad4aaad86b563a502af, type: 2}
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 32b0bf49916aec74486a8112da5cb353, type: 2}
   - {fileID: 2100000, guid: 4c259942f5d3f7e409f945cb9232cc16, type: 2}
   - {fileID: 2100000, guid: 356909a526799534085f25e3f13d4e52, type: 2}
   m_SubsetIndices: 
@@ -792,7 +792,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 4c259942f5d3f7e409f945cb9232cc16, type: 2}
+  - {fileID: 2100000, guid: 3103298321a4eed4bbb7d90cf2b3dc88, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
@@ -851,7 +851,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 37c42c4e7a4c84044bd2bc4db207005c, type: 2}
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 32b0bf49916aec74486a8112da5cb353, type: 2}
   - {fileID: 2100000, guid: dcb9182fdb7dbad4aaad86b563a502af, type: 2}
   - {fileID: 2100000, guid: 4c259942f5d3f7e409f945cb9232cc16, type: 2}
   - {fileID: 2100000, guid: 356909a526799534085f25e3f13d4e52, type: 2}
@@ -1343,7 +1343,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laser: {fileID: 0}
   canOverheat: 1
-  toggledOverheat: 0
   target: {fileID: 0}
 --- !u!114 &11471700
 MonoBehaviour:
@@ -1358,7 +1357,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laser: {fileID: 0}
   canOverheat: 1
-  toggledOverheat: 0
   target: {fileID: 0}
 --- !u!114 &11476288
 MonoBehaviour:
@@ -1407,7 +1405,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laser: {fileID: 0}
   canOverheat: 1
-  toggledOverheat: 0
   target: {fileID: 0}
 --- !u!114 &11492204
 MonoBehaviour:
@@ -1422,7 +1419,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laser: {fileID: 0}
   canOverheat: 1
-  toggledOverheat: 0
   target: {fileID: 0}
 --- !u!135 &13572958
 SphereCollider:

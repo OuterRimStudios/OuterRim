@@ -699,7 +699,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 225feb324f2e08b43b57b18585c4bf2b, type: 2}
+  - {fileID: 2100000, guid: 3103298321a4eed4bbb7d90cf2b3dc88, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
@@ -820,8 +820,8 @@ MeshRenderer:
   - {fileID: 2100000, guid: 78a1517e966afd3408b4875c1d9ec6b7, type: 2}
   - {fileID: 2100000, guid: 6e6a93be387198f45a0525912718c9ba, type: 2}
   - {fileID: 2100000, guid: b982799d83fe9744c9515bf39db00a0e, type: 2}
-  - {fileID: 2100000, guid: 6e6a93be387198f45a0525912718c9ba, type: 2}
-  - {fileID: 2100000, guid: d2c97a60bab4edb44867234ea0590f84, type: 2}
+  - {fileID: 2100000, guid: f5ad7de779b549e4e975f6b5fbf3ec6b, type: 2}
+  - {fileID: 2100000, guid: 3103298321a4eed4bbb7d90cf2b3dc88, type: 2}
   - {fileID: 2100000, guid: 32b0bf49916aec74486a8112da5cb353, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
@@ -909,7 +909,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 225feb324f2e08b43b57b18585c4bf2b, type: 2}
+  - {fileID: 2100000, guid: 3103298321a4eed4bbb7d90cf2b3dc88, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
@@ -938,7 +938,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 6e6a93be387198f45a0525912718c9ba, type: 2}
+  - {fileID: 2100000, guid: f5ad7de779b549e4e975f6b5fbf3ec6b, type: 2}
   - {fileID: 2100000, guid: 4da6b183d4879a24b9ae7ea4271e57c7, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
@@ -968,7 +968,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: f69840f702830ba42ac47cb3c441d19d, type: 2}
+  - {fileID: 2100000, guid: 3103298321a4eed4bbb7d90cf2b3dc88, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
@@ -997,7 +997,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: f69840f702830ba42ac47cb3c441d19d, type: 2}
+  - {fileID: 2100000, guid: 3103298321a4eed4bbb7d90cf2b3dc88, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
@@ -1269,7 +1269,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laser: {fileID: 0}
   canOverheat: 1
-  toggledOverheat: 0
   target: {fileID: 0}
 --- !u!114 &11433986
 MonoBehaviour:
@@ -1297,7 +1296,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laser: {fileID: 0}
   canOverheat: 1
-  toggledOverheat: 0
   target: {fileID: 0}
 --- !u!114 &11458750
 MonoBehaviour:
@@ -1320,7 +1318,7 @@ MonoBehaviour:
   colliders: {fileID: 149710}
   shield: {fileID: 108678}
   meteorExplosion: {fileID: 183352, guid: 2cb5d67b490148948aef61257a11a55b, type: 2}
-  laserColor: {fileID: 164644, guid: 77b08284e0b139f43aa3b1a8188f821d, type: 2}
+  laserColor: {fileID: 174594, guid: 653804ebb40bfe24296eac47db49cb67, type: 2}
   missileColor: {fileID: 145910, guid: 83904708eae581b4b90eddc05bddf6d5, type: 2}
 --- !u!114 &11463444
 MonoBehaviour:
@@ -1369,7 +1367,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laser: {fileID: 0}
   canOverheat: 1
-  toggledOverheat: 0
   target: {fileID: 0}
 --- !u!114 &11491188
 MonoBehaviour:
@@ -1384,7 +1381,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laser: {fileID: 0}
   canOverheat: 1
-  toggledOverheat: 0
   target: {fileID: 0}
 --- !u!135 &13510752
 SphereCollider:

@@ -849,7 +849,7 @@ MeshRenderer:
   m_Materials:
   - {fileID: 2100000, guid: 6e6a93be387198f45a0525912718c9ba, type: 2}
   - {fileID: 2100000, guid: dcb9182fdb7dbad4aaad86b563a502af, type: 2}
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 32b0bf49916aec74486a8112da5cb353, type: 2}
   - {fileID: 2100000, guid: f69840f702830ba42ac47cb3c441d19d, type: 2}
   - {fileID: 2100000, guid: 618c98fb8fbdf734ca79a8ceb8333ebd, type: 2}
   m_SubsetIndices: 
@@ -880,7 +880,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 6de209cb75700f34bb2b52081b35278b, type: 2}
+  - {fileID: 2100000, guid: 32b0bf49916aec74486a8112da5cb353, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
@@ -938,7 +938,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: f69840f702830ba42ac47cb3c441d19d, type: 2}
+  - {fileID: 2100000, guid: f5ad7de779b549e4e975f6b5fbf3ec6b, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
@@ -968,7 +968,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 6e6a93be387198f45a0525912718c9ba, type: 2}
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 32b0bf49916aec74486a8112da5cb353, type: 2}
   - {fileID: 2100000, guid: dcb9182fdb7dbad4aaad86b563a502af, type: 2}
   - {fileID: 2100000, guid: f69840f702830ba42ac47cb3c441d19d, type: 2}
   - {fileID: 2100000, guid: 618c98fb8fbdf734ca79a8ceb8333ebd, type: 2}
@@ -1393,7 +1393,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laser: {fileID: 0}
   canOverheat: 1
-  toggledOverheat: 0
   target: {fileID: 0}
 --- !u!114 &11444674
 MonoBehaviour:
@@ -1408,7 +1407,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laser: {fileID: 0}
   canOverheat: 1
-  toggledOverheat: 0
   target: {fileID: 0}
 --- !u!114 &11445038
 MonoBehaviour:
@@ -1423,7 +1421,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laser: {fileID: 0}
   canOverheat: 1
-  toggledOverheat: 0
   target: {fileID: 0}
 --- !u!114 &11464574
 MonoBehaviour:
@@ -1497,7 +1494,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laser: {fileID: 0}
   canOverheat: 1
-  toggledOverheat: 0
   target: {fileID: 0}
 --- !u!135 &13554560
 SphereCollider:

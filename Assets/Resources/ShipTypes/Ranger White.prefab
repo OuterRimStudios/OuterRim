@@ -760,8 +760,8 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 12bb4af85ced13045bebabafd95baf0f, type: 2}
-  - {fileID: 2100000, guid: 12bb4af85ced13045bebabafd95baf0f, type: 2}
+  - {fileID: 2100000, guid: 6e6a93be387198f45a0525912718c9ba, type: 2}
+  - {fileID: 2100000, guid: 6e6a93be387198f45a0525912718c9ba, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
@@ -1332,7 +1332,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laser: {fileID: 0}
   canOverheat: 1
-  toggledOverheat: 0
   target: {fileID: 0}
 --- !u!114 &11432804
 MonoBehaviour:
@@ -1347,7 +1346,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laser: {fileID: 0}
   canOverheat: 1
-  toggledOverheat: 0
   target: {fileID: 0}
 --- !u!114 &11435634
 MonoBehaviour:
@@ -1410,7 +1408,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laser: {fileID: 0}
   canOverheat: 1
-  toggledOverheat: 0
   target: {fileID: 0}
 --- !u!114 &11478992
 MonoBehaviour:
@@ -1425,7 +1422,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laser: {fileID: 0}
   canOverheat: 1
-  toggledOverheat: 0
   target: {fileID: 0}
 --- !u!114 &11479846
 MonoBehaviour:
