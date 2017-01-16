@@ -18,7 +18,7 @@ QualitySettings:
     shadowCascade2Split: 0.33333334
     shadowCascade4Split: {x: 0.06666667, y: 0.19999999, z: 0.46666664}
     blendWeights: 1
-    textureQuality: 0
+    textureQuality: 1
     anisotropicTextures: 1
     antiAliasing: 2
     softParticles: 0
@@ -34,13 +34,13 @@ QualitySettings:
     excludedTargetPlatforms:
     - Web
     - iPhone
-    - Android
     - BlackBerry
     - Tizen
     - Windows Store Apps
     - WP8
     - WebGL
     - Samsung TV
+    - Standalone
   - serializedVersion: 2
     name: Fast
     pixelLightCount: 0
@@ -76,6 +76,7 @@ QualitySettings:
     - WP8
     - WebGL
     - Samsung TV
+    - Standalone
   - serializedVersion: 2
     name: Simple
     pixelLightCount: 1
@@ -111,6 +112,7 @@ QualitySettings:
     - WP8
     - WebGL
     - Samsung TV
+    - Standalone
   - serializedVersion: 2
     name: Good
     pixelLightCount: 2
@@ -146,6 +148,7 @@ QualitySettings:
     - WP8
     - WebGL
     - Samsung TV
+    - Standalone
   - serializedVersion: 2
     name: Beautiful
     pixelLightCount: 3
@@ -181,6 +184,7 @@ QualitySettings:
     - WP8
     - WebGL
     - Samsung TV
+    - Standalone
   - serializedVersion: 2
     name: Fantastic
     pixelLightCount: 4
@@ -216,6 +220,7 @@ QualitySettings:
     - WP8
     - WebGL
     - Samsung TV
+    - Standalone
   m_PerPlatformDefaultQuality:
     Android: 0
     Standalone: 0

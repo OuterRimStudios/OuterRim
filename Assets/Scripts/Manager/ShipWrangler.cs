@@ -217,10 +217,10 @@ public class ShipWrangler : MonoBehaviour
             ships[i].GetComponent<ShipWrangler>().enabled = true;
         }
 
-        foreach (Transform child in ships[currentShip].transform)
-        {
-            child.GetComponent<ShipUnlocking>().enabled = true;
-        }
+        //foreach (Transform child in ships[currentShip].transform)
+        //{
+        //    child.GetComponent<ShipUnlocking>().enabled = true;
+        //}
 
         StartCoroutine(Transition());
         descriptionText.text = "Choose your color.";
