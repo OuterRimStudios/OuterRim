@@ -9,39 +9,23 @@ public class PauseGame : MonoBehaviour {
     public GameObject optionsPanel;
     public GameObject selectedGameObject;
     bool isPaused;
-    InputDevice inputDevice;
 
-	// Use this for initialization
-	void Start () {
+    void Start()
+    {
         pausePanel.SetActive(false);
         optionsPanel.SetActive(false);
-	}
-	
-	// Update is called once per frame
-	void Update ()
+    }
+
+    public void Pause()
     {
-        inputDevice = InputManager.ActiveDevice;
-
-	    if(inputDevice.MenuWasPressed || Input.GetKeyDown(KeyCode.Escape))
+        if (!isPaused)
         {
-            if(!isPaused)
-            {
-                EventSystem.current.SetSelectedGameObject(selectedGameObject);
-                isPaused = true;
-                Time.timeScale = 0;
-                Cursor.visible = true;
-                pausePanel.SetActive(true);
-            }
-            else if(isPaused)
-            {
-                isPaused = false;
-                Time.timeScale = 1;
-                Cursor.visible = false;
-                pausePanel.SetActive(false);
-            }
+            isPaused = true;
+            Time.timeScale = 0;
+            Cursor.visible = true;
+            pausePanel.SetActive(true);
         }
-	}
-
+    }
     public void Unpause()
     {
         if (isPaused)

@@ -24,6 +24,8 @@ public class EnemyState : MonoBehaviour
         {
             arrows.SetActive(false);
         }
+
+        pointer.SetActive(true);
     }
 
     void OnEnable()
@@ -47,11 +49,6 @@ public class EnemyState : MonoBehaviour
                 Mathf.Abs(transform.position.y - player.transform.position.y) > -2500
             || Mathf.Abs(transform.position.z - player.transform.position.z) > 9500) && !onScreen)
             Respawn();
-
-       if (transform.position.z - player.transform.position.z > 4000)
-			pointer.SetActive (true);
-       else
-            pointer.SetActive(false);
 
         //sets missile target
         if ( transform.position.z - player.transform.position.z < 8000 &&

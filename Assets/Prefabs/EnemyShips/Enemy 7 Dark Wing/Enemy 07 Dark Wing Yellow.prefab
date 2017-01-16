@@ -233,7 +233,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &179324
 GameObject:
   m_ObjectHideFlags: 1
@@ -1229,7 +1229,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b5865e7adfc7574e92c1cf533e97cd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lockOn: {fileID: 0}
   isTarget: 0
 --- !u!135 &13520696
 SphereCollider:
@@ -1329,7 +1328,7 @@ ParticleSystem:
   moveWithTransform: 1
   autoRandomSeed: 1
   scalingMode: 2
-  randomSeed: 0
+  randomSeed: -1579673688
   InitialModule:
     serializedVersion: 2
     enabled: 1
@@ -3028,7 +3027,7 @@ ParticleSystem:
   moveWithTransform: 1
   autoRandomSeed: 1
   scalingMode: 2
-  randomSeed: 0
+  randomSeed: 1266201767
   InitialModule:
     serializedVersion: 2
     enabled: 1
@@ -4724,7 +4723,7 @@ ParticleSystemRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedWireframeHidden: 1
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -4768,7 +4767,7 @@ ParticleSystemRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedWireframeHidden: 1
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
