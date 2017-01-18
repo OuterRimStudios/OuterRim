@@ -46,7 +46,7 @@ public class RandomSkybox : MonoBehaviour
 
 	IEnumerator Warping (GameObject oldSkybox)
 	{
-		yield return new WaitForSeconds (3);
+		yield return new WaitForSeconds (1);
 		oldSkybox.SetActive (false);
 		skyboxes.Remove(oldSkybox);	
 		int newRandom = Random.Range(0, skyboxes.Count);

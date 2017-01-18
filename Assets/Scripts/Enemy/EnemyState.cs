@@ -48,7 +48,7 @@ public class EnemyState : MonoBehaviour
             || Mathf.Abs(transform.position.z - player.transform.position.z) > 9500) && !onScreen)
             Respawn();
 
-       if (transform.position.z - player.transform.position.z > 2000)
+       if (transform.position.z - player.transform.position.z > 3000)
 			pointer.SetActive (true);
        else
             pointer.SetActive(false);
