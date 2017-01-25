@@ -152,6 +152,7 @@ public class ShipWrangler : MonoBehaviour {
 
     public void PreviousSelection()
     {
+        
         if (currentShip == 0)
         {
             currentShip = ships.Count - 1;
@@ -164,6 +165,10 @@ public class ShipWrangler : MonoBehaviour {
 
     void DisplayShip()
     {
+        if (textMask.rect.width < 600)
+        {
+            textMask.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 800);
+        }
         for (int i = 0; i < ships.Count; i++)
         {
             if (i == currentShip)
@@ -253,6 +258,7 @@ public class ShipWrangler : MonoBehaviour {
         if (!cycling)
         {
             cycling = true;
+            
             if (direction == "left")
             {
                 hasMoved = true;
