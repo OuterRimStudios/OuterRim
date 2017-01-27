@@ -1507,7 +1507,7 @@ public class ArcReactor_Arc : MonoBehaviour {
 						emitDir = (GetArcPoint(rand+0.001f,n) - emitPos).normalized;
 						tmpParticle.position = Vector3.Lerp(emitPos,GetOldArcPoint(rand,n),UnityEngine.Random.value) + randomVect * radius + spaceShiftVect;
 						tmpParticle.startLifetime = emitterSystems[n][i].startLifetime * (1 - arcs[n].emissionOptions[i].randomizationOptions.lifetimeRndCoef + arcs[n].emissionOptions[i].randomizationOptions.lifetimeRndCoef * UnityEngine.Random.value);
-						tmpParticle.lifetime = tmpParticle.startLifetime;
+						tmpParticle.remainingLifetime = tmpParticle.startLifetime;
 						tmpParticle.velocity = (randomVect * (1f - Mathf.Clamp01(Mathf.Abs(directionCoef))) + emitDir * directionCoef) * emitterSystems[n][i].startSpeed * (1 - arcs[n].emissionOptions[i].randomizationOptions.velocityRndCoef + arcs[n].emissionOptions[i].randomizationOptions.velocityRndCoef * UnityEngine.Random.value) * sizeMultiplier;
 						tmpParticle.rotation = emitterSystems[n][i].startRotation * (1 - arcs[n].emissionOptions[i].randomizationOptions.rotationRndCoef + arcs[n].emissionOptions[i].randomizationOptions.rotationRndCoef * UnityEngine.Random.value);
 						tmpParticle.angularVelocity = (arcs[n].emissionOptions[i].randomizationOptions.rotationRndCoef + arcs[n].emissionOptions[i].randomizationOptions.rotationRndCoef * UnityEngine.Random.value * 2);
