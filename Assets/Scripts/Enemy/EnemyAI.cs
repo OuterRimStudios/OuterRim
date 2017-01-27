@@ -14,7 +14,7 @@ public class EnemyAI : MonoBehaviour
     bool newSpawn;
     PublicVariableHandler publicVariableHandler;
 
-	void Start ()
+	void OnEnable ()
     {
         player = GameObject.Find("Player");
         gameManager = GameObject.Find("GameManager");
@@ -27,8 +27,8 @@ public class EnemyAI : MonoBehaviour
             switch (transform.name)
             {
                 case "BaseShip":
-                    speed = 300;
-                    warpSpeed = 100;
+                    speed = publicVariableHandler.enemy3Speed;
+                    warpSpeed = 1500;
                     break;
                 case "Enemy 01":
                     speed = publicVariableHandler.enemy1Speed;
