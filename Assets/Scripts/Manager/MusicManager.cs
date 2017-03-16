@@ -57,13 +57,14 @@ public class MusicManager : MonoBehaviour {
 
     bool CheckForPlaying()
     {
-        if(inputDevice.LeftBumper.WasPressed || Input.GetButtonDown("Fire4") || (Input.GetKeyDown(KeyCode.Q) && SceneManager.GetActiveScene().buildIndex != 0))
+        //inputDevice.LeftBumper.WasPressed || 
+        if (Input.GetButtonDown("Fire4") || (Input.GetKeyDown(KeyCode.Q) && SceneManager.GetActiveScene().buildIndex != 0))
         {
             SetSong(-1);
             return true;
         }
-
-        if(inputDevice.RightBumper.WasPressed || Input.GetButtonDown("Fire5") || (Input.GetKeyDown(KeyCode.E) && SceneManager.GetActiveScene().buildIndex != 0))
+        //inputDevice.RightBumper.WasPressed || 
+        if (Input.GetButtonDown("Fire5") || (Input.GetKeyDown(KeyCode.E) && SceneManager.GetActiveScene().buildIndex != 0))
         {
             SetSong(1);
             return true;
