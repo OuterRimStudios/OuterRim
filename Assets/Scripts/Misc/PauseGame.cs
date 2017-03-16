@@ -22,7 +22,7 @@ public class PauseGame : MonoBehaviour {
     {
         inputDevice = InputManager.ActiveDevice;
 
-	    if(inputDevice.MenuWasPressed || Input.GetKeyDown(KeyCode.Escape))
+	    if(inputDevice.MenuWasPressed || Input.GetKeyDown(KeyCode.Escape) || Input.GetButtonDown("Fire3"))
         {
             if(!isPaused)
             {
