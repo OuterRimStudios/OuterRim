@@ -90,16 +90,16 @@ public class ShipWrangler : MonoBehaviour {
             {
                 hasMoved = false;
             }
-
-            if((inputDevice.Action3.WasReleased || Input.GetKeyDown(KeyCode.Q)) && gameObject.name == "ShipContainer" && ships[currentShip].GetComponent<ShipWrangler>().ships[ships[currentShip].GetComponent<ShipWrangler>().currentShip].GetComponent<ShipUnlocking>().unlocked)
+            //inputDevice.Action3.WasReleased || 
+            if ((Input.GetButtonDown("Fire2") || Input.GetKeyDown(KeyCode.Q)) && gameObject.name == "ShipContainer" && ships[currentShip].GetComponent<ShipWrangler>().ships[ships[currentShip].GetComponent<ShipWrangler>().currentShip].GetComponent<ShipUnlocking>().unlocked)
             {
                 ShipUnlocking.choosingColor = true;
                 choosingContainer = true;
                 choosingShip = false;
                 SelectContainer();
             }
-
-            if (inputDevice.Action1.WasPressed || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.E))
+            //inputDevice.Action1.WasPressed
+            if (Input.GetButtonDown("Fire1") || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.E))
             {
                 if (choosingContainer)
                 {
@@ -114,8 +114,8 @@ public class ShipWrangler : MonoBehaviour {
                     SelectShip();
                 }
             }
-
-            if (inputDevice.Action2.WasReleased || Input.GetKeyDown(KeyCode.Backspace) || Input.GetKeyDown(KeyCode.Escape))
+            //inputDevice.Action2.WasReleased
+            if (Input.GetButtonDown("Fire3") || Input.GetKeyDown(KeyCode.Backspace) || Input.GetKeyDown(KeyCode.Escape))
             {
                 CancelSelect();
             }

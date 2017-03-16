@@ -39,7 +39,7 @@ public class OuterRimInputManager : MonoBehaviour
     void Update()
     {
         inputDevice = InputManager.ActiveDevice;
-        if(inputDevice.Action1.WasPressed)
+        if(Input.GetButtonDown("Fire1"))        // || inputDevice.Action1.WasPressed
         {
             ExecuteEvents.Execute(EventSystem.current.currentSelectedGameObject, new BaseEventData(EventSystem.current), ExecuteEvents.submitHandler);
             StartCoroutine(Wait());
