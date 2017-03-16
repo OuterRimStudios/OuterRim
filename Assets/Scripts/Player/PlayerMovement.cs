@@ -16,8 +16,20 @@ public class PlayerMovement : MonoBehaviour {
     public float clampY;
 
     public bool invertVertical;
-    InputDevice inputDevice;
+    //InputDevice inputDevice;
 	GameObject gameManager;
+    Controls _controls;
+    string saveData;
+
+    void OnEnable()
+    {
+        _controls = Controls.CreateWithDefaultBindings();
+    }
+
+    void OnDisable()
+    {
+        _controls.Destroy();
+    }
 
     void Start()
     {
@@ -29,29 +41,29 @@ public class PlayerMovement : MonoBehaviour {
     // Update is called once per frame
     void FixedUpdate()
     {
-        inputDevice = InputManager.ActiveDevice;
-        horizontalTurnAngle = -(Input.GetAxis("Horizontal") * Time.deltaTime * playerSpeed * 50) * 20;
+        //inputDevice = InputManager.ActiveDevice;
+        horizontalTurnAngle = -(_controls.Move.X * Time.deltaTime * playerSpeed * 50) * 20;
         horizontalTurnAngle = Mathf.Clamp(horizontalTurnAngle, -maxTurnAngle, maxTurnAngle);
-        moveX = Input.GetAxis("Horizontal") * Time.deltaTime * playerSpeed;
+        moveX = _controls.Move.X * Time.deltaTime * playerSpeed;
 
-        if (Input.GetAxis("Horizontal") != 0)       // && transform.rotation.z > -45 && transform.rotation.z < 45
+        if (_controls.Move.X != 0)       // && transform.rotation.z > -45 && transform.rotation.z < 45
         {
             transform.Rotate((Vector3.forward * horizontalTurnAngle * Time.deltaTime) * 7);
             ClampRotation(-maxTurnAngle, maxTurnAngle, 0);
         }
 
-        if (Input.GetAxis("Horizontal") == 0)
+        if (_controls.Move.X == 0)
         {
             transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.identity, Time.deltaTime * 5f);
         }
 
         if (invertVertical)           //inverted vertical movement
         {
-            moveY = -(Input.GetAxis("Vertical") * Time.deltaTime * (playerSpeed / 2));
+            moveY = -(_controls.Move.Y * Time.deltaTime * (playerSpeed / 2));
         }
         else if (!invertVertical)     //normal vertical movement
         {
-            moveY = Input.GetAxis("Vertical") * Time.deltaTime * (playerSpeed / 2);
+            moveY = _controls.Move.Y * Time.deltaTime * (playerSpeed / 2);
         }
 
         transform.position += new Vector3(moveX, moveY, moveZ);
@@ -93,5 +105,21 @@ public class PlayerMovement : MonoBehaviour {
 
         //If its to positive rotate until within range
         return Mathf.Repeat(angle, 360);
+    }
+
+    void SaveBindings()
+    {
+        saveData = _controls.Save();
+        PlayerPrefs.SetString("Bindings", saveData);
+    }
+
+
+    void LoadBindings()
+    {
+        if (PlayerPrefs.HasKey("Bindings"))
+        {
+            saveData = PlayerPrefs.GetString("Bindings");
+            _controls.Load(saveData);
+        }
     }
 }

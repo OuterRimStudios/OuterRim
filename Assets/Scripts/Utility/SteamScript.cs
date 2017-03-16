@@ -12,9 +12,4 @@ public class SteamScript : MonoBehaviour {
             Debug.Log(name);
         }
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 }

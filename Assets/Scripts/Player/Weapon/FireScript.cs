@@ -38,10 +38,39 @@ public class FireScript : MonoBehaviour
     public Transform target;
     bool laserPowerActive;
     bool dualLaserActive;
-    InputDevice inputDevice;
+    //InputDevice inputDevice;
 
     Coroutine laserCoroutine;
     Coroutine dualLaserCoroutine;
+
+    Controls _controls;
+    string saveData;
+
+    void OnEnable()
+    {
+        _controls = Controls.CreateWithDefaultBindings();
+    }
+
+    void OnDisable()
+    {
+        _controls.Destroy();
+    }
+
+    void SaveBindings()
+    {
+        saveData = _controls.Save();
+        PlayerPrefs.SetString("Bindings", saveData);
+    }
+
+
+    void LoadBindings()
+    {
+        if (PlayerPrefs.HasKey("Bindings"))
+        {
+            saveData = PlayerPrefs.GetString("Bindings");
+            _controls.Load(saveData);
+        }
+    }
 
     IEnumerator Start()
     {
@@ -90,20 +119,20 @@ public class FireScript : MonoBehaviour
 
     void FixedUpdate()
     {
-        inputDevice = InputManager.ActiveDevice;
+        //inputDevice = InputManager.ActiveDevice;
         if (laserHeat >= overheatMax)
         {
             overheated = true;
         }
 
-        if (Input.GetAxis("Fire1") > 0)
+        if (_controls.Fire.IsPressed)
         {
             isHoldingTrigger = true;
             if (Time.time > lastShot + fireFreq && !overheated)
                 Fire();
         }
 
-        if (Input.GetAxis("Fire1") < 0.1f)
+        if (_controls.Fire < 0.1f)
         {
             isHoldingTrigger = false;
             if (overheated)

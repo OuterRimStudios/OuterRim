@@ -78,15 +78,15 @@ public class ShipWrangler : MonoBehaviour {
         {
             DisplayShip();
 
-            if ((Input.GetAxis("Horizontal") < -.99f && !hasMoved) || Input.GetKeyDown(KeyCode.A))      //left
+            if ((inputDevice.LeftStick.Left.WasPressed && !hasMoved) || Input.GetKeyDown(KeyCode.A))      //left  < -.99f
             {
                 CallCoroutine("Cycle", "left");
             }
-            else if ((Input.GetAxis("Horizontal") > .99f && !hasMoved) || Input.GetKeyDown(KeyCode.D))  //right
+            else if ((inputDevice.LeftStick.Right.WasPressed && !hasMoved) || Input.GetKeyDown(KeyCode.D))  //right
             {
                 CallCoroutine("Cycle", "right");
             }
-            else if (Input.GetAxis("Horizontal") > -.09f && Input.GetAxis("Horizontal") < .09f)
+            else if (inputDevice.LeftStick.X == 0)
             {
                 hasMoved = false;
             }

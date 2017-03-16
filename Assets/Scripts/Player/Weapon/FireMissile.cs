@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
+
 public class FireMissile : MonoBehaviour
 {
     public List<GameObject> targetsInRange;
@@ -34,7 +35,20 @@ public class FireMissile : MonoBehaviour
     AudioSource source;
 
     bool missileUpgraded;
-    
+
+    Controls _controls;
+    string saveData;
+
+    void OnEnable()
+    {
+        _controls = Controls.CreateWithDefaultBindings();
+    }
+
+    void OnDisable()
+    {
+        _controls.Destroy();
+    }
+
     void Start()
     {
         hasTarget = false;
@@ -58,7 +72,7 @@ public class FireMissile : MonoBehaviour
         {
             FindEnemy();
         }
-        if (((Input.GetAxis("Fire2") > 0) && Time.time > (lastShot + missileCooldown) && hasTarget && missileCount > 0) && target != null)   // || (Input.GetAxis("Secondary")) != 0)
+        if ((_controls.Fire2.WasPressed && Time.time > (lastShot + missileCooldown) && hasTarget && missileCount > 0) && target != null)   // || (Input.GetAxis("Secondary")) != 0)
         {
             target.transform.parent.GetComponent<EnemyState>().isTarget = false;
             if (missileUpgraded)
@@ -108,5 +122,21 @@ public class FireMissile : MonoBehaviour
     public void MissilePickUp()
     {
         missileUpgraded = true;
+    }
+
+    void SaveBindings()
+    {
+        saveData = _controls.Save();
+        PlayerPrefs.SetString("Bindings", saveData);
+    }
+
+
+    void LoadBindings()
+    {
+        if (PlayerPrefs.HasKey("Bindings"))
+        {
+            saveData = PlayerPrefs.GetString("Bindings");
+            _controls.Load(saveData);
+        }
     }
 }

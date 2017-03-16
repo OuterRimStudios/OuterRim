@@ -9,7 +9,7 @@ public class ControllerDetection : MonoBehaviour {
     List<string> joysticks;
 
     // Update is called once per frame
-	void Update () {
+	void LateUpdate () {
         joysticks = new List<string>();
 
         for (int i = 0; i < Input.GetJoystickNames().GetLength(0); i++)

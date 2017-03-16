@@ -3,6 +3,7 @@ using UnityEngine.Analytics;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System.Collections.Generic;
+using Steamworks;
 
 public class MainMenuManager : MonoBehaviour {
 
@@ -14,19 +15,26 @@ public class MainMenuManager : MonoBehaviour {
     GameObject musicManager;
 
 	// Use this for initialization
-	void Start () {
+	void OnEnable() {
         optionsMenu.SetActive(false);
-        if (PlayerPrefs.GetString("Remember") == "True")
-        {
-            initialMenu.SetActive(false);
-            EventSystem.current.SetSelectedGameObject(startButton);
-            greeting.GetComponent<Text>().text = "Hello " + PlayerPrefs.GetString("Username") + "!";
-            greeting.SetActive(true);
-        }
-        else
-        {
-            initialMenu.SetActive(true);
-        }
+        EventSystem.current.SetSelectedGameObject(startButton);
+        PlayerPrefs.SetString("Username", SteamFriends.GetPersonaName());
+        greeting.GetComponent<Text>().text = "Hello, " + PlayerPrefs.GetString("Username") + "!";        
+        greeting.SetActive(true);
+
+        print("everything should be off");
+
+        //if (PlayerPrefs.GetString("Remember") == "True")
+        //{
+        //    initialMenu.SetActive(false);
+        //    EventSystem.current.SetSelectedGameObject(startButton);
+        //    greeting.GetComponent<Text>().text = "Hello " + SteamFriends.GetPersonaName() + "!"; //PlayerPrefs.GetString("Username")
+        //    greeting.SetActive(true);
+        //}
+        //else
+        //{
+        //    initialMenu.SetActive(true);
+        //}
 
         musicManager = GameObject.Find("MusicManager");
         if (musicManager == null)
@@ -35,7 +43,7 @@ public class MainMenuManager : MonoBehaviour {
             musicManager.name = "MusicManager";
         }
 
-        CheckSystem();
+        //CheckSystem();
     }
 
     void CheckSystem()
