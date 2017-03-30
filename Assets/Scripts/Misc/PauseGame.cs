@@ -10,6 +10,7 @@ public class PauseGame : MonoBehaviour {
     public GameObject selectedGameObject;
     bool isPaused;
     InputDevice inputDevice;
+    public Behaviour[] componentsToDisable;
 
 	// Use this for initialization
 	void Start () {
@@ -28,16 +29,17 @@ public class PauseGame : MonoBehaviour {
             {
                 EventSystem.current.SetSelectedGameObject(selectedGameObject);
                 isPaused = true;
+                foreach (Behaviour component in componentsToDisable)
+                {
+                    component.enabled = false;
+                }
                 Time.timeScale = 0;
                 Cursor.visible = true;
                 pausePanel.SetActive(true);
             }
             else if(isPaused)
             {
-                isPaused = false;
-                Time.timeScale = 1;
-                Cursor.visible = false;
-                pausePanel.SetActive(false);
+                Unpause();
             }
         }
 	}
@@ -47,6 +49,10 @@ public class PauseGame : MonoBehaviour {
         if (isPaused)
         {
             isPaused = false;
+            foreach(Behaviour component in componentsToDisable)
+            {
+                component.enabled = true;
+            }
             Time.timeScale = 1;
             Cursor.visible = false;
             pausePanel.SetActive(false);

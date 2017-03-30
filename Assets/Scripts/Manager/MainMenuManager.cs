@@ -18,23 +18,25 @@ public class MainMenuManager : MonoBehaviour {
 	void OnEnable() {
         optionsMenu.SetActive(false);
         EventSystem.current.SetSelectedGameObject(startButton);
-        PlayerPrefs.SetString("Username", SteamFriends.GetPersonaName());
+        if(SteamManager.Initialized)
+            PlayerPrefs.SetString("Username", SteamFriends.GetPersonaName());
         greeting.GetComponent<Text>().text = "Hello, " + PlayerPrefs.GetString("Username") + "!";        
         greeting.SetActive(true);
 
-        print("everything should be off");
-
+        #region Old Username Code
         //if (PlayerPrefs.GetString("Remember") == "True")
         //{
         //    initialMenu.SetActive(false);
         //    EventSystem.current.SetSelectedGameObject(startButton);
-        //    greeting.GetComponent<Text>().text = "Hello " + SteamFriends.GetPersonaName() + "!"; //PlayerPrefs.GetString("Username")
+        //    greeting.GetComponent<Text>().text = "Hello " + PlayerPrefs.GetString("Username") + "!";
         //    greeting.SetActive(true);
         //}
         //else
         //{
         //    initialMenu.SetActive(true);
         //}
+
+        #endregion
 
         musicManager = GameObject.Find("MusicManager");
         if (musicManager == null)
