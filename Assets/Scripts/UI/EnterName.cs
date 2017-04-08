@@ -63,7 +63,7 @@ public class EnterName : MonoBehaviour {
 
     public void UpdateRememberStatus()
     {
-        remember = !remember;
+        remember = true;
         PlayerPrefs.SetString("Remember", remember.ToString());
     }
 
