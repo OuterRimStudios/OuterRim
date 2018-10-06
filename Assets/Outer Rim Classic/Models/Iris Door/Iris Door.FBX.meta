@@ -1,0 +1,332 @@
+fileFormatVersion: 2
+guid: 36ff4c991faf64a4b9fbcba5e5516281
+timeCreated: 1468007282
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Box001
+    100002: Box003
+    100004: Box004
+    100006: Box005
+    100008: Box006
+    100010: Box007
+    100012: Box008
+    100014: Box009
+    100016: Box010
+    100018: Box011
+    100020: Box012
+    100022: Box013
+    100024: Box014
+    100026: Box015
+    100028: Box016
+    100030: Box017
+    100032: Box018
+    100034: //RootNode
+    100036: Tube001
+    400000: Box001
+    400002: Box003
+    400004: Box004
+    400006: Box005
+    400008: Box006
+    400010: Box007
+    400012: Box008
+    400014: Box009
+    400016: Box010
+    400018: Box011
+    400020: Box012
+    400022: Box013
+    400024: Box014
+    400026: Box015
+    400028: Box016
+    400030: Box017
+    400032: Box018
+    400034: //RootNode
+    400036: Tube001
+    2300000: Tube001
+    3300000: Tube001
+    4300000: Tube001
+    4300002: Box001
+    7400000: Open
+    7400002: Close
+    7400004: Iris Door Loop
+    9500000: //RootNode
+    13700000: Box001
+    13700002: Box003
+    13700004: Box004
+    13700006: Box005
+    13700008: Box006
+    13700010: Box007
+    13700012: Box008
+    13700014: Box009
+    13700016: Box010
+    13700018: Box011
+    13700020: Box012
+    13700022: Box013
+    13700024: Box014
+    13700026: Box015
+    13700028: Box016
+    13700030: Box017
+    13700032: Box018
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Open
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 50
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Box001
+        weight: 1
+      - path: Box003
+        weight: 1
+      - path: Box004
+        weight: 1
+      - path: Box005
+        weight: 1
+      - path: Box006
+        weight: 1
+      - path: Box007
+        weight: 1
+      - path: Box008
+        weight: 1
+      - path: Box009
+        weight: 1
+      - path: Box010
+        weight: 1
+      - path: Box011
+        weight: 1
+      - path: Box012
+        weight: 1
+      - path: Box013
+        weight: 1
+      - path: Box014
+        weight: 1
+      - path: Box015
+        weight: 1
+      - path: Box016
+        weight: 1
+      - path: Box017
+        weight: 1
+      - path: Box018
+        weight: 1
+      - path: Tube001
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Close
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 100
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Box001
+        weight: 1
+      - path: Box003
+        weight: 1
+      - path: Box004
+        weight: 1
+      - path: Box005
+        weight: 1
+      - path: Box006
+        weight: 1
+      - path: Box007
+        weight: 1
+      - path: Box008
+        weight: 1
+      - path: Box009
+        weight: 1
+      - path: Box010
+        weight: 1
+      - path: Box011
+        weight: 1
+      - path: Box012
+        weight: 1
+      - path: Box013
+        weight: 1
+      - path: Box014
+        weight: 1
+      - path: Box015
+        weight: 1
+      - path: Box016
+        weight: 1
+      - path: Box017
+        weight: 1
+      - path: Box018
+        weight: 1
+      - path: Tube001
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Iris Door Loop
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 100
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Box001
+        weight: 1
+      - path: Box003
+        weight: 1
+      - path: Box004
+        weight: 1
+      - path: Box005
+        weight: 1
+      - path: Box006
+        weight: 1
+      - path: Box007
+        weight: 1
+      - path: Box008
+        weight: 1
+      - path: Box009
+        weight: 1
+      - path: Box010
+        weight: 1
+      - path: Box011
+        weight: 1
+      - path: Box012
+        weight: 1
+      - path: Box013
+        weight: 1
+      - path: Box014
+        weight: 1
+      - path: Box015
+        weight: 1
+      - path: Box016
+        weight: 1
+      - path: Box017
+        weight: 1
+      - path: Box018
+        weight: 1
+      - path: Tube001
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
