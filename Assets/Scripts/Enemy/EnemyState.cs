@@ -16,7 +16,7 @@ public class EnemyState : MonoBehaviour
     void Start ()
     {
         player = GameObject.Find("Player");
-        pointer = transform.FindChild("Pointer").gameObject;
+        pointer = transform.Find("Pointer").gameObject;
         arrowPool = GameObject.FindGameObjectWithTag("ArrowPool").GetComponent<ObjectPooling>();
         fireMissile =GameObject.Find("MissileNozzle").GetComponent<FireMissile>();
         canBeTarget = true;

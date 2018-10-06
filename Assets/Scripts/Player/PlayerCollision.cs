@@ -47,7 +47,7 @@ public class PlayerCollision : MonoBehaviour
         gameManager = GameObject.Find("GameManager");
         pickUpManager = gameManager.GetComponent<PickUpManager>();
         publicVariableHandler = gameManager.GetComponent<PublicVariableHandler>();
-        source = gameManager.transform.FindChild("HitSourceManager").GetComponent<AudioSource>();
+        source = gameManager.transform.Find("HitSourceManager").GetComponent<AudioSource>();
 
         fadeOut = publicVariableHandler.fadeOut;
         healthBar = GameObject.Find("HealthBar").GetComponent<Image>();

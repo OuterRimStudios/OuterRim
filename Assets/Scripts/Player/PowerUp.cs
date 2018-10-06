@@ -41,7 +41,7 @@ public class PowerUp : MonoBehaviour
     void Start()
     {
         player = GameObject.Find("Player");
-        shield = player.transform.FindChild("Shield").gameObject;
+        shield = player.transform.Find("Shield").gameObject;
         audioSource = GameObject.Find("Canvas").GetComponent<AudioSource>();
         gameManager = GameObject.Find("GameManager");
         pickUpManager = gameManager.GetComponent<PickUpManager>();

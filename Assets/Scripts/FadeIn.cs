@@ -13,7 +13,7 @@ public class FadeIn : MonoBehaviour
     void Start()
     {
         image = GetComponent<Image>();
-        text = transform.FindChild("Tip").GetComponent<Text>();
+        text = transform.Find("Tip").GetComponent<Text>();
     }
 
     void Update()

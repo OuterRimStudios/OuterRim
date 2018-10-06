@@ -49,14 +49,14 @@ public class Shield : MonoBehaviour
         currentHealth--;
         if (currentHealth <= 0)
         {
-            player.transform.FindChild("ShipContainer").FindChild("Colliders").GetComponent<PlayerCollision>().enabled = true;
+            player.transform.Find("ShipContainer").Find("Colliders").GetComponent<PlayerCollision>().enabled = true;
             gameObject.SetActive(false);
         }
     }
 
     void ShieldDestroyed()
     {
-        player.transform.FindChild("ShipContainer").FindChild("Colliders").GetComponent<PlayerCollision>().enabled = true;
+        player.transform.Find("ShipContainer").Find("Colliders").GetComponent<PlayerCollision>().enabled = true;
         gameObject.SetActive(false);
     }
 

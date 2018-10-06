@@ -200,13 +200,13 @@ public class WaveHandler : MonoBehaviour
                 fourthEnemyCount++;
                 currentObject = fourthEnemy.GetPooledObject();
                 currentObject.name = objectPool;
-                shield = currentObject.transform.FindChild("Shield").gameObject;
+                shield = currentObject.transform.Find("Shield").gameObject;
                 shield.SetActive(true);
                 break;
             case "Enemy5":
                 currentObject = fifthEnemy.GetPooledObject();
                 currentObject.name = "Enemy5";
-                shield = currentObject.transform.FindChild("Shield").gameObject;
+                shield = currentObject.transform.Find("Shield").gameObject;
                 shield.SetActive(true);
                 shield.GetComponent<EnemyShield>().OnSpawn();
                 break;

@@ -10,7 +10,7 @@ public class EnemyStoreVariables : MonoBehaviour
 
 	void Start ()
 	{
-		lookAtPoint=transform.FindChild ("LookAtPoint");
+		lookAtPoint=transform.Find ("LookAtPoint");
 			
 	}
 

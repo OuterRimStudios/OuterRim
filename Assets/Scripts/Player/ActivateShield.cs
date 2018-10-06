@@ -29,7 +29,7 @@ public class ActivateShield : MonoBehaviour
 
     public void ShieldActive()
     {
-        player.transform.FindChild("ShipContainer").FindChild("Colliders").GetComponent<PlayerCollision>().enabled = false;
+        player.transform.Find("ShipContainer").Find("Colliders").GetComponent<PlayerCollision>().enabled = false;
         shield.SetActive(true);
     }
 }

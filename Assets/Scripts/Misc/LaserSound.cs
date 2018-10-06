@@ -11,7 +11,7 @@ public class LaserSound : MonoBehaviour
     void Start()
     {
         gameManager = GameObject.Find("GameManager");
-        laserSound = gameManager.transform.FindChild("GunSource").GetComponent<AudioSource>();
+        laserSound = gameManager.transform.Find("GunSource").GetComponent<AudioSource>();
         normalLaserSound = gameManager.GetComponent<PublicVariableHandler>().normalLaserSound;
         if (transform.tag == "PowerUpLasers" || transform.tag == "PodLeft" || transform.tag == "PodRight")
         {
@@ -27,7 +27,7 @@ public class LaserSound : MonoBehaviour
     void OnEnable()
     {
         gameManager = GameObject.Find("GameManager");
-        laserSound = gameManager.transform.FindChild("GunSource").GetComponent<AudioSource>();
+        laserSound = gameManager.transform.Find("GunSource").GetComponent<AudioSource>();
         normalLaserSound = gameManager.GetComponent<PublicVariableHandler>().normalLaserSound;
         if (transform.tag == "PowerUpLasers" || transform.tag == "PodLeft" || transform.tag == "PodRight")
         {

@@ -40,7 +40,7 @@ public class FireMissile : MonoBehaviour
         hasTarget = false;
         player = GameObject.Find("Player");
         gameManager = GameObject.Find("GameManager");
-        source = gameManager.transform.FindChild("MissileSource").GetComponent<AudioSource>();
+        source = gameManager.transform.Find("MissileSource").GetComponent<AudioSource>();
         waveManager = gameManager.GetComponent<WaveManager>();
         publicVariableHandler = gameManager.GetComponent<PublicVariableHandler>();
         missile = player.GetComponent<StoreVariables>().missileColor;
@@ -94,7 +94,7 @@ public class FireMissile : MonoBehaviour
 
     void FindEnemy()
     {
-       target = targetsInRange[Random.Range(0, targetsInRange.Count)].transform.FindChild("LookAtPoint").gameObject;
+       target = targetsInRange[Random.Range(0, targetsInRange.Count)].transform.Find("LookAtPoint").gameObject;
        target.transform.parent.GetComponent<EnemyState>().isTarget = true;
     }
 

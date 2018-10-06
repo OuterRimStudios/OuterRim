@@ -42,7 +42,7 @@ public class Enemy1Collision : MonoBehaviour
     {
         if(transform.name == "BasicShip")
         {
-            transform.FindChild("Shield").gameObject.SetActive(true);
+            transform.Find("Shield").gameObject.SetActive(true);
         }
     }
     
@@ -56,7 +56,7 @@ public class Enemy1Collision : MonoBehaviour
                     laserScore = publicVariableHandler.enemy4LaserScore;
                     missileScore = publicVariableHandler.enemy4MissileScore;
                     baseHealth = publicVariableHandler.enemy4BaseHealth;
-                    transform.FindChild("Shield").gameObject.SetActive(true);
+                    transform.Find("Shield").gameObject.SetActive(true);
                     break;
                 case "Enemy 01":
                     laserScore = publicVariableHandler.enemy1LaserScore;
@@ -77,7 +77,7 @@ public class Enemy1Collision : MonoBehaviour
                     laserScore = publicVariableHandler.enemy4LaserScore;
                     missileScore = publicVariableHandler.enemy4MissileScore;
                     baseHealth = publicVariableHandler.enemy4BaseHealth;
-                    transform.FindChild("Shield").gameObject.SetActive(true);
+                    transform.Find("Shield").gameObject.SetActive(true);
                     break;
                 case "Enemy 05":
                     laserScore = publicVariableHandler.enemy5LaserScore;
